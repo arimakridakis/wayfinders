@@ -1,24 +1,59 @@
 ---
 import Container from '../global/Container.astro';
-interface Props { eyebrow?: string; title: string; intro?: string; image?: string; alt?: string; }
-const { eyebrow, title, intro, image, alt = '' } = Astro.props;
-const hasMedia = Boolean(image) || Astro.slots.has('media');
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  /** Retained so each page can receive a unique hero image in a future update. */
+  image?: string;
+  alt?: string;
+}
+
+const { eyebrow, title, intro } = Astro.props;
 ---
-<section class:list={['page-hero', { 'has-image': hasMedia }]}>
+
+<section class="page-hero">
   <Container width="wide" class="hero-inner">
-    <div class="copy">{eyebrow && <p class="type-label">{eyebrow}</p>}<h1 class="type-page-title">{title}</h1>{intro && <p class="intro">{intro}</p>}<slot /></div>
-    {image ? <img src={image} {alt} width="1200" height="900" loading="eager" decoding="async" /> : hasMedia && <div class="media"><slot name="media" /></div>}
+    <div class="copy">
+      {eyebrow && <p class="type-label">{eyebrow}</p>}
+      <h1 class="type-page-title">{title}</h1>
+      {intro && <p class="intro">{intro}</p>}
+      <slot />
+    </div>
   </Container>
 </section>
+
 <style>
-  .page-hero { padding-block: clamp(3.5rem, 8vw, 7rem); background: var(--color-page-alt); }
-  :global(.hero-inner) { display: grid; align-items: center; gap: var(--column-gap); }
-  .has-image :global(.hero-inner) { grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); }
+  .page-hero {
+    display: grid;
+    min-height: clamp(30rem, 67vh, 46rem);
+    align-items: center;
+    padding-block: clamp(4.5rem, 10vw, 8rem);
+    background:
+      linear-gradient(90deg, rgb(8 28 18 / .86) 0%, rgb(8 28 18 / .69) 48%, rgb(8 28 18 / .3) 100%),
+      url('/images/heroes/GreenForest1.webp') center / cover no-repeat;
+    color: var(--color-surface);
+  }
+
   .copy { max-width: 48rem; }
-  h1 { margin: .65rem 0 0; }
-  .type-label { margin: 0; color: var(--color-rust); }
-  .intro { max-width: 42rem; margin: 1.5rem 0 0; color: var(--color-ink-muted); font-size: clamp(1.08rem, 2vw, 1.3rem); }
-  img, .media :global(> *) { width: 100%; }
-  img { height: min(32rem, 58vw); object-fit: cover; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
-  @media (max-width: 47.999rem) { .has-image :global(.hero-inner) { grid-template-columns: 1fr; } img { height: 18rem; } }
+  h1 { margin: .65rem 0 0; color: var(--color-surface); }
+  .type-label { margin: 0; color: var(--color-cream); }
+  .intro { max-width: 42rem; margin: 1.5rem 0 0; color: var(--color-surface); font-size: clamp(1.08rem, 2vw, 1.3rem); }
+  .copy :global(h2), .copy :global(p), .copy :global(strong) { color: var(--color-surface); }
+
+  :global(.page-hero .button) { border-color: var(--color-surface); }
+  :global(.page-hero .button.primary) { background: var(--color-surface); color: var(--color-forest-dark); }
+  :global(.page-hero .button.primary:hover) { border-color: var(--color-rust); background: var(--color-rust); color: white; }
+  :global(.page-hero .button.secondary) { background: rgb(23 59 42 / .45); color: var(--color-surface); }
+  :global(.page-hero .button.secondary:hover) { background: var(--color-cream); color: var(--color-forest-dark); }
+
+  @media (max-width: 47.999rem) {
+    .page-hero {
+      min-height: 30rem;
+      background:
+        linear-gradient(rgb(8 28 18 / .76), rgb(8 28 18 / .76)),
+        url('/images/heroes/GreenForest1.webp') center / cover no-repeat;
+    }
+  }
 </style>
