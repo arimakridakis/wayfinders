@@ -1,0 +1,15 @@
+---
+interface Props { as?: 'h1' | 'h2' | 'h3'; eyebrow?: string; level?: 'display' | 'page' | 'section' | 'card'; }
+const { as: Tag = 'h2', eyebrow, level = 'section' } = Astro.props as Props;
+const styles = { display: 'type-display', page: 'type-page-title', section: 'type-section', card: 'type-card' };
+---
+<div class="heading-group">
+  {eyebrow && <p class="type-label eyebrow">{eyebrow}</p>}
+  <Tag class={styles[level]}><slot /></Tag>
+</div>
+<style>
+  .heading-group { display: grid; gap: .75rem; }
+  .heading-group :global(h1), .heading-group :global(h2), .heading-group :global(h3), .eyebrow { margin: 0; }
+  .eyebrow { display: flex; align-items: center; gap: .65rem; color: var(--color-rust); }
+  .eyebrow::before { width: 2rem; height: 2px; background: currentColor; content: ''; }
+</style>

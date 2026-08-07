@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Wayfinders image placeholder</title>
+  <desc id="desc">An abstract layered landscape marking where approved photography will appear.</desc>
+  <rect width="800" height="900" fill="#e6eadc"/>
+  <circle cx="620" cy="210" r="92" fill="#f3ead2"/>
+  <path d="M0 600 190 385l145 160 125-210 340 355v210H0Z" fill="#9caf91"/>
+  <path d="M0 710 250 530l150 150 170-165 230 210v175H0Z" fill="#65784f"/>
+  <path d="M0 805c145-75 290-78 435-8 123 60 245 58 365-7v110H0Z" fill="#315843"/>
+</svg>

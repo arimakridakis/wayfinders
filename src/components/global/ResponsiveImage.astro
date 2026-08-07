@@ -1,0 +1,9 @@
+---
+interface Props { src: string; alt: string; width: number; height: number; sizes?: string; loading?: 'eager' | 'lazy'; class?: string; }
+const { src, alt, width, height, sizes = '(min-width: 70rem) 70rem, 100vw', loading = 'lazy', class: className } = Astro.props;
+---
+<figure class:list={['image-wrap', className]}><img {src} {alt} {width} {height} {sizes} {loading} decoding="async" /><slot name="caption" /></figure>
+<style>
+  .image-wrap { width: min(100%, var(--image-max)); margin: 0; overflow: hidden; border-radius: var(--radius-card); background: var(--color-surface-muted); }
+  img { width: 100%; height: auto; object-fit: cover; }
+</style>

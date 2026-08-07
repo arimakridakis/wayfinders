@@ -1,0 +1,10 @@
+---
+interface Props { as?: 'div' | 'section'; width?: 'prose' | 'standard' | 'wide'; class?: string; }
+const { as: Tag = 'div', width = 'standard', class: className = '' } = Astro.props as Props;
+const widths = { prose: 'var(--width-prose)', standard: 'var(--width-standard)', wide: 'var(--width-wide)' };
+---
+<Tag class:list={['container', className]} style={`--container-width: ${widths[width]}`}><slot /></Tag>
+
+<style>
+  .container { width: min(calc(100% - (2 * var(--gutter))), var(--container-width)); margin-inline: auto; }
+</style>

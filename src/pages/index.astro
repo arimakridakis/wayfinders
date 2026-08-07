@@ -1,0 +1,49 @@
+---
+import Button from '../components/global/Button.astro';
+import DecorativeHeading from '../components/global/DecorativeHeading.astro';
+import ResponsiveImage from '../components/global/ResponsiveImage.astro';
+import Section from '../components/global/Section.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Wayfinders on the Hudson" description="The new Wayfinders on the Hudson website foundation is taking root.">
+  <Section width="wide" class="hero">
+    <div class="hero-grid">
+      <div>
+        <DecorativeHeading as="h1" level="display" eyebrow="Website foundation">Growing a place to find your way.</DecorativeHeading>
+        <p class="intro">This provisional shell establishes an accessible, welcoming foundation for the new Wayfinders on the Hudson website. Final program content and imagery will follow after review.</p>
+        <div class="actions"><Button href="#approach">Explore the foundation</Button><Button variant="secondary">Registration link pending</Button></div>
+      </div>
+      <ResponsiveImage class="art" src="/images/foundation-placeholder.svg" alt="Abstract layered green landscape, used as a placeholder for approved Wayfinders photography" width={800} height={900} sizes="(min-width: 48rem) 42vw, 100vw" loading="eager" />
+    </div>
+  </Section>
+  <Section id="approach" tone="alternate">
+    <div class="prose">
+      <DecorativeHeading eyebrow="Design direction">Rooted, clear, and made for community.</DecorativeHeading>
+      <p>The foundation uses warm, nature-led provisional colors, expressive editorial headings, generous space, and durable shared components. It is intentionally flexible so future pages can tell different stories without drifting apart.</p>
+    </div>
+    <div class="cards">
+      <article><h2 class="type-card">Accessible by default</h2><p>Semantic landmarks, visible focus states, keyboard navigation, reduced-motion support, and deliberate touch targets are built into the shell.</p></article>
+      <article><h2 class="type-card">Flexible by design</h2><p>Containers and sections provide consistency without forcing every program or story into the same page template.</p></article>
+      <article><h2 class="type-card">Ready for real content</h2><p>Logo, photography, contact details, and action destinations remain clearly labeled until the organization supplies or approves them.</p></article>
+    </div>
+  </Section>
+</BaseLayout>
+<style>
+  .hero { min-height: min(48rem, calc(100svh - 5rem)); display: grid; align-items: center; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr); align-items: center; gap: var(--column-gap); }
+  .intro { max-width: 38rem; margin-block: 1.5rem 2rem; color: var(--color-ink-muted); font-size: clamp(1.05rem, 2vw, 1.25rem); }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  :global(.art) { min-height: clamp(20rem, 48vw, 34rem); border: 1px dashed var(--color-moss); border-radius: 45% 45% var(--radius-card) var(--radius-card); }
+  :global(.art img) { min-height: inherit; object-fit: cover; }
+  .prose { max-width: var(--width-prose); }
+  .prose > p { color: var(--color-ink-muted); font-size: 1.1rem; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
+  article { padding: var(--card-padding); border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+  article h2 { margin-top: 0; } article p { margin-bottom: 0; color: var(--color-ink-muted); }
+  @media (max-width: 47.999rem) {
+    .hero-grid { grid-template-columns: 1fr; }
+    :global(.art) { min-height: 18rem; border-radius: var(--radius-card); }
+    .cards { grid-template-columns: 1fr; }
+    .actions :global(.button) { width: 100%; }
+  }
+</style>
