@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "captured_at": "2026-08-07T16:49:24+00:00",
   "captured_at": "2026-08-07T15:38:30+00:00",
   "source_base": "https://www.wayfindersonthehudson.com",
   "target_base": "https://wayfinders-neon.vercel.app",
@@ -258,7 +259,7 @@
         "url": "https://wayfinders-neon.vercel.app/",
         "status": 200,
         "title": "Wayfinders on the Hudson",
-        "word_count": 549,
+        "word_count": 1406,
         "blocks": [
           {
             "type": "p",
@@ -266,7 +267,11 @@
           },
           {
             "type": "h1",
-            "text": "Connecting with ourselves, each other, and the earth"
+            "text": "Connecting With Ourselves, Each Other, and The Earth"
+          },
+          {
+            "type": "h2",
+            "text": "Check out our *NEW* programs!"
           },
           {
             "type": "p",
@@ -278,27 +283,35 @@
           },
           {
             "type": "h2",
-            "text": "Spark your child's connection to themselves, each other, and the earth."
+            "text": "Spark Your Child's Connection to Themselves, Each Other, and the Earth!"
           },
           {
             "type": "p",
-            "text": "Wayfinders Base Camp ignites a love for nature and fosters social-emotional learning through weekly fire circles and nature games, leadership development, community building, and flexible scheduling for same-age and mixed-age groups."
+            "text": "Wayfinders Base Camp ignites a love for nature and fosters social-emotional learning through:"
           },
           {
             "type": "li",
-            "text": "Deepen connections through engaging outdoor activities."
+            "text": "Weekly Fire Circles & Nature Games: Deepen connections with the outdoors and each other through engaging activities."
           },
           {
             "type": "li",
-            "text": "Build confidence, communication skills, and empathy."
+            "text": "Social-Emotional Learning & Leadership Development: Build confidence, communication skills, and empathy in a supportive environment."
           },
           {
             "type": "li",
-            "text": "Create lasting friendships and a sense of belonging."
+            "text": "Community Building: Create lasting friendships and a sense of belonging within a caring group."
+          },
+          {
+            "type": "p",
+            "text": "Flexible Scheduling & Growth for All Ages:"
           },
           {
             "type": "li",
-            "text": "Foster mentorship between younger and older participants."
+            "text": "Choose Your Day: Weekly after-school sessions on Tuesdays, Wednesdays, Thursdays or (or pick two or all three days for a 10% discount)."
+          },
+          {
+            "type": "li",
+            "text": "Same-Age & Mixed-Age Groups: Cater to individual preferences while fostering mentorship and village building. In mixed-age groups, younger children find role models in older kids, while older ones develop leadership skills by mentoring their peers."
           },
           {
             "type": "p",
@@ -310,11 +323,43 @@
           },
           {
             "type": "p",
-            "text": "We are living at a time when we are increasingly disconnected with ourselves, each other, and the earth. Wayfinders offers a solution: mindfulness, community building, and nature immersion."
+            "text": "We are living at a time when we are increasingly disconnected with ourselves, each other, and the earth. Wayfinders offers a solution: Mindfulness, community building, and nature immersion. Through social emotional learning and sustainability practices, Wayfinders provides experiential opportunities to disconnect (from technology) and reconnect with ourselves, each other, and the earth."
           },
           {
             "type": "p",
-            "text": "Through social emotional learning and sustainability practices, Wayfinders provides experiential opportunities to build interconnectedness, leadership, and community in a fun and safe space."
+            "text": "Wayfinders creates a fun & safe space to build interconnectedness through nature guided experiences and social & emotional mentoring. The program explores leadership development and community building, and offers Junior Mentor or Mentor-in-Training programs; and for those interested - Rites of Passage."
+          },
+          {
+            "type": "p",
+            "text": "Wayfinders experiential opportunities with nature connection and social emotional learning result in positive impacts including:"
+          },
+          {
+            "type": "li",
+            "text": "shaping future sustainability advocates"
+          },
+          {
+            "type": "li",
+            "text": "addressing mental health challenges"
+          },
+          {
+            "type": "li",
+            "text": "increasing opportunities for diverse and underserved participants."
+          },
+          {
+            "type": "p",
+            "text": "Stay connected"
+          },
+          {
+            "type": "h2",
+            "text": "Join Our Mailing List"
+          },
+          {
+            "type": "p",
+            "text": "Sign up with your email address to receive news and updates."
+          },
+          {
+            "type": "p",
+            "text": "Newsletter delivery is not yet connected because the destination provider and data owner require confirmation."
           },
           {
             "type": "p",
@@ -322,11 +367,11 @@
           },
           {
             "type": "h2",
-            "text": "Time and space to connect with purpose."
+            "text": "The call to action."
           },
           {
             "type": "p",
-            "text": "After 30 years of combined experience, climate activist Gwen Merkin and school counselor Leah Gozhansky saw a clear need for young people to step away from the daily and reconnect."
+            "text": "Why did climate activist - Gwen Merkin, and School Counselor - Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the evidence of a need for this program is very clear! Click on the below sections to learn more about the call to action."
           },
           {
             "type": "h2",
@@ -334,7 +379,7 @@
           },
           {
             "type": "p",
-            "text": "Participants are encouraged to see themselves as part of the web of life; practice gratitude, land acknowledgment, and sit spot; explore self-awareness; build relationships and community; connect with the earth; cultivate leadership skills; and be called to social action."
+            "text": "Participants are encouraged to see themselves as part of the web of life Practice gratitude, land acknowledgement, and sit spot Explore self-awareness Build relationships and community Connect with the earth Become more mindful of where things come from and where things go Cultivate leadership skills Be called to social action"
           },
           {
             "type": "h2",
@@ -342,7 +387,7 @@
           },
           {
             "type": "p",
-            "text": "Wayfinders participants move from identifying challenges to forming and implementing small, measurable solutions—and bring those skills back to their communities."
+            "text": "Identifying the challenges that our world and communities face is the easy part. Learning how to take steps to address issues like climate change and structural racism takes grit and guts. Developing small and measurable group goals, we learn to move from identifying a problem to forming and implementing a solution. Wayfinders participants bring these skills to their communities to make a larger impact."
           },
           {
             "type": "h2",
@@ -350,7 +395,7 @@
           },
           {
             "type": "p",
-            "text": "The Wayfinders community is a place to define the values we want to live by, understand the systems around us, and consider organizing and leadership opportunities that can overcome barriers."
+            "text": "How do we create the community we want to be part of? The Wayfinders community is a microcosm of our larger community and a playground for defining the values that we want to live by. Exploring how our family and personal values align (or don’t align) with the kind of community we want to live in helps participants find their way to taking the steps to transform their communities. We look at our community with fresh eyes, trying to understand the systems and structures all around us that have led to profound inequality. And we consider organizing and leadership opportunities to overcome these barriers."
           },
           {
             "type": "h2",
@@ -358,31 +403,31 @@
           },
           {
             "type": "p",
-            "text": "Skilled mentors and a supportive peer group give genuine, positive identities room to evolve through self-driven experiences and project-based learning."
+            "text": "The adolescent stage is where the term “identity crisis” originated. Adolescents stop looking to their parents/guardians for guidance and instead look toward their peers and other adults. The “social brain” activates as they start orienting towards the bigger world. Individuation is front and center during this developmental time. Wayfinders are surrounded by skilled mentors and a supportive peer group, where genuine and positive identities have a chance to evolve. Participants at Wayfinders will find relevance and meaning through self-driven experiences and project based learning."
           },
           {
             "type": "h2",
-            "text": "Safe Space & Belonging"
+            "text": "Safe Space, Belonging"
           },
           {
             "type": "p",
-            "text": "Wayfinders are encouraged to be their authentic selves as they explore who they are, how they relate to people, and what they want to contribute to the world."
+            "text": "Humans are social beings, wired for membership in a group. When children are consumed by monitoring their environment for cues of rejection, they can’t take in new information. Social media is a cesspool for rejection - kids feel left out when they see gatherings that they are not included in and are subjected to constant comparison as they scroll through their feeds. This onslaught of rejection impacts self-confidence and creates vulnerability to mental illness. Wayfinders are encouraged to be their most authentic selves as they explore the big questions of who they are, how they relate to people, and what they want to contribute to the world. Participants will thrive in a culture of kindness, where they feel safe and a sense of belonging."
           },
           {
             "type": "h2",
-            "text": "Technology, Social Media & the Climate Crisis"
+            "text": "Technology, Social Media, COVID, the Climate Crisis"
           },
           {
             "type": "p",
-            "text": "Time outdoors, nature skills, fire circles, and shared experiences give young people room to slow down and reconnect with themselves, each other, and the natural world."
+            "text": "Our children spend more time indoors and on screens and are more isolated than they have ever been. Children spend 3-7 hours a day on screens and miss out on childhood experiences necessary for healthy development. Depression, anxiety, and suicide rates are on the rise and scientific evidence makes it clear that there are long-tem detrimental impacts on the brain. The climate crisis is real, and our kids (and all of us) are unclear about the inevitable shifts. Children today may need a different skill set to succeed in the new world than those that we were prepared for. The scientific evidence is clear- spending time outdoors, in nature, improves overall mental health. Therapists are prescribing time in nature rather than medication. Wayfinders gather in the woods and spend time bonding and sharing around fire circles where we slow down and feel the beauty of connecting with ourselves, each other, and the natural world. We practice survival skills that build our relationship with the elements as we explore animal tracking, shelter and fire building, plant, tree, and mushroom identification, and earth crafts."
           },
           {
             "type": "h2",
-            "text": "Your Child's Future"
+            "text": "Your Child’s Future"
           },
           {
             "type": "p",
-            "text": "Nature connection, social-emotional learning, team building, leadership development, and exercise help participants build resilience and learn to regulate emotions."
+            "text": "Transformative experiences during this stage of life, sets the stage for the future. EQ (Emotional Quotient) is now understood as a better indicator of success than IQ (Intelligence Quotient) and is used to identify leaders, good team players, and people who work well independently. Wayfinders experiences sharpen EQ through social emotional learning, team building, nature connection, leadership development, and exercise. Wayfinders infuses soft and hard skills necessary to help navigate the social world and increase resilience. Learning to self-monitor and regulate emotions will have positive lifelong impacts."
           },
           {
             "type": "h2",
@@ -390,11 +435,19 @@
           },
           {
             "type": "p",
-            "text": "Ceremonies create time to pause, reflect, and honor meaningful transitions, personal growth, and each participant’s impact on the larger community."
+            "text": "In today’s busy world, we find that we are often rushing from one activity to the next. In this scenario, life starts to feel like a run on sentence, without punctuation or time for breath. Between school, extracurriculars, busy weekends, and non-stop technology, we are running ragged and often failing to pause for reflection, celebration, or re-calibration. Rites of passage serve as a way of pausing and honoring significant milestones as we transition from one stage into another. Ceremonies allow us to hold space for these moments and make them stand out as special, beautiful, meaningful, and memorable. Wayfinders experience rites of passage in group and individual ceremonies and recognize the significance of their personal growth and their impact on the larger community."
+          },
+          {
+            "type": "h2",
+            "text": "Our children are disconnecting from themselves, their families, communities, and the earth as they enter their teenage years."
+          },
+          {
+            "type": "h2",
+            "text": "Wayfinders carves out time for youth to step away from the daily, to connect with purpose."
           },
           {
             "type": "p",
-            "text": "Acknowledgment and responsibility"
+            "text": "Land Acknowledgment and Responsibility"
           },
           {
             "type": "h2",
@@ -402,11 +455,7 @@
           },
           {
             "type": "p",
-            "text": "The Wayfinders team recognizes that the land where we live, work and play exists within the territory of the Lenape. We acknowledge the Lenape for their enduring stewardship of this place throughout the centuries and still today. We recognize a responsibility to learn about this history while educating new generations about how to live in right relationship with the earth and all of her inhabitants."
-          },
-          {
-            "type": "p",
-            "text": "Learning and relationship building is an ongoing pursuit and we welcome guidance and feedback as we endeavor to repair and restore this relationship."
+            "text": "The Wayfinders team recognizes that the land where we live, work and play exists within the territory of the Lenape. We acknowledge the Lenape for their enduring stewardship of this place throughout the centuries and still today. We recognize a responsibility to learn about this history while educating new generations about how to live in right relationship with the earth and all of her inhabitants. Learning and relationship building is an ongoing pursuit and we welcome guidance and feedback from all as we endeavor to repair and restore this relationship."
           },
           {
             "type": "p",
@@ -414,7 +463,15 @@
           },
           {
             "type": "h2",
-            "text": "Share in the beauty of the natural world."
+            "text": "Let’s meet up in real life to share in the beauty of the natural world."
+          },
+          {
+            "type": "h2",
+            "text": "Sign up to be the first to know about our events."
+          },
+          {
+            "type": "p",
+            "text": "wayfindersonthehudson@gmail.com(917) 318-3888"
           },
           {
             "type": "p",
@@ -451,7 +508,7 @@
             "href": "/fall-2026-base-camp-k-8"
           },
           {
-            "text": "Explore our programs",
+            "text": "Our Programs",
             "href": "/fall-2026-programs-overview"
           },
           {
@@ -485,17 +542,75 @@
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/227d8a88-377c-4bfe-ad80-969800129ce7/IMG_9797.jpg?format=1200w",
             "alt": "Children exploring together in the woods",
             "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/f4fe7b2e-c144-4a34-80e9-e2cc36020dbb/IMG_9824.jpg?format=1200w",
+            "alt": "Wayfinders participants spending time together in the woods",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/789b6d2c-2c18-4deb-bb72-77c490b848a1/IMG_9803.jpg?format=1200w",
+            "alt": "Wayfinders outdoor nature activity",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/263cf156-497a-437a-a4b2-dc628ab6ff0d/michaeala.jpg?format=1200w",
+            "alt": "Wayfinders participant outdoors",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/86eadd05-5ce1-40af-bdad-9a5c43c6be5d/Drawing+with+charcoal.jpeg?format=1200w",
+            "alt": "Drawing with charcoal during a Wayfinders activity",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/97cf9aeb-fa20-4b44-94dd-2e5017f7b3bd/43-Alice+Gwen+candle.jpeg?format=1200w",
+            "alt": "Wayfinders ceremony with a candle",
+            "title": ""
           }
         ],
         "embeds": [],
-        "forms": [],
+        "forms": [
+          {
+            "action": "",
+            "method": "get",
+            "fields": [
+              {
+                "type": "email",
+                "name": "",
+                "required": false
+              },
+              {
+                "type": "button",
+                "name": "",
+                "required": false
+              }
+            ]
+          },
+          {
+            "action": "",
+            "method": "get",
+            "fields": [
+              {
+                "type": "email",
+                "name": "",
+                "required": false
+              },
+              {
+                "type": "button",
+                "name": "",
+                "required": false
+              }
+            ]
+          }
+        ],
         "counts": {
-          "blocks": 44,
-          "headings": 14,
+          "blocks": 58,
+          "headings": 19,
           "links": 9,
-          "images": 2,
+          "images": 7,
           "embeds": 0,
-          "forms": 0
+          "forms": 2
         }
       }
     },
@@ -4421,8 +4536,89 @@
       },
       "target": {
         "url": "https://wayfinders-neon.vercel.app/message-from-founders",
-        "status": 404,
-        "error": "HTTP Error 404: Not Found"
+        "status": 200,
+        "title": "Message from the Founders | Wayfinders on the Hudson",
+        "word_count": 70,
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Wayfinders on the Hudson"
+          },
+          {
+            "type": "h1",
+            "text": "A Message from the Founders"
+          },
+          {
+            "type": "p",
+            "text": "Hear from Leah and Gwen about their mission!"
+          },
+          {
+            "type": "p",
+            "text": "This 54-second source video is temporarily referenced from Squarespace CDN pending confirmation of ownership and delivery of an approved original. A transcript was not present on the public source page and requires an owner-provided or approved transcription."
+          },
+          {
+            "type": "p",
+            "text": "Connecting with ourselves, each other, and the earth."
+          },
+          {
+            "type": "p",
+            "text": "Take the next step"
+          },
+          {
+            "type": "p",
+            "text": "Follow along"
+          },
+          {
+            "type": "li",
+            "text": "Instagram"
+          },
+          {
+            "type": "li",
+            "text": "Facebook"
+          }
+        ],
+        "links": [
+          {
+            "text": "public founders’ page",
+            "href": "https://www.wayfindersonthehudson.com/message-from-founders"
+          },
+          {
+            "text": "wayfindersonthehudson@gmail.com",
+            "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "Explore programs",
+            "href": "/fall-2026-programs-overview"
+          },
+          {
+            "text": "Donate",
+            "href": "/donate"
+          },
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/wayfindersonthehudson/"
+          },
+          {
+            "text": "Facebook",
+            "href": "https://www.facebook.com/wayfinders.on.the.hudson"
+          }
+        ],
+        "images": [],
+        "embeds": [
+          {
+            "type": "source",
+            "src": "https://video.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/83c7e413-f3c4-4094-9ad3-fd8ac4d8731d/playlist.m3u8"
+          }
+        ],
+        "forms": [],
+        "counts": {
+          "blocks": 9,
+          "headings": 1,
+          "links": 6,
+          "images": 0,
+          "embeds": 1,
+          "forms": 0
+        }
       }
     },
     {
@@ -4798,7 +4994,7 @@
           },
           {
             "type": "p",
-            "text": "Our core values focus on disconnecting from technology to reconnect with nature. Through this cultural repair work, Wayfinders strives to build stronger communities and next generation leaders who are connected to themselves, each other, and the earth."
+            "text": "Our core values focus on disconnecting from technology to reconnect with nature. Through this cultural repair work, Wayfinders' strives to build stronger communities and next generation leaders who are connected to themselves, each other, and the earth."
           }
         ],
         "links": [],
@@ -8230,7 +8426,7 @@
         "url": "https://wayfinders-neon.vercel.app/the-team",
         "status": 200,
         "title": "The Team | Wayfinders on the Hudson",
-        "word_count": 157,
+        "word_count": 2262,
         "blocks": [
           {
             "type": "p",
@@ -8242,7 +8438,7 @@
           },
           {
             "type": "p",
-            "text": "Nature connection specialists, counselors, mentors, and community leaders creating space to reconnect."
+            "text": "The current public team listing and its linked biographies are preserved below pending confirmation of every current affiliation."
           },
           {
             "type": "h2",
@@ -8253,12 +8449,36 @@
             "text": "Co-Founder, Executive Director"
           },
           {
+            "type": "p",
+            "text": "MA City Planning, LEED AP, Wild Earth Teacher Training, Certificate in Ecopsychology"
+          },
+          {
+            "type": "p",
+            "text": "Gwen is a climate and cultural repair activist. In addition to Wayfinders, Gwen consults with individuals and families working to reduce their carbon footprint, and to inspire and transform neighborhoods and communities. She spent 11 years managing Corporate Sustainability and ESG programs at Underwriters Laboratories (UL) working with REITs on strategic sustainability and culture change. She worked at Cushman & Wakefield as a Sustainability Strategist, Steven Winter Associates as a Sustainability Consultant, and at the New York City Department of City Planning in Environmental Review. Gwen's experience completing the Wild Earth Apprenticeship & Teacher Training - an in-depth experiential training on nature mentoring, wilderness living skills, & creating connective nature experiences - motivated her to fulfill her long-standing dream of developing Wayfinders. Gwen was Chair of the Aligned Center Mentorship Program, life cycles teacher at Slide Ranch, K-12 curriculum developer for the Service-Learning Waste Management Program, Training Director for Amigos volunteers in community organizing & Spanish, conference and protest organizer for the Native Forest Network, City Repair community organizer in Portland, OR, and developer and teacher of a UVM course on Ecopsychology. She completed her BA in Environmental Studies and Sociology from UVM and received her MA in Urban and Region Planning from PSU. Gwen strongly believes in Wayfinders mission to provide youth with the tools to prepare for and become leaders of their generation."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /gwen"
+          },
+          {
             "type": "h2",
             "text": "Leah Gozhansky"
           },
           {
             "type": "p",
             "text": "Co-Founder, Program Director"
+          },
+          {
+            "type": "p",
+            "text": "M.A Psychological Counseling, Ed.M Psychological Counseling & Education, Certified Nature Informed Therapist"
+          },
+          {
+            "type": "p",
+            "text": "Leah is a Certified Nature-Informed Therapist who spent fifteen years working As a School Counselor at Ardsley High School and Bard High School Early College in Manhattan. She taught elementary school through Teach for America. Her extensive experience working in schools is complemented by her work in a psychiatric hospital and substance abuse clinic. She currently works as the Program Director of Wayfinders & facilitates walk and talk counseling sessions in the woods with adults. Leah earned her Masters degrees in Psychological Counseling from Columbia University and a Masters of Education through National Louis University, and a BA in Psychology from the University of Vermont. Leah is certified in Dialectical Behavior Therapy (Step A) and Mindfulness-Based Stress Reduction, and has received foundational training in Cognitive Behavioral Therapy. She is certified in child and adolescent yoga. Leah believes deeply in the mental health benefits of nature connection. She brings a wealth of experience in social-emotional learning, counseling, mindfulness, meditation, reflection, validation, group dynamics, and interpersonal relationships to foster a strong sense of self and a deeper connection to our community and the world around us."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /leah"
           },
           {
             "type": "h2",
@@ -8269,28 +8489,124 @@
             "text": "Mentor"
           },
           {
+            "type": "p",
+            "text": "Sayako is a Wayfinders Mentor who works with youth in Base Camp and early childhood educators in Wayfinders’ teacher trainings."
+          },
+          {
+            "type": "p",
+            "text": "Sayako recently graduated from Mount Holyoke College with a degree in Geography and Economics. Her studies focused on human-environment relations and currently inform her interest in fostering meaningful connections between people and the environment. Sayako also brings her experiences from climate justice organizing spaces and her training as a Junior Master in Taekwondo to Wayfinders’ dynamic community."
+          },
+          {
+            "type": "p",
+            "text": "She looks forward to learning with and from everyone at Wayfinders!"
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /sayako-aizeki-nevins"
+          },
+          {
             "type": "h2",
             "text": "Rebecca D’Elia"
+          },
+          {
+            "type": "p",
+            "text": "MA Psychological Counseling, School Counselor, NOLS Instructor"
+          },
+          {
+            "type": "p",
+            "text": "Rebecca is Wayfinders Lead Mentor and oversees all of Base Camp. She is an experienced outdoor educator and trained school counselor. She is passionate about helping people gain confidence in themselves and connect with one another through outdoor experiential learning. She spent six years teaching and leading at the High Mountain Institute in Colorado, where she filled many roles, including French Teacher, Environmental Ethics Teacher, Wilderness Instructor, Student Advisor, and Dean of Students. She is a trained National Outdoor Leadership Instructor, and she has run pre-teen and teen empowerment programs such as Girls on the Run and Smart-Girl. Rebecca earned her Masters of Education in Psychological Counseling from Columbia University, and her BA in Education and French at Colby College. She has been leading young people in the woods for over 15 years and plans to do so for as long as she is able!"
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /rebecca-dellia"
           },
           {
             "type": "h2",
             "text": "Bryte Gordon"
           },
           {
+            "type": "p",
+            "text": "Research Scientist, Ph.D."
+          },
+          {
+            "type": "p",
+            "text": "Bryte Gordon is a Ph.D. research scientist who studied small molecule metal enzyme mimics and specialized in x-ray crystallography. For over 15 years she has been working in the realm of intellectual property law with cutting edge innovators in biotech and green tech. Through it all, Bryte remains a child at heart and her deepest love is to be in the woods with little people."
+          },
+          {
+            "type": "p",
+            "text": "As a graduate student, Bryte was a founding member of Women in Science at Columbia, where she helped run the Saturday Science Starters program that hosted young girls from Harlem at the Columbia Chemistry Department to engage in fun and enriching science experiments."
+          },
+          {
+            "type": "p",
+            "text": "Bryte has also been an active member of the Non-Violent Communication community for a number of years now and is excited to continue to cultivate opportunities for deep listening, empathic connection and awareness with nature, within herself, with the Wayfinders tribe and beyond!"
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /bryte-gordon"
+          },
+          {
             "type": "h2",
             "text": "Sonjaia McCrae"
+          },
+          {
+            "type": "p",
+            "text": "Sonjaia has an exceptional amount of experience working with children from being a camp counselor at an outdoors-based sleep away camp."
+          },
+          {
+            "type": "p",
+            "text": "Sonjaia strongly believes that keeping the outdoors instilled in our everyday lives is very important; whether taking a quick walk or sitting outside to take in the environment around you, she prioritizes this herself and wants to bring that quality to children. Sonjaia enjoys taking walks and photographing nature during her free time."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /sonjaia-mccrae"
           },
           {
             "type": "h2",
             "text": "Stacie Bartolotta"
           },
           {
+            "type": "p",
+            "text": "Stacie brings more than 10 years of nature education experience to the Wayfinders team. For the past 4 years Stacie has been leading nature field trips, camps and partnership programs at Wave Hill Public Garden & Cultural Center. Prior to Wave Hill, Stacie was an Urban Park Ranger for NYC Parks. Valedictorian of her academy class, Stacie led guided camping, canoeing, fishing and survival programs for city residents, Facebook Live programs for thousands across the country and performed wildlife rescues of injured or abandoned animals. Originally from Colorado, Stacie first came to NYC in 2008 for an Americorp program and has never left."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /stacie-bartolotta"
+          },
+          {
             "type": "h2",
             "text": "Hannah Van Dolsen"
           },
           {
+            "type": "p",
+            "text": "MA in Teaching English to Speakers of Other Languages, MA Early Childhood Education (in progress), Forest School Educator"
+          },
+          {
+            "type": "p",
+            "text": "Hannah has always had a deep love and appreciation for nature and the youngest learners. She joined the Wayfinders community after working as a first grade teacher in a public, dual-language (Spanish) program in Washington Heights. Hannah was a loved teacher at Little Leaf Forest Preschool over several seasons before having her son."
+          },
+          {
+            "type": "p",
+            "text": "Prior to teaching in the NYC DOE, Hannah received a M.A. in Teaching English to Speakers of Other Languages at Teachers College and is currently finishing her M.A. in Early Childhood Education at Bank Street College of Education. She has worked in day care and preschool settings with influences of Reggio Emilia and Montessori."
+          },
+          {
+            "type": "p",
+            "text": "Hannah is inspired by and committed to the role of the natural world as children’s primary teacher, and cannot wait to see how children’s worlds expand with experiences in the dirt, sun, and forest. When she is not teaching, she loves to hike with her rescue pup, Junie, throughout New York State. Hannah also enjoys reading, exploring art and theater, and spending lots of time with her family and friends."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /hannah-van-dolsen"
+          },
+          {
             "type": "h2",
             "text": "Emily Orr"
+          },
+          {
+            "type": "p",
+            "text": "The Team page currently lists Emily Orr and links to /emily, but that public profile returns 404. Her role, biography, and current affiliation require an owner decision."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /emily"
           },
           {
             "type": "h2",
@@ -8298,7 +8614,15 @@
           },
           {
             "type": "p",
-            "text": "Creative Ritual Director"
+            "text": "B-Mitzvah Guide, Youth Mentor, Interfaith Minister, and the Creative Ritual Director of Wayfinders."
+          },
+          {
+            "type": "p",
+            "text": "For the past 6 years, Miriam served in the roles of Director of Programming, and Director of Membership at Romemu, NYC’s largest Jewish Renewal community. Miriam has been trained as a Purpose Guide™, Environmental Educator, and Interfaith Minister. Over the past 15 years, she has guided hundreds of youth and adults in deepening their connection to the earth, to their cultural history, and to the wisdom of their soul. Miriam was an outdoor educator for 7 years, where she guided hundreds of students to learn about their relationship with the earth, and designed unique rites of passage programs that supported adolescent development. Miriam is a Nature-based B-Mitzvah guide, she supports each of her students (youth and adults) in gaining their own personal and profound connection to the Hebrew language, to the wisdom of the tradition, and a deeper understanding of their own unique passions and purpose. Miriam sees nature connection, soul-growth, and the involvement of community, as critical practices for creating a meaningful and inspiring response to the urgent times that we're living in. Miriam earned her Bachelors degree at Barnard College in Environmental Science, where she studied the impacts of climate change on the relationship to pollen production in Northeast plant populations. She earned her Massage Therapy License in 2013 and specializes in Somatic Education, trigger-point therapy, and somatic-neural pathway re-education. After being guided through the Soul Purpose Discovery Process under the mentorship of Jonathan Gustin, Miriam found the work to be so profound that she decided to train as a Purpose Guide™. She is proud and humbled to serve as spiritual advisor for Wayfinders on the Hudson as it integrates her life's work."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /miriam"
           },
           {
             "type": "h2",
@@ -8309,8 +8633,36 @@
             "text": "Board Member"
           },
           {
+            "type": "p",
+            "text": "Jennie Brotman is a consultant working at the intersection of education and mental health to support organizations dedicated to youth and family wellbeing. She partners with nonprofits, foundations, and programs in areas such as strategic thought partnership, program design, learning & improvement, and professional writing."
+          },
+          {
+            "type": "p",
+            "text": "Jennie has been working to promote quality and equity in the education field for over twenty years, as a nonprofit programmatic leader, professor, researcher, curriculum writer, coach, professional learning facilitator, and middle school teacher. She has designed and scaled programs that have impacted thousands of students and teachers (as Director of Service Design at Teaching Matters), secured multi-million dollar grants to bring creative, equity-centered initiatives to life (from institutions such as the Bill & Melinda Gates Foundation), and contributed to the learning of the field through published academic research (based on a PhD in Science Education from Teachers College, Columbia University). She is also a passionate advocate for mental health agendas and a peer support for struggling parents with Other Parents Like Me."
+          },
+          {
+            "type": "p",
+            "text": "Jennie comes to Wayfinders as both a professional and a parent with firsthand experience of how nature connection, paired with social-emotional learning and community building, can powerfully support the mental health and identity development of young people."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /jennie"
+          },
+          {
             "type": "h2",
             "text": "Jaime Schwarz"
+          },
+          {
+            "type": "p",
+            "text": "Brand Therapist/Creative Director"
+          },
+          {
+            "type": "p",
+            "text": "Jaime Schwarz holds a BA in psychology and philosophy from Colgate University. He served at over a dozen agencies during his copywriting and creative direction career working on over 100 brands. He holds Cannes Lion, Clio, One Show, Webby, and B2B awards and has been published in industry magazines and books. In 2017, he founded Pro4Bono as a nonprofit-focused product development agency, but as those products became projects, Jaime became a serial co-founder, helping to launch startups focused on betterment, education, and web3 technologies. He served on the marketing advisory board of DoSomething.org from 2016-2019. In 2018, he began patenting systems and methods for certifying and empowering virtual objects in service of an open metaverse. In 2022, he founded Brand Therapy, a consultancy based on evolving brand strategy into brand consciousness so that brands can speak for themselves, helping with stakeholder alignment and authentic consumer connections. Beyond enjoying his board services for Wayfinders on the Hudson, Jaime is the Chief Brand Officer Parallel Worlds.us, the co-founder of TeamFlow.Institute, an advisor for DCarbon.solutions and XRSI.org, and an adjunct lecturer at City College's Branding and Integrated Communications school. He has been a Hastings resident since 2021 and is a proud 3rd year Wayfinders parent."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /jaime-schwarz-1"
           },
           {
             "type": "h2",
@@ -8318,7 +8670,23 @@
           },
           {
             "type": "p",
-            "text": "Our story"
+            "text": "Board Director"
+          },
+          {
+            "type": "p",
+            "text": "Aron Goldman is a Trainer/Advisor at ABFE. He is a nonprofit leader with a deep commitment to equity and social justice, and a track record of helping organizations, movements, and leaders make meaningful change. Trust-based relationships drive his work with grassroots organizations and larger systems, funders and grant seekers, professionals and lay leaders, and community stakeholders alike."
+          },
+          {
+            "type": "p",
+            "text": "Aron is an experienced organizational development consultant, nonprofit manager, board leader, facilitator, trainer, thought leader and writer, educator, and activist focused on root causes, structural change, and long-term sustainability."
+          },
+          {
+            "type": "p",
+            "text": "Source profile: /aron-goldman"
+          },
+          {
+            "type": "p",
+            "text": "Our Story"
           },
           {
             "type": "h2",
@@ -8326,11 +8694,11 @@
           },
           {
             "type": "p",
-            "text": "Gwen, a nature connection specialist and trained eco-psychologist, and Leah, a school counselor and certified nature-informed therapist, have been in each other's lives for more than fifteen years and have worked together at Wayfinders for the last five."
+            "text": "Gwen (Nature Connection Specialist & Trained Eco-Psychologist) & Leah (School Counselor & Certified Nature Informed Therapist) have been in each others lives for more than fifteen years and have been working together at Wayfinders for the last five! Their synergies are truly magical and together they elevate all things eco, psychology, and mentoring into a collaborative dynamic duo full of intense joyfulness and smarts. They have successfully run programs for all ages, from newborns through elders together. Wayfinders is their platform to harness sunshine and smiles, and manifest social and environmental change."
           },
           {
             "type": "p",
-            "text": "Together, they bring nature connection, counseling, coaching, psychology, and mentoring to programs for all ages—from newborns through elders. Additional support comes from a team of seasoned nature-connection mentors and board members."
+            "text": "The fusion of Gwen's nature connection & Leah's counseling and coaching creates a powerful combination. Additional support is provided by our stellar team of seasoned nature connection mentors and board members."
           },
           {
             "type": "p",
@@ -8359,55 +8727,55 @@
         ],
         "links": [
           {
-            "text": "Read bio →",
+            "text": "/gwen",
             "href": "https://www.wayfindersonthehudson.com/gwen"
           },
           {
-            "text": "Read bio →",
+            "text": "/leah",
             "href": "https://www.wayfindersonthehudson.com/leah"
           },
           {
-            "text": "Read bio →",
+            "text": "/sayako-aizeki-nevins",
             "href": "https://www.wayfindersonthehudson.com/sayako-aizeki-nevins"
           },
           {
-            "text": "Read bio →",
+            "text": "/rebecca-dellia",
             "href": "https://www.wayfindersonthehudson.com/rebecca-dellia"
           },
           {
-            "text": "Read bio →",
+            "text": "/bryte-gordon",
             "href": "https://www.wayfindersonthehudson.com/bryte-gordon"
           },
           {
-            "text": "Read bio →",
+            "text": "/sonjaia-mccrae",
             "href": "https://www.wayfindersonthehudson.com/sonjaia-mccrae"
           },
           {
-            "text": "Read bio →",
+            "text": "/stacie-bartolotta",
             "href": "https://www.wayfindersonthehudson.com/stacie-bartolotta"
           },
           {
-            "text": "Read bio →",
+            "text": "/hannah-van-dolsen",
             "href": "https://www.wayfindersonthehudson.com/hannah-van-dolsen"
           },
           {
-            "text": "Read bio →",
+            "text": "/emily",
             "href": "https://www.wayfindersonthehudson.com/emily"
           },
           {
-            "text": "Read bio →",
+            "text": "/miriam",
             "href": "https://www.wayfindersonthehudson.com/miriam"
           },
           {
-            "text": "Read bio →",
+            "text": "/jennie",
             "href": "https://www.wayfindersonthehudson.com/jennie"
           },
           {
-            "text": "Read bio →",
+            "text": "/jaime-schwarz-1",
             "href": "https://www.wayfindersonthehudson.com/jaime-schwarz-1"
           },
           {
-            "text": "Read bio →",
+            "text": "/aron-goldman",
             "href": "https://www.wayfindersonthehudson.com/aron-goldman"
           },
           {
@@ -8433,83 +8801,78 @@
         ],
         "images": [
           {
-            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/bd8cee37-159f-4a4e-a50e-53f6de5d19a1/Gwen%2C+Aron%2C+Leah.jpg?format=1200w",
-            "alt": "Wayfinders founders and board leadership together outdoors",
-            "title": ""
-          },
-          {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1632843226106-IQ5754HO4IDXYPKY7BUA/Gwen.jpg?format=1200w",
-            "alt": "Gwen Merkin, Wayfinders team member",
+            "alt": "Portrait of Gwen Merkin",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1632844439711-GT7TIUAFEL9FTT6QCMYV/leah.jpg?format=1200w",
-            "alt": "Leah Gozhansky, Wayfinders team member",
+            "alt": "Portrait of Leah Gozhansky",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/45b9265a-b0e2-4ba7-8fef-b0f8f93ca037/P1000301+%283%29.png?format=1200w",
-            "alt": "Sayako Aizeki-Nevins, Wayfinders team member",
+            "alt": "Portrait of Sayako Aizeki-Nevins",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1654546283146-K7PJ57I5QCSLPDVRJ6UW/Rebecca+2.jpeg?format=1200w",
-            "alt": "Rebecca D’Elia, Wayfinders team member",
+            "alt": "Portrait of Rebecca D’Elia",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3431ef0d-ebb5-4e75-94a5-e874e632a2ae/IMG_0100.jpg?format=1200w",
-            "alt": "Bryte Gordon, Wayfinders team member",
+            "alt": "Portrait of Bryte Gordon",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/08e2b6db-a51b-4c00-bff1-452d87d46c68/IMG_1930.jpeg?format=1200w",
-            "alt": "Sonjaia McCrae, Wayfinders team member",
+            "alt": "Portrait of Sonjaia McCrae",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/a7534f4d-af41-4ce3-b138-5aa62e44f2e8/69573019-6189-4D41-B205-91021AB4F524.png?format=1200w",
-            "alt": "Stacie Bartolotta, Wayfinders team member",
+            "alt": "Portrait of Stacie Bartolotta",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1660759281327-2B4283WJVP3ER6SID3SR/Hannah+Van+Dolsen.jpeg?format=1200w",
-            "alt": "Hannah Van Dolsen, Wayfinders team member",
+            "alt": "Portrait of Hannah Van Dolsen",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/7bb0ccf5-de71-4b46-bf32-3aefd1d56ba8/Emily+Orr_Photo.jpeg?format=1200w",
-            "alt": "Emily Orr, Wayfinders team member",
+            "alt": "Portrait of Emily Orr",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1632846478758-PL1V4NV2BVYJO77PKHQ5/Miriam.jpg?format=1200w",
-            "alt": "Miriam Rubin, Wayfinders team member",
+            "alt": "Portrait of Miriam Rubin",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/981aa327-aae9-464c-b760-b4f2fc3fabc4/240411_Brotman00258retouch+VertCrop+copy.jpg?format=1200w",
-            "alt": "Jennie Brotman, Wayfinders team member",
+            "alt": "Portrait of Jennie Brotman",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/9fc3a2d2-ed1d-41c4-90bf-ef0a9a6c2d72/jaime+outside+headshot.jpg?format=1200w",
-            "alt": "Jaime Schwarz, Wayfinders team member",
+            "alt": "Portrait of Jaime Schwarz",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/bd8cee37-159f-4a4e-a50e-53f6de5d19a1/Gwen%2C+Aron%2C+Leah.jpg?format=1200w",
-            "alt": "Aron Goldman, Wayfinders team member",
+            "alt": "Portrait of Aron Goldman",
             "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 31,
+          "blocks": 74,
           "headings": 15,
           "links": 18,
-          "images": 14,
+          "images": 13,
           "embeds": 0,
           "forms": 0
         }
