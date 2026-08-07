@@ -30,3 +30,6 @@ Thumbs.db
 
 # jetbrains setting folder
 .idea/
+
+# Visual parity captures are generated review artifacts; binary files are not committed.
+docs/content-parity/screenshots/
