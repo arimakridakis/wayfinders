@@ -3,12 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
 import Button from '../components/global/Button.astro';
+import Callout from '../components/sections/Callout.astro';
+import KeyDetails from '../components/sections/KeyDetails.astro';
+import MediaSplit from '../components/sections/MediaSplit.astro';
 ---
 <BaseLayout title="Contact" description="">
   <PageHero eyebrow="Connect with Wayfinders" title="Contact Us" intro="We would love to hear from you! Contact us to learn more about our mission and work, get involved, or register for a program." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/8d8c5ce2-addd-4888-a32d-44925828c3f7/trees.jpeg?format=1200w" alt="Looking up into a canopy of trees" />
 
   <Section tone="alternate" width="prose">
-    <div class="newsletter">
+    <Callout><div class="newsletter">
       <h2 class="type-section">Join our Mailing List</h2>
       <p>Sign up with your email address to receive news and updates.</p>
       <div class="field-preview" aria-label="Mailing-list form awaiting delivery confirmation">
@@ -18,20 +21,19 @@ import Button from '../components/global/Button.astro';
       </div>
       <p class="delivery-note">Mailing-list delivery requires owner confirmation. No information is collected by this page.</p>
       <p class="privacy">We respect your privacy.</p>
-    </div>
+    </div></Callout>
   </Section>
 
   <Section width="wide">
-    <div class="contact-grid">
-      <div>
+    <MediaSplit align="start">
+      <Fragment slot="copy">
         <h2 class="type-section">Contact Us</h2>
         <p>We would love to hear from you! Contact us to learn more about our mission and work, get involved, or register for a program.</p>
         <p>Let us know if you are looking to register for our new Programs: <strong>Forest Movement, Wise Owls, Motherhood Rising: Tending the Roots, FREE Forest Bathing</strong> or for more information on <strong>Corporate Retreats, School Programs, Internships, Base Camp, Passages,</strong> or just want to stay in touch!</p>
         <p>Please let us know if you would like to to set up an <strong>Information Session.</strong></p>
-        <p><strong>email:</strong> <a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a></p>
-        <p><strong>call:</strong> <a href="tel:+19173183888">(917) 318-3888</a></p>
-      </div>
-      <div class="contact-form" aria-label="Contact form awaiting delivery confirmation">
+        <KeyDetails heading="Contact details"><dt>email:</dt><dd><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a></dd><dt>call:</dt><dd><a href="tel:+19173183888">(917) 318-3888</a></dd></KeyDetails>
+      </Fragment>
+      <div slot="media" class="contact-form" aria-label="Contact form awaiting delivery confirmation">
         <fieldset disabled>
           <legend class="sr-only">Contact form</legend>
           <span class="group-label">Name</span>
@@ -45,13 +47,13 @@ import Button from '../components/global/Button.astro';
         </fieldset>
         <p class="delivery-note">Contact-form delivery requires owner confirmation. No information is collected by this page; use the email or telephone action instead.</p>
       </div>
-    </div>
+    </MediaSplit>
   </Section>
 </BaseLayout>
 <style>
   .newsletter{text-align:center}.newsletter h2{margin-top:0}.privacy,.delivery-note{font-size:.875rem;color:var(--color-ink-muted)}
   .field-preview{display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:end;max-width:38rem;margin:1.5rem auto}.field-preview label{text-align:left}.field-preview label,.contact-form label,.group-label{display:grid;gap:.4rem;font-weight:700}.field-preview span,.contact-form span{font-weight:400;color:var(--color-ink-muted)}
   input,textarea{width:100%;padding:.8rem;border:1px solid var(--color-line);border-radius:var(--radius-button);background:var(--color-surface);color:var(--color-ink);font:inherit}input:disabled,textarea:disabled{opacity:.8;cursor:not-allowed}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--column-gap)}.contact-grid h2{margin-top:0}.contact-grid a{overflow-wrap:anywhere}.contact-form fieldset{display:grid;gap:1.25rem;margin:0;padding:0;border:0}.name-fields{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.contact-form .button{justify-self:start}
-  @media(max-width:47.999rem){.contact-grid,.name-fields,.field-preview{grid-template-columns:1fr}.field-preview :global(.button){width:100%}}
+  .contact-form h2{margin-top:0}.contact-form a{overflow-wrap:anywhere}.contact-form fieldset{display:grid;gap:1.25rem;margin:0;padding:0;border:0}.name-fields{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.contact-form .button{justify-self:start}
+  @media(max-width:47.999rem){.name-fields,.field-preview{grid-template-columns:1fr}.field-preview :global(.button){width:100%}}
 </style>
