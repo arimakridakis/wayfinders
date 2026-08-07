@@ -1,0 +1,9 @@
+<div class="disclosure-list"><slot /></div>
+<style>
+  .disclosure-list { border-top: 1px solid var(--color-line); }
+  .disclosure-list :global(details) { padding-block: 1.4rem; border-bottom: 1px solid var(--color-line); }
+  .disclosure-list :global(summary) { cursor: pointer; color: var(--color-forest-dark); }
+  .disclosure-list :global(details > div) { padding: .5rem 0 0 1.75rem; color: var(--color-ink-muted); }
+  .disclosure-list :global(details > div > :last-child) { margin-bottom: 0; }
+  @media (max-width: 35.999rem) { .disclosure-list :global(details > div) { padding-left: 0; } }
+</style>

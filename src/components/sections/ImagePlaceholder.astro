@@ -1,0 +1,28 @@
+---
+interface Props {
+  label: string;
+  aspect?: '1:1' | '4:3' | '3:4' | '16:9';
+  note?: string;
+  class?: string;
+}
+const { label, aspect = '4:3', note, class: className = '' } = Astro.props;
+const ratios = { '1:1': '1 / 1', '4:3': '4 / 3', '3:4': '3 / 4', '16:9': '16 / 9' };
+const cropNames = { '1:1': 'Square', '4:3': 'Landscape', '3:4': 'Portrait', '16:9': 'Wide landscape' };
+---
+<div class:list={['image-placeholder', className]} style={`--placeholder-ratio: ${ratios[aspect]}`} role="img" aria-label={`Image placeholder: ${label}. ${cropNames[aspect]} crop, ${aspect}.`}>
+  <div>
+    <p class="type-label">Image placeholder</p>
+    <p class="label">{label}</p>
+    <p class="meta">{cropNames[aspect]} crop · {aspect}</p>
+    {note && <p class="note">{note}</p>}
+  </div>
+</div>
+<style>
+  .image-placeholder { display: grid; width: 100%; aspect-ratio: var(--placeholder-ratio); place-items: center; padding: var(--card-padding); border: 1px dashed var(--color-moss); border-radius: var(--radius-card); background: var(--color-surface-muted); color: var(--color-forest-dark); text-align: center; }
+  .image-placeholder > div { display: grid; max-width: 28rem; gap: .5rem; }
+  p { margin: 0; }
+  .type-label { color: var(--color-rust); }
+  .label { font-family: var(--font-display); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; line-height: 1.2; }
+  .meta, .note { color: var(--color-ink-muted); font-size: .875rem; }
+  .note { padding-top: .5rem; border-top: 1px solid var(--color-line); }
+</style>

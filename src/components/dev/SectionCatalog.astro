@@ -1,0 +1,44 @@
+---
+import Button from '../global/Button.astro';
+import Section from '../global/Section.astro';
+import PageHero from '../sections/PageHero.astro';
+import MediaSplit from '../sections/MediaSplit.astro';
+import ImagePlaceholder from '../sections/ImagePlaceholder.astro';
+import CardGrid from '../sections/CardGrid.astro';
+import InfoCard from '../sections/InfoCard.astro';
+import KeyDetails from '../sections/KeyDetails.astro';
+import DisclosureList from '../sections/DisclosureList.astro';
+import ImageGallery from '../sections/ImageGallery.astro';
+import Callout from '../sections/Callout.astro';
+import CallToAction from '../sections/CallToAction.astro';
+---
+<PageHero eyebrow="Development catalog" title="Baseline section recipes" intro="Representative content for responsive and accessibility review. This component is intentionally not connected to a production route.">
+  <ImagePlaceholder slot="media" label="Participants learning together outdoors" aspect="4:3" />
+</PageHero>
+<Section width="wide">
+  <MediaSplit>
+    <div slot="copy"><p class="type-label">Text and image split</p><h2 class="type-section">Copy and imagery work as a pair.</h2><p>Use this structure when one image directly supports the adjacent explanation.</p></div>
+    <ImagePlaceholder slot="media" label="Hands working with natural materials" aspect="4:3" note="Show the activity closely enough to understand it." />
+  </MediaSplit>
+</Section>
+<Section tone="alternate" width="wide">
+  <h2 class="type-section">Card grids</h2>
+  <CardGrid columns={3}>
+    <InfoCard heading="Tuesday" label="Program option" headingLevel="h3"><p>Concise peer information belongs in a shared card.</p><Button slot="action" href="#catalog-action">Choose Tuesday</Button></InfoCard>
+    <InfoCard heading="Wednesday" label="Program option" headingLevel="h3"><p>Cards remain a single column at narrow widths.</p><Button slot="action" href="#catalog-action">Choose Wednesday</Button></InfoCard>
+    <InfoCard heading="Thursday" label="Program option" headingLevel="h3"><p>Actions stay near the information they affect.</p><Button slot="action" href="#catalog-action">Choose Thursday</Button></InfoCard>
+  </CardGrid>
+</Section>
+<Section width="wide">
+  <div class="pair">
+    <KeyDetails heading="Key details"><dt>Dates</dt><dd>Representative dates</dd><dt>Location</dt><dd>Representative location</dd><dt>Eligibility</dt><dd>Representative audience</dd></KeyDetails>
+    <div><h2 class="type-section">Disclosure list</h2><DisclosureList><details><summary class="type-card">What belongs in a disclosure?</summary><div><p>Long optional explanations that visitors can reveal without JavaScript.</p></div></details><details><summary class="type-card">Does it work with a keyboard?</summary><div><p>Native details and summary elements retain built-in keyboard behavior.</p></div></details></DisclosureList></div>
+  </div>
+</Section>
+<Section tone="alternate" width="wide">
+  <h2 class="type-section">Gallery and callout</h2>
+  <ImageGallery layout="featured"><ImagePlaceholder label="Featured community moment" aspect="4:3" /><ImagePlaceholder label="Supporting activity" aspect="4:3" /><ImagePlaceholder label="Supporting landscape" aspect="4:3" /></ImageGallery>
+  <div class="catalog-space"><Callout><strong>Important notice:</strong> Use a callout for concise information that should be easy to find.</Callout></div>
+</Section>
+<Section width="wide" id="catalog-action"><CallToAction heading="Take the next step."><p>Keep the action focused and the supporting copy short.</p><Fragment slot="actions"><Button href="#">Primary action</Button><Button href="#" variant="secondary">Secondary action</Button></Fragment></CallToAction></Section>
+<style>.pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--column-gap); }.pair h2, section > h2 { margin-top: 0; }.catalog-space { margin-top: 2rem; } @media (max-width: 47.999rem) { .pair { grid-template-columns: 1fr; } }</style>

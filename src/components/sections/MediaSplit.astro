@@ -1,0 +1,20 @@
+---
+interface Props { imagePosition?: 'left' | 'right'; align?: 'center' | 'start'; }
+const { imagePosition = 'right', align = 'center' } = Astro.props;
+---
+<div class:list={['media-split', `media-${imagePosition}`, `align-${align}`]}>
+  <div class="copy"><slot name="copy" /></div>
+  <div class="media"><slot name="media" /></div>
+</div>
+<style>
+  .media-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr); gap: var(--column-gap); }
+  .align-center { align-items: center; }
+  .align-start { align-items: start; }
+  .media-left .media { grid-column: 1; grid-row: 1; }
+  .media-left .copy { grid-column: 2; }
+  .copy { min-width: 0; }
+  .copy :global(> :first-child), .media :global(> :first-child) { margin-top: 0; }
+  .copy :global(> :last-child), .media :global(> :last-child) { margin-bottom: 0; }
+  .media :global(img) { width: 100%; height: auto; border-radius: var(--radius-card); }
+  @media (max-width: 47.999rem) { .media-split { grid-template-columns: 1fr; } .media-left .copy, .media-left .media { grid-column: 1; } .media-left .copy { grid-row: 1; } .media-left .media { grid-row: 2; } }
+</style>

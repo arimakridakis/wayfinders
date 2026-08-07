@@ -1,0 +1,11 @@
+---
+interface Props { tone?: 'cream' | 'forest'; }
+const { tone = 'cream' } = Astro.props;
+---
+<aside class:list={['callout', `tone-${tone}`]}><slot /></aside>
+<style>
+  .callout { padding: var(--card-padding); border-left: .35rem solid var(--color-rust); border-radius: 0 var(--radius-card) var(--radius-card) 0; background: var(--color-cream); }
+  .tone-forest { border-left-color: var(--color-sage); background: var(--color-forest-dark); color: var(--color-cream); }
+  .callout :global(> :first-child) { margin-top: 0; }
+  .callout :global(> :last-child) { margin-bottom: 0; }
+</style>

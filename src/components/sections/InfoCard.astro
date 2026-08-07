@@ -1,0 +1,19 @@
+---
+interface Props { heading: string; label?: string; headingLevel?: 'h2' | 'h3'; }
+const { heading, label, headingLevel: Heading = 'h3' } = Astro.props;
+---
+<article class="info-card">
+  {label && <p class="type-label">{label}</p>}
+  <Heading class="type-card">{heading}</Heading>
+  <div class="content"><slot /></div>
+  <div class="action"><slot name="action" /></div>
+</article>
+<style>
+  .info-card { display: flex; align-items: flex-start; flex-direction: column; padding: var(--card-padding); border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+  .type-label { margin: 0 0 .65rem; color: var(--color-rust); }
+  .type-card { margin: 0; }
+  .content { width: 100%; flex: 1; color: var(--color-ink-muted); }
+  .content :global(> :last-child) { margin-bottom: 0; }
+  .action { margin-top: 1.5rem; }
+  .action:empty { display: none; }
+</style>

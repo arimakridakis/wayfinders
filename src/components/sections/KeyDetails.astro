@@ -1,0 +1,21 @@
+---
+interface Props { heading: string; }
+const { heading } = Astro.props;
+---
+<div class="key-details">
+  <h2 class="type-card">{heading}</h2>
+  <dl><slot /></dl>
+  <div class="notice"><slot name="notice" /></div>
+  <div class="action"><slot name="action" /></div>
+</div>
+<style>
+  .key-details { padding: var(--card-padding); border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); }
+  h2 { margin: 0 0 1.5rem; }
+  dl { display: grid; grid-template-columns: minmax(8rem, .45fr) 1fr; margin: 0; gap: .75rem 1.5rem; }
+  dl :global(dt) { font-weight: 750; }
+  dl :global(dd) { margin: 0; color: var(--color-ink-muted); }
+  .notice { margin-top: 1.5rem; }
+  .notice:empty, .action:empty { display: none; }
+  .action { margin-top: 1.5rem; }
+  @media (max-width: 35.999rem) { dl { grid-template-columns: 1fr; gap: .15rem; } dl :global(dd + dt) { margin-top: .75rem; } }
+</style>
