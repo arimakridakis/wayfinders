@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at": "2026-08-07T18:25:12+00:00",
+  "captured_at": "2026-08-07T18:47:26+00:00",
   "source_base": "https://www.wayfindersonthehudson.com",
   "target_base": "https://wayfinders-neon.vercel.app",
   "inventory": "docs/migration-inventory.csv",
@@ -515,6 +515,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -606,7 +610,7 @@
         "counts": {
           "blocks": 58,
           "headings": 19,
-          "links": 9,
+          "links": 10,
           "images": 7,
           "embeds": 0,
           "forms": 2
@@ -727,12 +731,12 @@
       "target": {
         "url": "https://wayfinders-neon.vercel.app/autumn-2026-womens-retreat",
         "status": 200,
-        "title": "Autumn 2026 Women’s Retreat | Wayfinders on the Hudson",
-        "word_count": 193,
+        "title": "Autumn 2026 Women's Retreat | Wayfinders on the Hudson",
+        "word_count": 273,
         "blocks": [
           {
             "type": "p",
-            "text": "Friday, September 18"
+            "text": "Friday, September 18th"
           },
           {
             "type": "h1",
@@ -740,35 +744,31 @@
           },
           {
             "type": "p",
-            "text": "Gather around the fire with other women as we downshift into quieter times."
+            "text": "It's hard to feel it right now, while it's still summertime and the light is showing us everything we need to see, but as the days darken this fall, will you be prepared to keep holding your medicine—what has been shown to you in this clear and bright light?"
           },
           {
             "type": "p",
-            "text": "Date & time"
+            "text": "DATE"
           },
           {
             "type": "h2",
-            "text": "Friday, September 18"
+            "text": "Friday, September 18th"
           },
           {
             "type": "p",
-            "text": "1:30–5:30 pm"
+            "text": "TIME: 1:30–5:30 PM"
           },
           {
             "type": "p",
-            "text": "Location"
+            "text": "LOCATION"
           },
           {
             "type": "h2",
-            "text": "Lenoir Preserve"
+            "text": "Lenoir Preserve in Yonkers"
           },
           {
             "type": "p",
-            "text": "Yonkers, New York"
-          },
-          {
-            "type": "p",
-            "text": "Cost"
+            "text": "COST"
           },
           {
             "type": "h2",
@@ -776,19 +776,23 @@
           },
           {
             "type": "p",
-            "text": "Scholarships and payment plans are available."
-          },
-          {
-            "type": "h2",
-            "text": "Take a break."
+            "text": "Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!"
           },
           {
             "type": "p",
-            "text": "As the days darken this fall, we are here to hold this moment together. We will reflect on summer to keep the thread alive and set intentions as we enter autumn. Spots are intentionally limited."
+            "text": "We are here to hold you through this moment together. Join us to gather around the fire with other women as we downshift into quieter times. We will reflect on summer to keep the vibes flying, and set intentions for keeping the thread alive as we enter into autumn."
+          },
+          {
+            "type": "p",
+            "text": "Spots intentionally limited"
           },
           {
             "type": "h2",
-            "text": "Retreat tracks"
+            "text": "Retreat Tracks"
+          },
+          {
+            "type": "p",
+            "text": "Select one of the following tracks:"
           },
           {
             "type": "li",
@@ -796,27 +800,27 @@
           },
           {
             "type": "li",
-            "text": "Ancient Goddess Cultures: What Our Grandmothers Knew About Culture Creation"
+            "text": "Ancient Goddess Cultures: What our Grandmothers Knew About Culture Creation"
           },
           {
             "type": "li",
-            "text": "Introduction to Vision Quest"
+            "text": "Intro to Vision Quest"
           },
           {
             "type": "h2",
-            "text": "What’s included"
+            "text": "What's Included"
           },
           {
             "type": "li",
-            "text": "Fire circle and facilitation"
+            "text": "Fire Circle and Facilitation"
           },
           {
             "type": "li",
-            "text": "Local, seasonal snacks and tea"
+            "text": "Snacks and Tea (local & seasonal)"
           },
           {
             "type": "li",
-            "text": "Guided wellness treatments and meditations"
+            "text": "Guided wellness treatments & meditations"
           },
           {
             "type": "li",
@@ -824,7 +828,7 @@
           },
           {
             "type": "li",
-            "text": "Ample time for rest and reflection"
+            "text": "Ample time for rest & reflection"
           },
           {
             "type": "h2",
@@ -832,11 +836,19 @@
           },
           {
             "type": "li",
-            "text": "Sistering and ceremony"
+            "text": "Sistering"
           },
           {
             "type": "li",
-            "text": "Relational rigor and rest"
+            "text": "Ceremony"
+          },
+          {
+            "type": "li",
+            "text": "Relational rigor"
+          },
+          {
+            "type": "li",
+            "text": "Rest"
           },
           {
             "type": "li",
@@ -844,35 +856,35 @@
           },
           {
             "type": "li",
-            "text": "Forest yoga"
+            "text": "Forest Yoga"
           },
           {
             "type": "p",
-            "text": "How it works"
+            "text": "How It Works"
           },
           {
             "type": "h2",
-            "text": "Reserve your spot"
+            "text": "Reserve Your Spot"
           },
           {
             "type": "p",
-            "text": "Sign up to reserve your place."
+            "text": "Sign up to reserve your spot."
           },
           {
             "type": "h2",
-            "text": "Review the welcome email"
+            "text": "Review the Welcome Email"
           },
           {
             "type": "p",
-            "text": "We’ll send everything you need to know."
+            "text": "After registering, we'll send you a Welcome Email with everything you need to know."
           },
           {
             "type": "h2",
-            "text": "Start dreaming"
+            "text": "Start Dreaming"
           },
           {
             "type": "p",
-            "text": "Get excited for an adventure in restoration."
+            "text": "Get excited for our adventure; we can’t wait to be together in restoration."
           },
           {
             "type": "p",
@@ -901,16 +913,20 @@
         ],
         "links": [
           {
-            "text": "Reserve your spot",
-            "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3ef6531ada3d487b898212099c1dcf992a1795b6d4c24ce9acec1b23f8c3f88478a340b7890448bbb12595742a93316e?locale=EN_US&cta=copylistmultilink"
+            "text": "Autumn 2026 Women's Retreat",
+            "href": "https://www.wayfindersonthehudson.com/register-for-fall-2023/p/autumn-2026-womens-retreat"
           },
           {
-            "text": "Register for the retreat",
+            "text": "Register",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3ef6531ada3d487b898212099c1dcf992a1795b6d4c24ce9acec1b23f8c3f88478a340b7890448bbb12595742a93316e?locale=EN_US&cta=copylistmultilink"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
             "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
           },
           {
             "text": "Explore programs",
@@ -932,17 +948,27 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2747a8bf-7a1a-4a91-8295-fc9faf882066/IMG_3736.jpg?format=1200w",
-            "alt": "Women gathering outdoors at a Wayfinders retreat",
+            "alt": "A group gathered outdoors at a Wayfinders retreat",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784832708689-L449LUNVPMZHPOMK2PFE/unsplash-image-3pFOBqLirEU.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784843341023-SKQCOSDA526I4FEP3XCZ/unsplash-image-pYTTHwL2UjI.jpg?format=1200w",
+            "alt": "",
             "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 42,
-          "headings": 11,
-          "links": 7,
-          "images": 1,
+          "blocks": 44,
+          "headings": 10,
+          "links": 8,
+          "images": 3,
           "embeds": 0,
           "forms": 0
         }
@@ -1182,6 +1208,10 @@
             "href": "https://forms.gle/5uQMaSNT6KH8369W8"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -1210,7 +1240,7 @@
         "counts": {
           "blocks": 25,
           "headings": 6,
-          "links": 8,
+          "links": 9,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -1553,7 +1583,7 @@
         "url": "https://wayfinders-neon.vercel.app/corporate-retreats",
         "status": 200,
         "title": "Corporate Retreats | Wayfinders on the Hudson",
-        "word_count": 184,
+        "word_count": 246,
         "blocks": [
           {
             "type": "p",
@@ -1565,7 +1595,7 @@
           },
           {
             "type": "p",
-            "text": "Get outside and become the best company you can be."
+            "text": "Get outside and become the best company you can be"
           },
           {
             "type": "h2",
@@ -1573,7 +1603,7 @@
           },
           {
             "type": "p",
-            "text": "When work happens at desks and through video calls, our innate skills at reading body language and being part of an interconnected community can atrophy. Wayfinders begins with tuning back in."
+            "text": "When you sit at a desk and only communicate via video conferences and calls, your innate skills at reading body language and being part of an interconnected community, can atrophy. Wayfinders begins with tuning back in."
           },
           {
             "type": "h2",
@@ -1581,7 +1611,7 @@
           },
           {
             "type": "p",
-            "text": "Work ebbs and flows just like the seasons. When we align our rhythms with nature, we become more grounded, pace ourselves, connect with purpose, and discover that slowing down can make us more productive."
+            "text": "Work ebbs and flows just like the seasons change. When we syncopate our rhythms with nature, we harness the power to become more grounded, pace ourselves, connect with our purpose, and find out that sometimes slowing down can actually make us more productive."
           },
           {
             "type": "h2",
@@ -1589,15 +1619,15 @@
           },
           {
             "type": "p",
-            "text": "Being outside and playing with colleagues brings people together in ways that do not happen within four conference-room walls. New angles can support deeper engagement at work."
+            "text": "Being outside and playing with your colleagues brings you together in ways that do not happen inside four walls of a conference room. Your true nature is revealed and you see each other through new angles that support your engagement at work."
           },
           {
             "type": "blockquote",
-            "text": "“We are still feeling the good vibes from Monday! It really set the stage for a very productive two-day planning session. We got a lot done.”Jordan Zelniker, CIO, Econoco Corporation"
+            "text": "“We are still feeling the good vibes from Monday! Even though it didn’t feel like a Monday! Hahaha.Thank you again for putting together such an impactful experience for our team. It really set the stage for a very productive 2-day planning session. We got A LOT done!Really appreciate all you did.”Quote from Jordan Zelniker, CIO, Econoco Corporation on Wayfinders Corporate Retreats"
           },
           {
             "type": "h2",
-            "text": "Get to know your colleagues in a whole new light."
+            "text": "Get to know your colleagues in a whole new light!"
           },
           {
             "type": "p",
@@ -1627,15 +1657,15 @@
         "links": [
           {
             "text": "Learn more",
-            "href": "mailto:wayfindersonthehudson@gmail.com?subject=Corporate%20Retreat"
-          },
-          {
-            "text": "Start a conversation",
-            "href": "mailto:wayfindersonthehudson@gmail.com?subject=Corporate%20Retreat"
+            "href": "/contact-us"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
             "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
           },
           {
             "text": "Explore programs",
@@ -1657,17 +1687,32 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ad398566-f667-4223-8bcf-262c0a6d3661/IMG_4469.jpg?format=1200w",
-            "alt": "Colleagues participating in a Wayfinders corporate retreat",
+            "alt": "Colleagues participating in an outdoor retreat",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/29f39634-d2e4-4e47-af7e-df4d460b0f65/_DSC9058.jpg?format=1200w",
-            "alt": "A team collaborating outdoors",
+            "alt": "",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/9a0cac0e-a455-4be0-9e99-5d26ab5c6ddc/_DSC9116.jpg?format=1200w",
-            "alt": "Corporate retreat participants connecting in nature",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/262c87c4-04b2-4b4c-9969-8c1dd9374d1c/_DSC9066.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/c6e2545c-bd7a-4a9e-abc6-faf5da0f74f0/IMG_4471.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/7efc01f4-59ce-4f70-898f-f323158c4e2f/Screenshot+2023-12-13+at+2.52.25%E2%80%AFPM.jpeg?format=1200w",
+            "alt": "",
             "title": ""
           }
         ],
@@ -1677,7 +1722,7 @@
           "blocks": 17,
           "headings": 5,
           "links": 7,
-          "images": 3,
+          "images": 6,
           "embeds": 0,
           "forms": 0
         }
@@ -1795,12 +1840,12 @@
       "target": {
         "url": "https://wayfinders-neon.vercel.app/dance-embody-collective",
         "status": 200,
-        "title": "Dance Embody Collective | Wayfinders on the Hudson",
-        "word_count": 86,
+        "title": "Motherhood Rising | Wayfinders on the Hudson",
+        "word_count": 110,
         "blocks": [
           {
             "type": "p",
-            "text": "Connection and somatic exploration"
+            "text": "Source browser title: Motherhood Rising"
           },
           {
             "type": "h1",
@@ -1808,51 +1853,67 @@
           },
           {
             "type": "p",
-            "text": "Dance as a sober meditation and freeform revelation."
+            "text": "Join us for connection and somatic exploration, where dance is a sober meditation and freeform revelation."
           },
           {
             "type": "p",
-            "text": "Dates"
+            "text": "Dates & Times:"
           },
           {
             "type": "h2",
-            "text": "Second Thursday"
+            "text": "Second Thursday of the month from September to January from 7-9 PM"
+          },
+          {
+            "type": "li",
+            "text": "September 10th"
+          },
+          {
+            "type": "li",
+            "text": "October 8th"
+          },
+          {
+            "type": "li",
+            "text": "November 12th"
+          },
+          {
+            "type": "li",
+            "text": "December 10th"
+          },
+          {
+            "type": "li",
+            "text": "January 14th"
           },
           {
             "type": "p",
-            "text": "September 10, October 8, November 12, December 10, and January 14"
-          },
-          {
-            "type": "p",
-            "text": "Time & format"
+            "text": "Format:"
           },
           {
             "type": "h2",
-            "text": "7:00–9:00 pm"
+            "text": "7:00 Opening Listening Circle"
+          },
+          {
+            "type": "li",
+            "text": "7:30 Rotating Guest Facilitation"
+          },
+          {
+            "type": "li",
+            "text": "8:00 Ecstatic Dance"
           },
           {
             "type": "p",
-            "text": "7:00 listening circle7:30 guest facilitation8:00 ecstatic dance"
-          },
-          {
-            "type": "p",
-            "text": "Location"
+            "text": "Location:"
           },
           {
             "type": "h2",
-            "text": "Irvington Recreation"
+            "text": "Irvington Recreation Department (71 Main St. Irvington)"
           },
           {
             "type": "p",
-            "text": "71 Main Street, Irvington"
+            "text": "Fee:$100 for Resident/School District, $120 for Non-Resident"
           },
           {
             "type": "p",
-            "text": "$100 for residents and school-district participants$120 for non-residents"
-          },
-          {
-            "type": "p",
-            "text": "Registration opens June 22."
+            "text": "More info: danceembody.comRegister now at register.capturepoint.com/villageofirvington"
           },
           {
             "type": "p",
@@ -1881,16 +1942,24 @@
         ],
         "links": [
           {
-            "text": "Register",
+            "text": "Registration opens on June 22nd!",
             "href": "https://register.capturepoint.com/reg/cat_program_list_detail.cfm?season_id=24610&program_id=2880221"
           },
           {
-            "text": "More information",
+            "text": "danceembody.com",
             "href": "http://danceembody.com"
+          },
+          {
+            "text": "register.capturepoint.com/villageofirvington",
+            "href": "http://register.capturepoint.com/villageofirvington"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
             "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
           },
           {
             "text": "Explore programs",
@@ -1912,16 +1981,16 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3273a57a-857c-4623-8875-7c5838ba7b57/IMG_1760.jpg?format=1200w",
-            "alt": "People moving together during a Dance Embody gathering",
+            "alt": "People moving together indoors",
             "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 20,
+          "blocks": 24,
           "headings": 4,
-          "links": 7,
+          "links": 9,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -2170,6 +2239,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -2198,7 +2271,7 @@
         "counts": {
           "blocks": 28,
           "headings": 5,
-          "links": 5,
+          "links": 6,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -2440,6 +2513,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -2473,7 +2550,7 @@
         "counts": {
           "blocks": 15,
           "headings": 3,
-          "links": 15,
+          "links": 16,
           "images": 2,
           "embeds": 0,
           "forms": 0
@@ -2970,6 +3047,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -3018,7 +3099,7 @@
         "counts": {
           "blocks": 48,
           "headings": 13,
-          "links": 10,
+          "links": 11,
           "images": 5,
           "embeds": 0,
           "forms": 0
@@ -3343,6 +3424,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -3411,7 +3496,7 @@
         "counts": {
           "blocks": 27,
           "headings": 10,
-          "links": 14,
+          "links": 15,
           "images": 9,
           "embeds": 0,
           "forms": 0
@@ -3640,6 +3725,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -3668,7 +3757,7 @@
         "counts": {
           "blocks": 34,
           "headings": 1,
-          "links": 5,
+          "links": 6,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -3954,6 +4043,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -3987,7 +4080,7 @@
         "counts": {
           "blocks": 29,
           "headings": 6,
-          "links": 9,
+          "links": 10,
           "images": 2,
           "embeds": 0,
           "forms": 0
@@ -4165,6 +4258,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -4198,7 +4295,7 @@
         "counts": {
           "blocks": 15,
           "headings": 3,
-          "links": 8,
+          "links": 9,
           "images": 2,
           "embeds": 0,
           "forms": 0
@@ -4487,6 +4584,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -4535,7 +4636,7 @@
         "counts": {
           "blocks": 27,
           "headings": 6,
-          "links": 9,
+          "links": 10,
           "images": 5,
           "embeds": 0,
           "forms": 0
@@ -4625,6 +4726,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -4652,7 +4757,7 @@
         "counts": {
           "blocks": 9,
           "headings": 1,
-          "links": 6,
+          "links": 7,
           "images": 0,
           "embeds": 1,
           "forms": 0
@@ -4954,6 +5059,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -4987,7 +5096,7 @@
         "counts": {
           "blocks": 37,
           "headings": 8,
-          "links": 8,
+          "links": 9,
           "images": 2,
           "embeds": 0,
           "forms": 0
@@ -5732,6 +5841,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -5790,7 +5903,7 @@
         "counts": {
           "blocks": 44,
           "headings": 13,
-          "links": 5,
+          "links": 6,
           "images": 7,
           "embeds": 0,
           "forms": 0
@@ -6665,6 +6778,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -6763,7 +6880,7 @@
         "counts": {
           "blocks": 90,
           "headings": 14,
-          "links": 10,
+          "links": 11,
           "images": 15,
           "embeds": 0,
           "forms": 0
@@ -7210,7 +7327,7 @@
         "url": "https://wayfinders-neon.vercel.app/school-programs",
         "status": 200,
         "title": "School Programs | Wayfinders on the Hudson",
-        "word_count": 881,
+        "word_count": 986,
         "blocks": [
           {
             "type": "p",
@@ -7223,6 +7340,38 @@
           {
             "type": "p",
             "text": "Wayfinders provides direct service to schools through Professional Development, School-Day Programming (Specials), Extended Day/Enrichment (After School), Field Trips, Clubs, Lunch time Enrichment, Family Circles, and Caregiver & Me."
+          },
+          {
+            "type": "h2",
+            "text": "Professional Development"
+          },
+          {
+            "type": "p",
+            "text": "Wayfinders provides facilitation workshops for teachers to integrate the practices of nature connection and social emotional learning into curriculum and advisory."
+          },
+          {
+            "type": "h2",
+            "text": "Early Childhood"
+          },
+          {
+            "type": "p",
+            "text": "Our Early Childhood experience provides a rich sensory connection with the natural world that serves as joyful building blocks as children grow into their relationships with the natural world."
+          },
+          {
+            "type": "h2",
+            "text": "Student Community Building"
+          },
+          {
+            "type": "p",
+            "text": "Wayfinders provides opportunities to cultivate community among new and existing students through facilitated nature connection and team building activities."
+          },
+          {
+            "type": "h2",
+            "text": "Sustainability Field Trips & Retreats"
+          },
+          {
+            "type": "p",
+            "text": "From pollinator plants to team building, Wayfinders field trips & retreats get students and teachers connected & curious about nature! Customized half, whole day or camping trips."
           },
           {
             "type": "p",
@@ -7443,6 +7592,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -7464,15 +7617,65 @@
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/dbc8c4b1-ca3b-4e9f-9b33-459454d7786c/Bard+Faculty+in+Field.jpg?format=1200w",
             "alt": "School faculty participating in an outdoor Wayfinders activity",
             "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/9bd7b129-2cba-46ff-b967-566f8383541b/image-asset.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b0457113-0481-4644-9518-e3683921e636/Bard+students.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/14594164-a525-405b-b531-c0470586718f/Bard+group+students.jpg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d7261e73-5c9a-4533-aea8-36c2dcd4c3cd/Capture.JPG?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1719349340796-IPO77ITP8S5UVQL8LBUZ/image-asset.jpeg?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ba808b22-95f9-444f-a2af-adb287c196b7/one-on-one+activities.jpg?format=1200w",
+            "alt": "One-on-one activities",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/c6011875-74bd-444f-8ede-10890ddf42ac/Contemplative.jpg?format=1200w",
+            "alt": "Contemplative activity",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/32c25ebd-2c34-44cf-92fc-ea6714fce32c/Inside+schools.jpg?format=1200w",
+            "alt": "Inside schools",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d12662ed-df21-4a3a-b05c-7dc02342c04e/Outside+in+city+park.jpg?format=1200w",
+            "alt": "Outside in a city park",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/169c2b8f-2633-4bc9-b226-b7b64fbe45fb/Bard+Student+Retreat.jpg?format=1200w",
+            "alt": "",
+            "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 52,
-          "headings": 15,
-          "links": 9,
-          "images": 1,
+          "blocks": 60,
+          "headings": 19,
+          "links": 10,
+          "images": 11,
           "embeds": 0,
           "forms": 0
         }
@@ -7783,6 +7986,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -8026,7 +8233,7 @@
         "counts": {
           "blocks": 9,
           "headings": 1,
-          "links": 5,
+          "links": 6,
           "images": 44,
           "embeds": 0,
           "forms": 0
@@ -9036,6 +9243,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -9124,7 +9335,7 @@
         "counts": {
           "blocks": 74,
           "headings": 15,
-          "links": 18,
+          "links": 19,
           "images": 13,
           "embeds": 0,
           "forms": 0
@@ -9216,7 +9427,7 @@
         "url": "https://wayfinders-neon.vercel.app/walk-talks",
         "status": 200,
         "title": "Walk & Talks | Wayfinders on the Hudson",
-        "word_count": 207,
+        "word_count": 230,
         "blocks": [
           {
             "type": "p",
@@ -9228,11 +9439,11 @@
           },
           {
             "type": "p",
-            "text": "A therapeutic experience that extends beyond the traditional office setting."
+            "text": "We offer nature-informed walk and talk therapy for individuals seeking a therapeutic experience that extends beyond the traditional office setting."
           },
           {
             "type": "p",
-            "text": "Wayfinders therapists are trained through the Center for Nature-Informed Therapy. We integrate evidence-informed psychotherapy with the restorative qualities of the natural world. Sessions take place outdoors, where movement, fresh air, and connection with the environment can support reflection, emotional processing, and personal growth."
+            "text": "Wayfinders therapists are trained through the Center for Nature-Informed Therapy, we integrate evidence-informed psychotherapy with the restorative qualities of the natural world. Sessions take place outdoors, where movement, fresh air, and connection with the environment can support reflection, emotional processing, and personal growth."
           },
           {
             "type": "h2",
@@ -9240,31 +9451,27 @@
           },
           {
             "type": "li",
-            "text": "Feel more comfortable talking while moving rather than sitting face-to-face."
+            "text": "Feel more comfortable talking while moving rather than sitting face-to-face"
           },
           {
             "type": "li",
-            "text": "Experience stress, anxiety, life transitions, grief, or burnout."
+            "text": "Experience stress, anxiety, life transitions, grief, or burnout"
           },
           {
             "type": "li",
-            "text": "Seek greater connection with themselves, others, and the natural world."
+            "text": "Seek greater connection with themselves, others, and the natural world"
           },
           {
             "type": "li",
-            "text": "Find that being outdoors helps them feel grounded, present, and open."
-          },
-          {
-            "type": "h2",
-            "text": "A meaningful resource in the healing process."
+            "text": "Find that being outdoors helps them feel grounded, present, and open"
           },
           {
             "type": "p",
-            "text": "Nature-informed therapy is not simply therapy that happens outside. Together, we may draw on observations from the environment, seasonal changes, natural metaphors, and mindful engagement with our surroundings to deepen insight and support well-being."
+            "text": "Nature-informed therapy is not simply therapy that happens outside. It recognizes that our relationship with the natural world can be a meaningful resource in the healing process. Together, we may draw on observations from the environment, seasonal changes, natural metaphors, and mindful engagement with our surroundings to deepen insight and support well-being."
           },
           {
             "type": "p",
-            "text": "Every session is tailored to your comfort level, therapeutic goals, physical abilities, and the conditions of the day. Whether walking, sitting, or pausing along the way, the focus remains on creating a safe, supportive space for exploration and growth."
+            "text": "Every session is tailored to your comfort level, therapeutic goals, physical abilities, and the conditions of the day. Whether we are walking, sitting, or pausing along the way, the focus remains on creating a safe, supportive space for exploration and growth."
           },
           {
             "type": "p",
@@ -9293,12 +9500,16 @@
         ],
         "links": [
           {
-            "text": "Inquire now",
-            "href": "mailto:wayfindersonthehudson@gmail.com?subject=Walk%20%26%20Talks"
+            "text": "Inquire Now",
+            "href": "/contact-us"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
             "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
           },
           {
             "text": "Explore programs",
@@ -9320,16 +9531,16 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/e24fef2d-985f-424f-a81a-00548c58060c/IMG_0468.jpg?format=1200w",
-            "alt": "A peaceful wooded path",
+            "alt": "A wooded path",
             "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 18,
-          "headings": 3,
-          "links": 6,
+          "blocks": 17,
+          "headings": 2,
+          "links": 7,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -9522,6 +9733,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -9570,7 +9785,7 @@
         "counts": {
           "blocks": 15,
           "headings": 6,
-          "links": 9,
+          "links": 10,
           "images": 5,
           "embeds": 0,
           "forms": 0
@@ -9703,6 +9918,10 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
+          },
+          {
             "text": "Explore programs",
             "href": "/fall-2026-programs-overview"
           },
@@ -9731,7 +9950,7 @@
         "counts": {
           "blocks": 12,
           "headings": 2,
-          "links": 6,
+          "links": 7,
           "images": 1,
           "embeds": 0,
           "forms": 0
@@ -9871,8 +10090,8 @@
       "target": {
         "url": "https://wayfinders-neon.vercel.app/wise-owls-55-1",
         "status": 200,
-        "title": "Wise Owls 55+ | Wayfinders on the Hudson",
-        "word_count": 178,
+        "title": "Wise Owls (65+) | Wayfinders on the Hudson",
+        "word_count": 224,
         "blocks": [
           {
             "type": "p",
@@ -9880,35 +10099,35 @@
           },
           {
             "type": "h1",
-            "text": "Wise Owls"
+            "text": "Wise Owls (55+)"
           },
           {
             "type": "p",
-            "text": "Move your body, calm your mind, and enjoy nature through facilitated mindful walking and talking."
+            "text": "Move your body, calm your mind, and enjoy nature! Wise Owls provides a facilitated mindful walking and talking experience for adults (men & women) ages 55+ which allows you to bring meaning to the present moment, feel gratitude, and connect with community."
           },
           {
             "type": "p",
-            "text": "Tuesdays"
+            "text": "Tuesdays or Wednesdays"
           },
           {
             "type": "h2",
-            "text": "Women only"
+            "text": "Tuesdays: WOMEN ONLY"
           },
           {
             "type": "p",
-            "text": "September 22–November 241:15–2:30 pm"
+            "text": "9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24"
           },
           {
             "type": "p",
-            "text": "Wednesdays"
+            "text": "Lenoir Preserve · 1:15-2:30 pm"
           },
           {
             "type": "h2",
-            "text": "Co-ed"
+            "text": "Wednesdays: CO-ED"
           },
           {
             "type": "p",
-            "text": "September 23–December 91:15–2:30 pm"
+            "text": "9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9"
           },
           {
             "type": "p",
@@ -9916,47 +10135,47 @@
           },
           {
             "type": "h2",
-            "text": "Choose your pace"
+            "text": "Series (10 sessions) - $350"
           },
           {
             "type": "p",
-            "text": "Easy walking paths or hiking trails.$350 for 10 sessions; $40 individually."
+            "text": "Individual Session - $40"
           },
           {
             "type": "p",
-            "text": "Walking alongside one another"
-          },
-          {
-            "type": "h2",
-            "text": "Cultivating wisdom and connection."
+            "text": "*walking on easy walking paths or hiking on trails at Lenoir Preserve."
           },
           {
             "type": "p",
-            "text": "Wise Owls provides a mindful experience for adults—men and women—ages 55+ to bring meaning to the present moment, feel gratitude, and connect with community."
+            "text": "Wise Owls have expressed that they find themselves:"
           },
           {
             "type": "li",
-            "text": "Cultivating wisdom"
+            "text": "cultivating wisdom"
           },
           {
             "type": "li",
-            "text": "Deepening connection"
+            "text": "deepening connection"
           },
           {
             "type": "li",
-            "text": "Belonging in nature"
+            "text": "belonging in nature"
           },
           {
             "type": "li",
-            "text": "Lifelong curiosity"
+            "text": "lifelong curiosity"
+          },
+          {
+            "type": "li",
+            "text": "walking alongside one another"
           },
           {
             "type": "p",
-            "text": "Facilitated by co-founders Gwen Merkin, certified in Nature Connection and Ecotherapy, and Leah Gozhansky, Certified Nature Informed Therapist."
+            "text": "Facilitated by Co-Founders Gwen Merkin, Certified in Nature Connection & Ecotherapy & Leah Gozhansky, Certified Nature Informed Therapist."
           },
           {
             "type": "blockquote",
-            "text": "Nature has guided us through every stage of life and developed us into wise owls. When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations."
+            "text": "Nature has guided us through every stage of life and developed us into wise owls.When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations."
           },
           {
             "type": "p",
@@ -9985,20 +10204,24 @@
         ],
         "links": [
           {
-            "text": "One session",
+            "text": "Register for One Session",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3c55bfbf268946c899fdeeabdaf32f9d9dc6b1403b2e4b8aac16a7b964b77078e52bf4e4d0814e59973e1de502d53f7d?locale=EN_US&cta=copylistmultilink"
           },
           {
-            "text": "Wednesday series",
+            "text": "Register for Wednesdays (10 weeks)",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7361f670c7af406e9bf047032ea001d4a8bcd0f467654fa3aad10c33deac9afce02db39da70f4b2d8eefb0f27d8e3fb5?locale=EN_US&cta=saveandcopylink"
           },
           {
-            "text": "Tuesday series",
+            "text": "Register for Tuesdays (10 weeks)",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b9af164453d14d02a5fe7611ac5f6321034730b8550e4d3c98390192b4d550ba56232c9c2db845e9a2103d1d618bbc9d?locale=EN_US&cta=saveandcopylink"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
             "href": "mailto:wayfindersonthehudson@gmail.com"
+          },
+          {
+            "text": "(917) 318-3888",
+            "href": "tel:+19173183888"
           },
           {
             "text": "Explore programs",
@@ -10020,12 +10243,12 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b42dfdc0-57a0-4ca3-b55b-279ff3ab2e8c/IMG_4139.jpg?format=1200w",
-            "alt": "Wise Owls walking together outdoors",
+            "alt": "Adults walking together outdoors",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/feeab10a-650d-441d-91cb-c86d9646d5a4/IMG_4143+%282%29.jpeg?format=1200w",
-            "alt": "Wise Owls participants connecting in nature",
+            "alt": "Adults connecting outdoors",
             "title": ""
           }
         ],
@@ -10033,8 +10256,8 @@
         "forms": [],
         "counts": {
           "blocks": 27,
-          "headings": 5,
-          "links": 8,
+          "headings": 4,
+          "links": 9,
           "images": 2,
           "embeds": 0,
           "forms": 0
