@@ -1,0 +1,12 @@
+---
+import Container from './Container.astro';
+interface Props { id?: string; tone?: 'default' | 'alternate' | 'surface' | 'forest'; width?: 'prose' | 'standard' | 'wide'; class?: string; }
+const { id, tone = 'default', width = 'standard', class: className = '' } = Astro.props;
+---
+<section {id} class:list={['section', `tone-${tone}`, className]}><Container {width}><slot /></Container></section>
+<style>
+  .section { padding-block: var(--section-space); }
+  .tone-alternate { background: var(--color-page-alt); }
+  .tone-surface { background: var(--color-surface); }
+  .tone-forest { background: var(--color-forest-dark); color: var(--color-cream); }
+</style>
