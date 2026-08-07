@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import Section from '../components/global/Section.astro';
+const values = [
+  'Racism is often structural in nature, embedded in systems, policy, our physical environment, and our unconscious behaviors and psychology.',
+  'Structural racism explains profound and persistent inequality in our everyday lives.',
+  'DEI includes race, ethnicity, nationality, class, religion, gender, sexual orientation, age, and disability.',
+  'DEI, and dismantling structural racism, is central to our program, but it also guides our internal operations and organizational culture.',
+];
+const actions = [
+  'DEI is an explicit element of Wayfinders’ mission statement.',
+  'Wayfinders operates regionally, prioritizing long-term, trust-based relationship building in communities of color and additional marginalized communities.',
+  'Substantial resources are allocated to recruitment and retention of program participants, staff, and lay leaders in communities of color and additional marginalized communities.',
+  'Governance, advisory, and decision-making structures reflect regional diversity.',
+  'Program design always incorporates DEI.',
+  'Wayfinders’ compensation policy and financial investment decisions will conform to this DEI policy.',
+  'Wayfinders is a learning organization. Substantial resources are allocated to regular and ongoing DEI training, monitoring, assessment, and reporting involving the entire organization.',
+];
+const accountability = [
+  'Wayfinders ensures safe and effective ways for internal and external concerns related to DEI to be reported.',
+  'Wayfinders regularly reports its performance relative to these principles and action steps.',
+  'This policy is easily accessed, and maintained and adjusted as necessary according to Wayfinders’ governance protocols.',
+];
+---
+<BaseLayout title="Diversity, Equity, Inclusion" description="Wayfinders’ diversity, equity, and inclusion purpose, values, actions, and accountability.">
+  <PageHero eyebrow="About Wayfinders" title="Diversity, Equity, Inclusion" intro="Diversity, equity, and inclusion are essential for Wayfinders to achieve its mission." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ccd0c103-bcba-4d22-9712-6967c8fb9b6d/wings+in+a+circle.jpeg?format=1200w" alt="A circle formed with colorful natural materials" />
+  <Section width="prose"><h2 class="type-section">Purpose</h2><p>A commitment to DEI is a deeply held value, but it is also a practical necessity for the organization to achieve its objectives. In addition to an explicit expression of our values, DEI means taking concrete action, and holding ourselves accountable to meaningful outcomes.</p></Section>
+  <Section tone="alternate"><div class="policy-grid"><article><h2 class="type-section">Values</h2><ul>{values.map(item => <li>{item}</li>)}</ul></article><article><h2 class="type-section">Action</h2><ul>{actions.map(item => <li>{item}</li>)}</ul></article></div></Section>
+  <Section width="prose"><h2 class="type-section">Accountability</h2><ul>{accountability.map(item => <li>{item}</li>)}</ul></Section>
+</BaseLayout>
+<style>.policy-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--column-gap)}h2{margin-top:0}li+li{margin-top:.75rem}@media(max-width:47.999rem){.policy-grid{grid-template-columns:1fr}}</style>
