@@ -1,32 +1,130 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/sections/PageHero.astro';
-import Section from '../components/global/Section.astro';
+import Container from '../components/global/Container.astro';
 import Button from '../components/global/Button.astro';
-import CardGrid from '../components/sections/CardGrid.astro';
-import InfoCard from '../components/sections/InfoCard.astro';
-import MediaSplit from '../components/sections/MediaSplit.astro';
-import ImageGallery from '../components/sections/ImageGallery.astro';
-import Callout from '../components/sections/Callout.astro';
-import CallToAction from '../components/sections/CallToAction.astro';
+import NatureIcon from '../components/global/NatureIcon.astro';
+import BaseCampOption from '../components/cards/BaseCampOption.astro';
+import DisclosureList from '../components/sections/DisclosureList.astro';
+
 const options = [
-  {day:'Tuesdays',ages:'1st–8th graders',dates:'10 weeks · September 22–November 24',time:'3:45–5:45 pm',href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink'},
-  {day:'Wednesdays',ages:'1st–8th graders',dates:'10 weeks · September 23–December 9 (skips November 11 and 25)',time:'3:45–5:45 pm',href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7fd8a8bc9e044b01bf85240931b5fbd4f5a757626a27445693f09090d6789ea3672fa74484ef49e8aa9d515af2163300?locale=EN_US&cta=saveandcopylink'},
-  {day:'Thursdays',ages:'Kindergarten',dates:'10 weeks · September 24–December 3 (skips November 26)',time:'3:45–5:00 pm',href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-9298690de1c848788cdeb6c69feb477841b288d9604a49899aa0b671da5468a018d3bfb80ecc401bbb43412950e21e7e?locale=EN_US&cta=copylistmultilink'},
-];
-const expectations = ['Weekly fire circles: Share gratitude, sing, and deepen group connection.','Nature-connection games: Immersive, playful activities that teach about the local ecosystem through direct experience.','Social-emotional learning: A focus on inclusion, kindness, and community care woven into every activity.','Leadership opportunities: Seasoned Wayfinders mentor and lead new participants, strengthening confidence and group bonds.','Skills: Fire building and tending, knife skills, shelter building, plant identification and foraging, earth art, songs'];
+  { day:'Tuesday', ages:'1st–8th graders', dates:'10 weeks · September 22–November 24', time:'3:45–5:45 pm', accent:'moss', icon:'leaf', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink' },
+  { day:'Wednesday', ages:'1st–8th graders', dates:'10 weeks · September 23–December 9 (skips November 11 and 25)', time:'3:45–5:45 pm', accent:'blue', icon:'mountain', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7fd8a8bc9e044b01bf85240931b5fbd4f5a757626a27445693f09090d6789ea3672fa74484ef49e8aa9d515af2163300?locale=EN_US&cta=saveandcopylink' },
+  { day:'Kindergarten', ages:'Young explorers', dates:'10 weeks · September 24–December 3 (skips November 26)', time:'3:45–5:00 pm', accent:'earth', icon:'acorn', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-9298690de1c848788cdeb6c69feb477841b288d9604a49899aa0b671da5468a018d3bfb80ecc401bbb43412950e21e7e?locale=EN_US&cta=copylistmultilink' },
+] as const;
+
+const experiences = [
+  { icon:'leaf', title:'Explore nature', text:'Wander the woods, observe wildlife, and connect with the seasons.' },
+  { icon:'fire', title:'Build skills', text:'Learn fire tending, shelter building, plant identification, and knife skills.' },
+  { icon:'heart', title:'Grow confidence', text:'Take healthy risks, solve problems, and celebrate personal growth.' },
+  { icon:'community', title:'Make friends', text:'Play, cooperate, and build lasting friendships in a caring community.' },
+  { icon:'feather', title:'Get creative', text:'Express through earth art, songs, imagination, and play.' },
+  { icon:'mountain', title:'Care for our world', text:'Practice ecological stewardship and care for our shared home.' },
+] as const;
+
+const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence, resilience, and independence.','Deep connection to nature in every season.','Meaningful friendships and cooperative play.','A supportive community for the whole family.'];
 ---
 <BaseLayout title="Fall 2026 Base Camp K–8" description="Wayfinders Fall Base Camp meets after school on Tuesdays, Wednesdays, and Thursdays at Lenoir Preserve.">
-  <PageHero eyebrow="Wayfinders Fall 2026" title="Wayfinders Fall Base Camp" intro="Outdoor play, community building, and leadership development for Kindergarten through 8th grade." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ef419cc4-de2f-4a90-b988-f5144d29feb7/IMG_0165.jpeg?format=1200w" alt="Wayfinders Base Camp participants outdoors together"><p class="location"><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</p></PageHero>
-  <Section width="wide"><Callout><strong>Limited Spaces & Scholarships Available!</strong> FREE Breathwork Sessions for Parents & Caregivers at Drop Off (first session on 9/22 or 9/23) - 4-5:30pm. Open to the Public! (see button below to register)</Callout><div class="option-spacing"><CardGrid columns={3}>{options.map((option) => <InfoCard heading={option.day} label={option.ages} headingLevel="h2"><p>{option.dates}</p><p>{option.time}</p><Button slot="action" href={option.href}>Register</Button></InfoCard>)}</CardGrid></div></Section>
-  <Section width="wide"><div class="details-copy"><p class="type-label">Details</p><h2 class="type-section">All Fall 2026 meeting dates</h2><h3 class="type-card">1st- 8th Graders:</h3><p>3:45 - 5:45 pm @ Lenoir Preserve - 19 Dudley St. Yonkers</p><p><strong>Tuesdays:</strong> 9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24</p><p><strong>Wednesdays:</strong> 9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9</p><h3 class="type-card">Kindergarteners:</h3><p>3:45 - 5:00 pm @ Lenoir Preserve - 19 Dudley St. Yonkers</p><p><strong>Thursdays:</strong> 9/24, 10/1, 10/8, 10/15, 10/22, 10/29, 11/5, 11/12, 11/19, (skip 11/26), 12/3</p></div></Section>
-  <Section tone="alternate" width="wide"><MediaSplit><div slot="copy"><p class="type-label">Growing community together</p><h2 class="type-section">Connected through nature, kindness, and play.</h2><p>Wayfinders Base Camp connects us with ourselves, each other, and the earth. Our fall session offers weekly gatherings that blend outdoor play, community-building, and leadership development.</p><ul>{expectations.map((item) => <li>{item}</li>)}</ul></div><img slot="media" src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3b8bbe34-7a41-4a5e-95b6-2381442780c7/IMG_1715.jpeg?format=1200w" alt="Children exploring during Wayfinders Base Camp" width="1200" height="900" loading="lazy" /></MediaSplit></Section>
-  <Section width="wide"><CardGrid columns={2}><InfoCard heading="Why join" headingLevel="h2"><p>Build friendships and a supportive community. Learn about the natural world through play. Grow emotionally and as a leader in a welcoming environment.</p><p>Our community is strong—and keeps growing stronger. Join us this fall to get active, energized, and connected.</p></InfoCard><InfoCard heading="Restoration Nation" headingLevel="h2"><p>We explore our local ecosystem through planting native trees, shrubs, grasses, and forbs in our ecosystem restoration project at Lenoir Preserve. We tend the land by removing invasive plants, and watering newly planted natives. We may repair the deer exclosure we installed to ensure it’s still protecting the restoration area.</p></InfoCard><InfoCard heading="Age groups" headingLevel="h2"><p>Same age and mixed age opportunities are available throughout Base Camp: Mixed age groups foster personal growth and village building; younger kids look up to older kids as role models; older kids grow into strong leaders as they facilitate activities and work with younger kids.<br /><br />Base Camp meets after school on Tuesday and Wednesday afternoons for 1st-8th graders (some participants join us for both days)<br /><br />Thursdays for Kindergarteners!</p></InfoCard><InfoCard heading="Weather" headingLevel="h2"><p>Takes place outdoors in the nature preserve with indoor space and activities available. Weather appropriate clothing is required and participants are advised on how to prepare.</p></InfoCard></CardGrid><div class="gallery-spacing"><ImageGallery><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/61ddf4e9-9f95-49fe-840c-b71ec5ad8b77/IMG_3626.jpg?format=1200w" alt="Children gathered in the woods" width="1200" height="900" loading="lazy" /><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/954b56d9-449c-48af-bdcf-8600061b497e/IMG_2939.jpg?format=1200w" alt="Wayfinders participants outdoors" width="1200" height="900" loading="lazy" /><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/162da3a6-5e50-42b1-b7d5-d572a21e23e7/bryte+and+jude.jpg?format=1200w" alt="Two children exploring outdoors" width="1200" height="900" loading="lazy" /></ImageGallery></div><CallToAction heading="Open to all."><Fragment slot="actions"><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork</Button><Button href="https://www.wayfindersonthehudson.com/scholarships-1">Apply for a scholarship</Button></Fragment></CallToAction><p class="contact"><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a><br />(917) 318-3888</p></Section>
+  <section class="hero">
+    <Container width="wide" class="hero-content">
+      <p class="type-label">Wayfinders · Fall 2026</p>
+      <h1>Fall 2026 <span>Base Camp</span></h1>
+      <p class="hero-intro">Outdoor play, community building, and leadership development for Kindergarten through 8th grade.</p>
+      <p class="location"><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</p>
+      <a class="hero-note" href="#programs"><NatureIcon name="heart" size={31} /><span>Serving the whole community:<br /><strong>kids and parents together</strong></span></a>
+    </Container>
+  </section>
+
+  <section id="programs" class="programs chapter">
+    <Container width="wide">
+      <header class="section-heading"><p class="type-label">Find your day in the forest</p><h2>Choose your program</h2><p>Each program meets one day per week for the fall session.</p></header>
+      <div class="options">{options.map((option) => <BaseCampOption {...option} />)}</div>
+      <p class="availability"><NatureIcon name="leaf" size={24} /><strong>Limited spaces and scholarships available.</strong></p>
+    </Container>
+  </section>
+
+  <section class="community chapter">
+    <Container width="wide" class="community-grid">
+      <div class="community-intro"><p class="type-label">Growing community together</p><h2>Connected through nature, kindness, and play.</h2><p>Wayfinders Base Camp connects us with ourselves, each other, and the earth. Our fall session offers weekly gatherings that blend outdoor play, community-building, and leadership development.</p><p class="handwritten">Supporting the whole family—mind, body, and community.</p></div>
+      <div class="workshops">
+        <article><span class="round-image"><img src="/images/heroes/GreenForest1.webp" alt="Wayfinders community member outdoors" /></span><div><p class="type-label">At drop off</p><h3>Free breathwork for parents and caregivers</h3><p>Join the first session on September 22 or 23, from 4–5:30 pm. Open to the public.</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register for breathwork</Button></article>
+      </div>
+    </Container>
+  </section>
+
+  <section class="experience chapter">
+    <Container width="wide"><header class="section-heading"><p class="type-label">A week at Base Camp</p><h2>What kids experience</h2><p>Each week in the forest, kids discover, play, and grow.</p></header><div class="experience-grid">{experiences.map((item) => <article><NatureIcon name={item.icon} size={54} /><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></Container>
+  </section>
+
+  <section class="contrast">
+    <div class="benefits chapter"><div><p class="type-label">Why families love Base Camp</p><h2>A place to belong and become.</h2><ul>{benefits.map((benefit) => <li><NatureIcon name="check" size={25} /><span>{benefit}</span></li>)}</ul><p class="handwritten">“Our community is strong—and keeps growing stronger.”</p></div></div>
+    <div class="restoration chapter"><div><NatureIcon name="leaf" size={35} /><p class="type-label">Stewardship in action</p><h2>Restoration Nation</h2><p>We explore our local ecosystem by planting native trees, shrubs, grasses, and forbs at Lenoir Preserve. We remove invasive plants, water new plantings, and care for the deer exclosure that protects the restoration area.</p></div></div>
+  </section>
+
+  <section class="details chapter">
+    <Container width="wide"><div class="details-layout"><header><p class="type-label">Plan your season</p><h2>Dates and frequently asked questions</h2><p>Base Camp takes place outdoors, with indoor space and activities available when needed.</p></header><DisclosureList>
+      <details><summary><strong>All Tuesday meeting dates</strong></summary><div><p><strong>1st–8th graders · 3:45–5:45 pm</strong></p><p>9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24</p></div></details>
+      <details><summary><strong>All Wednesday meeting dates</strong></summary><div><p><strong>1st–8th graders · 3:45–5:45 pm</strong></p><p>9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, skip 11/11, 11/18, skip 11/25, 12/2, 12/9</p></div></details>
+      <details><summary><strong>All Thursday meeting dates</strong></summary><div><p><strong>Kindergarteners · 3:45–5:00 pm</strong></p><p>9/24, 10/1, 10/8, 10/15, 10/22, 10/29, 11/5, 11/12, 11/19, skip 11/26, 12/3</p></div></details>
+      <details><summary><strong>What about the weather?</strong></summary><div><p>Weather-appropriate clothing is required, and participants are advised on how to prepare. Indoor space and activities are available.</p></div></details>
+      <details><summary><strong>How do mixed age groups work?</strong></summary><div><p>Mixed age groups foster village building: younger kids gain role models, while older kids grow into strong leaders as they facilitate activities and work with younger children.</p></div></details>
+      <details><summary><strong>Are scholarships available?</strong></summary><div><p>Yes. We want Base Camp to be open to all families.</p><p><a href="/scholarships-1">Learn about scholarships</a>.</p></div></details>
+    </DisclosureList></div></Container>
+  </section>
+
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A fall of wonder awaits</p><h2>Ready to join us?</h2><p>Choose your day and register for Base Camp today.</p><div class="closing-actions">{options.map((option) => <Button href={option.href}>{option.day} <span aria-hidden="true">→</span></Button>)}</div></div><aside><h3>Interested in the parent workshops?</h3><p>Register for the free community breathwork session.</p><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork</Button></aside></Container></section>
 </BaseLayout>
+
 <style>
-.location { margin-top: 1.5rem; }
-.option-spacing, .gallery-spacing { margin-top: 2rem; }
-.details-copy { max-width: var(--width-prose); }
-.gallery-spacing { margin-bottom: 3rem; }
-.contact { margin-top: 2rem; }
+  .chapter { padding-block:clamp(5rem,10vw,9rem); }
+  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('/images/heroes/GreenForest1.webp') center 43% / cover no-repeat; color:white; }
+  .hero::after { position:absolute; z-index:-1; inset:0; content:''; background:linear-gradient(90deg,rgb(10 27 17 / .9) 0%,rgb(10 27 17 / .68) 45%,rgb(10 27 17 / .12) 80%); }
+  :global(.hero-content) { padding-block:5rem; }
+  .hero .type-label { margin:0; color:#e3dda3; }
+  h1 { max-width:43rem; margin:.5rem 0 1rem; color:white; font-family:var(--font-display); font-size:clamp(4rem,9vw,7.4rem); font-weight:500; letter-spacing:-.04em; line-height:.78; }
+  h1 span { display:block; margin:.18em 0 0 .1em; color:#d3c769; font-family:var(--font-hand); font-size:.72em; font-weight:500; letter-spacing:0; line-height:1; }
+  .hero-intro { max-width:36rem; font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.55; }
+  .location { margin-bottom:2rem; }
+  .hero-note { display:inline-flex; align-items:center; gap:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .9); color:white; font-size:.8rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
+  .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
+  .section-heading .type-label,.community .type-label,.details .type-label { color:var(--color-moss); }
+  .section-heading h2,.community h2,.details h2,.contrast h2,.closing h2 { margin:.3rem 0 .6rem; font-family:var(--font-display); font-size:clamp(2.7rem,5vw,4.5rem); font-weight:600; letter-spacing:-.025em; line-height:1; }
+  .section-heading > p:last-child { margin:0; font-size:1.15rem; }
+  .programs { background:linear-gradient(120deg,#fbf8f0,#f5f1e7); }
+  .options { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+  .availability { display:flex; align-items:center; justify-content:center; gap:.75rem; margin:2.5rem 0 0; color:var(--color-moss); }
+  .community { position:relative; background:#e8ebdf; overflow:hidden; }
+  :global(.community-grid) { display:grid; grid-template-columns:.8fr 1.5fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
+  .community-intro h2 { font-size:clamp(3rem,5vw,4.75rem); }
+  .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:clamp(1.6rem,3vw,2.2rem); line-height:1.1; }
+  .workshops article { display:grid; grid-template-columns:9rem 1fr auto; gap:1.5rem; align-items:center; padding-block:1.5rem; border-block:1px solid rgb(49 88 67 / .2); }
+  .round-image { overflow:hidden; aspect-ratio:1; border-radius:50%; }
+  .round-image img { width:100%; height:100%; object-fit:cover; }
+  .workshops h3 { margin:.25rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:2rem; line-height:1; }
+  .experience { background:var(--color-surface); }
+  .experience-grid { display:grid; grid-template-columns:repeat(6,1fr); }
+  .experience-grid article { padding:0 clamp(.75rem,2vw,1.5rem); border-right:1px solid var(--color-line); text-align:center; }
+  .experience-grid article:last-child { border:0; }
+  .experience-grid :global(svg) { margin:0 auto 1rem; color:var(--color-moss); }
+  .experience-grid article:nth-child(2n) :global(svg) { color:var(--color-earth); }
+  .experience-grid h3 { margin:0; font-family:var(--font-display); font-size:1.45rem; }
+  .experience-grid p { margin:.6rem 0 0; font-size:.9rem; line-height:1.6; }
+  .contrast { display:grid; grid-template-columns:.9fr 1.1fr; }
+  .benefits { display:grid; place-items:center; padding-inline:var(--gutter); background:#eef0e7; }
+  .benefits > div { max-width:34rem; }
+  .benefits ul { display:grid; gap:0; margin:2rem 0; padding:0; list-style:none; }
+  .benefits li { display:flex; gap:.85rem; padding-block:.8rem; border-bottom:1px solid var(--color-line); }
+  .benefits li :global(svg) { flex:none; color:var(--color-moss); }
+  .restoration { display:grid; min-height:38rem; place-items:center; padding-inline:var(--gutter); background:linear-gradient(rgb(13 35 23 / .6),rgb(13 35 23 / .8)),url('/images/heroes/GreenForest1.webp') center / cover;color:white;text-align:center; }
+  .restoration > div { max-width:38rem; }
+  .restoration h2 { color:white; }.restoration .type-label{color:#e4dda2}.restoration :global(svg){margin:auto;color:#e4dda2}
+  .details { background:#faf7ef; }
+  .details-layout { display:grid; grid-template-columns:.75fr 1.25fr; gap:clamp(3rem,7vw,7rem); }
+  .details header { position:sticky; top:2rem; align-self:start; }
+  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .94),rgb(13 35 23 / .75)),url('/images/heroes/GreenForest1.webp') center / cover;color:white; }
+  :global(.closing-grid) { display:grid; grid-template-columns:1.5fr .7fr; gap:clamp(3rem,7vw,6rem); align-items:center; }
+  .closing h2 { color:white;font-size:clamp(3.5rem,7vw,6rem) }.closing .type-label{color:#e4dda2}.closing-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}.closing-actions :global(.button){border-color:white;background:white;color:var(--color-forest-dark)}
+  .closing aside { padding-left:clamp(2rem,5vw,4rem); border-left:1px solid rgb(255 255 255 / .5); }.closing aside h3{font-family:var(--font-display);font-size:2rem;line-height:1.1}.closing aside :global(.button){border-color:white;color:white}
+  @media (max-width:63.999rem){.options{grid-template-columns:1fr}.experience-grid{grid-template-columns:repeat(3,1fr);gap:2.5rem 0}.experience-grid article:nth-child(3){border:0}:global(.community-grid),.details-layout{grid-template-columns:1fr}.workshops article{grid-template-columns:7rem 1fr}.workshops :global(.button){grid-column:2}.details header{position:static}.contrast{grid-template-columns:1fr}.restoration{min-height:34rem}}
+  @media (max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(10 27 17 / .7)}h1{font-size:clamp(3.8rem,18vw,5.8rem)}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience-grid article:nth-child(3){border-right:1px solid var(--color-line)}.experience-grid article:nth-child(2n){border:0}:global(.closing-grid){grid-template-columns:1fr}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}.closing-actions{flex-direction:column}.closing-actions :global(.button){width:100%}}
+  @media (max-width:35.999rem){.workshops article{grid-template-columns:1fr}.round-image{width:7rem}.workshops :global(.button){grid-column:1}.experience-grid{grid-template-columns:1fr}.experience-grid article,.experience-grid article:nth-child(3){padding-block:1.5rem;border-right:0;border-bottom:1px solid var(--color-line)}}
 </style>
