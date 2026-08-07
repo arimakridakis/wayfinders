@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at": "2026-08-07T17:17:58+00:00",
+  "captured_at": "2026-08-07T18:25:12+00:00",
   "source_base": "https://www.wayfindersonthehudson.com",
   "target_base": "https://wayfinders-neon.vercel.app",
   "inventory": "docs/migration-inventory.csv",
@@ -1061,7 +1061,7 @@
         "url": "https://wayfinders-neon.vercel.app/careers",
         "status": 200,
         "title": "Careers | Wayfinders on the Hudson",
-        "word_count": 332,
+        "word_count": 328,
         "blocks": [
           {
             "type": "p",
@@ -1081,11 +1081,11 @@
           },
           {
             "type": "p",
-            "text": "We are looking for Mentors to support our Nature Connection Programs (Base Camp) for 2nd-8th graders. Learn more about Wayfinders on our home page."
+            "text": "We are looking for Mentors to support our Nature Connection Programs (Base Camp) for 2nd-8th graders. Learn more about Wayfinders here!"
           },
           {
             "type": "p",
-            "text": "Please apply using the external application and email your resume or CV to wayfindersonthehudson@gmail.com."
+            "text": "Please apply here and email your resume or CV to: wayfindersonthehudson@gmail.com."
           },
           {
             "type": "h2",
@@ -1093,11 +1093,11 @@
           },
           {
             "type": "p",
-            "text": "We are looking for Mentors-in-Training to participate in our Nature-Guided Youth Mentor Program (Base Camp) for 2nd-8th graders. Learn more about Wayfinders on our home page."
+            "text": "We are looking for Mentors-in-Training to participate in our Nature-Guided Youth Mentor Program (Base Camp) for 2nd-8th graders. Learn more about Wayfinders here!"
           },
           {
             "type": "p",
-            "text": "The public careers page also provides a second external application form."
+            "text": "Please apply here. If you’d like, you can also email your CV to: wayfindersonthehudson@gmail.com."
           },
           {
             "type": "h2",
@@ -1166,7 +1166,7 @@
         ],
         "links": [
           {
-            "text": "home page",
+            "text": "Learn more about Wayfinders here!",
             "href": "/"
           },
           {
@@ -1174,11 +1174,11 @@
             "href": "mailto:wayfindersonthehudson@gmail.com"
           },
           {
-            "text": "Apply with Google Forms",
+            "text": "Apply here",
             "href": "https://forms.gle/Ukcuf1nzXkvHFnca7"
           },
           {
-            "text": "second external application form",
+            "text": "Apply",
             "href": "https://forms.gle/5uQMaSNT6KH8369W8"
           },
           {
@@ -4508,6 +4508,26 @@
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1690238250129-GGSBV3VBHYM5EJFJBGZJ/image-asset.jpeg?format=1200w",
             "alt": "Young Wayfinders leaders outdoors",
             "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/aa747602-9417-4b2c-8be1-11a38559cef7/IMG_9040.jpeg?format=1200w",
+            "alt": "Wayfinders participants outdoors",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/14d7a5d9-a305-42dd-a5a5-aa983a8edff5/gabe+and+jack.jpg?format=1200w",
+            "alt": "Two Wayfinders participants outdoors",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2ac2f1e9-1212-4145-aa2b-4fdaaa64e2d4/29-Sabastian+Camo.jpg?format=1200w",
+            "alt": "A Wayfinders participant outdoors",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/4781c252-f9a6-4466-9518-7b8df256a202/43-Alice+Gwen+candle.jpg?format=1200w",
+            "alt": "Wayfinders participants with a candle",
+            "title": ""
           }
         ],
         "embeds": [],
@@ -4516,7 +4536,7 @@
           "blocks": 27,
           "headings": 6,
           "links": 9,
-          "images": 1,
+          "images": 5,
           "embeds": 0,
           "forms": 0
         }
@@ -6256,7 +6276,7 @@
         "url": "https://wayfinders-neon.vercel.app/rose-blossoms-12-15-year-old-girls",
         "status": 200,
         "title": "Rose Blossoms | Wayfinders on the Hudson",
-        "word_count": 683,
+        "word_count": 1167,
         "blocks": [
           {
             "type": "p",
@@ -6268,7 +6288,11 @@
           },
           {
             "type": "p",
-            "text": "An invitation to young women to discover gratitude, emotional resilience, sacred sisterhood, intuitive knowing, and earth stewardship."
+            "text": "An invitation to young women ages 12-15 to dive deeply into discovering gratitude, emotional resilience, sacred sisterhood, intuitive knowing, and Earth stewardship."
+          },
+          {
+            "type": "p",
+            "text": "Limited Spaces and Scholarships Available."
           },
           {
             "type": "p",
@@ -6276,7 +6300,15 @@
           },
           {
             "type": "p",
-            "text": "Rose Blossoms gathers seasonally during three weekends over the 2026–2027 school year, with family and community gatherings between each weekend. Parents and caregivers are supported along the path and given tools to uplift their girls as they step into this process."
+            "text": "Rose Blossoms will gather seasonally during three weekends over the 2026-2027 school year in order to provide spacious time for deepening connections with ourselves, each other, and the earth, and the Rose Blossoms themes."
+          },
+          {
+            "type": "p",
+            "text": "Between each weekend gathering, a Sunday afternoon family gathering will be held to support the ongoing program and build community within the group. These gatherings will be held on Sunday afternoons from 2-5pm. December 6, March 7, and the girls will be invited for sacred sharing at our seasonal final Base Camp sessions with the greater Wayfinders community."
+          },
+          {
+            "type": "p",
+            "text": "Parents and caregivers will be supported along the path and given tools to uplift their girls as they step into this process."
           },
           {
             "type": "h2",
@@ -6284,7 +6316,7 @@
           },
           {
             "type": "p",
-            "text": "Three weekend journeys with connective gatherings between them to keep the circle strong."
+            "text": "Three weekend journeys across the 2026–2027 school year with connective gatherings in between to keep the circle strong."
           },
           {
             "type": "h2",
@@ -6292,7 +6324,7 @@
           },
           {
             "type": "p",
-            "text": "Small-group connection, guided reflection, and supportive mentorship in a safe, welcoming space."
+            "text": "Small group connection, guided reflection, and supportive mentorship in a safe, welcoming space."
           },
           {
             "type": "h2",
@@ -6300,7 +6332,7 @@
           },
           {
             "type": "p",
-            "text": "Hands-on learning, rituals, and earth stewardship that nourish confidence, compassion, and leadership."
+            "text": "Hands-on learning, rituals, and Earth stewardship that nourish confidence, compassion, and leadership."
           },
           {
             "type": "h2",
@@ -6308,7 +6340,7 @@
           },
           {
             "type": "p",
-            "text": "Practices that help girls navigate change, trust their inner voice, and step into who they are becoming."
+            "text": "Rituals and practices that empower girls to navigate change, trust their inner voice, and step into who they are becoming."
           },
           {
             "type": "p",
@@ -6328,7 +6360,11 @@
           },
           {
             "type": "p",
-            "text": "Learn plants, foraging, and herbalism while strengthening connection to plant allies."
+            "text": "Practice receiving their own songs to share with their communities."
+          },
+          {
+            "type": "p",
+            "text": "Learn plants, foraging, and herbalism while strengthening their connection to plant allies."
           },
           {
             "type": "p",
@@ -6372,7 +6408,7 @@
           },
           {
             "type": "p",
-            "text": "Girls will sleep under the stars alongside mountain lakes, create an altar together, and dream into the girls they are becoming. Parents and caregivers will be invited to send their daughters off in ceremony and attend a parent-track session."
+            "text": "Girls will leave this weekend knowing themselves, each other, and the land so much better than when they arrived. Girls will have an opportunity to create an altar together which will illuminate the path they are on, as they call in support from a larger community. We will sleep under the stars alongside mountain lakes, and dream into the girls they are becoming. Parents/caregivers will be invited to send their daughters off in ceremony as they cross the threshold and begin this work, and invited to stay for a parent track session while the girls are off on their own journey."
           },
           {
             "type": "p",
@@ -6392,7 +6428,7 @@
           },
           {
             "type": "p",
-            "text": "As the snow blankets the land, participants will cozy up indoors and learn more about themselves and their changing bodies through natural beauty care for themselves and others."
+            "text": "As the snow blankets the land, we will cozy up indoors and learn more about ourselves and our changing bodies. We will create and experience natural beauty care for ourselves and to gift to others on the journey."
           },
           {
             "type": "p",
@@ -6412,55 +6448,171 @@
           },
           {
             "type": "p",
-            "text": "The final weekend brings forward what the girls have learned as they authorize themselves to become who they are here to be. Parents and caregivers will witness a changing-woman ceremony."
+            "text": "Our final weekend together will bring forward all we have learned and experienced together as the girls authorize themselves to become who they are here to be. We will participate in a changing woman ceremony for them to share reflections of each other. Parents and caregivers will be invited to witness the girls as they cross over the threshold again as changed women."
           },
           {
             "type": "h3",
-            "text": "Connective gatherings"
+            "text": "Connective offering"
           },
           {
             "type": "p",
-            "text": "Families gather Sunday, December 6 and Sunday, March 7 from 2:00–5:00 pm. Girls are also invited to share meaningful work with the greater Wayfinders community during final Base Camp family gatherings in December and June."
+            "text": "A time for girls and their families to stay connected about the important changes underway."
+          },
+          {
+            "type": "li",
+            "text": "Sunday, December 6th, 2–5pm"
+          },
+          {
+            "type": "li",
+            "text": "Wednesday, December 9th, 3:45–5:45pm (girls only): a time for girls to present something meaningful underway as revealed during the Fall Ceremony—to be witnessed by our greater Wayfinders community (during final Fall Base Camp family gathering)."
+          },
+          {
+            "type": "li",
+            "text": "Sunday, March 7th, 2–5pm"
+          },
+          {
+            "type": "li",
+            "text": "Wednesday in June TBD: 3:45–5:45: a ceremony to honor the changes in the girls to be witnessed in our greater Wayfinders community (during final Spring Base Camp family gathering)."
+          },
+          {
+            "type": "li",
+            "text": "Caregivers support track provided for families."
+          },
+          {
+            "type": "li",
+            "text": "Community members knowledgeable in relevant themes will join our circles."
+          },
+          {
+            "type": "li",
+            "text": "Youth co-design: participants help plan themes, lead activities, and evaluate the program."
+          },
+          {
+            "type": "li",
+            "text": "Short-term: improved emotional regulation, stronger peer connections, increased nature engagement & connection."
+          },
+          {
+            "type": "li",
+            "text": "Medium-term: demonstrated leadership, reduced single-use waste and other sustainability practices."
+          },
+          {
+            "type": "li",
+            "text": "Evaluation methods: participant reflections, caregiver feedback, facilitator observations, simple ecological metrics for projects."
+          },
+          {
+            "type": "li",
+            "text": "Create alumni circles for older youth to mentor newer cohorts."
+          },
+          {
+            "type": "li",
+            "text": "Document activities and outcomes to support funding and partnerships."
+          },
+          {
+            "type": "li",
+            "text": "Maintain seasonal traditions to anchor ongoing identity and belonging."
+          },
+          {
+            "type": "li",
+            "text": "Sessions: 2 seasonal camping trips in fall and spring (Orientation/First Gathering in Fall and Closing/Rite of Passage in Spring), plus Wintertime weekend sleepover, plus connecting gatherings between each weekend journey to keep the changes flowing, and a Summertime expo for the Wayfinders Community to share the learning and growth from the journey."
+          },
+          {
+            "type": "li",
+            "text": "Group size: 12 participants to balance intimacy and diversity of perspectives."
+          },
+          {
+            "type": "li",
+            "text": "Facilitators: Two trained adults (one lead, one assistant/guide) with experience in youth development, non-violent communication, outdoor education, girls rite of passage."
+          },
+          {
+            "type": "li",
+            "text": "Session Rhythm: welcome circle → check-in → thematic exploration and/or skill practice → small-group project or reflection → closing ritual."
+          },
+          {
+            "type": "li",
+            "text": "Belonging — identity mapping, group agreements, trust-building activities."
+          },
+          {
+            "type": "li",
+            "text": "Body & Mind — mindfulness, healthy boundaries, stress tools, moon cycles and synching."
+          },
+          {
+            "type": "li",
+            "text": "Relationships — active listening, conflict resolution, consent education, non-violent communication."
+          },
+          {
+            "type": "li",
+            "text": "Place — nature walks/hikes, local ecology, seasonal cycles."
+          },
+          {
+            "type": "li",
+            "text": "Action — low-waste swaps, service projects, planting, clean ups, gifting."
+          },
+          {
+            "type": "li",
+            "text": "Leadership & Celebration — project presentations, peer recognition, transition rituals."
+          },
+          {
+            "type": "li",
+            "text": "Circle check-ins with emotion cards or journaling prompts."
+          },
+          {
+            "type": "li",
+            "text": "Skill workshops: cooking, foraging, herbalism, self-care and beauty."
+          },
+          {
+            "type": "li",
+            "text": "Creative projects: earth art, bead making & mala necklaces."
+          },
+          {
+            "type": "li",
+            "text": "Stewardship actions: native planting, clean ups."
+          },
+          {
+            "type": "li",
+            "text": "Reflection rituals: gratitude stones, intention-setting, closing songs."
+          },
+          {
+            "type": "li",
+            "text": "Co-created behavioral agreements and consent culture."
+          },
+          {
+            "type": "li",
+            "text": "Deep mentorship and individualized learning goals."
+          },
+          {
+            "type": "li",
+            "text": "Low-barrier participation: sliding-scale fees or scholarships; materials provided."
           },
           {
             "type": "p",
-            "text": "Caregivers receive a support track. Community members knowledgeable in relevant themes join the circles. Participants help plan themes, lead activities, and evaluate the program."
-          },
-          {
-            "type": "p",
-            "text": "The group is designed for 12 participants with two trained adult facilitators experienced in youth development, non-violent communication, outdoor education, and girls’ rites of passage."
-          },
-          {
-            "type": "p",
-            "text": "Gatherings move through a welcome circle, check-in, thematic exploration or skill practice, small-group project or reflection, and closing ritual."
-          },
-          {
-            "type": "p",
-            "text": "Themes include belonging, body and mind, relationships, place, action, leadership, and celebration. Activities include circle check-ins, journaling, cooking, foraging, herbalism, natural self-care, earth art, bead making, native planting, clean ups, gratitude, intention-setting, and closing songs."
-          },
-          {
-            "type": "p",
-            "text": "The program uses co-created behavioral agreements, consent culture, deep mentorship, individualized learning goals, sliding-scale fees or scholarships, and provided materials."
-          },
-          {
-            "type": "p",
-            "text": "Intended outcomes include improved emotional regulation, stronger peer connections, increased nature engagement, demonstrated leadership, and sustainable practices. Reflections, caregiver feedback, facilitator observations, and simple ecological metrics support evaluation. Alumni circles and seasonal traditions help sustain the community."
-          },
-          {
-            "type": "p",
-            "text": "Join the Rose Blossoms journey"
+            "text": "Join the Rose Blossoms Journey"
           },
           {
             "type": "h2",
-            "text": "Deep work, enduring friendships."
+            "text": "Reserve your spot at our first camping weekend on October 23-25th or join for the Rose Blossoms Journey!"
           },
           {
             "type": "p",
-            "text": "Three immersive weekend-long ceremonies and connective gatherings across the school year build self-awareness, confidence, resilience, leadership, and lifelong friendships."
+            "text": "Three immersive camping weekend-long ceremonies and short connective gatherings between the weekends (two Sunday afternoons) across the school year, designed to build self awareness & confidence, resilience, leadership, and lifelong friendships through outdoor adventure and meaningful mentorship. Families are deeply encouraged to join for the full journey for maximum growth, and we understand that may not be the right fit for everyone, so we offer weekend options too."
           },
           {
             "type": "p",
-            "text": "$550 per weekend or $1,450 for the full journey—a $200 savings. Payment plans and scholarships are available."
+            "text": "$550 per weekend or $1,450 for the full Journey (save $200). Payment plans and scholarships available."
+          },
+          {
+            "type": "p",
+            "text": "Limited Spaces & Scholarships Available!"
+          },
+          {
+            "type": "h2",
+            "text": "Scholarships Available."
+          },
+          {
+            "type": "h2",
+            "text": "Open to all!"
+          },
+          {
+            "type": "p",
+            "text": "wayfindersonthehudson@gmail.com(917) 318-3888"
           },
           {
             "type": "p",
@@ -6497,11 +6649,11 @@
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-47b764e180774183bd534e417aa1e1aa070a56dcdd244b5a917c4d59ebb0a3425157ebfa108d474e9572bca4e4c4c501?locale=EN_US&cta=copylistmultilink"
           },
           {
-            "text": "Camping weekend",
+            "text": "Camping Weekend",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b05303556c5743c19b436e9f5ad980762e71deb9659042c2bf5204807802f8baf474ba1adf0c445d975b569ebcf28767?locale=EN_US&cta=copylistmultilink"
           },
           {
-            "text": "Full journey",
+            "text": "Rose Blossoms Journey",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-47b764e180774183bd534e417aa1e1aa070a56dcdd244b5a917c4d59ebb0a3425157ebfa108d474e9572bca4e4c4c501?locale=EN_US&cta=copylistmultilink"
           },
           {
@@ -6549,15 +6701,70 @@
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/bd4e4ecf-30bf-4b01-ab0f-1e83b75af219/Spring4.png?format=1200w",
             "alt": "",
             "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/dce5a068-69ed-4a85-9d86-645aaea21f8f/leaf3.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/118092ff-5937-409c-99b0-c694e33451be/Love3.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ef82371d-4870-469f-ae4e-ed67ed62e6aa/Sun3.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/6870c0b7-310d-45f4-91a3-6a21aa3aaf4c/Lotus3.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b2c3b18f-7b7d-4baa-8872-79c65cbad443/RoseBg2.jpg?format=1200w",
+            "alt": "Rose Blossoms artwork",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/9d95e6f3-695e-467e-a5b3-0e7e93bb55fa/RBBG5.png?format=1200w",
+            "alt": "Rose Blossoms program artwork",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/74945e75-5c87-4ff3-8b01-395ca98b9543/Hand3.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/64205956-b926-4859-bc6f-7624ec172f04/Leaf4.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/68bfd2f8-f491-4212-a8e8-ad661ca1cac8/Path4.png?format=1200w",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3df2c1a5-9ff4-44a5-8f53-ba217d71d290/RoseBg6.jpg?format=1200w",
+            "alt": "Rose Blossoms artwork",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/162da3a6-5e50-42b1-b7d5-d572a21e23e7/bryte+and+jude.jpg?format=1200w",
+            "alt": "Two young people outdoors",
+            "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 57,
-          "headings": 12,
+          "blocks": 90,
+          "headings": 14,
           "links": 10,
-          "images": 4,
+          "images": 15,
           "embeds": 0,
           "forms": 0
         }
@@ -6646,7 +6853,7 @@
         "url": "https://wayfinders-neon.vercel.app/scholarships-1",
         "status": 200,
         "title": "Scholarships | Wayfinders on the Hudson",
-        "word_count": 239,
+        "word_count": 252,
         "blocks": [
           {
             "type": "p",
@@ -6658,7 +6865,7 @@
           },
           {
             "type": "p",
-            "text": "Wayfinders believes that tuition should not prevent anyone from joining and participating in our community."
+            "text": "Contribute to the Wayfinders Scholarship Fund or Apply for a Scholarship below."
           },
           {
             "type": "h2",
@@ -6666,23 +6873,27 @@
           },
           {
             "type": "p",
-            "text": "Funding does not yet allow for need-blind admission. Families who can are asked to pay full tuition to offset tuition for families unable to pay the full amount. Wayfinders progressive tuition and scholarship opportunities are a step toward creating equity. This effort relies on our community to uplift each other."
+            "text": "Wayfinders believes that tuition should not prevent anyone from joining and participating in our community. However, funding does not yet allow for need-blind admission."
           },
           {
             "type": "p",
+            "text": "Families who can, are asked to pay full tuition to off-set tuition for families unable to pay the full amount. Wayfinders progressive tuition and scholarship opportunities are a step toward creating equity. This effort relies on our community to uplift each other."
+          },
+          {
+            "type": "li",
             "text": "Scholarships draw directly from the Wayfinders Scholarship Fund, which is an ongoing fundraising priority. When these funds are depleted, typically no additional scholarships are available for that program year."
           },
           {
-            "type": "p",
+            "type": "li",
             "text": "Scholarship applications are processed, and scholarship decisions are made, by a subcommittee of the Wayfinders Board of Directors. The members of this committee are responsible for executing the scholarship process according to the mission and values of the organization, with integrity and impartiality."
           },
           {
-            "type": "p",
+            "type": "li",
             "text": "There are limited opportunities for families to provide in-kind donations of goods or services to help offset tuition, depending on organizational needs at a given time."
           },
           {
-            "type": "p",
-            "text": "Families seeking scholarships can apply directly through the registration form and may select from a range of options. A Scholarship Committee member may follow up with the family directly with additional questions and may request documentation of free and reduced lunch designation."
+            "type": "li",
+            "text": "Families seeking scholarships can apply directly through the registration form, and may select from a range of options. A Scholarship Committee member may follow up with the family directly with any additional questions, and request documentation of free and reduced lunch designation."
           },
           {
             "type": "h2",
@@ -6711,11 +6922,15 @@
         ],
         "links": [
           {
-            "text": "Contribute to the scholarship fund",
+            "text": "Contribute to a Wayfinders Scholarship",
+            "href": "/donate"
+          },
+          {
+            "text": "Apply for Wayfinders Scholarship",
             "href": "https://forms.gle/8o8xWUZpeAeRBiYA8"
           },
           {
-            "text": "Apply for a scholarship",
+            "text": "registration form",
             "href": "https://forms.gle/9iMYsTESrsyxFUAS8"
           },
           {
@@ -6727,9 +6942,9 @@
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 15,
+          "blocks": 16,
           "headings": 5,
-          "links": 3,
+          "links": 4,
           "images": 0,
           "embeds": 0,
           "forms": 0

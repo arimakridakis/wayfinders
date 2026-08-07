@@ -1,6 +1,6 @@
 # Content parity baseline report
 
-> Generated 2026-08-07T17:17:58+00:00 by `python3 scripts/content_parity.py`.
+> Generated 2026-08-07T18:25:12+00:00 by `python3 scripts/content_parity.py`.
 
 This is a triage report, not proof of parity. Word and element counts identify likely gaps; every page still requires semantic and visual review.
 
@@ -8,7 +8,7 @@ This is a triage report, not proof of parity. Word and element counts identify l
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | `/` | 200 | 200 | 1344 | 1406 | 105% | 7 | 7 | 2 | 2 |
 | `/autumn-2026-womens-retreat` | 200 | 200 | 249 | 193 | 78% | 3 | 1 | 0 | 0 |
-| `/careers` | 200 | 200 | 302 | 332 | 110% | 1 | 1 | 0 | 0 |
+| `/careers` | 200 | 200 | 302 | 328 | 109% | 1 | 1 | 0 | 0 |
 | `/contact-us` | 200 | 200 | 117 | 152 | 130% | 1 | 1 | 1 | 0 |
 | `/corporate-retreats` | 200 | 200 | 228 | 184 | 81% | 6 | 3 | 0 | 0 |
 | `/dance-embody-collective` | 200 | 200 | 86 | 86 | 100% | 1 | 1 | 0 | 0 |
@@ -19,13 +19,13 @@ This is a triage report, not proof of parity. Word and element counts identify l
 | `/faqs` | 200 | 200 | 905 | 807 | 89% | 1 | 1 | 0 | 0 |
 | `/forest-tots-12-30-months` | 200 | 200 | 151 | 180 | 119% | 2 | 2 | 0 | 0 |
 | `/holiday-camps-1st-8th-graders` | 200 | 200 | 28 | 46 | 164% | 2 | 2 | 0 | 0 |
-| `/internships` | 200 | 200 | 286 | 281 | 98% | 5 | 1 | 0 | 0 |
+| `/internships` | 200 | 200 | 286 | 281 | 98% | 5 | 5 | 0 | 0 |
 | `/message-from-founders` | 200 | 200 | 13 | 70 | 538% | 0 | 0 | 0 | 0 |
 | `/motherhood-rising-6-weeks-12-months` | 200 | 200 | 371 | 371 | 100% | 2 | 2 | 0 | 0 |
 | `/our-mission` | 200 | 200 | 70 | 81 | 116% | 0 | 0 | 0 | 0 |
 | `/pastworkshops` | 200 | 200 | 696 | 637 | 92% | 10 | 7 | 0 | 0 |
-| `/rose-blossoms-12-15-year-old-girls` | 200 | 200 | 1172 | 683 | 58% | 15 | 4 | 0 | 0 |
-| `/scholarships-1` | 200 | 200 | 249 | 239 | 96% | 0 | 0 | 0 | 0 |
+| `/rose-blossoms-12-15-year-old-girls` | 200 | 200 | 1172 | 1167 | 100% | 15 | 15 | 0 | 0 |
+| `/scholarships-1` | 200 | 200 | 249 | 252 | 101% | 0 | 0 | 0 | 0 |
 | `/school-programs` | 200 | 200 | 969 | 881 | 91% | 11 | 1 | 0 | 0 |
 | `/slideshow-1` | 200 | 200 | 23 | 34 | 148% | 44 | 44 | 0 | 0 |
 | `/testimonials-` | 200 | 200 | 1360 | 1330 | 98% | 4 | 0 | 0 | 0 |
