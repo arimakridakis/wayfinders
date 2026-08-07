@@ -7,10 +7,10 @@ export const site = {
     { label: 'The team', href: '/the-team' },
     { label: 'Fall programs', href: '/fall-2026-programs-overview' },
     { label: 'Base Camp', href: '/fall-2026-base-camp-k-8' },
-    { label: 'Contact', href: 'mailto:wayfindersonthehudson@gmail.com' },
+    { label: 'Contact', href: '/contact-us' },
   ],
   contact: 'wayfindersonthehudson@gmail.com',
-  donationUrl: 'https://www.wayfindersonthehudson.com/donate',
+  donationUrl: '/donate',
   newsletterUrl: null,
   socialLinks: [
     { label: 'Instagram', href: 'https://www.instagram.com/wayfindersonthehudson/' },
