@@ -4,7 +4,7 @@
 
 | Route | Page family | Density | Existing images | Proposed baseline sections | Content issue | Readiness |
 | --- | --- | --- | --- | --- | --- | --- |
-| `/` | Homepage | High | Yes | Split hero, media split, prose, feature grid, gallery, CTA | Newsletter provider unresolved | Later batch |
+| `/` | Homepage | High | Yes | Split hero, media split, prose, feature grid, gallery, CTA | Newsletter provider unresolved | Batch 5 complete |
 | `/fall-2026-programs-overview` | Program overview | High | Yes | Split hero, card grids, media splits, CTA | None noted | Batch 2 complete |
 | `/fall-2026-base-camp-k-8` | Individual program | High | Yes | Split hero, callout, three-card grid, details, media split, feature grid, gallery, CTA | Preserve external registrations | Pilot complete |
 | `/forest-tots-12-30-months` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Batch 2 complete |
