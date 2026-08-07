@@ -1,12 +1,12 @@
 # Content parity baseline report
 
-> Generated 2026-08-07T15:19:46+00:00 by `python3 scripts/content_parity.py`.
+> Generated 2026-08-07T16:49:24+00:00 by `python3 scripts/content_parity.py`.
 
 This is a triage report, not proof of parity. Word and element counts identify likely gaps; every page still requires semantic and visual review.
 
 | Route | Source | Target | Source words | Target words | Ratio | Source images | Target images | Source forms | Target forms |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `/` | 200 | 200 | 1344 | 549 | 41% | 7 | 2 | 2 | 0 |
+| `/` | 200 | 200 | 1344 | 1406 | 105% | 7 | 7 | 2 | 2 |
 | `/autumn-2026-womens-retreat` | 200 | 200 | 249 | 193 | 78% | 3 | 1 | 0 | 0 |
 | `/careers` | 200 | 200 | 302 | 332 | 110% | 1 | 1 | 0 | 0 |
 | `/contact-us` | 200 | 200 | 117 | 152 | 130% | 1 | 1 | 1 | 0 |
@@ -20,7 +20,7 @@ This is a triage report, not proof of parity. Word and element counts identify l
 | `/forest-tots-12-30-months` | 200 | 200 | 151 | 175 | 116% | 2 | 2 | 0 | 0 |
 | `/holiday-camps-1st-8th-graders` | 200 | 200 | 28 | 63 | 225% | 2 | 3 | 0 | 0 |
 | `/internships` | 200 | 200 | 286 | 281 | 98% | 5 | 1 | 0 | 0 |
-| `/message-from-founders` | 200 | 404 | 13 | 0 | 0% | 0 | 0 | 0 | 0 |
+| `/message-from-founders` | 200 | 200 | 13 | 70 | 538% | 0 | 0 | 0 | 0 |
 | `/motherhood-rising-6-weeks-12-months` | 200 | 200 | 371 | 255 | 69% | 2 | 2 | 0 | 0 |
 | `/our-mission` | 200 | 200 | 70 | 81 | 116% | 0 | 0 | 0 | 0 |
 | `/pastworkshops` | 200 | 200 | 696 | 637 | 92% | 10 | 7 | 0 | 0 |
@@ -29,7 +29,7 @@ This is a triage report, not proof of parity. Word and element counts identify l
 | `/school-programs` | 200 | 200 | 969 | 881 | 91% | 11 | 1 | 0 | 0 |
 | `/slideshow-1` | 200 | 200 | 23 | 34 | 148% | 44 | 44 | 0 | 0 |
 | `/testimonials-` | 200 | 200 | 1360 | 1330 | 98% | 4 | 0 | 0 | 0 |
-| `/the-team` | 200 | 200 | 194 | 157 | 81% | 13 | 14 | 0 | 0 |
+| `/the-team` | 200 | 200 | 194 | 2262 | 1166% | 13 | 13 | 0 | 0 |
 | `/walk-talks` | 200 | 200 | 213 | 207 | 97% | 1 | 1 | 0 | 0 |
 | `/wayfinders-in-the-news` | 200 | 200 | 116 | 113 | 97% | 5 | 5 | 0 | 0 |
 | `/wayfinders-video` | 200 | 200 | 11 | 65 | 591% | 1 | 1 | 0 | 0 |

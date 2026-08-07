@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import Section from '../components/global/Section.astro';
+---
+<BaseLayout title="Message from the Founders" description="Hear from Leah and Gwen about their mission.">
+  <PageHero eyebrow="Wayfinders on the Hudson" title="A Message from the Founders" intro="Hear from Leah and Gwen about their mission!" />
+  <Section width="standard"><div class="video-wrap"><video controls preload="metadata" aria-label="A message from Wayfinders founders Leah and Gwen"><source src="https://video.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/83c7e413-f3c4-4094-9ad3-fd8ac4d8731d/playlist.m3u8" type="application/vnd.apple.mpegurl" />Your browser cannot play this video. The temporary source video remains available on the <a href="https://www.wayfindersonthehudson.com/message-from-founders">public founders’ page</a>.</video><p class="media-note">This 54-second source video is temporarily referenced from Squarespace CDN pending confirmation of ownership and delivery of an approved original. A transcript was not present on the public source page and requires an owner-provided or approved transcription.</p></div></Section>
+</BaseLayout>
+<style>.video-wrap{max-width:60rem;margin-inline:auto}.video-wrap video{width:100%;aspect-ratio:16/9;border-radius:var(--radius-card);background:var(--color-forest-dark)}.media-note{color:var(--color-ink-muted);font-size:.875rem}</style>
