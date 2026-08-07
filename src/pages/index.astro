@@ -6,6 +6,9 @@ import Section from '../components/global/Section.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Wayfinders on the Hudson" description="The new Wayfinders on the Hudson website foundation is taking root.">
+  <aside class="preview-marker" aria-label="Preview environment notice">
+    <span class="type-label">Vercel preview workflow test</span>
+  </aside>
   <Section width="wide" class="hero">
     <div class="hero-grid">
       <div>
@@ -29,6 +32,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </Section>
 </BaseLayout>
 <style>
+  .preview-marker { margin: 0; padding: .45rem var(--gutter); border-bottom: 1px solid var(--color-line); background: var(--color-surface-muted); color: var(--color-forest-dark); text-align: center; }
   .hero { min-height: min(48rem, calc(100svh - 5rem)); display: grid; align-items: center; }
   .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr); align-items: center; gap: var(--column-gap); }
   .intro { max-width: 38rem; margin-block: 1.5rem 2rem; color: var(--color-ink-muted); font-size: clamp(1.05rem, 2vw, 1.25rem); }
