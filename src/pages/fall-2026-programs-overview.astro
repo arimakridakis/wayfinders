@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
 import ProgramCard from '../components/cards/ProgramCard.astro';
+import CardGrid from '../components/sections/CardGrid.astro';
 const programs = [
   ['Motherhood Rising: Tending the Roots (6 weeks - 12 months)','Provides new parents/ guardians/ caregivers with a space to connect with themselves and their babies, build community with other caregivers, and the earth. Program includes both active movement (hiking & stretching), and sharing time. Indoor time in the nature center is available as needed.','/motherhood-rising-6-weeks-12-months','https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/95933549-62ba-461b-a6af-327f93917380/IMG_1780.jpg?format=1200w','A caregiver holding a baby outdoors'],
   ['Forest Tots (12 - 30 months)','Play-based, sensory rich experience in nature where toddlers and caregivers will be nourished from hands on experiences together outdoors. Free play inspired by thoughtful nature-based invitations allow children to engage deeply. A short circle time with songs and finger plays related to the seasons will sweetly round out the time together.','/forest-tots-12-30-months','https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/280a8097-6a1d-478d-b98d-8be8399cda20/IMG_9287.jpg?format=1200w','A young child exploring outdoors'],
@@ -17,6 +18,5 @@ const programs = [
 ---
 <BaseLayout title="Fall 2026 Programs Overview" description="Explore Fall 2026 programs from Wayfinders on the Hudson.">
   <PageHero eyebrow="FALL 2026 PROGRAMS" title="Fall 2026 Programs" intro="Spend some screen-free time in the woods! Scholarships & Payment Plans are available for all programs!" image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/95933549-62ba-461b-a6af-327f93917380/IMG_1780.jpg?format=1200w" alt="A caregiver holding a baby outdoors" />
-  <Section width="wide"><div class="program-grid">{programs.map(([title,description,href,image,alt]) => <ProgramCard {title} {description} {href} {image} {alt} />)}</div></Section>
+  <Section width="wide"><CardGrid columns={3}>{programs.map(([title,description,href,image,alt]) => <ProgramCard {title} {description} {href} {image} {alt} />)}</CardGrid></Section>
 </BaseLayout>
-<style>.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}@media(max-width:63.999rem){.program-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:35.999rem){.program-grid{grid-template-columns:1fr}}</style>

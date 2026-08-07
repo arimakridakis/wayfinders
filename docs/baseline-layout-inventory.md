@@ -5,16 +5,16 @@
 | Route | Page family | Density | Existing images | Proposed baseline sections | Content issue | Readiness |
 | --- | --- | --- | --- | --- | --- | --- |
 | `/` | Homepage | High | Yes | Split hero, media split, prose, feature grid, gallery, CTA | Newsletter provider unresolved | Later batch |
-| `/fall-2026-programs-overview` | Program overview | High | Yes | Split hero, card grids, media splits, CTA | None noted | Ready |
+| `/fall-2026-programs-overview` | Program overview | High | Yes | Split hero, card grids, media splits, CTA | None noted | Batch 2 complete |
 | `/fall-2026-base-camp-k-8` | Individual program | High | Yes | Split hero, callout, three-card grid, details, media split, feature grid, gallery, CTA | Preserve external registrations | Pilot complete |
-| `/forest-tots-12-30-months` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Ready |
-| `/motherhood-rising-6-weeks-12-months` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Ready |
-| `/rose-blossoms-12-15-year-old-girls` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Ready |
-| `/wise-owls-55-1` | Individual program | Medium | Yes | Split hero, details, media split, CTA | Route slug is inherited | Ready |
-| `/holiday-camps-1st-8th-graders` | Camp | Medium | Yes | Split hero, card grid, details, CTA | None noted | Ready |
-| `/autumn-2026-womens-retreat` | Retreat | Medium | Yes | Split hero, details, prose, CTA | None noted | Ready |
-| `/dance-embody-collective` | Program | Medium | Yes | Split hero, details, media split, CTA | None noted | Ready |
-| `/walk-talks` | Program | Medium | Yes | Split hero, details, prose, CTA | None noted | Ready |
+| `/forest-tots-12-30-months` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Batch 2 complete |
+| `/motherhood-rising-6-weeks-12-months` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Batch 2 complete |
+| `/rose-blossoms-12-15-year-old-girls` | Individual program | Medium | Yes | Split hero, details, media split, CTA | None noted | Batch 2 complete |
+| `/wise-owls-55-1` | Individual program | Medium | Yes | Split hero, details, media split, CTA | Route slug is inherited | Batch 2 complete |
+| `/holiday-camps-1st-8th-graders` | Camp | Medium | Yes | Split hero, card grid, details, CTA | None noted | Batch 2 complete |
+| `/autumn-2026-womens-retreat` | Retreat | Medium | Yes | Split hero, details, prose, CTA | None noted | Batch 2 complete |
+| `/dance-embody-collective` | Program | Medium | Yes | Split hero, details, media split, CTA | None noted | Batch 2 complete |
+| `/walk-talks` | Program | Medium | Yes | Split hero, details, prose, CTA | None noted | Batch 2 complete |
 | `/our-mission` | About | Low | No approved image | Simple hero, media split with placeholder | Final image selection deferred | Pilot complete |
 | `/message-from-founders` | About | Medium | Yes | Simple hero, narrow prose, media split | None noted | Ready |
 | `/the-team` | People | High | Yes | Simple hero, people grid | None noted | Ready |
