@@ -1,7 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at": "2026-08-07T16:49:24+00:00",
-  "captured_at": "2026-08-07T15:38:30+00:00",
+  "captured_at": "2026-08-07T17:17:58+00:00",
   "source_base": "https://www.wayfindersonthehudson.com",
   "target_base": "https://wayfinders-neon.vercel.app",
   "inventory": "docs/migration-inventory.csv",
@@ -2750,7 +2749,7 @@
         "url": "https://wayfinders-neon.vercel.app/fall-2026-base-camp-k-8",
         "status": 200,
         "title": "Fall 2026 Base Camp K–8 | Wayfinders on the Hudson",
-        "word_count": 266,
+        "word_count": 495,
         "blocks": [
           {
             "type": "p",
@@ -2758,7 +2757,7 @@
           },
           {
             "type": "h1",
-            "text": "Fall Base Camp"
+            "text": "Wayfinders Fall Base Camp"
           },
           {
             "type": "p",
@@ -2790,7 +2789,7 @@
           },
           {
             "type": "p",
-            "text": "10 weeks · September 23–December 9"
+            "text": "10 weeks · September 23–December 9 (skips November 11 and 25)"
           },
           {
             "type": "p",
@@ -2802,11 +2801,47 @@
           },
           {
             "type": "p",
-            "text": "10 weeks · September 24–December 3"
+            "text": "10 weeks · September 24–December 3 (skips November 26)"
           },
           {
             "type": "p",
             "text": "3:45–5:00 pm"
+          },
+          {
+            "type": "p",
+            "text": "Details"
+          },
+          {
+            "type": "h2",
+            "text": "All Fall 2026 meeting dates"
+          },
+          {
+            "type": "h3",
+            "text": "1st- 8th Graders:"
+          },
+          {
+            "type": "p",
+            "text": "3:45 - 5:45 pm @ Lenoir Preserve - 19 Dudley St. Yonkers"
+          },
+          {
+            "type": "p",
+            "text": "Tuesdays: 9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24"
+          },
+          {
+            "type": "p",
+            "text": "Wednesdays: 9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9"
+          },
+          {
+            "type": "h3",
+            "text": "Kindergarteners:"
+          },
+          {
+            "type": "p",
+            "text": "3:45 - 5:00 pm @ Lenoir Preserve - 19 Dudley St. Yonkers"
+          },
+          {
+            "type": "p",
+            "text": "Thursdays: 9/24, 10/1, 10/8, 10/15, 10/22, 10/29, 11/5, 11/12, 11/19, (skip 11/26), 12/3"
           },
           {
             "type": "p",
@@ -2822,23 +2857,23 @@
           },
           {
             "type": "li",
-            "text": "Weekly fire circles to share gratitude, sing, and deepen group connection."
+            "text": "Weekly fire circles: Share gratitude, sing, and deepen group connection."
           },
           {
             "type": "li",
-            "text": "Immersive nature-connection games that teach about the local ecosystem through play."
+            "text": "Nature-connection games: Immersive, playful activities that teach about the local ecosystem through direct experience."
           },
           {
             "type": "li",
-            "text": "Social-emotional learning centered on inclusion, kindness, and community care."
+            "text": "Social-emotional learning: A focus on inclusion, kindness, and community care woven into every activity."
           },
           {
             "type": "li",
-            "text": "Leadership opportunities for seasoned Wayfinders to mentor new participants."
+            "text": "Leadership opportunities: Seasoned Wayfinders mentor and lead new participants, strengthening confidence and group bonds."
           },
           {
             "type": "li",
-            "text": "Fire building and tending, knife skills, shelter building, foraging, plant identification, earth art, and songs."
+            "text": "Skills: Fire building and tending, knife skills, shelter building, plant identification and foraging, earth art, songs"
           },
           {
             "type": "h2",
@@ -2849,12 +2884,16 @@
             "text": "Build friendships and a supportive community. Learn about the natural world through play. Grow emotionally and as a leader in a welcoming environment."
           },
           {
+            "type": "p",
+            "text": "Our community is strong—and keeps growing stronger. Join us this fall to get active, energized, and connected."
+          },
+          {
             "type": "h2",
             "text": "Restoration Nation"
           },
           {
             "type": "p",
-            "text": "Participants plant native trees, shrubs, grasses, and forbs, remove invasive plants, water new plantings, and help maintain the restoration area at Lenoir Preserve."
+            "text": "We explore our local ecosystem through planting native trees, shrubs, grasses, and forbs in our ecosystem restoration project at Lenoir Preserve. We tend the land by removing invasive plants, and watering newly planted natives. We may repair the deer exclosure we installed to ensure it’s still protecting the restoration area."
           },
           {
             "type": "h2",
@@ -2862,7 +2901,7 @@
           },
           {
             "type": "p",
-            "text": "Same-age and mixed-age opportunities foster personal growth and village building. Younger children gain role models while older participants grow as leaders."
+            "text": "Same age and mixed age opportunities are available throughout Base Camp: Mixed age groups foster personal growth and village building; younger kids look up to older kids as role models; older kids grow into strong leaders as they facilitate activities and work with younger kids.Base Camp meets after school on Tuesday and Wednesday afternoons for 1st-8th graders (some participants join us for both days)Thursdays for Kindergarteners!"
           },
           {
             "type": "h2",
@@ -2870,11 +2909,15 @@
           },
           {
             "type": "p",
-            "text": "Programs take place outdoors with indoor space and activities available. Weather-appropriate clothing is required, and families receive guidance on preparing."
+            "text": "Takes place outdoors in the nature preserve with indoor space and activities available. Weather appropriate clothing is required and participants are advised on how to prepare."
           },
           {
             "type": "h2",
             "text": "Open to all."
+          },
+          {
+            "type": "p",
+            "text": "wayfindersonthehudson@gmail.com(917) 318-3888"
           },
           {
             "type": "p",
@@ -2953,15 +2996,30 @@
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3b8bbe34-7a41-4a5e-95b6-2381442780c7/IMG_1715.jpeg?format=1200w",
             "alt": "Children exploring during Wayfinders Base Camp",
             "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/61ddf4e9-9f95-49fe-840c-b71ec5ad8b77/IMG_3626.jpg?format=1200w",
+            "alt": "Children gathered in the woods",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/954b56d9-449c-48af-bdcf-8600061b497e/IMG_2939.jpg?format=1200w",
+            "alt": "Wayfinders participants outdoors",
+            "title": ""
+          },
+          {
+            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/162da3a6-5e50-42b1-b7d5-d572a21e23e7/bryte+and+jude.jpg?format=1200w",
+            "alt": "Two children exploring outdoors",
+            "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 37,
-          "headings": 10,
+          "blocks": 48,
+          "headings": 13,
           "links": 10,
-          "images": 2,
+          "images": 5,
           "embeds": 0,
           "forms": 0
         }
@@ -3131,12 +3189,12 @@
       "target": {
         "url": "https://wayfinders-neon.vercel.app/fall-2026-programs-overview",
         "status": 200,
-        "title": "Fall 2026 Programs | Wayfinders on the Hudson",
-        "word_count": 254,
+        "title": "Fall 2026 Programs Overview | Wayfinders on the Hudson",
+        "word_count": 396,
         "blocks": [
           {
             "type": "p",
-            "text": "Programs for all ages"
+            "text": "FALL 2026 PROGRAMS"
           },
           {
             "type": "h1",
@@ -3144,47 +3202,47 @@
           },
           {
             "type": "p",
-            "text": "Spend some screen-free time in the woods. Scholarships and payment plans are available for all programs."
+            "text": "Spend some screen-free time in the woods! Scholarships & Payment Plans are available for all programs!"
           },
           {
             "type": "h2",
-            "text": "Motherhood Rising: Tending the Roots (6 weeks–12 months)"
+            "text": "Motherhood Rising: Tending the Roots (6 weeks - 12 months)"
           },
           {
             "type": "p",
-            "text": "A space for caregivers to connect with themselves and their babies, build community, move, hike, stretch, and share."
+            "text": "Provides new parents/ guardians/ caregivers with a space to connect with themselves and their babies, build community with other caregivers, and the earth. Program includes both active movement (hiking & stretching), and sharing time. Indoor time in the nature center is available as needed."
           },
           {
             "type": "h2",
-            "text": "Forest Tots (12–30 months)"
+            "text": "Forest Tots (12 - 30 months)"
           },
           {
             "type": "p",
-            "text": "A play-based, sensory-rich experience where toddlers and caregivers learn from hands-on experiences together outdoors."
+            "text": "Play-based, sensory rich experience in nature where toddlers and caregivers will be nourished from hands on experiences together outdoors. Free play inspired by thoughtful nature-based invitations allow children to engage deeply. A short circle time with songs and finger plays related to the seasons will sweetly round out the time together."
           },
           {
             "type": "h2",
-            "text": "Base Camp (K–8)"
+            "text": "Base Camp (After School Program) - Tues. & Weds 1st-8th Grades; Thurs Kindergarten only"
           },
           {
             "type": "p",
-            "text": "Weekly fire circles, immersive nature games, social-emotional learning, leadership development, survival skills, and community building."
+            "text": "Explore connections with ourselves, each other & the earth through weekly fire circles and immersive nature connection games & activities, social emotional learning, leadership development, survival skills, and community building."
           },
           {
             "type": "h2",
-            "text": "Rose Blossoms (ages 12–15)"
+            "text": "Rose Blossoms (12-15 year old girls)"
           },
           {
             "type": "p",
-            "text": "A community of young women exploring care for ourselves, each other, and the earth through camping, weekend programs, and rites of passage."
+            "text": "A blossoming community of young women ages 12–15 exploring Wayfinders’ values of caring for ourselves, each other, & the Earth. Meets 6 times over the 2026-27 school year for camping & weekend programs for exploration of coming of age. Culminates with a rite of passage experience."
           },
           {
             "type": "h2",
-            "text": "Internships (grades 6–12)"
+            "text": "Internships - 6th-12th Grades"
           },
           {
             "type": "p",
-            "text": "Mentorship and character-building opportunities for Mini Mentors, Junior Mentors, and Mentors in Training."
+            "text": "Provides teens with the essential skills & character building to effectively mentor youth. Participants receive a Wayfinder’s Mentorship Certification. 6th & 8th Graders (Mini Mentors) - Wayfinders who have participated for more than 2 seasons are eligible. 9th & 10th Graders (Jr. Mentors) - Community Service Hrs. 11th & 12th Graders (Mentor in Training) - Community service hrs or stipend."
           },
           {
             "type": "h2",
@@ -3192,39 +3250,23 @@
           },
           {
             "type": "p",
-            "text": "A walking and talking program for people 55+ to pause, feel gratitude, and connect with peers and nature."
+            "text": "“Wise Owls” is a walking and talking program that provides a space for people 55+ to pause to bring more meaning to this moment, feel gratitude, and connect with others in the same stage of life as they explore their connection to nature."
           },
           {
             "type": "h2",
-            "text": "Autumn Women’s Retreat"
+            "text": "Corporate Retreats (Adults)"
           },
           {
             "type": "p",
-            "text": "Gather around the fire to reflect on summer, set intentions for autumn, rest, and connect."
+            "text": "Team Building meets nature connection and Social Emotional Learning to create healthy workplaces and teams."
           },
           {
             "type": "h2",
-            "text": "Dance Embody Collective"
+            "text": "School Programs (All Ages)"
           },
           {
             "type": "p",
-            "text": "A monthly evening of listening, guest facilitation, ecstatic dance, and somatic exploration."
-          },
-          {
-            "type": "h2",
-            "text": "Corporate Retreats"
-          },
-          {
-            "type": "p",
-            "text": "Team building meets nature connection and social-emotional learning to create healthier workplaces and teams."
-          },
-          {
-            "type": "h2",
-            "text": "School Programs"
-          },
-          {
-            "type": "p",
-            "text": "Orientations, after-school and in-school programs, field trips, and professional development for all ages."
+            "text": "Wayfinders provides orientations, after-school programs, in-school programs, field trips, and professional development."
           },
           {
             "type": "h2",
@@ -3232,7 +3274,7 @@
           },
           {
             "type": "p",
-            "text": "Nature-informed walk and talk therapy for people seeking an experience beyond the traditional office setting."
+            "text": "Nature-informed walk and talk therapy for individuals seeking a therapeutic experience that extends beyond the traditional office setting."
           },
           {
             "type": "p",
@@ -3278,7 +3320,7 @@
           },
           {
             "text": "Learn more",
-            "href": "https://www.wayfindersonthehudson.com/internships"
+            "href": "/internships"
           },
           {
             "text": "Learn more",
@@ -3286,23 +3328,15 @@
           },
           {
             "text": "Learn more",
-            "href": "/autumn-2026-womens-retreat"
-          },
-          {
-            "text": "Learn more",
-            "href": "/dance-embody-collective"
-          },
-          {
-            "text": "Learn more",
             "href": "/corporate-retreats"
           },
           {
             "text": "Learn more",
-            "href": "https://www.wayfindersonthehudson.com/school-programs"
+            "href": "/school-programs"
           },
           {
             "text": "Learn more",
-            "href": "/walk-talks"
+            "href": "/"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
@@ -3328,47 +3362,32 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/95933549-62ba-461b-a6af-327f93917380/IMG_1780.jpg?format=1200w",
-            "alt": "Wayfinders participants enjoying time together outdoors",
-            "title": ""
-          },
-          {
-            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/95933549-62ba-461b-a6af-327f93917380/IMG_1780.jpg?format=1200w",
-            "alt": "Caregiver and baby spending time outdoors",
+            "alt": "A caregiver holding a baby outdoors",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/280a8097-6a1d-478d-b98d-8be8399cda20/IMG_9287.jpg?format=1200w",
-            "alt": "A young child exploring nature",
+            "alt": "A young child exploring outdoors",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/61ddf4e9-9f95-49fe-840c-b71ec5ad8b77/IMG_3626.jpg?format=1200w",
-            "alt": "Wayfinders children gathered in the woods",
+            "alt": "Children gathered together in the woods",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3c4b2445-10f9-412d-9f12-db2f241ab522/bella+and+charley.jpg?format=1200w",
-            "alt": "Two Rose Blossoms participants outdoors",
+            "alt": "Two young people outdoors",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1654967677275-LC008BNCTALQGB839X4J/Rebecca+with+Girls.jpeg?format=1200w",
-            "alt": "A Wayfinders mentor with young participants",
+            "alt": "A mentor with young participants outdoors",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d7fcfdd8-cdf7-45ed-9c89-798fac288223/IMG_1769.jpg?format=1200w",
-            "alt": "Adults walking together in nature",
-            "title": ""
-          },
-          {
-            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2747a8bf-7a1a-4a91-8295-fc9faf882066/IMG_3736.jpg?format=1200w",
-            "alt": "Women gathering outdoors for a retreat",
-            "title": ""
-          },
-          {
-            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3273a57a-857c-4623-8875-7c5838ba7b57/IMG_1760.jpg?format=1200w",
-            "alt": "People dancing and moving together",
+            "alt": "Adults walking together outdoors",
             "title": ""
           },
           {
@@ -3383,17 +3402,17 @@
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/e24fef2d-985f-424f-a81a-00548c58060c/IMG_0468.jpg?format=1200w",
-            "alt": "A wooded trail for a nature-informed walk",
+            "alt": "A wooded trail",
             "title": ""
           }
         ],
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 31,
-          "headings": 12,
-          "links": 16,
-          "images": 12,
+          "blocks": 27,
+          "headings": 10,
+          "links": 14,
+          "images": 9,
           "embeds": 0,
           "forms": 0
         }
@@ -3794,7 +3813,7 @@
         "url": "https://wayfinders-neon.vercel.app/forest-tots-12-30-months",
         "status": 200,
         "title": "Forest Tots | Wayfinders on the Hudson",
-        "word_count": 175,
+        "word_count": 180,
         "blocks": [
           {
             "type": "p",
@@ -3846,7 +3865,7 @@
           },
           {
             "type": "p",
-            "text": "$350 for the 10-session series$40 for an individual session"
+            "text": "$350 for the series (10 sessions)$40 for individual sessions"
           },
           {
             "type": "p",
@@ -3858,19 +3877,19 @@
           },
           {
             "type": "li",
-            "text": "Play-based, sensory-rich outdoor experiences designed for toddlers and their caregivers."
+            "text": "Play-based, sensory-rich outdoor experiences designed for toddlers and their caregivers"
           },
           {
             "type": "li",
-            "text": "Nature-focused activities and free play prompted by thoughtful invitations to explore."
+            "text": "Hands-on, nature-focused activities and free play prompted by thoughtful invitations to explore"
           },
           {
             "type": "li",
-            "text": "Short circle time with seasonal songs and finger plays."
+            "text": "Short circle time with seasonal songs and finger plays"
           },
           {
             "type": "li",
-            "text": "Opportunities for parent–child bonding and sensory development in a natural setting."
+            "text": "Opportunities for parent–child bonding and sensory development in a natural setting"
           },
           {
             "type": "p",
@@ -3882,7 +3901,11 @@
           },
           {
             "type": "p",
-            "text": "Forest Tots is led by Hannah Van Dolsen, former forest school teacher at Little Leaf. Hannah has her own little one, Dimitri, and is passionate about raising him and all young ones in deep connection with nature."
+            "text": "Forest Tots is led by Hannah Van Dolsen, former forest school teacher (Little Leaf). Hannah has her own little one, Dimitri, and is passionate about raising him and all young ones in deep connection with nature."
+          },
+          {
+            "type": "p",
+            "text": "wayfindersonthehudson@gmail.com(917) 318-3888"
           },
           {
             "type": "p",
@@ -3962,7 +3985,7 @@
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 28,
+          "blocks": 29,
           "headings": 6,
           "links": 9,
           "images": 2,
@@ -4060,24 +4083,20 @@
       "target": {
         "url": "https://wayfinders-neon.vercel.app/holiday-camps-1st-8th-graders",
         "status": 200,
-        "title": "Holiday Camps | Wayfinders on the Hudson",
-        "word_count": 63,
+        "title": "Holiday Camps (1st - 8th graders) | Wayfinders on the Hudson",
+        "word_count": 46,
         "blocks": [
           {
             "type": "p",
-            "text": "Grades 1–8"
+            "text": "1st - 8th graders"
           },
           {
             "type": "h1",
-            "text": "Holiday Camps"
+            "text": "Holiday Camps!"
           },
           {
             "type": "p",
-            "text": "Spend a day outdoors at Lenoir Preserve. Scholarships and sibling discounts are available."
-          },
-          {
-            "type": "p",
-            "text": "9:00 am–3:00 pm · Lenoir Preserve"
+            "text": "Scholarships and Sibling Discounts are available!"
           },
           {
             "type": "h2",
@@ -4088,16 +4107,20 @@
             "text": "October 12, 2026"
           },
           {
+            "type": "p",
+            "text": "9am - 3pm"
+          },
+          {
+            "type": "p",
+            "text": "Lenoir Preserve"
+          },
+          {
             "type": "h2",
             "text": "Veteran’s Day"
           },
           {
             "type": "p",
             "text": "November 11, 2026"
-          },
-          {
-            "type": "p",
-            "text": "Scholarships and sibling discounts are available."
           },
           {
             "type": "p",
@@ -4126,16 +4149,16 @@
         ],
         "links": [
           {
+            "text": "Learn more",
+            "href": "/scholarships-1"
+          },
+          {
             "text": "Register",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-a140319a9f4d4508b941abd80c3fc726c804061eb2b14da4b2e13aab088acfd9f7d9f18354b7404b8dffca8f1341ea03?locale=EN_US&cta=saveandcopylink"
           },
           {
             "text": "Register",
             "href": "https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-9ce099ef3d2143b281148a0cb7d8032c170c415fde3b4d7e8d1aa166d9edbf4bb8fe86c956e64a10b057de8c9b10d101?locale=EN_US&cta=saveandcopylink"
-          },
-          {
-            "text": "Learn about scholarships",
-            "href": "/scholarships-1"
           },
           {
             "text": "wayfindersonthehudson@gmail.com",
@@ -4161,17 +4184,12 @@
         "images": [
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/bec60d19-ef19-48b3-9572-ef292cb5611f/IMG_1431+%282%29.jpeg?format=1200w",
-            "alt": "Children enjoying a Wayfinders holiday camp outdoors",
-            "title": ""
-          },
-          {
-            "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/bec60d19-ef19-48b3-9572-ef292cb5611f/IMG_1431+%282%29.jpeg?format=1200w",
-            "alt": "Participants at the Indigenous Peoples’ Day holiday camp",
+            "alt": "Children enjoying an outdoor Wayfinders camp",
             "title": ""
           },
           {
             "src": "https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ed45a473-af40-4eb2-a839-dfdb2ca0da09/IMG_1415.jpeg?format=1200w",
-            "alt": "Participants at the Veteran’s Day holiday camp",
+            "alt": "Two children outdoors at a Wayfinders camp",
             "title": ""
           }
         ],
@@ -4181,7 +4199,7 @@
           "blocks": 15,
           "headings": 3,
           "links": 8,
-          "images": 3,
+          "images": 2,
           "embeds": 0,
           "forms": 0
         }
@@ -4747,7 +4765,7 @@
         "url": "https://wayfinders-neon.vercel.app/motherhood-rising-6-weeks-12-months",
         "status": 200,
         "title": "Motherhood Rising | Wayfinders on the Hudson",
-        "word_count": 255,
+        "word_count": 371,
         "blocks": [
           {
             "type": "p",
@@ -4759,7 +4777,7 @@
           },
           {
             "type": "p",
-            "text": "Find your place in a supportive community where you can be yourself and be surrounded by other mothers who are going through it too."
+            "text": "Being a new mom is no joke, and without a village to support you, it’s harder than ever. So drop into Wayfinders Motherhood Rising: Tending the Roots, to find your place in a supportive community where you can be yourself, and be surrounded by other mothers who are going through it too!"
           },
           {
             "type": "p",
@@ -4771,7 +4789,7 @@
           },
           {
             "type": "p",
-            "text": "11:45 am–1:00 pmTen sessions beginning September 22 or 23"
+            "text": "Tuesdays 11:45-1PM: 9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24Wednesdays 11:45-1PM: 9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9"
           },
           {
             "type": "p",
@@ -4795,7 +4813,7 @@
           },
           {
             "type": "p",
-            "text": "Yonkers, New York"
+            "text": "Lenoir Preserve, Yonkers, NY"
           },
           {
             "type": "h2",
@@ -4811,7 +4829,11 @@
           },
           {
             "type": "p",
-            "text": "This circle is designed for new mothers with babies aged 6 weeks to 12 months. Infants are welcome. We gather in nature to honor the journey of motherhood as a significant transition to be marked, shared, and celebrated within community."
+            "text": "This circle is designed for new mothers (with babies aged 6 weeks to 12 months). Infants are welcome!"
+          },
+          {
+            "type": "p",
+            "text": "We will gather in nature to honor the journey of motherhood—as a significant transition to be marked, shared, and celebrated within community."
           },
           {
             "type": "h3",
@@ -4835,7 +4857,15 @@
           },
           {
             "type": "li",
-            "text": "Integration and celebration"
+            "text": "Integration and Celebration"
+          },
+          {
+            "type": "li",
+            "text": "Honoring Motherhood, Honoring You"
+          },
+          {
+            "type": "p",
+            "text": "Come root into support, share stories, and weave connections with other mothers on this path."
           },
           {
             "type": "p",
@@ -4847,11 +4877,19 @@
           },
           {
             "type": "p",
+            "text": "Co-Hosted by: Wayfinders on the Hudson, and Ardis Ruiz, MS INNATE Postpartum Care Certified Practitioner, and founder of This Time, Nurtured to Thrive"
+          },
+          {
+            "type": "p",
             "text": "Ardis Ruiz is a mother, INNATE Postpartum Care Certified Practitioner, and founder of This Time, Nurtured to Thrive. Her calling grew from her own tender initiation into motherhood, where she felt the absence of the care and traditions once woven into the postpartum time."
           },
           {
             "type": "p",
             "text": "Rooted in the physiological needs of this sacred time, Ardis honors the profound transformation that unfolds after birth. Her approach embraces the natural rhythms of healing, prioritizing rest, and nurturing both mothers and families with warmth and intention."
+          },
+          {
+            "type": "p",
+            "text": "wayfindersonthehudson@gmail.com(917) 318-3888"
           },
           {
             "type": "p",
@@ -4927,7 +4965,7 @@
         "embeds": [],
         "forms": [],
         "counts": {
-          "blocks": 32,
+          "blocks": 37,
           "headings": 8,
           "links": 8,
           "images": 2,
