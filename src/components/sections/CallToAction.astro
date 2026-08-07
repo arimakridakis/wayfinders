@@ -1,0 +1,17 @@
+---
+interface Props { heading: string; }
+const { heading } = Astro.props;
+---
+<aside class="cta">
+  <div class="copy"><h2 class="type-section">{heading}</h2><slot /></div>
+  <div class="actions"><slot name="actions" /></div>
+</aside>
+<style>
+  .cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: var(--card-padding); border-radius: var(--radius-card); background: var(--color-forest-dark); color: var(--color-cream); }
+  h2 { margin: 0; color: inherit; }
+  .copy :global(p) { max-width: 42rem; margin-bottom: 0; }
+  .actions { display: flex; flex: none; flex-wrap: wrap; gap: .75rem; }
+  .actions :global(.secondary) { border-color: var(--color-cream); color: var(--color-cream); }
+  .actions :global(.secondary:hover) { border-color: var(--color-cream); background: var(--color-cream); color: var(--color-forest-dark); }
+  @media (max-width: 47.999rem) { .cta { align-items: stretch; flex-direction: column; } .actions { flex-direction: column; } .actions :global(.button) { width: 100%; } }
+</style>
