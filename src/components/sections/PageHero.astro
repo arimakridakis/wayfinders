@@ -1,0 +1,22 @@
+---
+import Container from '../global/Container.astro';
+interface Props { eyebrow?: string; title: string; intro?: string; image?: string; alt?: string; }
+const { eyebrow, title, intro, image, alt = '' } = Astro.props;
+---
+<section class:list={['page-hero', { 'has-image': image }]}>
+  <Container width="wide" class="hero-inner">
+    <div class="copy">{eyebrow && <p class="type-label">{eyebrow}</p>}<h1 class="type-page-title">{title}</h1>{intro && <p class="intro">{intro}</p>}<slot /></div>
+    {image && <img src={image} {alt} width="1200" height="900" loading="eager" decoding="async" />}
+  </Container>
+</section>
+<style>
+  .page-hero { padding-block: clamp(3.5rem, 8vw, 7rem); background: var(--color-page-alt); }
+  :global(.hero-inner) { display: grid; align-items: center; gap: var(--column-gap); }
+  .has-image :global(.hero-inner) { grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); }
+  .copy { max-width: 48rem; }
+  h1 { margin: .65rem 0 0; }
+  .type-label { margin: 0; color: var(--color-rust); }
+  .intro { max-width: 42rem; margin: 1.5rem 0 0; color: var(--color-ink-muted); font-size: clamp(1.08rem, 2vw, 1.3rem); }
+  img { width: 100%; height: min(32rem, 58vw); object-fit: cover; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
+  @media (max-width: 47.999rem) { .has-image :global(.hero-inner) { grid-template-columns: 1fr; } img { height: 18rem; } }
+</style>

@@ -3,12 +3,17 @@ export const site = {
   description: 'A new website for Wayfinders on the Hudson is taking root.',
   navigation: [
     { label: 'Home', href: '/' },
-    { label: 'Our approach', href: '/#approach' },
-    { label: 'Stay connected', href: '/#stay-connected' },
+    { label: 'Our mission', href: '/our-mission' },
+    { label: 'The team', href: '/the-team' },
+    { label: 'Fall programs', href: '/fall-2026-programs-overview' },
+    { label: 'Base Camp', href: '/fall-2026-base-camp-k-8' },
+    { label: 'Contact', href: 'mailto:wayfindersonthehudson@gmail.com' },
   ],
-  // Final contact, donation, newsletter, and social destinations are intentionally unset.
-  contact: null,
-  donationUrl: null,
+  contact: 'wayfindersonthehudson@gmail.com',
+  donationUrl: 'https://www.wayfindersonthehudson.com/donate',
   newsletterUrl: null,
-  socialLinks: [],
+  socialLinks: [
+    { label: 'Instagram', href: 'https://www.instagram.com/wayfindersonthehudson/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/wayfinders.on.the.hudson' },
+  ],
 } as const;
