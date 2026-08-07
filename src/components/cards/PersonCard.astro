@@ -1,0 +1,10 @@
+---
+interface Props { name: string; role?: string; image: string; href?: string; }
+const { name, role, image, href } = Astro.props;
+---
+<article class="person"><img src={image} alt={`${name}, Wayfinders team member`} width="600" height="700" loading="lazy" decoding="async" /><div><h2 class="type-card">{name}</h2>{role && <p>{role}</p>}{href && <a href={href}>Read bio <span aria-hidden="true">→</span></a>}</div></article>
+<style>
+  .person { overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); }
+  img { width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; }
+  div { padding: 1.25rem; } h2, p { margin: 0; } p { margin-top: .35rem; color: var(--color-ink-muted); } a { display: inline-flex; margin-top: 1rem; font-weight: 700; }
+</style>
