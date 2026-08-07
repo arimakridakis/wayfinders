@@ -17,6 +17,6 @@ const programs = [
 ---
 <BaseLayout title="Fall 2026 Programs" description="Explore Fall 2026 nature-connection programs from Wayfinders on the Hudson.">
   <PageHero eyebrow="Programs for all ages" title="Fall 2026 Programs" intro="Spend some screen-free time in the woods. Scholarships and payment plans are available for all programs." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/95933549-62ba-461b-a6af-327f93917380/IMG_1780.jpg?format=1200w" alt="Wayfinders participants enjoying time together outdoors" />
-  <Section width="wide"><div class="program-grid">{programs.map(([title,description,href,image,alt]) => <ProgramCard {title} {description} href={['/fall-2026-base-camp-k-8'].includes(href) ? href : `https://www.wayfindersonthehudson.com${href}`} {image} {alt} />)}</div></Section>
+  <Section width="wide"><div class="program-grid">{programs.map(([title,description,href,image,alt]) => <ProgramCard {title} {description} href={['/motherhood-rising-6-weeks-12-months','/forest-tots-12-30-months','/fall-2026-base-camp-k-8','/rose-blossoms-12-15-year-old-girls'].includes(href) ? href : `https://www.wayfindersonthehudson.com${href}`} {image} {alt} />)}</div></Section>
 </BaseLayout>
 <style>.program-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; } @media (max-width:63.999rem){.program-grid{grid-template-columns:repeat(2,1fr)}} @media (max-width:35.999rem){.program-grid{grid-template-columns:1fr}}</style>
