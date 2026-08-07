@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "captured_at": "2026-08-07T16:49:24+00:00",
+  "captured_at": "2026-08-07T15:38:30+00:00",
   "source_base": "https://www.wayfindersonthehudson.com",
   "target_base": "https://wayfinders-neon.vercel.app",
   "inventory": "docs/migration-inventory.csv",
