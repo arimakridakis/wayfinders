@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
+import CardGrid from '../components/sections/CardGrid.astro';
 const stories = [
   { title: 'The Antidote to the Times: Re-Connecting with Nature, Together', summary: 'While screen time dominates lives, Wayfinders on the Hudson receives Rockefeller Brothers Fund grant to get people back together in nature.', publication: 'Press release', href: 'https://drive.google.com/file/d/1utoUakFiYmXjymqb5txiakQL806hIjpP/view?usp=sharing', image: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/912b92dc-4cb3-4b98-9a98-603f5111f848/IMG_3961.jpg' },
   { title: 'Wayfinders pull and plant at Lenoir Preserve', publication: 'Rivertown Enterprise', href: 'https://www.rivertownsenterprise.net/hastings_on_hudson/wayfinders-pull-and-plant-at-lenoir-preserve/article_fdbc4a66-deef-11ec-8652-3347d3c178af.html', image: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1655913023702-AK5JN1NZC6CRPZJQ2XXH/Screen+Shot+2022-06-22+at+11.50.04+AM.png' },
@@ -12,6 +13,6 @@ const stories = [
 ---
 <BaseLayout title="Wayfinders in the News" description="Press releases and coverage of Wayfinders on the Hudson.">
   <PageHero eyebrow="Media" title="Wayfinders in the News" intro="Extra, extra, read all about us!" />
-  <Section width="wide"><div class="stories">{stories.map((story) => <article><img src={story.image} alt="" width="800" height="520" loading="lazy" /><div><h2 class="type-card">{story.title}</h2>{story.summary && <p>{story.summary}</p>}{story.href && <a href={story.href}>Read {story.publication === 'Press release' ? 'the press release' : `in the ${story.publication}`}<span class="sr-only">: {story.title}</span></a>}</div></article>)}</div></Section>
+  <Section width="wide"><CardGrid columns={2}>{stories.map((story) => <article><img src={story.image} alt="" width="800" height="520" loading="lazy" decoding="async" /><div><h2 class="type-card">{story.title}</h2>{story.summary && <p>{story.summary}</p>}{story.href && <a href={story.href}>Read {story.publication === 'Press release' ? 'the press release' : `in the ${story.publication}`}<span class="sr-only">: {story.title}</span></a>}</div></article>)}</CardGrid></Section>
 </BaseLayout>
-<style>.stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--column-gap)}article{overflow:hidden;border:1px solid var(--color-line);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}article:last-child{grid-column:1/-1}img{width:100%;height:18rem;object-fit:cover}article div{padding:var(--card-padding)}h2{margin-top:0}p{color:var(--color-ink-muted)}a{font-weight:750}@media(max-width:47.999rem){.stories{grid-template-columns:1fr}article:last-child{grid-column:auto}img{height:14rem}}</style>
+<style>article{overflow:hidden;border:1px solid var(--color-line);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}img{width:100%;height:18rem;object-fit:cover}article div{padding:var(--card-padding)}h2{margin-top:0}p{color:var(--color-ink-muted)}a{font-weight:750}@media(max-width:47.999rem){img{height:14rem}}</style>
