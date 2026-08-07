@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import Section from '../components/global/Section.astro';
+const images = [
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/328f5bcb-fb4b-4472-986f-a19fa4c5af81/2-Christian+with+big+smile+and+hearts.jpg', alt: 'Christian with big smile and hearts' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2bff7b2b-9a17-47c5-b7c5-c1e039494e3f/1-Alberto+and+Ari+Wow+Face.jpg', alt: 'Alberto and Ari Wow Face' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2ec12061-b98e-4911-bb98-622a69bed5f2/3-christian+and+zach+otters.jpg', alt: 'christian and zach otters' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/88500fef-0f94-4997-9545-38086c755662/4-girls+flying+like+birds+in+field.jpg', alt: 'girls flying like birds in field' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/793431e3-de3c-464f-b2b7-9a7bfd38f653/5-Jake+on+winter+hike+with+kids.jpg', alt: 'Jake on winter hike with kids' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/08559520-3108-48ea-b6ff-c516d6221fcc/6-Gwen+with+kids+Wow+Walk.jpg', alt: 'Gwen with kids Wow Walk' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/0da8e68e-9c1d-480f-a964-f4b38a3d70f0/8-Ani+meditating.jpg', alt: 'Ani meditating' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1ff57a6c-6481-4a97-8308-4c02d31f6eb2/9-Fire+Circle+Leah+excited.jpg', alt: 'Fire Circle Leah excited' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/a9f44b60-0f2a-471e-97f9-fd69a8bc4697/10-Leah+with+Michaela+and+Lark.jpg', alt: 'Leah with Michaela and Lark' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/84430ceb-373b-46a9-bb92-361d579fef5e/11-snakes+in+field.jpg', alt: 'snakes in field' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/77e7aec2-5331-4e2a-a96a-29a244e13a2e/13-Zach+Big+Dream+Catcher.jpg', alt: 'Zach Big Dream Catcher' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/14b21d60-5905-4047-bf1f-196b25c09930/14-Group+Dream+Catcher.jpg', alt: 'Group Dream Catcher' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/709fd748-0065-4234-94d2-dda4c75514c8/15-Gwen+making+fire.jpg', alt: 'Gwen making fire' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/991ea84f-3b1b-42d1-9533-dde4b06d2483/16-Leah%2C+Greg%2C+Gwen+roleplay.jpg', alt: 'Leah, Greg, Gwen roleplay' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/541eebaf-9aa0-49fc-b5d1-720013d7db20/17-Christian%2C+Zach%2C+Ani%2C+Mason.jpg', alt: 'Christian, Zach, Ani, Mason' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/eb5f50e9-0def-4459-83ca-f3459dab8852/19-Look+up.jpg', alt: 'Look up' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/4beff656-da9c-4af3-a42d-d2a5f0eb8a6b/12-wings+in+a+circle.jpg', alt: 'wings in a circle' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/16cc4fc9-398f-4fbf-af2a-6413ab204134/21-Miriam+Drum.jpg', alt: 'Miriam Drum' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/e03ef107-bef0-46b1-b963-812eeb57df11/24-Rebecca+with+Girls.jpg', alt: 'Rebecca with Girls' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1a3f2337-a654-4d61-85e8-facd7af1bcd2/27-Michaela+mugwort.jpg', alt: 'Michaela mugwort' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2ac2f1e9-1212-4145-aa2b-4fdaaa64e2d4/29-Sabastian+Camo.jpg', alt: 'Sabastian Camo' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2de4e875-0a62-4711-b049-1c0989e72b44/30-Fire+Circle+2.jpg', alt: 'Fire Circle 2' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d410dbfe-2ccd-486a-a3be-b112a8c8b0c4/32-Lark%2C+Cassie%2C+Bella+mud+2.jpg', alt: 'Lark, Cassie, Bella mud 2' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d0a0e56c-edf4-4998-bfeb-5fc90cd12cda/33-Stella+and+Lark+Mud.jpg', alt: 'Stella and Lark Mud' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/c3765df8-5129-4365-8323-a3637ce1c713/31-Sprinklers+5.jpg', alt: 'Sprinklers 5' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/d365884e-6677-4dd0-acc3-3c21d657908b/35-Parent+Alex%2C+Theressa%2C+Charlotte.jpg', alt: 'Parent Alex, Theressa, Charlotte' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/c181b269-bea0-41c4-87d8-ce37093bc43f/36-Parent+Guardian+Fire+Circle+backs+2.jpg', alt: 'Parent Guardian Fire Circle backs 2' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/4f7b3afb-59cd-4b13-96b2-34666bf093a5/37-Parent+Guardians+Blindfolded.jpg', alt: 'Parent Guardians Blindfolded' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/7cb9159a-cbc4-4e75-84f0-3331cea0bb8b/38-Parent+Nicole.jpg', alt: 'Parent Nicole' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2a52c6f3-5fdd-4007-8e83-e1d2a4a6bc83/39-Patrick+and+Mason.jpg', alt: 'Patrick and Mason' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/df0939f8-3165-425b-8670-e3bb41abb2b1/40-Pair+obstacle+course.jpg', alt: 'Pair obstacle course' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/46fac4ff-cfa7-47d6-a39d-5bc3cecf81fe/41-sensory+walk+1.jpg', alt: 'sensory walk 1' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1a194535-0f5b-434b-bb57-770df809a6a5/34-Mason%2C+Jake%2C+Patrick%2C+Michaela.jpg', alt: 'Mason, Jake, Patrick, Michaela' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/239f5ac6-57cf-4448-ab79-2f282b06d414/25-Alberto+journal+field.jpg', alt: 'Alberto journal field' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1ad22897-686e-4be8-9c11-e1d486997880/28-pesto+station+3.jpg', alt: 'pesto station 3' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2c47b75c-1cfa-4fb8-9da3-b2da3d7c7124/20-Opening+Circle+4+Guitar.jpeg', alt: 'Opening Circle 4 Guitar' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/16585349-eea9-42db-b135-7b1cf039ee7c/22-Michaela+and+Gwen+on+the+guitar.jpg', alt: 'Michaela and Gwen on the guitar' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/08c3b672-712c-43c7-88ff-88db88d371db/23-Miles+journal.jpg', alt: 'Miles journal' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b60d5b58-db42-4fe4-bec5-47f66be2271f/26-Bella%2C+Ani%2C+Stella+garden.jpg', alt: 'Bella, Ani, Stella garden' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/f94478c6-e06d-4de8-8fbb-bb4ae61973d7/42-Mandala.jpg', alt: 'Mandala' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/4781c252-f9a6-4466-9518-7b8df256a202/43-Alice+Gwen+candle.jpg', alt: 'Alice Gwen candle' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/4808f7b2-948d-4d58-9ce6-907cb8b19f97/44-Cassie+Gwen+candle.jpg', alt: 'Cassie Gwen candle' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/ec72b9e9-2ef6-4dcc-9211-69ca12dfa5ac/45-All+5+Mentors.jpg', alt: 'All 5 Mentors' },
+  { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2ae33c20-86cf-4d1b-a5fa-4af0766c2c91/46-All+Wayfinders.jpg', alt: 'All Wayfinders' },
+];
+---
+<BaseLayout title="Slideshow" description="Photographs from Wayfinders on the Hudson’s Spring 2022 programs.">
+  <PageHero eyebrow="Spring 2022" title="Wayfinders Slideshow" intro="Scenes from a season of nature connection, creativity, and community." />
+  <Section width="wide"><div class="review-note"><strong>Historical gallery:</strong> These photographs remain pending owner review for image rights, source originals, order, and alternative text before publication.</div><div class="gallery">{images.map((image, index) => <figure><img src={image.src} alt={image.alt} width="900" height="675" loading={index < 4 ? 'eager' : 'lazy'} /><figcaption class="type-small">Spring 2022 · Photograph {index + 1} of {images.length}</figcaption></figure>)}</div></Section>
+</BaseLayout>
+<style>.review-note{margin-bottom:2rem;padding:1.25rem;border-left:.35rem solid var(--color-warning);background:var(--color-cream)}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}figure{margin:0;overflow:hidden;border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}img{width:100%;aspect-ratio:4/3;object-fit:cover}figcaption{padding:.65rem 1rem;color:var(--color-ink-muted)}@media(max-width:47.999rem){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:35.999rem){.gallery{grid-template-columns:1fr}}</style>
