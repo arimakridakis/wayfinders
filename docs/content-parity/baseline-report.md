@@ -1,6 +1,6 @@
 # Content parity baseline report
 
-> Generated 2026-08-07T15:19:46+00:00 by `python3 scripts/content_parity.py`.
+> Generated 2026-08-07T15:38:30+00:00 by `python3 scripts/content_parity.py`.
 
 This is a triage report, not proof of parity. Word and element counts identify likely gaps; every page still requires semantic and visual review.
 
