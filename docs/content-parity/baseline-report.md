@@ -1,7 +1,6 @@
 # Content parity baseline report
 
-> Generated 2026-08-07T16:49:24+00:00 by `python3 scripts/content_parity.py`.
-> Generated 2026-08-07T15:38:30+00:00 by `python3 scripts/content_parity.py`.
+> Generated 2026-08-07T17:17:58+00:00 by `python3 scripts/content_parity.py`.
 
 This is a triage report, not proof of parity. Word and element counts identify likely gaps; every page still requires semantic and visual review.
 
@@ -15,14 +14,14 @@ This is a triage report, not proof of parity. Word and element counts identify l
 | `/dance-embody-collective` | 200 | 200 | 86 | 86 | 100% | 1 | 1 | 0 | 0 |
 | `/dei` | 200 | 200 | 273 | 290 | 106% | 1 | 1 | 0 | 0 |
 | `/donate` | 200 | 200 | 176 | 178 | 101% | 2 | 2 | 0 | 0 |
-| `/fall-2026-base-camp-k-8` | 200 | 200 | 506 | 266 | 53% | 5 | 2 | 0 | 0 |
-| `/fall-2026-programs-overview` | 200 | 200 | 396 | 254 | 64% | 9 | 12 | 0 | 0 |
+| `/fall-2026-base-camp-k-8` | 200 | 200 | 506 | 495 | 98% | 5 | 5 | 0 | 0 |
+| `/fall-2026-programs-overview` | 200 | 200 | 396 | 396 | 100% | 9 | 9 | 0 | 0 |
 | `/faqs` | 200 | 200 | 905 | 807 | 89% | 1 | 1 | 0 | 0 |
-| `/forest-tots-12-30-months` | 200 | 200 | 151 | 175 | 116% | 2 | 2 | 0 | 0 |
-| `/holiday-camps-1st-8th-graders` | 200 | 200 | 28 | 63 | 225% | 2 | 3 | 0 | 0 |
+| `/forest-tots-12-30-months` | 200 | 200 | 151 | 180 | 119% | 2 | 2 | 0 | 0 |
+| `/holiday-camps-1st-8th-graders` | 200 | 200 | 28 | 46 | 164% | 2 | 2 | 0 | 0 |
 | `/internships` | 200 | 200 | 286 | 281 | 98% | 5 | 1 | 0 | 0 |
 | `/message-from-founders` | 200 | 200 | 13 | 70 | 538% | 0 | 0 | 0 | 0 |
-| `/motherhood-rising-6-weeks-12-months` | 200 | 200 | 371 | 255 | 69% | 2 | 2 | 0 | 0 |
+| `/motherhood-rising-6-weeks-12-months` | 200 | 200 | 371 | 371 | 100% | 2 | 2 | 0 | 0 |
 | `/our-mission` | 200 | 200 | 70 | 81 | 116% | 0 | 0 | 0 | 0 |
 | `/pastworkshops` | 200 | 200 | 696 | 637 | 92% | 10 | 7 | 0 | 0 |
 | `/rose-blossoms-12-15-year-old-girls` | 200 | 200 | 1172 | 683 | 58% | 15 | 4 | 0 | 0 |
