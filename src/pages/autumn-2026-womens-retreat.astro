@@ -1,20 +1,116 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/sections/PageHero.astro';
-import Section from '../components/global/Section.astro';
+import Container from '../components/global/Container.astro';
 import Button from '../components/global/Button.astro';
-import CardGrid from '../components/sections/CardGrid.astro';
-import InfoCard from '../components/sections/InfoCard.astro';
-import ImageGallery from '../components/sections/ImageGallery.astro';
+import NatureIcon from '../components/global/NatureIcon.astro';
 
 const registerUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3ef6531ada3d487b898212099c1dcf992a1795b6d4c24ce9acec1b23f8c3f88478a340b7890448bbb12595742a93316e?locale=EN_US&cta=copylistmultilink';
 const commerceUrl = 'https://www.wayfindersonthehudson.com/register-for-fall-2023/p/autumn-2026-womens-retreat';
+
+const possibilities = [
+  { icon: 'community', title: 'Sistering' },
+  { icon: 'fire', title: 'Ceremony' },
+  { icon: 'heart', title: 'Relational rigor' },
+  { icon: 'leaf', title: 'Rest' },
+  { icon: 'mountain', title: 'Engagement with the land' },
+  { icon: 'feather', title: 'Forest Yoga' },
+] as const;
+
+const included = [
+  'Fire Circle and Facilitation',
+  'Snacks and Tea (local & seasonal)',
+  'Guided wellness treatments & meditations',
+  'Supplies for all activities',
+  'Ample time for rest & reflection',
+] as const;
 ---
+
 <BaseLayout title="Autumn 2026 Women's Retreat" description="Autumn 2026 Women’s Retreat at Lenoir Preserve in Yonkers.">
-<PageHero eyebrow="Friday, September 18th" title="Autumn 2026 Women’s Retreat" intro="It's hard to feel it right now, while it's still summertime and the light is showing us everything we need to see, but as the days darken this fall, will you be prepared to keep holding your medicine—what has been shown to you in this clear and bright light?" image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2747a8bf-7a1a-4a91-8295-fc9faf882066/IMG_3736.jpg?format=1200w" alt="A group gathered outdoors at a Wayfinders retreat">
-  <Button href={commerceUrl}>Autumn 2026 Women's Retreat</Button>
-</PageHero>
-<Section width="wide"><CardGrid columns={3}><InfoCard label="DATE" heading="Friday, September 18th" headingLevel="h2"><p>TIME: 1:30–5:30 PM</p></InfoCard><InfoCard label="LOCATION" heading="Lenoir Preserve in Yonkers" headingLevel="h2" /><InfoCard label="COST" heading="$120" headingLevel="h2"><p>Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!</p></InfoCard></CardGrid></Section>
-<Section tone="alternate" width="wide"><div class="intro"><p>We are here to hold you through this moment together. Join us to gather around the fire with other women as we downshift into quieter times. We will reflect on summer to keep the vibes flying, and set intentions for keeping the thread alive as we enter into autumn.</p><p><strong>Spots intentionally limited</strong></p></div><CardGrid columns={3}><InfoCard heading="Retreat Tracks" headingLevel="h2"><p>Select one of the following tracks:</p><ul><li>Family of Origin</li><li>Ancient Goddess Cultures: What our Grandmothers Knew About Culture Creation</li><li>Intro to Vision Quest</li></ul></InfoCard><InfoCard heading="What's Included" headingLevel="h2"><ul><li>Fire Circle and Facilitation</li><li>Snacks and Tea (local & seasonal)</li><li>Guided wellness treatments & meditations</li><li>Supplies for all activities</li><li>Ample time for rest & reflection</li></ul></InfoCard><InfoCard heading="Possibilities" headingLevel="h2"><ul><li>Sistering</li><li>Ceremony</li><li>Relational rigor</li><li>Rest</li><li>Engagement with the land</li><li>Forest Yoga</li></ul></InfoCard></CardGrid><div class="supporting-images"><ImageGallery><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784832708689-L449LUNVPMZHPOMK2PFE/unsplash-image-3pFOBqLirEU.jpg?format=1200w" alt="" width="1200" height="800" loading="lazy" /><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784843341023-SKQCOSDA526I4FEP3XCZ/unsplash-image-pYTTHwL2UjI.jpg?format=1200w" alt="" width="1200" height="800" loading="lazy" /></ImageGallery></div></Section>
-<Section width="wide"><p class="type-label">How It Works</p><div class="steps"><article><span>1</span><h2 class="type-card">Reserve Your Spot</h2><p>Sign up to reserve your spot.</p></article><article><span>2</span><h2 class="type-card">Review the Welcome Email</h2><p>After registering, we'll send you a Welcome Email with everything you need to know.</p></article><article><span>3</span><h2 class="type-card">Start Dreaming</h2><p>Get excited for our adventure; we can’t wait to be together in restoration.</p></article></div><Button href={registerUrl}>Register</Button></Section></BaseLayout>
-<style>:global(.page-hero .button){margin-top:2rem}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.steps article{padding:var(--card-padding);border:1px solid var(--color-line);border-radius:var(--radius-card);background:var(--color-surface)}.steps h2{margin:0}.steps p,.intro p{color:var(--color-ink-muted)}.intro{max-width:var(--width-prose);margin-bottom:2rem}.steps{margin:1rem 0 2rem}.steps span{display:grid;width:2.5rem;aspect-ratio:1;place-items:center;margin-bottom:1rem;border-radius:50%;background:var(--color-cream);font-weight:800}.supporting-images{margin-top:2rem}@media(max-width:47.999rem){.steps{grid-template-columns:1fr}}</style>
+  <section class="hero">
+    <Container width="wide" class="hero-content">
+      <p class="type-label">Friday, September 18th</p>
+      <h1>Autumn 2026 <span>Women’s Retreat</span></h1>
+      <p class="hero-intro">It's hard to feel it right now, while it's still summertime and the light is showing us everything we need to see, but as the days darken this fall, will you be prepared to keep holding your medicine—what has been shown to you in this clear and bright light?</p>
+      <a class="hero-note" href="#retreat-details"><NatureIcon name="fire" size={31} /><span>Gather around the fire<br /><strong>Friday afternoon at Lenoir Preserve</strong></span></a>
+    </Container>
+  </section>
+
+  <section id="retreat-details" class="details chapter">
+    <Container width="wide">
+      <header class="section-heading"><p class="type-label">An autumn afternoon together</p><h2>Retreat details</h2><p>Spots intentionally limited</p></header>
+      <div class="detail-cards">
+        <article><span class="detail-icon"><NatureIcon name="calendar" size={36} /></span><p class="type-label">Date &amp; time</p><h3>Friday, September 18th</h3><p>1:30–5:30 PM</p></article>
+        <article><span class="detail-icon"><NatureIcon name="mountain" size={36} /></span><p class="type-label">Location</p><h3>Lenoir Preserve in Yonkers</h3></article>
+        <article><span class="detail-icon"><NatureIcon name="leaf" size={36} /></span><p class="type-label">Cost</p><h3>$120</h3><p>Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!</p></article>
+      </div>
+      <div class="detail-action"><Button href={commerceUrl}>Autumn 2026 Women's Retreat <span aria-hidden="true">→</span></Button></div>
+    </Container>
+  </section>
+
+  <section class="invitation chapter">
+    <Container width="wide" class="invitation-grid">
+      <div><p class="type-label">Downshift into quieter times</p><h2>We are here to hold you through this moment together.</h2></div>
+      <div class="invitation-copy"><p>Join us to gather around the fire with other women as we downshift into quieter times. We will reflect on summer to keep the vibes flying, and set intentions for keeping the thread alive as we enter into autumn.</p><p class="handwritten">Keeping the thread alive, together.</p></div>
+    </Container>
+  </section>
+
+  <section class="possibilities chapter">
+    <Container width="wide"><header class="section-heading"><p class="type-label">Space for what you need</p><h2>Retreat possibilities</h2></header><div class="possibility-grid">{possibilities.map((item) => <article><NatureIcon name={item.icon} size={54} /><h3>{item.title}</h3></article>)}</div></Container>
+  </section>
+
+  <section class="contrast">
+    <div class="tracks chapter"><div><p class="type-label">Choose your path</p><h2>Retreat Tracks</h2><p>Select one of the following tracks:</p><ul><li>Family of Origin</li><li>Ancient Goddess Cultures: What our Grandmothers Knew About Culture Creation</li><li>Intro to Vision Quest</li></ul></div></div>
+    <div class="included chapter"><div><NatureIcon name="fire" size={38} /><p class="type-label">Held with care</p><h2>What's Included</h2><ul>{included.map((item) => <li><NatureIcon name="check" size={25} /><span>{item}</span></li>)}</ul></div></div>
+  </section>
+
+  <section class="process chapter">
+    <Container width="wide"><header class="section-heading"><p class="type-label">How it works</p><h2>Your path to the retreat</h2></header><div class="steps"><article><span>1</span><h3>Reserve Your Spot</h3><p>Sign up to reserve your spot.</p></article><article><span>2</span><h3>Review the Welcome Email</h3><p>After registering, we'll send you a Welcome Email with everything you need to know.</p></article><article><span>3</span><h3>Start Dreaming</h3><p>Get excited for our adventure; we can’t wait to be together in restoration.</p></article></div></Container>
+  </section>
+
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">An afternoon of restoration awaits</p><h2>Come gather with us.</h2><p>Reserve your place at the Autumn 2026 Women’s Retreat.</p><Button href={registerUrl}>Register <span aria-hidden="true">→</span></Button></div><p class="closing-note">Reflection, sistering, ceremony, and time on the land.</p></Container></section>
+</BaseLayout>
+
+<style>
+  .chapter { padding-block:clamp(5rem,10vw,9rem); }
+  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2747a8bf-7a1a-4a91-8295-fc9faf882066/IMG_3736.jpg?format=1800w') center 45% / cover no-repeat; color:white; }
+  .hero::after { position:absolute; z-index:-1; inset:0; content:''; background:linear-gradient(90deg,rgb(10 27 17 / .91) 0%,rgb(10 27 17 / .7) 48%,rgb(10 27 17 / .12) 82%); }
+  :global(.hero-content) { padding-block:5rem; }
+  .hero .type-label { margin:0; color:#e3dda3; }
+  h1 { max-width:48rem; margin:.5rem 0 1.25rem; color:white; font-family:var(--font-display); font-size:clamp(3.8rem,8.5vw,7rem); font-weight:500; letter-spacing:-.04em; line-height:.8; }
+  h1 span { display:block; margin:.2em 0 0 .08em; color:#d3c769; font-family:var(--font-hand); font-size:.67em; font-weight:500; letter-spacing:0; line-height:1; }
+  .hero-intro { max-width:43rem; font-size:clamp(1.05rem,1.8vw,1.3rem); line-height:1.6; }
+  .hero-note { display:inline-flex; align-items:center; gap:1rem; margin-top:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .92); color:white; font-size:.8rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
+  .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
+  .section-heading .type-label,.invitation .type-label { color:var(--color-moss); }
+  .section-heading h2,.invitation h2,.contrast h2,.closing h2 { margin:.3rem 0 .6rem; font-family:var(--font-display); font-size:clamp(2.7rem,5vw,4.5rem); font-weight:600; letter-spacing:-.025em; line-height:1; }
+  .section-heading > p:last-child { margin:.4rem 0 0; font-size:1.1rem; }
+  .details { background:linear-gradient(120deg,#fbf8f0,#f5f1e7); }
+  .detail-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+  .detail-cards article { padding:clamp(1.5rem,3vw,2.25rem); border:1px solid rgb(49 88 67 / .13); border-radius:1.75rem; background:rgb(255 253 247 / .96); box-shadow:0 18px 45px rgb(31 42 36 / .1); text-align:center; }
+  .detail-icon { display:grid; width:4.75rem; aspect-ratio:1; place-items:center; margin:0 auto 1.25rem; border-radius:50%; background:var(--color-moss); color:white; }
+  .detail-cards article:nth-child(2) .detail-icon { background:#4f7480; }.detail-cards article:nth-child(3) .detail-icon { background:#b26d32; }
+  .detail-cards h3 { margin:.45rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:clamp(1.7rem,3vw,2.2rem); line-height:1.05; }
+  .detail-cards p:last-child { margin-bottom:0; }.detail-action { margin-top:2.5rem; text-align:center; }
+  .invitation { background:#e8ebdf; }
+  :global(.invitation-grid) { display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
+  .invitation h2 { font-size:clamp(3rem,5vw,4.75rem); }.invitation-copy > p:first-child { font-size:1.15rem; }
+  .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:clamp(1.8rem,3vw,2.4rem); line-height:1.1; }
+  .possibilities { background:var(--color-surface); }.possibility-grid { display:grid; grid-template-columns:repeat(6,1fr); }
+  .possibility-grid article { padding:0 clamp(.75rem,2vw,1.5rem); border-right:1px solid var(--color-line); text-align:center; }.possibility-grid article:last-child { border:0; }
+  .possibility-grid :global(svg) { margin:0 auto 1rem; color:var(--color-moss); }.possibility-grid article:nth-child(2n) :global(svg) { color:var(--color-earth); }
+  .possibility-grid h3 { margin:0; font-family:var(--font-display); font-size:1.45rem; line-height:1.1; }
+  .contrast { display:grid; grid-template-columns:.9fr 1.1fr; }.tracks,.included { display:grid; place-items:center; padding-inline:var(--gutter); }
+  .tracks { background:#eef0e7; }.tracks > div,.included > div { max-width:36rem; }.tracks ul { padding-left:1.25rem; }.tracks li { padding:.55rem 0; }
+  .included { min-height:40rem; background:linear-gradient(rgb(13 35 23 / .62),rgb(13 35 23 / .82)),url('https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784832708689-L449LUNVPMZHPOMK2PFE/unsplash-image-3pFOBqLirEU.jpg?format=1200w') center / cover;color:white; }
+  .included h2 { color:white; }.included .type-label,.included > div > :global(svg) { color:#e4dda2; }.included > div > :global(svg) { margin:auto; }
+  .included ul { margin:2rem 0 0; padding:0; list-style:none; }.included li { display:flex; gap:.85rem; padding-block:.8rem; border-bottom:1px solid rgb(255 255 255 / .3); }.included li :global(svg) { flex:none; color:#e4dda2; }
+  .process { background:#faf7ef; }.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); counter-reset:steps; }
+  .steps article { padding:clamp(1.5rem,3vw,2.25rem); border-top:1px solid var(--color-line); }.steps span { display:grid; width:3.25rem; aspect-ratio:1; place-items:center; margin-bottom:1.5rem; border-radius:50%; background:var(--color-moss); color:white; font-weight:800; }
+  .steps h3 { margin:0; font-family:var(--font-display); font-size:clamp(1.65rem,3vw,2.1rem); line-height:1.1; }.steps p { color:var(--color-ink-muted); }
+  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .95),rgb(13 35 23 / .76)),url('https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/1784843341023-SKQCOSDA526I4FEP3XCZ/unsplash-image-pYTTHwL2UjI.jpg?format=1800w') center / cover;color:white; }
+  :global(.closing-grid) { display:grid; grid-template-columns:1.5fr .7fr; gap:clamp(3rem,7vw,6rem); align-items:center; }.closing h2 { color:white; font-size:clamp(3.5rem,7vw,6rem); }.closing .type-label { color:#e4dda2; }.closing :global(.button) { margin-top:1.25rem; border-color:white; background:white; color:var(--color-forest-dark); }
+  .closing-note { padding-left:clamp(2rem,5vw,4rem); border-left:1px solid rgb(255 255 255 / .5); font-family:var(--font-hand); font-size:clamp(1.8rem,3vw,2.5rem); line-height:1.15; }
+  @media (max-width:63.999rem) { .detail-cards { grid-template-columns:1fr; }.possibility-grid { grid-template-columns:repeat(3,1fr); gap:2.5rem 0; }.possibility-grid article:nth-child(3) { border:0; }:global(.invitation-grid) { grid-template-columns:1fr; }.contrast { grid-template-columns:1fr; }.included { min-height:36rem; } }
+  @media (max-width:47.999rem) { .hero { min-height:44rem; background-position:60% center; }.hero::after { background:rgb(10 27 17 / .74); }h1 { font-size:clamp(3.6rem,17vw,5.5rem); }.possibility-grid { grid-template-columns:repeat(2,1fr); }.possibility-grid article:nth-child(3) { border-right:1px solid var(--color-line); }.possibility-grid article:nth-child(2n) { border:0; }.steps,:global(.closing-grid) { grid-template-columns:1fr; }.closing-note { padding:2rem 0 0; border-top:1px solid rgb(255 255 255 / .5); border-left:0; } }
+  @media (max-width:35.999rem) { .possibility-grid { grid-template-columns:1fr; }.possibility-grid article,.possibility-grid article:nth-child(3) { padding-block:1.5rem; border-right:0; border-bottom:1px solid var(--color-line); } }
+</style>
