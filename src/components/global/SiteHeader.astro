@@ -5,7 +5,7 @@ import Container from './Container.astro';
 <header class="site-header">
   <Container width="wide" class="header-inner">
     <a class="brand" href="/" aria-label={`${site.name}, home`}>
-      <span class="logo-mark" aria-hidden="true">W</span><span>{site.name}</span>
+      <img src="/images/branding/wayfinders-logo.webp" width="601" height="601" alt="Wayfinders on the Hudson" />
     </a>
     <nav class="desktop-nav" aria-label="Primary">
       <ul>
@@ -49,13 +49,14 @@ import Container from './Container.astro';
   </Container>
 </header>
 <style>
-  .site-header { position: relative; z-index: 10; border-bottom: 1px solid var(--color-line); background: color-mix(in srgb, var(--color-page) 94%, transparent); }
-  :global(.header-inner) { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; gap: 1.5rem; }
-  .brand { display: inline-flex; min-height: var(--touch-target); align-items: center; gap: .75rem; max-width: 18rem; color: var(--color-forest-dark); font-family: var(--font-display); font-size: 1rem; font-weight: 700; line-height: 1.1; text-decoration: none; }
-  .logo-mark { display: grid; width: 2.5rem; aspect-ratio: 1; place-items: center; flex: none; border: 1px dashed var(--color-moss); border-radius: 50%; font-family: var(--font-sans); font-size: .75rem; }
+  .site-header { position: relative; z-index: 10; background: transparent; }
+  :global(.header-inner) { display: grid; min-height: 8.5rem; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1.5rem; }
+  .brand { display: inline-flex; min-height: var(--touch-target); align-items: center; grid-column: 1; justify-self: start; transform: translateY(10px); text-decoration: none; }
+  .brand img { display: block; width: clamp(5.9375rem, 8.75vw, 7.8125rem); height: auto; }
   ul { margin: 0; padding: 0; list-style: none; }
-  .desktop-nav > ul { display: flex; align-items: center; gap: clamp(.75rem, 1.5vw, 1.5rem); }
-  nav a, nav summary { display: inline-flex; min-height: var(--touch-target); align-items: center; color: var(--color-ink); font-size: .875rem; font-weight: 700; text-decoration: none; }
+  .desktop-nav { grid-column: 2; justify-self: center; }
+  .desktop-nav > ul { display: flex; align-items: center; gap: clamp(1.25rem, 2.4vw, 2.5rem); }
+  nav a, nav summary { display: inline-flex; min-height: var(--touch-target); align-items: center; padding-inline: .25rem; color: var(--color-ink); font-size: 1rem; font-weight: 700; text-decoration: none; }
   nav a:hover, nav summary:hover { text-decoration: underline; }
   summary { cursor: pointer; list-style: none; }
   summary::-webkit-details-marker { display: none; }
@@ -66,9 +67,11 @@ import Container from './Container.astro';
   .dropdown-menu { position: absolute; top: calc(100% + .25rem); left: -.75rem; width: max-content; min-width: 14rem; max-width: min(24rem, calc(100vw - (2 * var(--gutter)))); padding: .6rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
   .dropdown-menu a { width: 100%; min-height: 2.5rem; padding: .25rem .65rem; border-radius: .5rem; font-weight: 650; }
   .dropdown-menu a:hover { background: var(--color-surface-muted); text-decoration: none; }
-  .mobile-menu { display: none; position: relative; }
+  .mobile-menu { display: none; position: relative; grid-column: 3; justify-self: end; }
   .mobile-menu > summary { min-width: var(--touch-target); min-height: var(--touch-target); align-items: center; justify-content: center; font-size: .875rem; font-weight: 750; }
   @media (max-width: 63.999rem) {
+    :global(.header-inner) { min-height: 6rem; }
+    .brand img { width: 5.3125rem; }
     .desktop-nav { display: none; }
     .mobile-menu { display: block; }
     .mobile-menu > nav { position: absolute; top: calc(100% + .6rem); right: 0; width: min(22rem, calc(100vw - (2 * var(--gutter)))); max-height: calc(100vh - 7rem); overflow-y: auto; padding: 1rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
@@ -79,4 +82,9 @@ import Container from './Container.astro';
     .mobile-submenu li + li { margin-top: .1rem; }
     .mobile-submenu a { min-height: 2.5rem; font-weight: 600; }
   }
+  :global(body:has(main > .hero) .site-header) { position: absolute; top: 0; right: 0; left: 0; }
+  :global(body:has(main > .hero) .site-header) nav a,
+  :global(body:has(main > .hero) .site-header) nav summary { color: white; text-shadow: 0 1px 12px rgb(0 0 0 / .45); }
+  :global(body:has(main > .hero) .site-header) nav a:hover,
+  :global(body:has(main > .hero) .site-header) nav summary:hover { color: white; }
 </style>
