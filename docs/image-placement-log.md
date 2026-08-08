@@ -14,7 +14,9 @@ This log records images copied from the local `images/` collection into the site
 - Forest Tots is an infant-only program. Do not use `images/Alberto mugwart.jpg` or `images/Dandelion1.jpg` for that page.
 - Source originals remain in the local, currently untracked `images/` folder. Only the selected, site-ready copies above are added to version control.
 
-## Hero overlay experiment
+## Hero overlay reference
 
-- Previous colors: homepage `rgb(8 25 15)`; Base Camp, Holiday Camps, and Internships `rgb(10 27 17)`. Their gradient opacity stops were left unchanged.
-- Current test color: `rgb(34 75 48)` for all four hero overlays, with the same opacity stops as before.
+- Current (restored) colors: homepage `rgb(8 25 15)`; Base Camp, Holiday Camps, and Internships `rgb(10 27 17)`.
+- Desktop gradients retain their existing opacity stops. They fade to 12% opacity before the right edge, rather than reaching zero.
+- Mobile heroes use their existing solid dark-green overlay.
+- The lighter `rgb(34 75 48)` overlay was tested and reverted.
