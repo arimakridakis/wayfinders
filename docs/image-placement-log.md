@@ -2,6 +2,8 @@
 
 This log records images copied from the local `images/` collection into the site and the pages where they are used.
 
+The Women’s Retreat and Dance Embody Collective heroes intentionally share the existing Dance Embody Collective source image from Squarespace CDN.
+
 | Site asset | Source image | Placement |
 | --- | --- | --- |
 | `public/images/heroes/home-leaves-1.jpg` | `images/Banners/Leaves1.jpg` | Homepage hero |
