@@ -35,4 +35,22 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
 <style>
   .skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 100; padding: .75rem 1rem; transform: translateY(-180%); border-radius: .5rem; background: var(--color-forest-dark); color: white; font-weight: 750; }
   .skip-link:focus { transform: translateY(0); }
+
+  :global(#main-content > .hero:not(.home-hero)) {
+    min-height: calc(min(48rem, 82vh) + 50px) !important;
+  }
+
+  :global(#main-content > .hero:not(.home-hero) .hero-content) {
+    transform: translateY(50px);
+  }
+
+  @media (max-width: 47.999rem) {
+    :global(#main-content > .hero:not(.home-hero)) {
+      min-height: calc(42rem + 50px) !important;
+    }
+
+    :global(#main-content > .hero.hero--tall-mobile) {
+      min-height: calc(44rem + 50px) !important;
+    }
+  }
 </style>

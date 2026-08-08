@@ -27,7 +27,7 @@ const { eyebrow, title, intro, image } = Astro.props;
 <style>
   .page-hero {
     display: grid;
-    min-height: clamp(30rem, 67vh, 46rem);
+    min-height: calc(clamp(30rem, 67vh, 46rem) + 50px);
     align-items: center;
     padding-block: clamp(4.5rem, 10vw, 8rem);
     background:
@@ -36,7 +36,7 @@ const { eyebrow, title, intro, image } = Astro.props;
     color: var(--color-surface);
   }
 
-  .copy { max-width: 48rem; }
+  .copy { max-width: 48rem; transform: translateY(50px); }
   h1 { margin: .65rem 0 0; color: var(--color-surface); }
   .type-label { margin: 0; color: var(--color-cream); }
   .intro { max-width: 42rem; margin: 1.5rem 0 0; color: var(--color-surface); font-size: clamp(1.08rem, 2vw, 1.3rem); }
@@ -50,7 +50,7 @@ const { eyebrow, title, intro, image } = Astro.props;
 
   @media (max-width: 47.999rem) {
     .page-hero {
-      min-height: 30rem;
+      min-height: calc(30rem + 50px);
       background:
         linear-gradient(rgb(8 28 18 / .76), rgb(8 28 18 / .76)),
         var(--hero-image, url('/images/heroes/GreenForest1.webp')) center / cover no-repeat;
