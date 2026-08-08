@@ -29,17 +29,12 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
     <a class="skip-link" href="#main-content">Skip to content</a>
     <SiteHeader />
     <main id="main-content" tabindex="-1"><slot /></main>
-    <div class="leaf-divider" aria-hidden="true"><img src="/images/decorative/leaf-left-small.png" alt="" /><span></span><img src="/images/decorative/leaf-right-small.png" alt="" /></div>
     <SiteFooter />
   </body>
 </html>
 <style>
   .skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 100; padding: .75rem 1rem; transform: translateY(-180%); border-radius: .5rem; background: var(--color-forest-dark); color: white; font-weight: 750; }
   .skip-link:focus { transform: translateY(0); }
-  .leaf-divider { display:flex; align-items:center; justify-content:center; gap:.6rem; min-height:4.5rem; padding-inline:var(--gutter); overflow:hidden; background:var(--color-surface); }
-  .leaf-divider img { width:clamp(2.25rem,4vw,3.5rem); height:auto; }
-  .leaf-divider span { width:clamp(3rem,10vw,8rem); border-top:1px solid rgb(84 107 55 / .45); }
-
   :global(.section-heading h2) { display:flex; align-items:center; justify-content:center; gap:clamp(.45rem,1vw,.8rem); }
   :global(.section-heading h2::before), :global(.section-heading h2::after) { width:clamp(1.8rem,3.5vw,2.8rem); height:1.2rem; flex:none; background:center / contain no-repeat; content:''; }
   :global(.section-heading h2::before) { background-image:url('/images/decorative/leaf-left-small.png'); }

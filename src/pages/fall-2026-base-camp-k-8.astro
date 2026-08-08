@@ -7,6 +7,7 @@ import BaseCampOption from '../components/cards/BaseCampOption.astro';
 import DisclosureList from '../components/sections/DisclosureList.astro';
 import ImageStrip from '../components/sections/ImageStrip.astro';
 import LeafFlourish from '../components/global/LeafFlourish.astro';
+import LeafDivider from '../components/global/LeafDivider.astro';
 
 const options = [
   { day:'Tuesday', ages:'1st–8th graders', dates:'10 weeks · September 22–November 24', time:'3:45–5:45 pm', accent:'moss', icon:'leaf', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink' },
@@ -60,7 +61,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   </section>
 
   <section class="experience chapter">
-    <Container width="wide"><header class="section-heading"><p class="type-label">A week at Base Camp</p><h2>What kids experience</h2><p>Each week in the forest, kids discover, play, and grow.</p></header><div class="experience-grid">{experiences.map((item) => <article><NatureIcon name={item.icon} size={54} /><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></Container>
+    <Container width="wide"><header class="section-heading"><p class="type-label">A week at Base Camp</p><h2>What kids experience</h2><p>Each week in the forest, kids discover, play, and grow.</p></header><div class="experience-grid">{experiences.map((item) => <article><NatureIcon name={item.icon} size={54} /><h3>{item.title}</h3><p>{item.text}</p></article>)}</div><LeafDivider /></Container>
   </section>
 
   <section class="contrast">
