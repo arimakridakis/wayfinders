@@ -1,9 +1,61 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import PageHero from '../components/sections/PageHero.astro'; import Section from '../components/global/Section.astro'; import Button from '../components/global/Button.astro'; import CardGrid from '../components/sections/CardGrid.astro'; import InfoCard from '../components/sections/InfoCard.astro'; import MediaSplit from '../components/sections/MediaSplit.astro';
-const registrations=[['One session','https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3c55bfbf268946c899fdeeabdaf32f9d9dc6b1403b2e4b8aac16a7b964b77078e52bf4e4d0814e59973e1de502d53f7d?locale=EN_US&cta=copylistmultilink'],['Wednesday series','https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7361f670c7af406e9bf047032ea001d4a8bcd0f467654fa3aad10c33deac9afce02db39da70f4b2d8eefb0f27d8e3fb5?locale=EN_US&cta=saveandcopylink'],['Tuesday series','https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b9af164453d14d02a5fe7611ac5f6321034730b8550e4d3c98390192b4d550ba56232c9c2db845e9a2103d1d618bbc9d?locale=EN_US&cta=saveandcopylink']];
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/global/Container.astro';
+import Button from '../components/global/Button.astro';
+import NatureIcon from '../components/global/NatureIcon.astro';
+
+const registrations = [
+  { label: 'Register for one session', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3c55bfbf268946c899fdeeabdaf32f9d9dc6b1403b2e4b8aac16a7b964b77078e52bf4e4d0814e59973e1de502d53f7d?locale=EN_US&cta=copylistmultilink' },
+  { label: 'Register for Wednesdays', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7361f670c7af406e9bf047032ea001d4a8bcd0f467654fa3aad10c33deac9afce02db39da70f4b2d8eefb0f27d8e3fb5?locale=EN_US&cta=saveandcopylink' },
+  { label: 'Register for Tuesdays', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b9af164453d14d02a5fe7611ac5f6321034730b8550e4d3c98390192b4d550ba56232c9c2db845e9a2103d1d618bbc9d?locale=EN_US&cta=saveandcopylink' },
+];
+
+const gatherings = [
+  { icon: 'leaf', label: 'Tuesdays · women only', title: 'A weekly walk together', copy: '9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24' },
+  { icon: 'mountain', label: 'Wednesdays · co-ed', title: 'A weekly walk together', copy: '9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9' },
+  { icon: 'calendar', label: 'Lenoir Preserve · 1:15–2:30 pm', title: 'Choose your pace', copy: 'Series (10 sessions) – $350 · Individual Session – $40 · Walking on easy walking paths or hiking on trails at Lenoir Preserve.' },
+] as const;
+
+const reflections = ['cultivating wisdom', 'deepening connection', 'belonging in nature', 'lifelong curiosity', 'walking alongside one another'];
 ---
-<BaseLayout title="Wise Owls (65+)" description="Wise Owls provides a facilitated mindful walking and talking experience for adults (men & women) ages 55+."><PageHero eyebrow="Adults 55+" title="Wise Owls (55+)" intro="Move your body, calm your mind, and enjoy nature! Wise Owls provides a facilitated mindful walking and talking experience for adults (men & women) ages 55+ which allows you to bring meaning to the present moment, feel gratitude, and connect with community." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b42dfdc0-57a0-4ca3-b55b-279ff3ab2e8c/IMG_4139.jpg?format=1200w" alt="Adults walking together outdoors" />
-<Section width="wide"><CardGrid columns={3}><InfoCard label="Tuesdays or Wednesdays" heading="Tuesdays: WOMEN ONLY" headingLevel="h2"><p>9/22, 9/29, 10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17, 11/24</p></InfoCard><InfoCard label="Lenoir Preserve · 1:15-2:30 pm" heading="Wednesdays: CO-ED" headingLevel="h2"><p>9/23, 9/30, 10/7, 10/14, 10/21, 10/28, 11/4, (Skip 11/11), 11/18, (skip 11/25), 12/2, 12/9</p></InfoCard><InfoCard label="Lenoir Preserve" heading="Series (10 sessions) - $350" headingLevel="h2"><p>Individual Session - $40</p><p>*walking on easy walking paths or hiking on trails at Lenoir Preserve.</p></InfoCard></CardGrid><div class="actions">{registrations.map(([label,href],i)=><Button {href} variant={i===0?'secondary':'primary'}>{label === 'One session' ? 'Register for One Session' : `Register for ${label === 'Wednesday series' ? 'Wednesdays' : 'Tuesdays'} (10 weeks)`}</Button>)}</div></Section>
-<Section tone="alternate" width="wide"><MediaSplit><div slot="copy"><p>Wise Owls have expressed that they find themselves:</p><ul><li>cultivating wisdom</li><li>deepening connection</li><li>belonging in nature</li><li>lifelong curiosity</li><li>walking alongside one another</li></ul><p>Facilitated by Co-Founders Gwen Merkin, Certified in Nature Connection & Ecotherapy & Leah Gozhansky, Certified Nature Informed Therapist.</p></div><img slot="media" src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/feeab10a-650d-441d-91cb-c86d9646d5a4/IMG_4143+%282%29.jpeg?format=1200w" alt="Adults connecting outdoors" width="1200" height="900" loading="lazy" /></MediaSplit></Section>
-<Section width="prose"><blockquote><p>Nature has guided us through every stage of life and developed us into wise owls.</p><p>When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations.</p></blockquote></Section></BaseLayout>
-<style>.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}blockquote{margin:0;font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.35rem);line-height:1.35;color:var(--color-forest)}@media(max-width:47.999rem){.actions :global(.button){width:100%}}</style>
+<BaseLayout title="Wise Owls (55+)" description="Wise Owls provides a facilitated mindful walking and talking experience for adults (men & women) ages 55+.">
+  <section class="hero">
+    <Container width="wide" class="hero-content">
+      <p class="type-label">Adults 55+</p>
+      <h1>Wise <span>Owls</span></h1>
+      <p class="hero-intro">Move your body, calm your mind, and enjoy nature. Wise Owls provides a facilitated mindful walking and talking experience for adults ages 55+.</p>
+      <a class="hero-note" href="#gatherings"><NatureIcon name="leaf" size={31} /><span>Mindful walking and talking<br /><strong>at Lenoir Preserve</strong></span></a>
+    </Container>
+  </section>
+
+  <section id="gatherings" class="gatherings chapter">
+    <Container width="wide">
+      <header class="section-heading"><p class="type-label">Find your rhythm</p><h2>Walk with the Wise Owls</h2><p>Bring more meaning to the present moment, feel gratitude, and connect with community.</p></header>
+      <div class="gathering-grid">{gatherings.map((gathering) => <article><span class="icon"><NatureIcon name={gathering.icon} size={38} /></span><p class="type-label">{gathering.label}</p><h3>{gathering.title}</h3><p>{gathering.copy}</p></article>)}</div>
+      <div class="actions">{registrations.map((registration, index) => <Button href={registration.href} variant={index === 0 ? 'secondary' : 'primary'}>{registration.label} <span aria-hidden="true">→</span></Button>)}</div>
+    </Container>
+  </section>
+
+  <section class="connection chapter">
+    <Container width="wide" class="connection-grid">
+      <div class="connection-copy"><p class="type-label">Walking alongside one another</p><h2>There is wisdom in every season.</h2><p>Wise Owls have expressed that they find themselves:</p><ul>{reflections.map((reflection) => <li><NatureIcon name="check" size={24} /><span>{reflection}</span></li>)}</ul><p class="handwritten">A space to pause, notice, and belong in nature.</p></div>
+      <div class="connection-image"><img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/feeab10a-650d-441d-91cb-c86d9646d5a4/IMG_4143+%282%29.jpeg?format=1200w" alt="Adults connecting outdoors" width="1200" height="900" loading="lazy" /></div>
+    </Container>
+  </section>
+
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A shared path</p><h2>Nature has guided us through every stage of life.</h2><p>When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations.</p></div><aside><p>Facilitated by Co-Founders Gwen Merkin, Certified in Nature Connection & Ecotherapy, and Leah Gozhansky, Certified Nature Informed Therapist.</p><Button href={registrations[0].href} variant="secondary">Join a Wise Owls walk <span aria-hidden="true">→</span></Button></aside></Container></section>
+</BaseLayout>
+
+<style>
+  .chapter { padding-block:clamp(5rem,10vw,9rem); }
+  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b42dfdc0-57a0-4ca3-b55b-279ff3ab2e8c/IMG_4139.jpg?format=1600w') center / cover no-repeat; color:white; }
+  .hero::after { position:absolute; z-index:-1; inset:0; content:''; background:linear-gradient(90deg,rgb(10 27 17 / .9),rgb(10 27 17 / .63) 48%,rgb(10 27 17 / .12) 80%); }
+  :global(.hero-content) { padding-block:5rem; }.hero .type-label,.closing .type-label{color:#e3dda3}
+  h1 { max-width:43rem; margin:.5rem 0 1rem; color:white; font-family:var(--font-display); font-size:clamp(4rem,9vw,7.4rem); font-weight:500; letter-spacing:-.04em; line-height:.78; } h1 span{display:block;margin:.18em 0 0 .1em;color:#d3c769;font-family:var(--font-hand);font-size:.72em;font-weight:500;letter-spacing:0;line-height:1}
+  .hero-intro{max-width:37rem;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.55}.hero-note{display:inline-flex;align-items:center;gap:1rem;margin-top:1.8rem;padding:.75rem 1.25rem;border-radius:1rem;background:rgb(101 120 79 / .9);color:white;font-size:.8rem;letter-spacing:.1em;line-height:1.45;text-decoration:none;text-transform:uppercase}
+  .gatherings{background:linear-gradient(120deg,#fbf8f0,#f5f1e7)}.section-heading{max-width:50rem;margin:0 auto clamp(2.5rem,5vw,4rem);text-align:center}.section-heading .type-label,.connection .type-label{color:var(--color-moss)}.section-heading h2,.connection h2,.closing h2{margin:.3rem 0 .6rem;font-family:var(--font-display);font-size:clamp(2.7rem,5vw,4.5rem);font-weight:600;letter-spacing:-.025em;line-height:1}.section-heading > p:last-child{margin:0;font-size:1.15rem}
+  .gathering-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}.gathering-grid article{padding:clamp(1.5rem,3vw,2.25rem);border:1px solid rgb(49 88 67 / .12);border-radius:var(--radius-card);background:rgb(255 253 247 / .78);box-shadow:var(--shadow-soft)}.icon{display:grid;width:4.8rem;aspect-ratio:1;place-items:center;border-radius:50%;background:var(--color-page-alt);color:var(--color-moss)}.gathering-grid article:nth-child(2) .icon{background:#dce7e9;color:#406b7b}.gathering-grid article:nth-child(3) .icon{background:var(--color-cream);color:var(--color-earth)}.gathering-grid .type-label{margin:1.5rem 0 .45rem;color:var(--color-moss)}.gathering-grid h3{margin:0;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.05}.gathering-grid p:last-child{line-height:1.65}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2.5rem}
+  .connection{background:#e8ebdf}.connection-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,7vw,7rem);align-items:center}.connection-copy{max-width:35rem}.connection-copy ul{display:grid;gap:0;margin:2rem 0;padding:0;list-style:none}.connection-copy li{display:flex;gap:.85rem;padding-block:.8rem;border-bottom:1px solid var(--color-line)}.connection-copy li :global(svg){flex:none;color:var(--color-moss)}.handwritten{color:var(--color-earth);font-family:var(--font-hand);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1}.connection-image{overflow:hidden;min-height:32rem;border-radius:50% 50% 0 0}.connection-image img{width:100%;height:100%;object-fit:cover}
+  .closing{background:linear-gradient(90deg,rgb(13 35 23 / .94),rgb(13 35 23 / .75)),url('https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/b42dfdc0-57a0-4ca3-b55b-279ff3ab2e8c/IMG_4139.jpg?format=1600w') center / cover;color:white}.closing-grid{display:grid;grid-template-columns:1.5fr .7fr;gap:clamp(3rem,7vw,6rem);align-items:center}.closing h2{color:white;font-size:clamp(3.5rem,7vw,6rem)}.closing aside{padding-left:clamp(2rem,5vw,4rem);border-left:1px solid rgb(255 255 255 / .5)}.closing aside :global(.button){margin-top:1rem;border-color:white;color:white}
+  @media(max-width:63.999rem){.gathering-grid{grid-template-columns:1fr}.connection-grid,.closing-grid{grid-template-columns:1fr}.connection-image{min-height:26rem}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}}@media(max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(10 27 17 / .72)}h1{font-size:clamp(3.8rem,18vw,5.8rem)}.actions{flex-direction:column}.actions :global(.button){width:100%}}
+</style>
