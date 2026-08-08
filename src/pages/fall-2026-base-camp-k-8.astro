@@ -5,6 +5,7 @@ import Button from '../components/global/Button.astro';
 import NatureIcon from '../components/global/NatureIcon.astro';
 import BaseCampOption from '../components/cards/BaseCampOption.astro';
 import DisclosureList from '../components/sections/DisclosureList.astro';
+import ImageStrip from '../components/sections/ImageStrip.astro';
 
 const options = [
   { day:'Tuesday', ages:'1st–8th graders', dates:'10 weeks · September 22–November 24', time:'3:45–5:45 pm', accent:'moss', icon:'leaf', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink' },
@@ -39,6 +40,11 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
       <header class="section-heading"><p class="type-label">Find your day in the forest</p><h2>Choose your program</h2><p>Each program meets one day per week for the fall session.</p></header>
       <div class="options">{options.map((option) => <BaseCampOption {...option} />)}</div>
       <p class="availability"><NatureIcon name="leaf" size={24} /><strong>Limited spaces and scholarships available.</strong></p>
+      <ImageStrip label="A day at Base Camp" images={[
+        { src:'/images/content/alberto-mugwart.jpg', alt:'A child exploring plants outdoors at Wayfinders' },
+        { src:'/images/content/fire3.jpg', alt:'Young people learning around a fire outdoors' },
+        { src:'/images/content/greg-and-miles-knife-2.jpg', alt:'Wayfinders participants practicing outdoor skills' },
+      ]} />
     </Container>
   </section>
 
@@ -46,7 +52,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
     <Container width="wide" class="community-grid">
       <div class="community-intro"><p class="type-label">Growing community together</p><h2>Connected through nature, kindness, and play.</h2><p>Wayfinders Base Camp connects us with ourselves, each other, and the earth. Our fall session offers weekly gatherings that blend outdoor play, community-building, and leadership development.</p><p class="handwritten">Supporting the whole family—mind, body, and community.</p></div>
       <div class="workshops">
-        <article><span class="round-image"><img src="/images/heroes/GreenForest1.webp" alt="Wayfinders community member outdoors" /></span><div><p class="type-label">At drop off</p><h3>Free breathwork for parents and caregivers</h3><p>Join the first session on September 22 or 23, from 4–5:30 pm. Open to the public.</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register for breathwork</Button></article>
+        <article><span class="round-image"><img src="/images/content/alberto-mugwart.jpg" alt="A child exploring plants outdoors at Wayfinders" /></span><div><p class="type-label">At drop off</p><h3>Free breathwork for parents and caregivers</h3><p>Join the first session on September 22 or 23, from 4–5:30 pm. Open to the public.</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register for breathwork</Button></article>
       </div>
     </Container>
   </section>
@@ -120,7 +126,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .details { background:#faf7ef; }
   .details-layout { display:grid; grid-template-columns:.75fr 1.25fr; gap:clamp(3rem,7vw,7rem); }
   .details header { position:sticky; top:2rem; align-self:start; }
-  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .94),rgb(13 35 23 / .75)),url('/images/heroes/GreenForest1.webp') center / cover;color:white; }
+  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .94),rgb(13 35 23 / .75)),url('/images/banners/fire-circle-9.jpg') center / cover;color:white; }
   :global(.closing-grid) { display:grid; grid-template-columns:1.5fr .7fr; gap:clamp(3rem,7vw,6rem); align-items:center; }
   .closing h2 { color:white;font-size:clamp(3.5rem,7vw,6rem) }.closing .type-label{color:#e4dda2}.closing-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}.closing-actions :global(.button){border-color:white;background:white;color:var(--color-forest-dark)}
   .closing aside { padding-left:clamp(2rem,5vw,4rem); border-left:1px solid rgb(255 255 255 / .5); }.closing aside h3{font-family:var(--font-display);font-size:2rem;line-height:1.1}.closing aside :global(.button){border-color:white;color:white}
