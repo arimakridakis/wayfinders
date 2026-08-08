@@ -7,7 +7,7 @@ import MediaSplit from '../components/sections/MediaSplit.astro';
 const legacyVideo = 'https://www.wayfindersonthehudson.com/wayfinders-video/v/wayfinders-video';
 ---
 <BaseLayout title="Wayfinders Video" description="Watch the Wayfinders on the Hudson video.">
-  <PageHero eyebrow="Media" title="Wayfinders Video" intro="A look at the Wayfinders community in motion." />
+  <PageHero eyebrow="Media" title="Wayfinders Video" intro="A look at the Wayfinders community in motion." image="/images/banners/running-kids-1.jpg" />
   <Section width="wide"><MediaSplit imagePosition="left"><img slot="media" src="https://video.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/f8bf40e3-7565-4f3e-bf3e-c9d57c25a7cc/thumbnail" alt="Wayfinders video thumbnail" width="1920" height="1080" /><div slot="copy" class="video-copy"><p class="type-label">Video · 4 minutes, 11 seconds</p><h2 class="type-section">Wayfinders Video</h2><p>The source video is hosted by Squarespace. Until an approved original and captions are available for the Astro site, watch it on the existing Wayfinders video page.</p><Button href={legacyVideo}>Watch the video</Button></div></MediaSplit></Section>
 </BaseLayout>
 <style>img{aspect-ratio:16/9;object-fit:cover}.video-copy h2{margin:.75rem 0}.video-copy p:not(.type-label){max-width:var(--width-prose);color:var(--color-ink-muted)}</style>
