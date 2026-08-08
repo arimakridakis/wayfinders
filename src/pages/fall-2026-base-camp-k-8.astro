@@ -6,6 +6,7 @@ import NatureIcon from '../components/global/NatureIcon.astro';
 import BaseCampOption from '../components/cards/BaseCampOption.astro';
 import DisclosureList from '../components/sections/DisclosureList.astro';
 import ImageStrip from '../components/sections/ImageStrip.astro';
+import LeafFlourish from '../components/global/LeafFlourish.astro';
 
 const options = [
   { day:'Tuesday', ages:'1st–8th graders', dates:'10 weeks · September 22–November 24', time:'3:45–5:45 pm', accent:'moss', icon:'leaf', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink' },
@@ -49,6 +50,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   </section>
 
   <section class="community chapter">
+    <LeafFlourish side="left" variant="big-2" class="community-leaf" />
     <Container width="wide" class="community-grid">
       <div class="community-intro"><p class="type-label">Growing community together</p><h2>Connected through nature, kindness, and play.</h2><p>Wayfinders Base Camp connects us with ourselves, each other, and the earth. Our fall session offers weekly gatherings that blend outdoor play, community-building, and leadership development.</p><p class="handwritten">Supporting the whole family—mind, body, and community.</p></div>
       <div class="workshops">
@@ -98,7 +100,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .programs { background:linear-gradient(120deg,#fbf8f0,#f5f1e7); }
   .options { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
   .availability { display:flex; align-items:center; justify-content:center; gap:.75rem; margin:2.5rem 0 0; color:var(--color-moss); }
-  .community { position:relative; background:#e8ebdf; overflow:hidden; }
+  .community { position:relative; background:#e8ebdf; overflow:hidden; }.community-leaf{top:10%;}.community :global(.community-grid){position:relative;z-index:1}
   :global(.community-grid) { display:grid; grid-template-columns:.8fr 1.5fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
   .community-intro h2 { font-size:clamp(3rem,5vw,4.75rem); }
   .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:clamp(1.6rem,3vw,2.2rem); line-height:1.1; }
