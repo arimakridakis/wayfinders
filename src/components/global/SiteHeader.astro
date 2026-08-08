@@ -97,7 +97,7 @@ import Container from './Container.astro';
   .nav-dropdown > summary { gap: .4rem; }
   .chevron { width: .45rem; height: .45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-.1rem) rotate(45deg); transition: transform var(--transition); }
   details[open] > summary .chevron { transform: translateY(.1rem) rotate(225deg); }
-  .dropdown-menu { position: absolute; top: calc(100% + .25rem); left: -.75rem; width: max-content; min-width: 14rem; max-width: min(24rem, calc(100vw - (2 * var(--gutter)))); padding: .6rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+  .dropdown-menu { position: absolute; top: 100%; left: -.75rem; width: max-content; min-width: 14rem; max-width: min(24rem, calc(100vw - (2 * var(--gutter)))); padding: .6rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
   .dropdown-menu a { width: 100%; min-height: 2.5rem; padding: .25rem .65rem; border-radius: .5rem; font-weight: 650; }
   .dropdown-menu a:hover { background: var(--color-surface-muted); text-decoration: none; }
   .mobile-menu { display: none; position: relative; grid-column: 3; justify-self: end; }
