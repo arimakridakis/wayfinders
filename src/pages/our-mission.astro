@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
-import ImagePlaceholder from '../components/sections/ImagePlaceholder.astro';
 import MediaSplit from '../components/sections/MediaSplit.astro';
 ---
 <BaseLayout title="Our Mission" description="Wayfinders fosters nature connection and social-emotional learning to develop future sustainability leaders.">
@@ -10,7 +9,7 @@ import MediaSplit from '../components/sections/MediaSplit.astro';
   <Section width="wide">
     <MediaSplit imagePosition="right" align="start">
       <div slot="copy" class="mission"><p>The mission of Wayfinders is to foster experiential nature-connection and social emotional learning to develop future sustainability leaders, bolster mental and physical health, and provide equitable access to experiences in nature.</p><p>Our core values focus on disconnecting from technology to reconnect with nature. Through this cultural repair work, Wayfinders' strives to build stronger communities and next generation leaders who are connected to themselves, each other, and the earth.</p></div>
-      <ImagePlaceholder slot="media" label="Wayfinders community connecting together in nature" aspect="4:3" note="Use an inclusive community image that supports the mission without competing with the statement." />
+      <img slot="media" src="/images/banners/leaves-1.jpg" alt="Wayfinders community members celebrating together outdoors" width="2154" height="1220" loading="lazy" />
     </MediaSplit>
   </Section>
 </BaseLayout>
