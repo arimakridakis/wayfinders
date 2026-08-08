@@ -1,0 +1,40 @@
+---
+import Button from '../global/Button.astro';
+import NatureIcon from '../global/NatureIcon.astro';
+
+interface Props {
+  title: string;
+  label: string;
+  date: string;
+  time: string;
+  href: string;
+  icon?: 'leaf' | 'heart' | 'community';
+  accent?: 'moss' | 'earth' | 'blue';
+  action?: string;
+}
+
+const { title, label, date, time, href, icon = 'leaf', accent = 'moss', action = 'Register' } = Astro.props;
+---
+<article class:list={['program-option', `accent-${accent}`]}>
+  <div class="option-heading">
+    <span class="option-icon"><NatureIcon name={icon} size={34} /></span>
+    <div><h3>{title}</h3><p class="type-label">{label}</p></div>
+  </div>
+  <dl>
+    <div><dt><NatureIcon name="calendar" size={21} /><span class="sr-only">Dates</span></dt><dd>{date}</dd></div>
+    <div><dt><NatureIcon name="clock" size={21} /><span class="sr-only">Time</span></dt><dd>{time}</dd></div>
+  </dl>
+  <Button {href}>{action} <span aria-hidden="true">→</span></Button>
+</article>
+
+<style>
+  .program-option { --accent:var(--color-moss); display:flex; flex-direction:column; padding:clamp(1.5rem,3vw,2.25rem); border:1px solid rgb(49 88 67 / .13); border-radius:1.75rem; background:rgb(255 253 247 / .96); box-shadow:var(--shadow-soft); transition:transform var(--transition),box-shadow var(--transition); }
+  .program-option:hover { transform:translateY(-5px); box-shadow:0 24px 55px rgb(31 42 36 / .16); }
+  .accent-earth { --accent:var(--color-earth); }.accent-blue { --accent:#4f7480; }
+  .option-heading { display:flex; align-items:center; gap:1rem; padding-bottom:1.4rem; border-bottom:1px solid var(--color-line); }
+  .option-icon { display:grid; width:4.5rem; aspect-ratio:1; place-items:center; flex:none; border-radius:50%; background:var(--accent); color:white; }
+  h3 { margin:0; color:var(--accent); font-size:clamp(1.25rem,2.3vw,1.55rem); font-weight:800; line-height:1.15; text-transform:uppercase; }
+  .type-label { margin:.45rem 0 0; color:var(--color-ink); }
+  dl { display:grid; gap:1rem; margin:1.5rem 0; } dl div { display:grid; grid-template-columns:1.75rem 1fr; gap:.65rem; } dt { color:var(--accent); } dd { margin:0; line-height:1.5; }
+  :global(.button) { width:100%; margin-top:auto; border-color:var(--accent); background:var(--accent); gap:1.25rem; }
+</style>
