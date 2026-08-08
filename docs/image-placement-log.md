@@ -17,6 +17,6 @@ This log records images copied from the local `images/` collection into the site
 ## Hero overlay reference
 
 - Current (restored) colors: homepage `rgb(8 25 15)`; Base Camp, Holiday Camps, and Internships `rgb(10 27 17)`.
-- Desktop gradients retain their existing opacity stops. They fade to 12% opacity before the right edge, rather than reaching zero.
+- Desktop gradients now fade from 90% opacity at the left edge to zero opacity at the 50% mark.
 - Mobile heroes use their existing solid dark-green overlay.
 - The lighter `rgb(34 75 48)` overlay was tested and reverted.
