@@ -10,10 +10,10 @@ interface Props {
   alt?: string;
 }
 
-const { eyebrow, title, intro } = Astro.props;
+const { eyebrow, title, intro, image } = Astro.props;
 ---
 
-<section class="page-hero">
+<section class="page-hero" style={image ? `--hero-image: url("${image}")` : undefined}>
   <Container width="wide" class="hero-inner">
     <div class="copy">
       {eyebrow && <p class="type-label">{eyebrow}</p>}
@@ -32,7 +32,7 @@ const { eyebrow, title, intro } = Astro.props;
     padding-block: clamp(4.5rem, 10vw, 8rem);
     background:
       linear-gradient(90deg, rgb(8 28 18 / .86) 0%, rgb(8 28 18 / .69) 48%, rgb(8 28 18 / .3) 100%),
-      url('/images/heroes/GreenForest1.webp') center / cover no-repeat;
+      var(--hero-image, url('/images/heroes/GreenForest1.webp')) center / cover no-repeat;
     color: var(--color-surface);
   }
 
@@ -53,7 +53,7 @@ const { eyebrow, title, intro } = Astro.props;
       min-height: 30rem;
       background:
         linear-gradient(rgb(8 28 18 / .76), rgb(8 28 18 / .76)),
-        url('/images/heroes/GreenForest1.webp') center / cover no-repeat;
+        var(--hero-image, url('/images/heroes/GreenForest1.webp')) center / cover no-repeat;
     }
   }
 </style>

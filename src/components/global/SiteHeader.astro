@@ -115,12 +115,12 @@ import Container from './Container.astro';
     .mobile-submenu li + li { margin-top: .1rem; }
     .mobile-submenu a { min-height: 2.5rem; font-weight: 600; }
   }
-  :global(body:has(main > .hero) .site-header) { position: absolute; top: 0; right: 0; left: 0; }
-  :global(body:has(main > .hero) .site-header) nav a,
-  :global(body:has(main > .hero) .site-header) nav summary { color: white; text-shadow: 0 1px 12px rgb(0 0 0 / .45); }
-  :global(body:has(main > .hero) .site-header) nav a:hover,
-  :global(body:has(main > .hero) .site-header) nav summary:hover { color: white; }
-  :global(body:has(main > .hero) .site-header .dropdown-menu),
-  :global(body:has(main > .hero) .site-header .mobile-menu > nav) { border-color: rgb(255 255 255 / .3); background: rgb(13 35 23 / .85); }
-  :global(body:has(main > .hero) .site-header .dropdown-menu a:hover) { background: rgb(255 255 255 / .14); }
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header) { position: absolute; top: 0; right: 0; left: 0; }
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header) nav a,
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header) nav summary { color: white; text-shadow: 0 1px 12px rgb(0 0 0 / .45); }
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header) nav a:hover,
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header) nav summary:hover { color: white; }
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header .dropdown-menu),
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header .mobile-menu > nav) { border-color: rgb(255 255 255 / .3); background: rgb(13 35 23 / .85); }
+  :global(body:has(main > :is(.hero, .page-hero)) .site-header .dropdown-menu a:hover) { background: rgb(255 255 255 / .14); }
 </style>
