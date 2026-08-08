@@ -48,6 +48,39 @@ import Container from './Container.astro';
     </details>
   </Container>
 </header>
+<script>
+  const desktopBreakpoint = window.matchMedia('(min-width: 64rem)');
+  const desktopDropdowns = Array.from(document.querySelectorAll<HTMLDetailsElement>('.desktop-nav .nav-dropdown'));
+
+  const closeOtherDropdowns = (activeDropdown: HTMLDetailsElement) => {
+    desktopDropdowns.forEach((dropdown) => {
+      if (dropdown !== activeDropdown) dropdown.removeAttribute('open');
+    });
+  };
+
+  desktopDropdowns.forEach((dropdown) => {
+    dropdown.addEventListener('pointerenter', () => {
+      if (!desktopBreakpoint.matches) return;
+      closeOtherDropdowns(dropdown);
+      dropdown.setAttribute('open', '');
+    });
+
+    dropdown.addEventListener('pointerleave', () => {
+      if (desktopBreakpoint.matches) dropdown.removeAttribute('open');
+    });
+
+    dropdown.addEventListener('focusin', () => {
+      closeOtherDropdowns(dropdown);
+      dropdown.setAttribute('open', '');
+    });
+
+    dropdown.addEventListener('focusout', () => {
+      window.setTimeout(() => {
+        if (!dropdown.contains(document.activeElement)) dropdown.removeAttribute('open');
+      });
+    });
+  });
+</script>
 <style>
   .site-header { position: relative; z-index: 10; background: transparent; }
   :global(.header-inner) { display: grid; min-height: 8.5rem; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1.5rem; }
@@ -65,7 +98,6 @@ import Container from './Container.astro';
   .chevron { width: .45rem; height: .45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-.1rem) rotate(45deg); transition: transform var(--transition); }
   details[open] > summary .chevron { transform: translateY(.1rem) rotate(225deg); }
   .dropdown-menu { position: absolute; top: calc(100% + .25rem); left: -.75rem; width: max-content; min-width: 14rem; max-width: min(24rem, calc(100vw - (2 * var(--gutter)))); padding: .6rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
-  .nav-dropdown:hover > .dropdown-menu, .nav-dropdown:focus-within > .dropdown-menu { display: block; }
   .dropdown-menu a { width: 100%; min-height: 2.5rem; padding: .25rem .65rem; border-radius: .5rem; font-weight: 650; }
   .dropdown-menu a:hover { background: var(--color-surface-muted); text-decoration: none; }
   .mobile-menu { display: none; position: relative; grid-column: 3; justify-self: end; }
