@@ -76,7 +76,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
 
 <style>
   .chapter { padding-block:clamp(5rem,10vw,9rem); }
-  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('/images/heroes/base-camp-running-kids-1.jpg') center / cover no-repeat; color:white; }
+  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('/images/heroes/base-camp-running-kids-1b.jpg') center / cover no-repeat; color:white; }
   .hero::after { position:absolute; z-index:-1; inset:0; content:''; background:linear-gradient(90deg,rgb(10 27 17 / .9) 0%,rgb(10 27 17 / .68) 45%,rgb(10 27 17 / .12) 80%); }
   :global(.hero-content) { padding-block:5rem; }
   .hero .type-label { margin:0; color:#e3dda3; }
@@ -127,4 +127,6 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   @media (max-width:63.999rem){.options{grid-template-columns:1fr}.experience-grid{grid-template-columns:repeat(3,1fr);gap:2.5rem 0}.experience-grid article:nth-child(3){border:0}:global(.community-grid),.details-layout{grid-template-columns:1fr}.workshops article{grid-template-columns:7rem 1fr}.workshops :global(.button){grid-column:2}.details header{position:static}.contrast{grid-template-columns:1fr}.restoration{min-height:34rem}}
   @media (max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(10 27 17 / .7)}h1{font-size:clamp(3.8rem,18vw,5.8rem)}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience-grid article:nth-child(3){border-right:1px solid var(--color-line)}.experience-grid article:nth-child(2n){border:0}:global(.closing-grid){grid-template-columns:1fr}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}.closing-actions{flex-direction:column}.closing-actions :global(.button){width:100%}}
   @media (max-width:35.999rem){.workshops article{grid-template-columns:1fr}.round-image{width:7rem}.workshops :global(.button){grid-column:1}.experience-grid{grid-template-columns:1fr}.experience-grid article,.experience-grid article:nth-child(3){padding-block:1.5rem;border-right:0;border-bottom:1px solid var(--color-line)}}
+  .hero::after { background:linear-gradient(90deg,rgb(34 75 48 / .9) 0%,rgb(34 75 48 / .68) 45%,rgb(34 75 48 / .12) 80%); }
+  @media (max-width:47.999rem){.hero::after{background:rgb(34 75 48 / .7)}}
 </style>
