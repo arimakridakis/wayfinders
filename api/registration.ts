@@ -3,6 +3,20 @@ const asText = (value: unknown, maximumLength: number) => typeof value === 'stri
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const environment = globalThis as typeof globalThis & { process?: { env: Record<string, string | undefined> } };
 
+async function storeRegistrationInSheet(registration: Record<string, unknown>) {
+  const webhookUrl = environment.process?.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  const webhookSecret = environment.process?.env.GOOGLE_SHEETS_WEBHOOK_SECRET;
+  if (!webhookUrl || !webhookSecret) throw new Error('Google Sheets is not configured.');
+  const response = await fetch(webhookUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...registration, token: webhookSecret }),
+    signal: AbortSignal.timeout(5000),
+  });
+  const result = await response.json().catch(() => null) as { ok?: boolean } | null;
+  if (!response.ok || !result?.ok) throw new Error('Google Sheets save failed.');
+}
+
 async function subscribeToUpdates(email: string, firstName: string, lastName: string) {
   const apiKey = environment.process?.env.MAILCHIMP_API_KEY;
   const audienceId = environment.process?.env.MAILCHIMP_AUDIENCE_ID;
@@ -48,6 +62,8 @@ export default {
     const verificationResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: verificationBody });
     const verification = await verificationResponse.json() as { success?: boolean; score?: number; action?: string; hostname?: string };
     if (!verification.success || verification.action !== 'program_registration' || (verification.score ?? 0) < 0.5 || verification.hostname !== new URL(request.url).hostname) return json({ error: 'We could not verify this registration. Please try again.' }, 400);
+
+    await storeRegistrationInSheet({ program, firstName, lastName, email, participantName, participantAge, marketingConsent }).catch(() => undefined);
 
     const notification = await fetch('https://api.resend.com/emails', {
       method: 'POST',
