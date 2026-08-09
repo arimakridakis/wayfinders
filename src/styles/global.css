@@ -88,3 +88,7 @@ a:hover { color: var(--color-rust); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Hero wordmarks and taglines use Caveat at the larger hero scale. */
+.family-program h1 span { font-size:calc(.68em + var(--font-hand-size-adjust) + 5px) !important; }
+.hero-tagline { font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust) + 5px) !important; }
