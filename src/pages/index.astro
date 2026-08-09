@@ -89,18 +89,19 @@ const gallery = [
   @media(max-width:47.999rem){.what-gallery{grid-template-columns:1fr}.what-gallery img{height:15rem}}
 
   .base-camp{display:flex;align-items:center;min-height:54rem;background:linear-gradient(90deg,rgb(10 27 17 / .92) 0%,rgb(10 27 17 / .73) 43%,rgb(10 27 17 / .08) 78%),url('/images/banners/running-kids-3.jpg') center / cover no-repeat;color:white}
-  .base-camp-content{position:relative;z-index:1;max-width:min(100%,calc(60% + 10vw))}
+  .base-camp-content{position:relative;left:-75px;z-index:1;max-width:min(100%,calc(60% + 10vw))}
   .base-camp .type-label{margin:0;color:#e4dda2;font-family:var(--font-hand);font-size:clamp(1.9rem,3vw,2.5rem);font-weight:500;letter-spacing:0;text-transform:none}
   .base-camp h2{margin:.45rem 0 1.5rem;color:white;font-family:var(--font-display);font-size:clamp(3.8rem,6.5vw,6rem);font-weight:500;letter-spacing:-.04em;line-height:.9}
-  .base-camp-copy{display:grid;gap:1.25rem}
+  .base-camp-copy{display:grid;gap:25px}
   .base-camp-copy p{margin:0;font-size:1.1875rem;line-height:1.65}
   .base-camp-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
   .base-camp-highlights article,.base-camp-schedule-grid article{min-width:0}
-  .base-camp-highlights :global(svg),.base-camp-schedule-grid :global(svg){margin-bottom:.7rem;color:#e4dda2}.base-camp-highlights :global(svg){margin-inline:auto}
+  .base-camp-highlights article{display:grid;grid-template-rows:3rem 5rem auto;align-content:start}
+  .base-camp-highlights :global(svg),.base-camp-schedule-grid :global(svg){margin-bottom:.7rem;color:#e4dda2}.base-camp-highlights :global(svg),.base-camp-schedule-grid :global(svg){margin-inline:auto}
   .base-camp-highlights h3,.base-camp-schedule-grid h3{margin:0 0 .55rem;color:white;font-family:var(--font-display);font-size:clamp(1.55rem,2.3vw,2.15rem);font-weight:600;line-height:1.03}
   .base-camp-scheduling{padding-top:1.5rem;border-top:1px solid rgb(255 255 255 / .35)}
   .base-camp-subheading{color:#e4dda2;font-family:var(--font-display);font-size:clamp(1.7rem,2.7vw,2.4rem)!important;font-weight:600;line-height:1.05}
   .base-camp-schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.25rem}
   .base-camp :global(.button){margin-top:2rem;border-color:white;background:white;color:var(--color-forest-dark)}
-  @media(max-width:47.999rem){.base-camp{min-height:0;background-position:62% center}.base-camp-content{max-width:none}.base-camp h2{font-size:clamp(3.5rem,15vw,5rem)}.base-camp-highlights,.base-camp-schedule-grid{grid-template-columns:1fr}}
+  @media(max-width:47.999rem){.base-camp{min-height:0;background-position:62% center}.base-camp-content{left:0;max-width:none}.base-camp h2{font-size:clamp(3.5rem,15vw,5rem)}.base-camp-highlights,.base-camp-schedule-grid{grid-template-columns:1fr}.base-camp-highlights article{grid-template-rows:auto}}
 </style>
