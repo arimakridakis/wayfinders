@@ -7,19 +7,25 @@ import Container from './Container.astro';
   <Container width="wide" class="footer-grid">
     <div><p class="footer-name">{site.name}</p><p class="placeholder">Connecting with ourselves, each other, and the earth.</p><address><a href={`mailto:${site.contact}`}>{site.contact}</a><br /><a href="tel:+19173183888">(917) 318-3888</a></address></div>
     <div><p class="type-label">Take the next step</p><div class="actions"><Button href="/fall-2026-programs-overview" variant="secondary">Explore programs</Button><Button href={site.donationUrl}>Donate</Button></div></div>
-    <div><p class="type-label">Follow along</p><ul>{site.socialLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
+    <div><p class="type-label">Follow along</p><ul class="social-links">{site.socialLinks.map((link) => <li><a href={link.href} aria-label={link.label}>{link.label.toLowerCase().includes('instagram') ? <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg> : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3.5l.5-4H13V9c0-.7.3-1 1-1Z" /></svg>}<span class="sr-only">{link.label}</span></a></li>)}</ul></div>
   </Container>
   <Container width="wide" class="legal"><small>© {new Date().getFullYear()} {site.name}. Foundation preview—not yet published.</small></Container>
 </footer>
 <style>
   .site-footer { padding-block: clamp(3rem, 7vw, 5rem) 2rem; border-top: 1px solid var(--color-line); background: var(--color-cream); }
-  :global(.footer-grid) { display: grid; grid-template-columns: 1.2fr 1.5fr 1fr; gap: var(--column-gap); }
-  .footer-name { margin: 0; color: var(--color-forest-dark); font-family: var(--font-display); font-size:calc( calc(1.5rem + var(--font-display-size-adjust)) + var(--font-display-size-adjust)); font-weight: 700; }
+  :global(.footer-grid) { display: grid; grid-template-columns: 2.25fr 1.5fr 1fr; gap: var(--column-gap); }
+  .footer-name { margin: 0; color: var(--color-forest-dark); font-family: var(--font-display); font-size:calc(1.5rem + var(--font-display-size-adjust) + var(--font-display-size-adjust) + 5px); font-weight: 700; }
   .type-label { margin-top: .4rem; color: var(--color-earth); }
   .placeholder { max-width: 26rem; color: var(--color-ink-muted); font-size: 1.1875rem; }
-  address { font-style: normal; }
+  address { margin-top: 30px; font-style: normal; }
   .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
   ul { display: grid; gap: .35rem; margin: 0; padding: 0; list-style: none; }
+  .footer-grid > div:nth-child(2) .type-label { margin-bottom: 30px; }
+  .social-links { display: flex; gap: 1rem; }
+  .social-links a { display: inline-flex; width: 2.25rem; height: 2.25rem; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-forest-dark); color: var(--color-cream); }
+  .social-links svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .social-links a:hover { background: var(--color-rust); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
   :global(.legal) { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-line); color: var(--color-ink-muted); }
   @media (max-width: 47.999rem) { :global(.footer-grid) { grid-template-columns: 1fr; } }
 </style>
