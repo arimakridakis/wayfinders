@@ -5,9 +5,9 @@ import Button from '../components/global/Button.astro';
 import NatureIcon from '../components/global/NatureIcon.astro';
 
 const registrations = [
-  { label: 'Register for one session', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3c55bfbf268946c899fdeeabdaf32f9d9dc6b1403b2e4b8aac16a7b964b77078e52bf4e4d0814e59973e1de502d53f7d?locale=EN_US&cta=copylistmultilink' },
-  { label: 'Register for Wednesdays', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7361f670c7af406e9bf047032ea001d4a8bcd0f467654fa3aad10c33deac9afce02db39da70f4b2d8eefb0f27d8e3fb5?locale=EN_US&cta=saveandcopylink' },
-  { label: 'Register for Tuesdays', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b9af164453d14d02a5fe7611ac5f6321034730b8550e4d3c98390192b4d550ba56232c9c2db845e9a2103d1d618bbc9d?locale=EN_US&cta=saveandcopylink' },
+  { label: 'Register for one session', program: 'Wise Owls — One session', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3c55bfbf268946c899fdeeabdaf32f9d9dc6b1403b2e4b8aac16a7b964b77078e52bf4e4d0814e59973e1de502d53f7d?locale=EN_US&cta=copylistmultilink' },
+  { label: 'Register for Wednesdays', program: 'Wise Owls — Wednesday series', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7361f670c7af406e9bf047032ea001d4a8bcd0f467654fa3aad10c33deac9afce02db39da70f4b2d8eefb0f27d8e3fb5?locale=EN_US&cta=saveandcopylink' },
+  { label: 'Register for Tuesdays', program: 'Wise Owls — Tuesday series', href: 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b9af164453d14d02a5fe7611ac5f6321034730b8550e4d3c98390192b4d550ba56232c9c2db845e9a2103d1d618bbc9d?locale=EN_US&cta=saveandcopylink' },
 ];
 
 const gatherings = [
@@ -32,7 +32,7 @@ const reflections = ['cultivating wisdom', 'deepening connection', 'belonging in
     <Container width="wide">
       <header class="section-heading"><p class="type-label">Find your rhythm</p><h2>Walk with the Wise Owls</h2><p>Bring more meaning to the present moment, feel gratitude, and connect with community.</p></header>
       <div class="gathering-grid">{gatherings.map((gathering) => <article><span class="icon"><NatureIcon name={gathering.icon} size={38} /></span><p class="type-label">{gathering.label}</p><h3>{gathering.title}</h3><p>{gathering.copy}</p></article>)}</div>
-      <div class="actions">{registrations.map((registration, index) => <Button href={registration.href} variant={index === 0 ? 'secondary' : 'primary'}>{registration.label} <span aria-hidden="true">→</span></Button>)}</div>
+      <div class="actions">{registrations.map((registration, index) => <Button registration={{ program: registration.program, paymentUrl: registration.href }} variant={index === 0 ? 'secondary' : 'primary'}>{registration.label} <span aria-hidden="true">→</span></Button>)}</div>
     </Container>
   </section>
 
@@ -43,7 +43,7 @@ const reflections = ['cultivating wisdom', 'deepening connection', 'belonging in
     </Container>
   </section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A shared path</p><h2>Nature has guided us through every stage of life.</h2><p>When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations.</p></div><aside><p>Facilitated by Co-Founders Gwen Merkin, Certified in Nature Connection & Ecotherapy, and Leah Gozhansky, Certified Nature Informed Therapist.</p><Button href={registrations[0].href} variant="secondary">Join a Wise Owls walk <span aria-hidden="true">→</span></Button></aside></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A shared path</p><h2>Nature has guided us through every stage of life.</h2><p>When we connect with ourselves, each other, and the earth, we inspire a collective commitment to sharing our wisdom with our own and future generations.</p></div><aside><p>Facilitated by Co-Founders Gwen Merkin, Certified in Nature Connection & Ecotherapy, and Leah Gozhansky, Certified Nature Informed Therapist.</p><Button registration={{ program: registrations[0].program, paymentUrl: registrations[0].href }} variant="secondary">Join a Wise Owls walk <span aria-hidden="true">→</span></Button></aside></Container></section>
 </BaseLayout>
 
 <style>

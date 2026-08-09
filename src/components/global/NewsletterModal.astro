@@ -62,6 +62,10 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
           if (recaptcha) resolve(recaptcha);
           else reject(new Error('We could not load spam protection.'));
         };
+        if (existing && (window as Window & { grecaptcha?: Recaptcha }).grecaptcha) {
+          complete();
+          return;
+        }
         script.addEventListener('load', complete, { once: true });
         script.addEventListener('error', () => reject(new Error('We could not load spam protection.')), { once: true });
         if (!existing) {
