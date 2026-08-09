@@ -1,8 +1,8 @@
 ---
-interface Props { href?: string | null; variant?: 'primary' | 'secondary'; label?: string; }
-const { href, variant = 'primary', label } = Astro.props;
+interface Props { href?: string | null; variant?: 'primary' | 'secondary'; label?: string; newsletter?: boolean; }
+const { href, variant = 'primary', label, newsletter = false } = Astro.props;
 ---
-{href ? <a class:list={['button', variant]} href={href}><slot>{label}</slot></a> : <span class:list={['button', variant, 'disabled']} aria-disabled="true"><slot>{label}</slot></span>}
+{newsletter ? <button class:list={['button', variant]} type="button" data-newsletter-open><slot>{label}</slot></button> : href ? <a class:list={['button', variant]} href={href}><slot>{label}</slot></a> : <span class:list={['button', variant, 'disabled']} aria-disabled="true"><slot>{label}</slot></span>}
 <style>
   .button { display: inline-flex; min-height: var(--button-height); align-items: center; justify-content: center; padding: .65rem 1.4rem; border: 2px solid var(--color-forest-dark); border-radius: var(--radius-button); font-size: 1.1875rem; font-weight: 750; line-height: 1.1; text-align: center; text-decoration: none; transition: background-color var(--transition), color var(--transition), transform var(--transition); }
   .button:hover { transform: translateY(-1px); }
