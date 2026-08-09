@@ -47,6 +47,14 @@ const gallery = [
     </div>
   </section>
 
+  <section class="what-is chapter">
+    <div class="wide"><div class="what-panel"><p class="eyebrow-line type-label">What is Wayfinders?</p><h2>Disconnect from technology. Reconnect with what matters.</h2><p>We are living at a time when we are increasingly disconnected with ourselves, each other, and the earth. Wayfinders offers a solution: Mindfulness, community building, and nature immersion. Through social emotional learning and sustainability practices, Wayfinders provides experiential opportunities to disconnect (from technology) and reconnect with ourselves, each other, and the earth.</p><p>Wayfinders creates a fun & safe space to build interconnectedness through nature guided experiences and social & emotional mentoring. The program explores leadership development and community building, and offers Junior Mentor or Mentor-in-Training programs; and for those interested - Rites of Passage.</p><p>Wayfinders experiential opportunities with nature connection and social emotional learning result in positive impacts including:</p><ul><li>shaping future sustainability advocates</li><li>addressing mental health challenges</li><li>increasing opportunities for diverse and underserved participants.</li></ul></div></div>
+  </section>
+
+  <section class="why chapter">
+    <div class="wide"><header class="section-heading"><p class="eyebrow-line type-label">The call to action</p><h2>Why Wayfinders?</h2><p>Why did climate activist Gwen Merkin and School Counselor Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the need for this program is clear.</p></header><div class="reason-grid">{reasons.slice(0,6).map(([title, copy], index) => <article class={`reason reason-${index + 1}`}><div class="reason-heading"><span class="reason-icon"><NatureIcon name={reasonIcons[index]} size={30} /></span><h3>{title}</h3></div><p>{copy}</p></article>)}</div></div>
+  </section>
+
   <section class="base-camp chapter">
     <LeafFlourish side="left" variant="big-2" class="base-camp-leaf" />
     <div class="wide split">
@@ -55,17 +63,9 @@ const gallery = [
     </div>
   </section>
 
-  <section class="what-is chapter">
-    <div class="what-panel"><p class="eyebrow-line type-label">What is Wayfinders?</p><h2>Disconnect from technology. Reconnect with what matters.</h2><p>We are living at a time when we are increasingly disconnected with ourselves, each other, and the earth. Wayfinders offers a solution: Mindfulness, community building, and nature immersion. Through social emotional learning and sustainability practices, Wayfinders provides experiential opportunities to disconnect (from technology) and reconnect with ourselves, each other, and the earth.</p><p>Wayfinders creates a fun & safe space to build interconnectedness through nature guided experiences and social & emotional mentoring. The program explores leadership development and community building, and offers Junior Mentor or Mentor-in-Training programs; and for those interested - Rites of Passage.</p><p>Wayfinders experiential opportunities with nature connection and social emotional learning result in positive impacts including:</p><ul><li>shaping future sustainability advocates</li><li>addressing mental health challenges</li><li>increasing opportunities for diverse and underserved participants.</li></ul></div>
-  </section>
-
-  <section class="why chapter">
-    <div class="wide"><header class="section-heading"><p class="eyebrow-line type-label">The call to action</p><h2>Why Wayfinders?</h2><p>Why did climate activist - Gwen Merkin, and School Counselor - Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the evidence of a need for this program is very clear! Click on the below sections to learn more about the call to action.</p></header><div class="reason-grid">{reasons.slice(0,6).map(([title, copy], index) => <details class={`reason reason-${index + 1}`}><summary><span class="reason-icon"><NatureIcon name={reasonIcons[index]} size={30} /></span><span>{title}</span><span class="plus" aria-hidden="true">+</span></summary><p>{copy}</p></details>)}</div></div>
-  </section>
+  <section class="statements"><div class="wide"><p>Our children are disconnecting from themselves, their families, communities, and the earth as they enter their teenage years.</p><p>Wayfinders carves out time for youth to step away from the daily, to connect with purpose.</p><LeafDivider class="statements-divider" /></div></section>
 
   <section class="future chapter"><LeafFlourish side="right" variant="big-3" class="future-leaf" /><div class="wide future-grid"><header><p class="type-label">Growing up. Growing together.</p><h2>Real-world experiences for a life of purpose.</h2></header>{reasons.slice(6).map(([title, copy]) => <article><h3>{title}</h3><p>{copy}</p></article>)}<div class="gallery">{gallery.slice(0,3).map(([src,alt]) => <img {src} {alt} width="800" height="600" loading="lazy" />)}</div></div></section>
-
-  <section class="statements"><div class="wide"><p>Our children are disconnecting from themselves, their families, communities, and the earth as they enter their teenage years.</p><p>Wayfinders carves out time for youth to step away from the daily, to connect with purpose.</p><LeafDivider class="statements-divider" /></div></section>
 
   <section class="land chapter"><div class="wide land-grid"><div><p class="type-label">Land Acknowledgment and Responsibility</p><h2>We recognize the enduring stewardship of the Lenape.</h2></div><p>The Wayfinders team recognizes that the land where we live, work and play exists within the territory of the Lenape. We acknowledge the Lenape for their enduring stewardship of this place throughout the centuries and still today. We recognize a responsibility to learn about this history while educating new generations about how to live in right relationship with the earth and all of her inhabitants. Learning and relationship building is an ongoing pursuit and we welcome guidance and feedback from all as we endeavor to repair and restore this relationship.</p></div></section>
 
@@ -78,4 +78,14 @@ const gallery = [
   @media(max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(8 25 15/.7)}.hero h1{font-size:clamp(3.25rem,15vw,5rem)}.actions{flex-direction:column}.actions :global(.button){width:100%}.reason-grid,.future-grid,.statements .wide,.connect-grid{grid-template-columns:1fr}.future header,.gallery,.connect-grid>div:first-child{grid-column:auto}.future article{padding:0 0 2rem;border-right:0;border-bottom:1px solid var(--color-line)}.gallery{grid-template-columns:1fr}.gallery img{min-height:15rem}.what-is{background-position:60% center}.what-panel{padding:2rem}.reason summary{min-height:6rem}.land-grid{gap:1rem}}
   @media(max-width:47.999rem){.hero{min-height:calc(42rem + 9.0625rem)}}
   @media(min-width:48rem){.hero::after{background:linear-gradient(90deg,rgb(8 25 15/.9) 0%,rgb(8 25 15 / 0) 85%)}}
+
+  /* Home-page sequence: quiet introduction, then the fuller case for Wayfinders. */
+  .what-is{display:block;min-height:0;padding-inline:0;background:var(--color-surface)}
+  .what-panel{width:min(100%,52rem);margin:0;padding:0;border-radius:0;background:transparent;box-shadow:none}
+  .why{background:linear-gradient(110deg,#e9ede3,#faf7ee)}
+  .reason-grid{align-items:stretch}
+  .reason{padding:clamp(1.25rem,2.2vw,2rem)}
+  .reason-heading{display:flex;gap:1rem;align-items:center}
+  .reason h3{margin:0;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(1.45rem,2vw,1.9rem);font-weight:600;line-height:1.05}
+  .reason p{margin:1.25rem 0 0;padding:0;color:var(--color-ink-muted);font-size:.9rem;line-height:1.65;white-space:pre-line}
 </style>
