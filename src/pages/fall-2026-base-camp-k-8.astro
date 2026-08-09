@@ -80,7 +80,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
     </DisclosureList></div></Container>
   </section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A fall of wonder awaits</p><h2>Ready to join us?</h2><p>Choose your day and register for Base Camp today.</p><div class="closing-actions">{options.map((option) => <Button href={option.href}>{option.day} <span aria-hidden="true">→</span></Button>)}</div></div><aside><h3>Interested in the parent workshops?</h3><p>Register for the free community breathwork session.</p><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork</Button></aside></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A fall of wonder awaits</p><h2>Ready to join us?</h2><p>Choose your day and register for Base Camp today.</p><div class="closing-actions">{options.map((option) => <Button registration={{ program: `Fall 2026 Base Camp — ${option.day}`, paymentUrl: option.href }}>{option.day} <span aria-hidden="true">→</span></Button>)}</div></div><aside><h3>Interested in the parent workshops?</h3><p>Register for the free community breathwork session.</p><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork</Button></aside></Container></section>
 </BaseLayout>
 
 <style>

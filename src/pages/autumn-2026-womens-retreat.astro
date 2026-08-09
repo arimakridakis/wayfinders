@@ -7,7 +7,6 @@ import LeafFlourish from '../components/global/LeafFlourish.astro';
 import LeafDivider from '../components/global/LeafDivider.astro';
 
 const registerUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3ef6531ada3d487b898212099c1dcf992a1795b6d4c24ce9acec1b23f8c3f88478a340b7890448bbb12595742a93316e?locale=EN_US&cta=copylistmultilink';
-const commerceUrl = 'https://www.wayfindersonthehudson.com/register-for-fall-2023/p/autumn-2026-womens-retreat';
 
 const possibilities = [
   { icon: 'community', title: 'Sistering' },
@@ -45,7 +44,7 @@ const included = [
         <article><span class="detail-icon"><NatureIcon name="mountain" size={36} /></span><p class="type-label">Location</p><h3>Lenoir Preserve in Yonkers</h3></article>
         <article><span class="detail-icon"><NatureIcon name="leaf" size={36} /></span><p class="type-label">Cost</p><h3>$120</h3><p>Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!</p></article>
       </div>
-      <div class="detail-action"><Button href={commerceUrl}>Autumn 2026 Women's Retreat <span aria-hidden="true">→</span></Button></div>
+      <div class="detail-action"><Button registration={{ program: 'Autumn 2026 Women’s Retreat', paymentUrl: registerUrl }}>Autumn 2026 Women's Retreat <span aria-hidden="true">→</span></Button></div>
     </Container>
   </section>
 
@@ -71,7 +70,7 @@ const included = [
     <Container width="wide"><header class="section-heading"><p class="type-label">How it works</p><h2>Your path to the retreat</h2></header><div class="steps"><article><span>1</span><h3>Reserve Your Spot</h3><p>Sign up to reserve your spot.</p></article><article><span>2</span><h3>Review the Welcome Email</h3><p>After registering, we'll send you a Welcome Email with everything you need to know.</p></article><article><span>3</span><h3>Start Dreaming</h3><p>Get excited for our adventure; we can’t wait to be together in restoration.</p></article></div></Container>
   </section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">An afternoon of restoration awaits</p><h2>Come gather with us.</h2><p>Reserve your place at the Autumn 2026 Women’s Retreat.</p><Button href={registerUrl}>Register <span aria-hidden="true">→</span></Button></div><p class="closing-note">Reflection, sistering, ceremony, and time on the land.</p></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">An afternoon of restoration awaits</p><h2>Come gather with us.</h2><p>Reserve your place at the Autumn 2026 Women’s Retreat.</p><Button registration={{ program: 'Autumn 2026 Women’s Retreat', paymentUrl: registerUrl }}>Register <span aria-hidden="true">→</span></Button></div><p class="closing-note">Reflection, sistering, ceremony, and time on the land.</p></Container></section>
 </BaseLayout>
 
 <style>

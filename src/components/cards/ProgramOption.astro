@@ -8,12 +8,13 @@ interface Props {
   date: string;
   time: string;
   href: string;
+  program: string;
   icon?: 'leaf' | 'heart' | 'community';
   accent?: 'moss' | 'earth' | 'blue';
   action?: string;
 }
 
-const { title, label, date, time, href, icon = 'leaf', accent = 'moss', action = 'Register' } = Astro.props;
+const { title, label, date, time, href, program, icon = 'leaf', accent = 'moss', action = 'Register' } = Astro.props;
 ---
 <article class:list={['program-option', `accent-${accent}`]}>
   <div class="option-heading">
@@ -24,7 +25,7 @@ const { title, label, date, time, href, icon = 'leaf', accent = 'moss', action =
     <div><dt><NatureIcon name="calendar" size={21} /><span class="sr-only">Dates</span></dt><dd>{date}</dd></div>
     <div><dt><NatureIcon name="clock" size={21} /><span class="sr-only">Time</span></dt><dd>{time}</dd></div>
   </dl>
-  <Button {href}>{action} <span aria-hidden="true">→</span></Button>
+  <Button registration={{ program, paymentUrl: href }}>{action} <span aria-hidden="true">→</span></Button>
 </article>
 
 <style>

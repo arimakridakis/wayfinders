@@ -1,0 +1,136 @@
+---
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+---
+
+<div class="registration-modal" data-registration-modal data-recaptcha-site-key={recaptchaSiteKey} hidden>
+  <div class="registration-modal__backdrop" data-registration-close></div>
+  <section class="registration-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="registration-title">
+    <button class="registration-modal__close" type="button" aria-label="Close registration form" data-registration-close>×</button>
+    <p class="registration-modal__eyebrow">Registration details</p>
+    <h2 id="registration-title">Tell us who’s joining.</h2>
+    <p class="registration-modal__program">Registering for <strong data-registration-program-label></strong></p>
+    <p>We’ll collect these details before sending you to QuickBooks for secure payment.</p>
+    <form data-registration-form>
+      <label>First name <input name="firstName" autocomplete="given-name" required /></label>
+      <label>Last name <input name="lastName" autocomplete="family-name" required /></label>
+      <label class="registration-modal__email">Email address <input name="email" type="email" autocomplete="email" required /></label>
+      <label>Participant’s name <input name="participantName" autocomplete="name" required /></label>
+      <label>Participant’s age <input name="participantAge" inputmode="numeric" pattern="[0-9]{1,3}" required /></label>
+      <label class="registration-modal__consent"><input name="marketingConsent" type="checkbox" /> <span>Keep me updated about Wayfinders programs and events.</span></label>
+      <div class="registration-modal__honeypot" aria-hidden="true"><label>Leave this field empty <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <button type="submit">Continue to secure payment <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="registration-modal__error" data-registration-error role="alert" hidden></p>
+    <p class="registration-modal__privacy">Your space is not confirmed until payment is completed in QuickBooks.</p>
+  </section>
+</div>
+
+<script>
+  type Recaptcha = { ready: (callback: () => void) => void; execute: (siteKey: string, options: { action: string }) => Promise<string>; };
+  const modal = document.querySelector<HTMLElement>('[data-registration-modal]');
+  if (modal) {
+    const siteKey = modal.dataset.recaptchaSiteKey;
+    const dialog = modal.querySelector('.registration-modal__dialog');
+    const programLabel = modal.querySelector<HTMLElement>('[data-registration-program-label]');
+    const form = modal.querySelector<HTMLFormElement>('[data-registration-form]');
+    const errorPanel = modal.querySelector<HTMLElement>('[data-registration-error]');
+    const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+    let trigger: HTMLElement | null = null;
+    let paymentUrl = '';
+    let recaptchaLoader: Promise<Recaptcha> | null = null;
+
+    const setError = (message = '') => {
+      if (!errorPanel) return;
+      errorPanel.textContent = message;
+      errorPanel.toggleAttribute('hidden', !message);
+    };
+    const loadRecaptcha = () => {
+      if (!siteKey) return Promise.reject(new Error('Registration is temporarily unavailable.'));
+      if (recaptchaLoader) return recaptchaLoader;
+      recaptchaLoader = new Promise((resolve, reject) => {
+        const existing = document.querySelector<HTMLScriptElement>('script[data-wayfinders-recaptcha]');
+        const script = existing ?? document.createElement('script');
+        const complete = () => {
+          const recaptcha = (window as Window & { grecaptcha?: Recaptcha }).grecaptcha;
+          if (recaptcha) resolve(recaptcha);
+          else reject(new Error('We could not load spam protection.'));
+        };
+        if (existing && (window as Window & { grecaptcha?: Recaptcha }).grecaptcha) {
+          complete();
+          return;
+        }
+        script.addEventListener('load', complete, { once: true });
+        script.addEventListener('error', () => reject(new Error('We could not load spam protection.')), { once: true });
+        if (!existing) {
+          script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+          script.async = true;
+          script.defer = true;
+          script.dataset.wayfindersRecaptcha = 'true';
+          document.head.append(script);
+        }
+      });
+      return recaptchaLoader;
+    };
+    const getRecaptchaToken = async () => {
+      const recaptcha = await loadRecaptcha();
+      await new Promise<void>((resolve) => recaptcha.ready(resolve));
+      return recaptcha.execute(siteKey!, { action: 'program_registration' });
+    };
+    const close = () => {
+      modal.setAttribute('hidden', '');
+      document.body.classList.remove('registration-modal-open');
+      form?.reset();
+      setError();
+      trigger?.focus();
+    };
+    const open = (event: Event) => {
+      trigger = event.currentTarget as HTMLElement;
+      paymentUrl = trigger.dataset.registrationPaymentUrl || '';
+      const program = trigger.dataset.registrationProgram || 'this Wayfinders program';
+      if (programLabel) programLabel.textContent = program;
+      modal.removeAttribute('hidden');
+      document.body.classList.add('registration-modal-open');
+      (dialog?.querySelector('input[name="firstName"]') as HTMLInputElement | null)?.focus();
+    };
+
+    document.querySelectorAll('[data-registration-open]').forEach((element) => element.addEventListener('click', open));
+    modal.querySelectorAll('[data-registration-close]').forEach((element) => element.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hasAttribute('hidden')) close(); });
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity() || !paymentUrl) return;
+      setError();
+      if (submitButton) submitButton.disabled = true;
+      try {
+        const fields = new FormData(form);
+        const recaptchaToken = await getRecaptchaToken();
+        const response = await fetch('/api/registration', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            program: programLabel?.textContent,
+            firstName: fields.get('firstName'),
+            lastName: fields.get('lastName'),
+            email: fields.get('email'),
+            participantName: fields.get('participantName'),
+            participantAge: fields.get('participantAge'),
+            marketingConsent: fields.get('marketingConsent') === 'on',
+            website: fields.get('website'),
+            recaptchaToken,
+          }),
+        });
+        const result = await response.json() as { ok?: boolean; error?: string };
+        if (!response.ok || !result.ok) throw new Error(result.error || 'We could not save your details. Please try again.');
+        window.location.assign(paymentUrl);
+      } catch (error) {
+        setError(error instanceof Error ? error.message : 'We could not save your details. Please try again.');
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .registration-modal{position:fixed;z-index:201;inset:0;display:grid;place-items:center;padding:1rem}.registration-modal__backdrop{position:absolute;inset:0;background:rgb(8 25 15 / .72);backdrop-filter:blur(3px)}.registration-modal__dialog{position:relative;width:min(100%,42rem);padding:clamp(2rem,5vw,4rem);border:1px solid rgb(255 255 255 / .45);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:0 24px 70px rgb(0 0 0 / .3);color:var(--color-ink)}.registration-modal__close{position:absolute;top:1rem;right:1rem;display:grid;width:2.75rem;aspect-ratio:1;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--color-forest-dark);font-size:2rem;line-height:1;cursor:pointer}.registration-modal__eyebrow{margin:0;color:var(--color-rust);font-size:1rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.registration-modal h2{margin:.35rem 0 1rem;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4rem);font-weight:600;line-height:.95}.registration-modal__program{margin:0 0 .5rem;color:var(--color-moss)}.registration-modal form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.registration-modal label{display:grid;gap:.4rem;color:var(--color-forest-dark);font-size:.95rem;font-weight:750}.registration-modal input{width:100%;min-height:3rem;padding:.65rem .8rem;border:1px solid var(--color-line);border-radius:.65rem;background:#fff;color:var(--color-ink);font:inherit}.registration-modal__email,.registration-modal form button,.registration-modal__consent{grid-column:1/-1}.registration-modal__consent{display:flex!important;align-items:flex-start;gap:.65rem;font-weight:600!important;line-height:1.4}.registration-modal__consent input{width:1.25rem;min-height:1.25rem;margin:.1rem 0 0;accent-color:var(--color-forest-dark)}.registration-modal form button{min-height:3.25rem;padding:.7rem 1.4rem;border:0;border-radius:var(--radius-button);background:var(--color-forest-dark);color:white;font:inherit;font-weight:750;cursor:pointer}.registration-modal form button:hover{background:var(--color-rust)}.registration-modal form button:disabled{cursor:wait;opacity:.7}.registration-modal__honeypot{position:absolute;left:-5000px}.registration-modal__privacy{margin:1rem 0 0;color:var(--color-ink-muted);font-size:.875rem}.registration-modal__error{margin:1rem 0 0;color:#9a3118;font-weight:700}:global(body.registration-modal-open){overflow:hidden}@media(max-width:47.999rem){.registration-modal form{grid-template-columns:1fr}.registration-modal__dialog{padding:2rem}.registration-modal__close{top:.5rem;right:.5rem}}
+</style>
