@@ -37,7 +37,7 @@ const { eyebrow, title, intro, image } = Astro.props;
   }
 
   .copy { max-width: 48rem; transform: translateY(50px); }
-  h1 { margin: .65rem 0 0; color: var(--color-surface); }
+  h1 { margin: .65rem 0 0; color: var(--color-surface); font-size: calc(clamp(2.5rem, 6vw, 5rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust)); }
   .type-label { margin: 0; color: var(--color-cream); }
   .intro { max-width: 42rem; margin: 1.5rem 0 0; color: var(--color-surface); font-size: clamp(1.08rem, 2vw, 1.3rem); }
   .copy :global(h2), .copy :global(p), .copy :global(strong) { color: var(--color-surface); }
