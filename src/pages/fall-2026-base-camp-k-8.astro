@@ -12,7 +12,7 @@ import LeafDivider from '../components/global/LeafDivider.astro';
 const options = [
   { day:'Tuesday', ages:'1st–8th graders', dates:'10 weeks · September 22–November 24', time:'3:45–5:45 pm', accent:'moss', icon:'leaf', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-46a9b4dfa26d4d4389eca15a85435c825b11d31d1d4b437cab8e2493d14104b98cd623f49faf4c59893113898372b577?locale=EN_US&cta=saveandcopylink' },
   { day:'Wednesday', ages:'1st–8th graders', dates:'10 weeks · September 23–December 9 (skips November 11 and 25)', time:'3:45–5:45 pm', accent:'blue', icon:'mountain', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-7fd8a8bc9e044b01bf85240931b5fbd4f5a757626a27445693f09090d6789ea3672fa74484ef49e8aa9d515af2163300?locale=EN_US&cta=saveandcopylink' },
-  { day:'Kindergarten', ages:'Young explorers', dates:'10 weeks · September 24–December 3 (skips November 26)', time:'3:45–5:00 pm', accent:'earth', icon:'acorn', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-9298690de1c848788cdeb6c69feb477841b288d9604a49899aa0b671da5468a018d3bfb80ecc401bbb43412950e21e7e?locale=EN_US&cta=copylistmultilink' },
+  { day:'Thursday', ages:'Kindergarten', dates:'10 weeks · September 24–December 3 (skips November 26)', time:'3:45–5:00 pm', accent:'earth', icon:'acorn', href:'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-9298690de1c848788cdeb6c69feb477841b288d9604a49899aa0b671da5468a018d3bfb80ecc401bbb43412950e21e7e?locale=EN_US&cta=copylistmultilink' },
 ] as const;
 
 const experiences = [
@@ -29,10 +29,9 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
 <BaseLayout title="Fall 2026 Base Camp K–8" description="Wayfinders Fall Base Camp meets after school on Tuesdays, Wednesdays, and Thursdays at Lenoir Preserve.">
   <section class="hero">
     <Container width="wide" class="hero-content">
-      <p class="type-label">Wayfinders · Fall 2026</p>
+      <p class="type-label">WAYFINDERS</p>
       <h1>Fall 2026 <span>Base Camp</span></h1>
       <p class="hero-intro">Outdoor play, community building, and leadership development for Kindergarten through 8th grade.</p>
-      <p class="location"><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</p>
       <a class="hero-note" href="#programs"><NatureIcon name="heart" size={31} /><span>Serving the whole community:<br /><strong>kids and parents together</strong></span></a>
     </Container>
   </section>
@@ -95,6 +94,8 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .location { margin-bottom:2rem; }
   .hero-note { display:inline-flex; align-items:center; gap:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .9); color:white; font-size:1.1875rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
   .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
+  .programs .section-heading h2 { gap:clamp(.2rem,.5vw,.4rem); }
+  .programs .section-heading h2::before,.programs .section-heading h2::after { transform:scale(2); }
   .section-heading .type-label,.community .type-label,.details .type-label { color:var(--color-moss); }
   .section-heading h2,.community h2,.details h2,.contrast h2,.closing h2 { margin:.3rem 0 .6rem; font-family:var(--font-display); font-size:calc(clamp(2.7rem,5vw,4.5rem) + var(--font-display-size-adjust)); font-weight:600; letter-spacing:-.025em; line-height:1; }
   .section-heading > p:last-child { margin:0; font-size:1.15rem; }
@@ -110,6 +111,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .round-image img { width:100%; height:100%; object-fit:cover; }
   .workshops h3 { margin:.25rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1; }
   .experience { background:var(--color-surface); }
+  .experience .section-heading h2::before,.experience .section-heading h2::after { display:none; }
   .experience-grid { display:grid; grid-template-columns:repeat(6,1fr); }
   .experience-grid article { padding:0 clamp(.75rem,2vw,1.5rem); border-right:1px solid var(--color-line); text-align:center; }
   .experience-grid article:last-child { border:0; }
