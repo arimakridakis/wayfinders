@@ -6,11 +6,11 @@ import LeafFlourish from '../components/global/LeafFlourish.astro';
 import LeafDivider from '../components/global/LeafDivider.astro';
 const reasons = [
   ['Our Core Values', `Participants are encouraged to see themselves as part of the web of life
-Practice gratitude, land acknowledgement, and sit spot
+Become more mindful of where things come from and where things go
 Explore self-awareness
 Build relationships and community
 Connect with the earth
-Become more mindful of where things come from and where things go
+Practice gratitude, land acknowledgement, and sit spot
 Cultivate leadership skills
 Be called to social action`],
   ['Leadership Development', `Identifying the challenges that our world and communities face is the easy part. Learning how to take steps to address issues like climate change and structural racism takes grit and guts. Developing small and measurable group goals, we learn to move from identifying a problem to forming and implementing a solution. Wayfinders participants bring these skills to their communities to make a larger impact.`],
@@ -101,14 +101,14 @@ const gallery = [
   .base-camp-highlights h3,.base-camp-schedule-grid h3{margin:0 0 .55rem;color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.55rem,2.3vw,2.15rem) + var(--font-display-size-adjust));font-weight:600;line-height:1.03}
   .base-camp-highlights article p,.base-camp-schedule-grid article p{text-align:left}
   .base-camp-scheduling{padding-top:1.5rem;border-top:1px solid rgb(255 255 255 / .35)}
-  .base-camp-subheading{color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.7rem,2.7vw,2.4rem) + var(--font-display-size-adjust))!important;font-weight:600;line-height:1.05}
+  .base-camp-subheading{color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.7rem,2.7vw,2.4rem) + var(--font-display-size-adjust) + 3px)!important;font-weight:600;line-height:1.05;text-align:center}
   .base-camp-schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.25rem}
   .base-camp :global(.button){margin-top:2rem;border-color:white;background:white;color:var(--color-forest-dark)}
   .reason-grid{display:grid;grid-template-columns:1fr;max-width:var(--width-wide);margin-inline:auto}
   .reason{padding:0;border:0;border-top:1px solid rgb(23 59 42 / .45);border-radius:0;background:transparent;box-shadow:none}
   .reason:last-child{border-bottom:1px solid rgb(23 59 42 / .45)}
   .reason summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0;cursor:pointer;color:var(--color-forest-dark);font-family:var(--font-display);font-size:calc(clamp(1.5rem,2.4vw,2.15rem) + var(--font-display-size-adjust));font-weight:500;line-height:1.15;list-style:none}
-  .reason:not([open]) summary{padding-block:calc(1.25rem - 7px)}
+  .reason:not([open]) summary{padding-block:calc(1.25rem - 14px)}
   .reason summary::-webkit-details-marker{display:none}.reason summary h3{margin:0;font:inherit;color:inherit}.reason-toggle{position:relative;display:block;flex:none;width:1.5rem;height:1.5rem}.reason-toggle::before,.reason-toggle::after{position:absolute;top:50%;left:50%;width:1.05rem;height:2px;background:currentColor;content:'';transform:translate(-50%,-50%)}.reason-toggle::after{transform:translate(-50%,-50%) rotate(90deg)}.reason[open] .reason-toggle::after{display:none}
   .reason-content{padding:0 clamp(1rem,9vw,8rem) 2rem 0}.reason-content p{margin:0;color:var(--color-ink-muted);font-size:1.1875rem;line-height:1.65;white-space:pre-line}
   .core-values{display:grid;grid-template-columns:1fr 1fr;gap:1rem 3rem;margin:0;padding:0;list-style:none}.core-values li{display:flex;align-items:flex-start;gap:.75rem;color:var(--color-ink-muted);font-size:1.1875rem;line-height:1.5}.core-values :global(svg){flex:none;margin-top:.15rem;color:var(--color-forest)}
