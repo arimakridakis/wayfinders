@@ -1,8 +1,8 @@
 ---
-const formAction = 'https://seedpod.us3.list-manage.com/subscribe/post?u=1e15fb7a65ef3c60361738300&id=ac2c47bde9&f_id=0066cde3f0';
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
 ---
 
-<div class="newsletter-modal" data-newsletter-modal hidden>
+<div class="newsletter-modal" data-newsletter-modal data-recaptcha-site-key={recaptchaSiteKey} hidden>
   <div class="newsletter-modal__backdrop" data-newsletter-close></div>
   <section class="newsletter-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
     <button class="newsletter-modal__close" type="button" aria-label="Close signup form" data-newsletter-close>×</button>
@@ -10,13 +10,14 @@ const formAction = 'https://seedpod.us3.list-manage.com/subscribe/post?u=1e15fb7
       <p class="newsletter-modal__eyebrow">Stay connected</p>
       <h2 id="newsletter-title">Join the Wayfinders community.</h2>
       <p>Receive news, programs, and invitations to spend more time together outdoors.</p>
-      <form action={formAction} method="post" target="mailchimp-submit-frame" data-newsletter-form-submit>
+      <form data-newsletter-form-submit>
         <label>First name <input name="FNAME" autocomplete="given-name" /></label>
         <label>Last name <input name="LNAME" autocomplete="family-name" /></label>
         <label class="newsletter-modal__email">Email address <input name="EMAIL" type="email" autocomplete="email" required /></label>
-        <div class="newsletter-modal__honeypot" aria-hidden="true"><label>Leave this field empty <input name="b_1e15fb7a65ef3c60361738300_ac2c47bde9" tabindex="-1" /></label></div>
+        <div class="newsletter-modal__honeypot" aria-hidden="true"><label>Leave this field empty <input name="website" tabindex="-1" autocomplete="off" /></label></div>
         <button type="submit">Sign me up <span aria-hidden="true">→</span></button>
       </form>
+      <p class="newsletter-modal__error" data-newsletter-error role="alert" hidden></p>
       <p class="newsletter-modal__privacy">We respect your privacy. You can unsubscribe anytime.</p>
     </div>
     <div class="newsletter-modal__success" data-newsletter-success hidden tabindex="-1">
@@ -27,22 +28,64 @@ const formAction = 'https://seedpod.us3.list-manage.com/subscribe/post?u=1e15fb7
     </div>
   </section>
 </div>
-<iframe class="newsletter-modal__frame" name="mailchimp-submit-frame" title="Mailchimp signup submission"></iframe>
 
 <script>
-  const modal = document.querySelector('[data-newsletter-modal]');
+  type Recaptcha = {
+    ready: (callback: () => void) => void;
+    execute: (siteKey: string, options: { action: string }) => Promise<string>;
+  };
+  const modal = document.querySelector<HTMLElement>('[data-newsletter-modal]');
   if (modal) {
+    const siteKey = modal.dataset.recaptchaSiteKey;
     const dialog = modal.querySelector('.newsletter-modal__dialog');
-    const formPanel = modal.querySelector('[data-newsletter-form]');
-    const successPanel = modal.querySelector('[data-newsletter-success]');
-    const form = modal.querySelector('[data-newsletter-form-submit]');
+    const formPanel = modal.querySelector<HTMLElement>('[data-newsletter-form]');
+    const successPanel = modal.querySelector<HTMLElement>('[data-newsletter-success]');
+    const errorPanel = modal.querySelector<HTMLElement>('[data-newsletter-error]');
+    const form = modal.querySelector<HTMLFormElement>('[data-newsletter-form-submit]');
+    const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
     let trigger: HTMLElement | null = null;
+    let recaptchaLoader: Promise<Recaptcha> | null = null;
 
+    const setError = (message = '') => {
+      if (!errorPanel) return;
+      errorPanel.textContent = message;
+      errorPanel.toggleAttribute('hidden', !message);
+    };
+    const loadRecaptcha = () => {
+      if (!siteKey) return Promise.reject(new Error('Newsletter signup is temporarily unavailable.'));
+      if (recaptchaLoader) return recaptchaLoader;
+      recaptchaLoader = new Promise((resolve, reject) => {
+        const existing = document.querySelector<HTMLScriptElement>('script[data-wayfinders-recaptcha]');
+        const script = existing ?? document.createElement('script');
+        const complete = () => {
+          const recaptcha = (window as Window & { grecaptcha?: Recaptcha }).grecaptcha;
+          if (recaptcha) resolve(recaptcha);
+          else reject(new Error('We could not load spam protection.'));
+        };
+        script.addEventListener('load', complete, { once: true });
+        script.addEventListener('error', () => reject(new Error('We could not load spam protection.')), { once: true });
+        if (!existing) {
+          script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+          script.async = true;
+          script.defer = true;
+          script.dataset.wayfindersRecaptcha = 'true';
+          document.head.append(script);
+        }
+      });
+      return recaptchaLoader;
+    };
+    const getRecaptchaToken = async () => {
+      const recaptcha = await loadRecaptcha();
+      await new Promise<void>((resolve) => recaptcha.ready(resolve));
+      return recaptcha.execute(siteKey!, { action: 'newsletter_signup' });
+    };
     const close = () => {
       modal.setAttribute('hidden', '');
       document.body.classList.remove('newsletter-modal-open');
       formPanel?.removeAttribute('hidden');
       successPanel?.setAttribute('hidden', '');
+      form?.reset();
+      setError();
       trigger?.focus();
     };
     const open = (event: Event) => {
@@ -55,16 +98,39 @@ const formAction = 'https://seedpod.us3.list-manage.com/subscribe/post?u=1e15fb7
     document.querySelectorAll('[data-newsletter-open]').forEach((element) => element.addEventListener('click', open));
     modal.querySelectorAll('[data-newsletter-close]').forEach((element) => element.addEventListener('click', close));
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hasAttribute('hidden')) close(); });
-    form?.addEventListener('submit', () => {
-      window.setTimeout(() => {
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      setError();
+      if (submitButton) submitButton.disabled = true;
+      try {
+        const fields = new FormData(form);
+        const recaptchaToken = await getRecaptchaToken();
+        const response = await fetch('/api/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName: fields.get('FNAME'),
+            lastName: fields.get('LNAME'),
+            email: fields.get('EMAIL'),
+            website: fields.get('website'),
+            recaptchaToken,
+          }),
+        });
+        const result = await response.json() as { ok?: boolean; error?: string };
+        if (!response.ok || !result.ok) throw new Error(result.error || 'We could not complete your signup. Please try again.');
         formPanel?.setAttribute('hidden', '');
         successPanel?.removeAttribute('hidden');
-        (successPanel as HTMLElement | null)?.focus();
-      }, 150);
+        successPanel?.focus();
+      } catch (error) {
+        setError(error instanceof Error ? error.message : 'We could not complete your signup. Please try again.');
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
     });
   }
 </script>
 
 <style>
-  .newsletter-modal{position:fixed;z-index:200;inset:0;display:grid;place-items:center;padding:1rem}.newsletter-modal__backdrop{position:absolute;inset:0;background:rgb(8 25 15 / .72);backdrop-filter:blur(3px)}.newsletter-modal__dialog{position:relative;width:min(100%,38rem);padding:clamp(2rem,5vw,4rem);border:1px solid rgb(255 255 255 / .45);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:0 24px 70px rgb(0 0 0 / .3);color:var(--color-ink)}.newsletter-modal__close{position:absolute;top:1rem;right:1rem;display:grid;width:2.75rem;aspect-ratio:1;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--color-forest-dark);font-size:2rem;line-height:1;cursor:pointer}.newsletter-modal__eyebrow{margin:0;color:var(--color-rust);font-size:1rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.newsletter-modal h2{margin:.35rem 0 1rem;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4rem);font-weight:600;line-height:.95}.newsletter-modal form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.newsletter-modal label{display:grid;gap:.4rem;color:var(--color-forest-dark);font-size:.95rem;font-weight:750}.newsletter-modal input{width:100%;min-height:3rem;padding:.65rem .8rem;border:1px solid var(--color-line);border-radius:.65rem;background:#fff;color:var(--color-ink);font:inherit}.newsletter-modal__email,.newsletter-modal form button{grid-column:1/-1}.newsletter-modal form button,.newsletter-modal__success button{min-height:3.25rem;padding:.7rem 1.4rem;border:0;border-radius:var(--radius-button);background:var(--color-forest-dark);color:white;font:inherit;font-weight:750;cursor:pointer}.newsletter-modal form button:hover,.newsletter-modal__success button:hover{background:var(--color-rust)}.newsletter-modal__honeypot{position:absolute;left:-5000px}.newsletter-modal__privacy{margin:1rem 0 0;color:var(--color-ink-muted);font-size:.875rem}.newsletter-modal__success{min-height:17rem;display:grid;align-content:center}.newsletter-modal__success p:not(.newsletter-modal__eyebrow){margin-bottom:25px}.newsletter-modal__frame{position:absolute;width:1px;height:1px;border:0;clip-path:inset(50%)}:global(body.newsletter-modal-open){overflow:hidden}@media(max-width:47.999rem){.newsletter-modal form{grid-template-columns:1fr}.newsletter-modal__dialog{padding:2rem}.newsletter-modal__close{top:.5rem;right:.5rem}}
+  .newsletter-modal{position:fixed;z-index:200;inset:0;display:grid;place-items:center;padding:1rem}.newsletter-modal__backdrop{position:absolute;inset:0;background:rgb(8 25 15 / .72);backdrop-filter:blur(3px)}.newsletter-modal__dialog{position:relative;width:min(100%,38rem);padding:clamp(2rem,5vw,4rem);border:1px solid rgb(255 255 255 / .45);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:0 24px 70px rgb(0 0 0 / .3);color:var(--color-ink)}.newsletter-modal__close{position:absolute;top:1rem;right:1rem;display:grid;width:2.75rem;aspect-ratio:1;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--color-forest-dark);font-size:2rem;line-height:1;cursor:pointer}.newsletter-modal__eyebrow{margin:0;color:var(--color-rust);font-size:1rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.newsletter-modal h2{margin:.35rem 0 1rem;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4rem);font-weight:600;line-height:.95}.newsletter-modal form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.newsletter-modal label{display:grid;gap:.4rem;color:var(--color-forest-dark);font-size:.95rem;font-weight:750}.newsletter-modal input{width:100%;min-height:3rem;padding:.65rem .8rem;border:1px solid var(--color-line);border-radius:.65rem;background:#fff;color:var(--color-ink);font:inherit}.newsletter-modal__email,.newsletter-modal form button{grid-column:1/-1}.newsletter-modal form button,.newsletter-modal__success button{min-height:3.25rem;padding:.7rem 1.4rem;border:0;border-radius:var(--radius-button);background:var(--color-forest-dark);color:white;font:inherit;font-weight:750;cursor:pointer}.newsletter-modal form button:hover,.newsletter-modal__success button:hover{background:var(--color-rust)}.newsletter-modal form button:disabled{cursor:wait;opacity:.7}.newsletter-modal__honeypot{position:absolute;left:-5000px}.newsletter-modal__privacy{margin:1rem 0 0;color:var(--color-ink-muted);font-size:.875rem}.newsletter-modal__error{margin:1rem 0 0;color:#9a3118;font-weight:700}.newsletter-modal__success{min-height:17rem;display:grid;align-content:center}.newsletter-modal__success p:not(.newsletter-modal__eyebrow){margin-bottom:25px}:global(body.newsletter-modal-open){overflow:hidden}@media(max-width:47.999rem){.newsletter-modal form{grid-template-columns:1fr}.newsletter-modal__dialog{padding:2rem}.newsletter-modal__close{top:.5rem;right:.5rem}}
 </style>
