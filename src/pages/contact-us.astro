@@ -3,52 +3,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
 import Button from '../components/global/Button.astro';
-import Callout from '../components/sections/Callout.astro';
 import KeyDetails from '../components/sections/KeyDetails.astro';
 import MediaSplit from '../components/sections/MediaSplit.astro';
----
-<BaseLayout title="Contact" description="">
-  <PageHero eyebrow="Connect with Wayfinders" title="Contact Us" intro="We would love to hear from you! Contact us to learn more about our mission and work, get involved, or register for a program." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/8d8c5ce2-addd-4888-a32d-44925828c3f7/trees.jpeg?format=1200w" alt="Looking up into a canopy of trees" />
 
-  <Section tone="alternate" width="prose">
-    <Callout><div class="newsletter">
-      <h2 class="type-section">Join our Mailing List</h2>
-      <p>Sign up with your email address to receive news and updates.</p>
-      <Button newsletter>Sign Up <span aria-hidden="true">→</span></Button>
-      <p class="privacy">We respect your privacy.</p>
-    </div></Callout>
-  </Section>
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+---
+<BaseLayout title="Contact" description="Get in touch with Wayfinders on the Hudson.">
+  <PageHero eyebrow="Connect with Wayfinders" title="Contact Us" intro="We would love to hear from you—whether you are curious about a program, our work, or getting involved." image="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/8d8c5ce2-addd-4888-a32d-44925828c3f7/trees.jpeg?format=1200w" alt="Looking up into a canopy of trees" />
 
   <Section width="wide">
     <MediaSplit align="start">
       <Fragment slot="copy">
-        <h2 class="type-section">Contact Us</h2>
-        <p>We would love to hear from you! Contact us to learn more about our mission and work, get involved, or register for a program.</p>
-        <p>Let us know if you are looking to register for our new Programs: <strong>Forest Movement, Wise Owls, Motherhood Rising: Tending the Roots, FREE Forest Bathing</strong> or for more information on <strong>Corporate Retreats, School Programs, Internships, Base Camp, Passages,</strong> or just want to stay in touch!</p>
-        <p>Please let us know if you would like to to set up an <strong>Information Session.</strong></p>
-        <KeyDetails heading="Contact details"><dt>email:</dt><dd><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a></dd><dt>call:</dt><dd><a href="tel:+19173183888">(917) 318-3888</a></dd></KeyDetails>
+        <div class="contact-copy">
+          <h2 class="type-section">We’d love to hear from you.</h2>
+          <p>Contact us to learn more about our mission and work, get involved, or register for a program.</p>
+          <p>Let us know if you are looking to register for our new Programs: <strong>Forest Movement, Wise Owls, Motherhood Rising: Tending the Roots, FREE Forest Bathing</strong> or for more information on <strong>Corporate Retreats, School Programs, Internships, Base Camp, Passages</strong>, or just want to stay in touch!</p>
+          <p>You can also let us know if you would like to to set up an <strong>Information Session</strong>.</p>
+          <KeyDetails heading="Contact details"><dt>Email</dt><dd><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a></dd><dt>Call</dt><dd><a href="tel:+19173183888">(917) 318-3888</a></dd></KeyDetails>
+        </div>
       </Fragment>
-      <div slot="media" class="contact-form" aria-label="Contact form awaiting delivery confirmation">
-        <fieldset disabled>
-          <legend class="sr-only">Contact form</legend>
-          <span class="group-label">Name</span>
-          <div class="name-fields">
-            <label>First Name <span>(required)</span><input type="text" autocomplete="given-name" /></label>
-            <label>Last Name <span>(required)</span><input type="text" autocomplete="family-name" /></label>
-          </div>
-          <label>Email <span>(required)</span><input type="email" autocomplete="email" /></label>
-          <label>Message <span>(required)</span><textarea rows="5"></textarea></label>
-          <Button>Send</Button>
-        </fieldset>
-        <p class="delivery-note">Contact-form delivery requires owner confirmation. No information is collected by this page; use the email or telephone action instead.</p>
-      </div>
+      <form slot="media" class="contact-form" data-contact-form data-recaptcha-site-key={recaptchaSiteKey}>
+        <p class="type-label contact-eyebrow">Send a message</p>
+        <h2 class="type-card">How can we help?</h2>
+        <div class="name-fields">
+          <label>First name <input name="firstName" autocomplete="given-name" required /></label>
+          <label>Last name <input name="lastName" autocomplete="family-name" required /></label>
+        </div>
+        <label>Email address <input name="email" type="email" autocomplete="email" required /></label>
+        <label>Message <textarea name="message" rows="6" required></textarea></label>
+        <div class="contact-form__honeypot" aria-hidden="true"><label>Leave this field empty <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+        <button class="contact-form__submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+        <p class="contact-form__error" data-contact-error role="alert" hidden></p>
+        <p class="contact-form__success" data-contact-success role="status" hidden>Thank you—your message is on its way. We’ll be in touch soon.</p>
+      </form>
     </MediaSplit>
   </Section>
+
+  <Section tone="alternate" width="wide">
+    <div class="mailing-list">
+      <p class="type-label contact-eyebrow">Stay connected</p>
+      <h2 class="type-section">Join our Mailing List</h2>
+      <p>Sign up for news, new programs, and invitations to spend more time together outdoors.</p>
+      <Button newsletter>Sign up <span aria-hidden="true">→</span></Button>
+      <p class="privacy">We respect your privacy. You can unsubscribe anytime.</p>
+    </div>
+  </Section>
 </BaseLayout>
+
+<script>
+  type Recaptcha = { ready: (callback: () => void) => void; execute: (siteKey: string, options: { action: string }) => Promise<string>; };
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  if (form) {
+    const siteKey = form.dataset.recaptchaSiteKey;
+    const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const errorPanel = form.querySelector<HTMLElement>('[data-contact-error]');
+    const successPanel = form.querySelector<HTMLElement>('[data-contact-success]');
+    let recaptchaLoader: Promise<Recaptcha> | null = null;
+    const setError = (message = '') => {
+      if (!errorPanel) return;
+      errorPanel.textContent = message;
+      errorPanel.toggleAttribute('hidden', !message);
+    };
+    const loadRecaptcha = () => {
+      if (!siteKey) return Promise.reject(new Error('The contact form is temporarily unavailable.'));
+      if (recaptchaLoader) return recaptchaLoader;
+      recaptchaLoader = new Promise((resolve, reject) => {
+        const existing = document.querySelector<HTMLScriptElement>('script[data-wayfinders-recaptcha]');
+        const script = existing ?? document.createElement('script');
+        const complete = () => {
+          const recaptcha = (window as Window & { grecaptcha?: Recaptcha }).grecaptcha;
+          if (recaptcha) resolve(recaptcha);
+          else reject(new Error('We could not load spam protection.'));
+        };
+        if (existing && (window as Window & { grecaptcha?: Recaptcha }).grecaptcha) { complete(); return; }
+        script.addEventListener('load', complete, { once: true });
+        script.addEventListener('error', () => reject(new Error('We could not load spam protection.')), { once: true });
+        if (!existing) {
+          script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+          script.async = true;
+          script.defer = true;
+          script.dataset.wayfindersRecaptcha = 'true';
+          document.head.append(script);
+        }
+      });
+      return recaptchaLoader;
+    };
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      setError();
+      successPanel?.setAttribute('hidden', '');
+      if (submitButton) submitButton.disabled = true;
+      try {
+        const recaptcha = await loadRecaptcha();
+        await new Promise<void>((resolve) => recaptcha.ready(resolve));
+        const fields = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstName: fields.get('firstName'), lastName: fields.get('lastName'), email: fields.get('email'), message: fields.get('message'), website: fields.get('website'), recaptchaToken: await recaptcha.execute(siteKey!, { action: 'contact_inquiry' }) }),
+        });
+        const result = await response.json() as { ok?: boolean; error?: string };
+        if (!response.ok || !result.ok) throw new Error(result.error || 'We could not send your message. Please try again.');
+        form.reset();
+        successPanel?.removeAttribute('hidden');
+      } catch (error) {
+        setError(error instanceof Error ? error.message : 'We could not send your message. Please try again.');
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  }
+</script>
+
 <style>
-  .newsletter{text-align:center}.newsletter h2{margin-top:0}.newsletter :global(.button){margin:1.5rem auto 0}.privacy,.delivery-note{font-size:.875rem;color:var(--color-ink-muted)}
-  .contact-form label,.group-label{display:grid;gap:.4rem;font-weight:700}.contact-form span{font-weight:400;color:var(--color-ink-muted)}
-  input,textarea{width:100%;padding:.8rem;border:1px solid var(--color-line);border-radius:var(--radius-button);background:var(--color-surface);color:var(--color-ink);font:inherit}input:disabled,textarea:disabled{opacity:.8;cursor:not-allowed}
-  .contact-form h2{margin-top:0}.contact-form a{overflow-wrap:anywhere}.contact-form fieldset{display:grid;gap:1.25rem;margin:0;padding:0;border:0}.name-fields{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.contact-form .button{justify-self:start}
-  @media(max-width:47.999rem){.name-fields{grid-template-columns:1fr}}
+  .contact-eyebrow{margin:0 0:.65rem;color:var(--color-rust)}.contact-copy{display:grid}.contact-copy h2{margin-top:0}.contact-copy p{margin:0}.contact-copy p + p{margin-top:15px}.contact-copy :global(.key-details){margin-top:2rem}.contact-form{display:grid;gap:1.25rem;padding:clamp(1.5rem,4vw,2.75rem);border:1px solid var(--color-line);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}.contact-form h2{margin:-.5rem 0 .25rem}.contact-form label{display:grid;gap:.45rem;color:var(--color-forest-dark);font-size:1.1875rem;font-weight:750}.contact-form input,.contact-form textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--color-line);border-radius:.8rem;background:var(--color-page);color:var(--color-ink);font:inherit}.contact-form textarea{resize:vertical}.name-fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.contact-form__submit{justify-self:start;min-height:var(--button-height);padding:.65rem 1.4rem;border:2px solid var(--color-forest-dark);border-radius:var(--radius-button);background:var(--color-forest-dark);color:#fff;font:inherit;font-size:1.1875rem;font-weight:750;cursor:pointer}.contact-form__submit:hover{background:var(--color-rust);border-color:var(--color-rust)}.contact-form__submit:disabled{cursor:wait;opacity:.7}.contact-form__honeypot{position:absolute;left:-5000px}.contact-form__error{margin:0;color:#9a3118;font-weight:750}.contact-form__success{margin:0;color:var(--color-success);font-weight:750}.mailing-list{max-width:55rem;margin-inline:auto;text-align:center}.mailing-list h2{margin:.25rem 0 1rem}.mailing-list p:not(.privacy){max-width:43rem;margin-inline:auto}.mailing-list :global(.button){margin-top:1rem}.privacy{margin:1rem 0 0;color:var(--color-ink-muted);font-size:1.1875rem}@media(max-width:47.999rem){.name-fields{grid-template-columns:1fr}}
 </style>
