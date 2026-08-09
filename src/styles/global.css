@@ -34,6 +34,8 @@
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   /* Keeps the Poppins heading experiment visually aligned with the previous scale. */
   --font-display-size-adjust: -3px;
+  --font-display-hero-size-adjust: -5px;
+  --font-hand-size-adjust: 3px;
   --font-hand: "Caveat", cursive;
   --breakpoint-sm: 36rem;
   --breakpoint-md: 48rem;
