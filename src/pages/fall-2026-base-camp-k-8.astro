@@ -65,7 +65,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   </section>
 
   <section class="contrast">
-    <div class="benefits chapter"><div><p class="type-label">Why families love Base Camp</p><h2>A place to belong and become.</h2><ul>{benefits.map((benefit) => <li><NatureIcon name="check" size={25} /><span>{benefit}</span></li>)}</ul><p class="handwritten">“Our community is strong—and keeps growing stronger.”</p></div></div>
+    <div class="benefits chapter"><div><p class="type-label">Why families love Base Camp</p><h2>A place to belong and grow.</h2><ul>{benefits.map((benefit) => <li><NatureIcon name="check" size={25} /><span>{benefit}</span></li>)}</ul><p class="handwritten">“Our community is strong—and keeps growing stronger.”</p></div></div>
     <div class="restoration chapter"><div><NatureIcon name="leaf" size={35} /><p class="type-label">Stewardship in action</p><h2>Restoration Nation</h2><p>We explore our local ecosystem by planting native trees, shrubs, grasses, and forbs at Lenoir Preserve. We remove invasive plants, water new plantings, and care for the deer exclosure that protects the restoration area.</p></div></div>
   </section>
 
@@ -91,12 +91,13 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .hero .type-label { margin:0; color:#e3dda3; }
   h1 { max-width:43rem; margin:.5rem 0 1rem; color:white; font-family:var(--font-display); font-size:calc(clamp(4rem,9vw,7.4rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust)); font-weight:500; letter-spacing:-.04em; line-height:.78; }
   h1 span { display:block; margin:.18em 0 0 .1em; color:#d3c769; font-family:var(--font-hand); font-size:calc(.72em + var(--font-hand-size-adjust)); font-weight:500; letter-spacing:0; line-height:1; }
-  .hero-intro { max-width:36rem; font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.55; }
+  .hero-intro { max-width:36rem; margin-bottom:40px; font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.55; }
   .location { margin-bottom:2rem; }
   .hero-note { display:inline-flex; align-items:center; gap:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .9); color:white; font-size:1.1875rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
   .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
   .programs .section-heading h2 { gap:clamp(.2rem,.5vw,.4rem); }
-  .programs .section-heading h2::before,.programs .section-heading h2::after { transform:scale(2); }
+  .programs .section-heading h2::before { transform:translateX(80px) scale(4); }
+  .programs .section-heading h2::after { transform:translateX(-80px) scale(4); }
   .section-heading .type-label,.community .type-label,.details .type-label { color:var(--color-moss); }
   .section-heading h2,.community h2,.details h2,.contrast h2,.closing h2 { margin:.3rem 0 .6rem; font-family:var(--font-display); font-size:calc(clamp(2.7rem,5vw,4.5rem) + var(--font-display-size-adjust)); font-weight:600; letter-spacing:-.025em; line-height:1; }
   .section-heading > p:last-child { margin:0; font-size:1.15rem; }
@@ -135,8 +136,9 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .restoration h2 { color:white; }.restoration .type-label{color:#e4dda2}.restoration :global(svg){margin:auto;color:#e4dda2}
   .details { background:#faf7ef; }
   .details-layout { display:grid; grid-template-columns:.75fr 1.25fr; gap:clamp(3rem,7vw,7rem); }
+  .details-layout header h2 { margin-bottom:25px; }
   .details header { position:sticky; top:2rem; align-self:start; }
-  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .94),rgb(13 35 23 / .75)),url('/images/banners/fire-circle-9.jpg') center / cover;color:white; }
+  .closing { background:linear-gradient(90deg,rgb(13 35 23 / .5),rgb(13 35 23 / .5)),url('/images/banners/earth-altar.jpg') center / cover;color:white; }
   :global(.closing-grid) { display:grid; grid-template-columns:1.5fr .7fr; gap:clamp(3rem,7vw,6rem); align-items:center; }
   .closing h2 { color:white;font-size:calc(clamp(3.5rem,7vw,6rem)  + var(--font-display-size-adjust))}.closing .type-label{color:#e4dda2}.closing-actions{display:grid;width:min(100%,20rem);gap:.75rem;margin-top:2rem}.closing-actions :global(.button){border-color:white;background:white;color:var(--color-forest-dark)}
   .closing aside { padding-left:clamp(2rem,5vw,4rem); border-left:1px solid rgb(255 255 255 / .5); }.closing aside h3{font-family:var(--font-display);font-size:calc(2rem + var(--font-display-size-adjust));line-height:1.1}.closing aside :global(.button){border-color:white;color:white}

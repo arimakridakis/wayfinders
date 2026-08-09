@@ -8,7 +8,7 @@ const { day, ages, dates, time, href, accent, icon } = Astro.props;
 <article class:list={['option-card', `accent-${accent}`]}>
   <div class="option-heading"><span class="icon"><NatureIcon name={icon} size={36} /></span><div><h2>{day}<br />Base Camp</h2><p class="type-label">{ages}</p></div></div>
   <dl><div><dt><NatureIcon name="calendar" size={21} /><span class="sr-only">Dates</span></dt><dd>{dates}</dd></div><div><dt><NatureIcon name="clock" size={21} /><span class="sr-only">Time</span></dt><dd>{time}</dd></div></dl>
-  <p class="option-location"><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</p>
+  <div class="option-location"><dt><NatureIcon name="map-pin" size={21} /><span class="sr-only">Location</span></dt><dd><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</dd></div>
   <Button registration={{ program: `Fall 2026 Base Camp — ${day}`, paymentUrl: href }}>Register <span aria-hidden="true">→</span></Button>
 </article>
 <style>
@@ -22,7 +22,9 @@ const { day, ages, dates, time, href, accent, icon } = Astro.props;
   dl { display:grid; gap:1rem; margin:1.5rem 0; }
   dl div { display:grid; grid-template-columns:1.75rem 1fr; gap:.65rem; align-items:start; }
   dt { color:var(--accent); } dd { margin:0; line-height:1.5; }
-  .option-location { margin:0 0 1.5rem; color:var(--color-ink-muted); font-size:1.1875rem; line-height:1.4; }
+  .option-location { display:grid; grid-template-columns:1.75rem 1fr; gap:.65rem; margin:0 0 1.5rem; color:var(--color-ink-muted); font-size:1.1875rem; line-height:1.4; }
+  .option-location dt { color:var(--accent); }
+  .option-location dd { margin:0; }
   :global(.button) { width:100%; margin-top:auto; border-color:var(--accent); background:var(--accent); gap:1.25rem; }
   @media (max-width:35.999rem) { .icon { width:4rem; } }
 </style>
