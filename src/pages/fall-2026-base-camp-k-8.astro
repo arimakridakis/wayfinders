@@ -52,9 +52,10 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   <section class="community chapter">
     <LeafFlourish side="left" variant="big-2" class="community-leaf" />
     <Container width="wide" class="community-grid">
-      <div class="community-intro"><p class="type-label">Growing community together</p><h2>Connected through nature, kindness, and play.</h2><p>Wayfinders Base Camp connects us with ourselves, each other, and the earth. Our fall session offers weekly gatherings that blend outdoor play, community-building, and leadership development.</p><p class="handwritten">Supporting the whole family—mind, body, and community.</p></div>
+      <div class="community-intro"><h2>Growing Community Together</h2><p>This fall, Base Camp isn’t only for kids.</p><p>During the first two weeks of the session, parents are invited to stay and participate in two free community workshops while their children are in the forest.</p><p>This is our way of supporting the whole family.</p></div>
       <div class="workshops">
-        <article><span class="round-image"><img src="/images/content/alberto-mugwart.jpg" alt="A child exploring plants outdoors at Wayfinders" /></span><div><p class="type-label">At drop off</p><h3>Free breathwork for parents and caregivers</h3><p>Join the first session on September 22 or 23, from 4–5:30 pm. Open to the public.</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register for breathwork</Button></article>
+        <article><span class="round-image"><img src="/images/content/tal-gozhansky.png" alt="Tal Gozhansky" /></span><div><p class="type-label">Week one</p><h3>Breathwork with Tal Gozhansky</h3><p>Join Tal for a grounding breathwork session to reset, recharge, and connect more deeply.</p><p class="workshop-dates">Tues 9/22 4–5:30pm · Wed 9/23 4–5:30pm · Thurs 9/24 4–5pm</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register</Button></article>
+        <article><span class="round-image"><img src="/images/content/talia-kovacs.png" alt="Talia Kovacs" /></span><div><p class="type-label">Week two</p><h3>Resilience with Talia Kovacs</h3><p>Leave with practices to help your kids end meltdowns, get comfortable making mistakes, and build their resilience muscle.</p><p class="workshop-dates">Tues 9/29 4–5:30pm · Wed 9/30 4–5:30pm · Thurs 10/1 4–5pm</p></div><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6">Register</Button></article>
       </div>
     </Container>
   </section>
@@ -105,11 +106,15 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .community { position:relative; background:#e8ebdf; overflow:hidden; }.community-leaf{top:10%;}.community :global(.community-grid){position:relative;z-index:1}
   :global(.community-grid) { display:grid; grid-template-columns:.8fr 1.5fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
   .community-intro h2 { font-size:calc(clamp(3rem,5vw,4.75rem) + var(--font-display-size-adjust)); }
+  .community-intro>p { font-size:1.1875rem; line-height:1.65; }
   .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:calc(clamp(1.6rem,3vw,2.2rem) + var(--font-hand-size-adjust)); line-height:1.1; }
   .workshops article { display:grid; grid-template-columns:9rem 1fr auto; gap:1.5rem; align-items:center; padding-block:1.5rem; border-block:1px solid rgb(49 88 67 / .2); }
   .round-image { overflow:hidden; aspect-ratio:1; border-radius:50%; }
   .round-image img { width:100%; height:100%; object-fit:cover; }
   .workshops h3 { margin:.25rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1; }
+  .workshops article:nth-child(1) .type-label,.workshops article:nth-child(1) h3 { color:var(--color-rust); }
+  .workshops article:nth-child(2) .type-label,.workshops article:nth-child(2) h3 { color:#267490; }
+  .workshop-dates { margin-top:1rem; font-size:1.1875rem; }
   .experience { background:var(--color-surface); }
   .experience .section-heading h2::before,.experience .section-heading h2::after { display:none; }
   .experience-grid { display:grid; grid-template-columns:repeat(6,1fr); }
