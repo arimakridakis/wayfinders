@@ -56,7 +56,7 @@ export default {
       },
       body: JSON.stringify({
         email_address: email,
-        status: 'pending',
+        status: 'subscribed',
         merge_fields: { FNAME: firstName, LNAME: lastName },
       }),
     });
