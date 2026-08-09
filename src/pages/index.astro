@@ -127,11 +127,11 @@ const gallery = [
   .mailing-signup{position:relative;display:flex;min-height:34rem;align-items:center;padding:clamp(4rem,8vw,7rem) var(--gutter);overflow:hidden;background:linear-gradient(90deg,rgb(8 25 15 / .88) 0%,rgb(8 25 15 / .62) 48%,rgb(8 25 15 / .12) 82%),url('/images/banners/mud-girl.jpg') center / cover no-repeat;color:#fff}
   .mailing-signup__content{width:min(50%,var(--width-standard));margin-left:max(0px,calc((100vw - var(--width-wide))/2));}
   .mailing-signup h2{margin:0;color:#fff;font-family:var(--font-display);font-size:calc(clamp(2.8rem,5vw,4.8rem) + var(--font-display-size-adjust));font-weight:500;letter-spacing:-.03em;line-height:1}
-  .mailing-signup p{max-width:31rem;margin:1.25rem 0 0;color:#fff;font-family:var(--font-hand);font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust));line-height:1.1}
+  .mailing-signup p{max-width:none;margin:1.25rem 0 0;color:#fff;font-family:var(--font-hand);font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust));line-height:1.1;white-space:nowrap}
   .mailing-signup :global(.button){margin-top:2rem;border-color:#fff;background:#fff;color:var(--color-forest-dark)}
   .why .section-heading h2::before,.why .section-heading h2::after{transform:scale(1.5)}
   .land-grid>p{font-size:1.1875rem}
   .connect-grid{display:block;max-width:var(--width-standard);text-align:center}
-  .connect-grid .button{margin-top:2rem}
-  @media(max-width:47.999rem){.combined-reason{grid-template-columns:1fr}.mailing-signup{min-height:28rem;background-position:62% center}.mailing-signup__content{width:100%;margin:0}.mailing-signup h2{font-size:calc(clamp(2.6rem,12vw,4rem) + var(--font-display-size-adjust))}}
+  .connect-grid .button{margin-top:25px}
+  @media(max-width:47.999rem){.combined-reason{grid-template-columns:1fr}.mailing-signup{min-height:28rem;background-position:62% center}.mailing-signup__content{width:100%;margin:0}.mailing-signup h2{font-size:calc(clamp(2.6rem,12vw,4rem) + var(--font-display-size-adjust))}.mailing-signup p{white-space:normal}}
 </style>
