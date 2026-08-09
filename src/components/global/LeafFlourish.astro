@@ -1,0 +1,19 @@
+---
+interface Props {
+  side?: 'left' | 'right';
+  variant?: 'big-2' | 'big-3';
+  class?: string;
+}
+
+const { side = 'left', variant = 'big-2', class: className = '' } = Astro.props;
+const image = variant === 'big-2' ? '/images/decorative/leaf-big-2.png' : '/images/decorative/leaf-big-3.png';
+---
+
+<img class:list={['leaf-flourish', `side-${side}`, className]} src={image} alt="" aria-hidden="true" />
+
+<style>
+  .leaf-flourish { position:absolute; z-index:0; width:clamp(7rem,14vw,13rem); height:auto; pointer-events:none; opacity:.55; }
+  .side-left { left:clamp(.5rem,4vw,4rem); }
+  .side-right { right:clamp(.5rem,4vw,4rem); transform:scaleX(-1); }
+  @media (max-width:47.999rem) { .leaf-flourish { width:6rem; opacity:.38; } }
+</style>

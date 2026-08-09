@@ -1,0 +1,16 @@
+---
+interface Props { class?: string; }
+const { class: className = '' } = Astro.props;
+---
+
+<div class:list={['leaf-divider', className]} aria-hidden="true">
+  <img src="/images/decorative/leaf-left-small.png" alt="" />
+  <span></span>
+  <img src="/images/decorative/leaf-right-small.png" alt="" />
+</div>
+
+<style>
+  .leaf-divider { display:flex; align-items:center; justify-content:center; gap:.6rem; margin-top:clamp(2rem,4vw,3.5rem); }
+  img { width:clamp(2.25rem,4vw,3.5rem); height:auto; }
+  span { width:clamp(3rem,10vw,8rem); border-top:1px solid rgb(84 107 55 / .45); }
+</style>

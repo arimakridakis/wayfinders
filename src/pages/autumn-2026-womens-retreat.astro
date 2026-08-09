@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/global/Container.astro';
 import Button from '../components/global/Button.astro';
 import NatureIcon from '../components/global/NatureIcon.astro';
+import LeafFlourish from '../components/global/LeafFlourish.astro';
+import LeafDivider from '../components/global/LeafDivider.astro';
 
 const registerUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3ef6531ada3d487b898212099c1dcf992a1795b6d4c24ce9acec1b23f8c3f88478a340b7890448bbb12595742a93316e?locale=EN_US&cta=copylistmultilink';
 const commerceUrl = 'https://www.wayfindersonthehudson.com/register-for-fall-2023/p/autumn-2026-womens-retreat';
@@ -48,10 +50,12 @@ const included = [
   </section>
 
   <section class="invitation chapter">
+    <LeafFlourish side="right" variant="big-3" class="invitation-leaf" />
     <Container width="wide" class="invitation-grid">
       <div><p class="type-label">Downshift into quieter times</p><h2>We are here to hold you through this moment together.</h2></div>
       <div class="invitation-copy"><p>Join us to gather around the fire with other women as we downshift into quieter times. We will reflect on summer to keep the vibes flying, and set intentions for keeping the thread alive as we enter into autumn.</p><p class="handwritten">Keeping the thread alive, together.</p></div>
     </Container>
+    <LeafDivider class="invitation-divider" />
   </section>
 
   <section class="possibilities chapter">
@@ -91,7 +95,7 @@ const included = [
   .detail-cards article:nth-child(2) .detail-icon { background:#4f7480; }.detail-cards article:nth-child(3) .detail-icon { background:#b26d32; }
   .detail-cards h3 { margin:.45rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:clamp(1.7rem,3vw,2.2rem); line-height:1.05; }
   .detail-cards p:last-child { margin-bottom:0; }.detail-action { margin-top:2.5rem; text-align:center; }
-  .invitation { background:#e8ebdf; }
+  .invitation { position:relative; overflow:hidden; background:#e8ebdf; }.invitation-leaf{top:12%;}:global(.invitation-grid),:global(.invitation-divider){position:relative;z-index:1}
   :global(.invitation-grid) { display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
   .invitation h2 { font-size:clamp(3rem,5vw,4.75rem); }.invitation-copy > p:first-child { font-size:1.15rem; }
   .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:clamp(1.8rem,3vw,2.4rem); line-height:1.1; }
