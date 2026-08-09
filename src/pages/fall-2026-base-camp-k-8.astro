@@ -16,12 +16,12 @@ const options = [
 ] as const;
 
 const experiences = [
-  { icon:'leaf', title:'Explore nature', text:'Wander the woods, observe wildlife, and connect with the seasons.' },
-  { icon:'fire', title:'Build skills', text:'Learn fire tending, shelter building, plant identification, and knife skills.' },
-  { icon:'heart', title:'Grow confidence', text:'Take healthy risks, solve problems, and celebrate personal growth.' },
-  { icon:'community', title:'Make friends', text:'Play, cooperate, and build lasting friendships in a caring community.' },
-  { icon:'feather', title:'Get creative', text:'Express through earth art, songs, imagination, and play.' },
-  { icon:'mountain', title:'Care for our world', text:'Practice ecological stewardship and care for our shared home.' },
+  { icon:'leaf', title:'Explore\nNature', text:'Wander the woods, observe wildlife, and connect with the seasons.' },
+  { icon:'fire', title:'Build\nSkills', text:'Learn fire tending, shelter building, plant identification, and knife skills.' },
+  { icon:'heart', title:'Grow\nConfidence', text:'Take healthy risks, solve problems, and celebrate personal growth.' },
+  { icon:'community', title:'Make\nFriends', text:'Play, cooperate, and build lasting friendships in a caring community.' },
+  { icon:'feather', title:'Get\nCreative', text:'Express through earth art, songs, imagination, and play.' },
+  { icon:'mountain', title:'Care for\nOur World', text:'Practice ecological stewardship and care for our shared home.' },
 ] as const;
 
 const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence, resilience, and independence.','Deep connection to nature in every season.','Meaningful friendships and cooperative play.','A supportive community for the whole family.'];
@@ -96,6 +96,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .hero-note { display:inline-flex; align-items:center; gap:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .9); color:white; font-size:1.1875rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
   .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
   .programs .section-heading h2 { gap:clamp(.2rem,.5vw,.4rem); }
+  .programs .section-heading h2 { margin-bottom:20px; }
   .programs .section-heading h2::before { transform:translateX(80px) scale(4); }
   .programs .section-heading h2::after { transform:translateX(-80px) scale(4); }
   .section-heading .type-label,.community .type-label,.details .type-label { color:var(--color-moss); }
@@ -114,7 +115,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .workshops article { display:grid; grid-template-columns:9rem 1fr auto; gap:1.5rem; align-items:center; padding-block:1.5rem; border-block:1px solid rgb(49 88 67 / .2); }
   .round-image { overflow:hidden; aspect-ratio:1; border-radius:50%; }
   .round-image img { width:100%; height:100%; object-fit:cover; }
-  .workshops h3 { margin:.25rem 0; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1; }
+  .workshops h3 { margin:.25rem 0 20px; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1; }
   .workshops article:nth-child(1) .type-label,.workshops article:nth-child(1) h3 { color:var(--color-rust); }
   .workshops article:nth-child(2) .type-label,.workshops article:nth-child(2) h3 { color:#267490; }
   .workshop-dates { margin-top:1rem; font-size:1.1875rem; }
@@ -125,7 +126,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .experience-grid article:last-child { border:0; }
   .experience-grid :global(svg) { margin:0 auto 1rem; color:var(--color-moss); }
   .experience-grid article:nth-child(2n) :global(svg) { color:var(--color-earth); }
-  .experience-grid h3 { margin:0; font-family:var(--font-display); font-size:calc(1.45rem + var(--font-display-size-adjust)); }
+  .experience-grid h3 { margin:0; font-family:var(--font-display); font-size:calc(1.45rem + var(--font-display-size-adjust)); white-space:pre-line; }
   .experience-grid p { margin:.6rem 0 0; font-size:1.1875rem; line-height:1.6; }
   .contrast { display:grid; grid-template-columns:.9fr 1.1fr; }
   .benefits { display:grid; place-items:center; padding-inline:var(--gutter); background:#eef0e7; }
