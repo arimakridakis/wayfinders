@@ -52,7 +52,7 @@ const gallery = [
   </section>
 
   <section class="base-camp chapter">
-    <div class="wide"><div class="base-camp-content"><p class="type-label">Now enrolling</p><h2>Fall 2026 Base Camp</h2><div class="base-camp-copy"><p>Wayfinders Base Camp ignites a love for nature and fosters social-emotional learning through:</p><ul><li><strong>Weekly Fire Circles &amp; Nature Games:</strong> Deepen connections with the outdoors and each other through engaging activities.</li><li><strong>Social-Emotional Learning &amp; Leadership Development:</strong> Build confidence, communication skills, and empathy in a supportive environment.</li><li><strong>Community Building:</strong> Create lasting friendships and a sense of belonging within a caring group.</li></ul><p><strong>Flexible Scheduling &amp; Growth for All Ages:</strong></p><ul><li><strong>Choose Your Day:</strong> Weekly after-school sessions on Tuesdays, Wednesdays, Thursdays or (or pick two or all three days for a 10% discount).</li><li><strong>Same-Age &amp; Mixed-Age Groups:</strong> Cater to individual preferences while fostering mentorship and village building. In mixed-age groups, younger children find role models in older kids, while older ones develop leadership skills by mentoring their peers.</li></ul></div><Button href="/fall-2026-base-camp-k-8">Discover Base Camp <span aria-hidden="true">→</span></Button></div></div>
+    <div class="wide"><div class="base-camp-content"><p class="type-label">Now enrolling</p><h2>Fall 2026 Base Camp</h2><div class="base-camp-copy"><p>Wayfinders Base Camp ignites a love for nature and fosters social-emotional learning through:</p><ul class="base-camp-highlights"><li><strong>Weekly Fire Circles &amp; Nature Games:</strong> Deepen connections with the outdoors and each other through engaging activities.</li><li><strong>Social-Emotional Learning &amp; Leadership Development:</strong> Build confidence, communication skills, and empathy in a supportive environment.</li><li><strong>Community Building:</strong> Create lasting friendships and a sense of belonging within a caring group.</li></ul><p><strong>Flexible Scheduling &amp; Growth for All Ages:</strong></p><ul><li><strong>Choose Your Day:</strong> Weekly after-school sessions on Tuesdays, Wednesdays, Thursdays or (or pick two or all three days for a 10% discount).</li><li><strong>Same-Age &amp; Mixed-Age Groups:</strong> Cater to individual preferences while fostering mentorship and village building. In mixed-age groups, younger children find role models in older kids, while older ones develop leadership skills by mentoring their peers.</li></ul></div><Button href="/fall-2026-base-camp-k-8">Discover Base Camp <span aria-hidden="true">→</span></Button></div></div>
   </section>
 
   <section class="why chapter">
@@ -89,12 +89,13 @@ const gallery = [
   @media(max-width:47.999rem){.what-gallery{grid-template-columns:1fr}.what-gallery img{height:15rem}}
 
   .base-camp{display:flex;align-items:center;min-height:54rem;background:linear-gradient(90deg,rgb(10 27 17 / .92) 0%,rgb(10 27 17 / .73) 43%,rgb(10 27 17 / .08) 78%),url('/images/banners/running-kids-3.jpg') center / cover no-repeat;color:white}
-  .base-camp-content{position:relative;z-index:1;max-width:min(100%,42rem)}
-  .base-camp .type-label{margin:0;color:#e4dda2}
+  .base-camp-content{position:relative;z-index:1;max-width:60%}
+  .base-camp .type-label{margin:0;color:#e4dda2;font-family:var(--font-hand);font-size:clamp(1.9rem,3vw,2.5rem);font-weight:500;letter-spacing:0;text-transform:none}
   .base-camp h2{margin:.45rem 0 1.5rem;color:white;font-family:var(--font-display);font-size:clamp(3.8rem,6.5vw,6rem);font-weight:500;letter-spacing:-.04em;line-height:.9}
   .base-camp-copy{display:grid;gap:1.25rem}
   .base-camp-copy p,.base-camp-copy li{font-size:1.1875rem;line-height:1.65}
   .base-camp-copy p{margin:0}.base-camp-copy ul{display:grid;gap:.8rem;margin:0;padding:0;list-style:none}.base-camp-copy li{position:relative;padding-left:1.4rem}.base-camp-copy li::before{position:absolute;left:0;color:#e4dda2;content:'◆';font-size:.65em;top:.35em}
+  .base-camp-copy .base-camp-highlights{grid-template-columns:repeat(3,1fr);gap:1.25rem}.base-camp-highlights li{padding-left:0}.base-camp-highlights li::before{position:static;display:block;margin-bottom:.55rem}
   .base-camp :global(.button){margin-top:2rem;border-color:white;background:white;color:var(--color-forest-dark)}
-  @media(max-width:47.999rem){.base-camp{min-height:0;background-position:62% center}.base-camp-content{max-width:none}.base-camp h2{font-size:clamp(3.5rem,15vw,5rem)}}
+  @media(max-width:47.999rem){.base-camp{min-height:0;background-position:62% center}.base-camp-content{max-width:none}.base-camp h2{font-size:clamp(3.5rem,15vw,5rem)}.base-camp-copy .base-camp-highlights{grid-template-columns:1fr}}
 </style>
