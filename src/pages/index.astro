@@ -56,7 +56,7 @@ const gallery = [
   </section>
 
   <section class="why chapter">
-    <div class="wide"><header class="section-heading"><p class="eyebrow-line type-label">The call to action</p><h2>Why Wayfinders?</h2><p>Why did climate activist Gwen Merkin and School Counselor Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the need for this program is clear.</p></header><div class="reason-grid">{reasons.slice(0,6).map(([title, copy], index) => <article class={`reason reason-${index + 1}`}><div class="reason-heading"><span class="reason-icon"><NatureIcon name={reasonIcons[index]} size={30} /></span><h3>{title}</h3></div><p>{copy}</p></article>)}</div></div>
+    <div class="wide"><header class="section-heading"><p class="eyebrow-line type-label">The call to action</p><h2>Why Wayfinders?</h2><p>Why did climate activist Gwen Merkin and School Counselor Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the need for this program is clear.</p></header><div class="reason-grid">{reasons.slice(0,6).map(([title, copy], index) => <details class={`reason reason-${index + 1}`} open={index === 0}><summary><h3>{title}</h3><span class="reason-toggle" aria-hidden="true"></span></summary><div class="reason-content"><p>{copy}</p></div></details>)}</div></div>
   </section>
 
   <section class="statements"><div class="wide"><p>Our children are disconnecting from themselves, their families, communities, and the earth as they enter their teenage years.</p><p>Wayfinders carves out time for youth to step away from the daily, to connect with purpose.</p><LeafDivider class="statements-divider" /></div></section>
@@ -101,8 +101,14 @@ const gallery = [
   .base-camp-highlights h3,.base-camp-schedule-grid h3{margin:0 0 .55rem;color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.55rem,2.3vw,2.15rem) + var(--font-display-size-adjust));font-weight:600;line-height:1.03}
   .base-camp-highlights article p,.base-camp-schedule-grid article p{text-align:left}
   .base-camp-scheduling{padding-top:1.5rem;border-top:1px solid rgb(255 255 255 / .35)}
-  .base-camp-subheading{color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.7rem,2.7vw,2.4rem)!important + var(--font-display-size-adjust));font-weight:600;line-height:1.05}
+  .base-camp-subheading{color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.7rem,2.7vw,2.4rem) + var(--font-display-size-adjust))!important;font-weight:600;line-height:1.05}
   .base-camp-schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.25rem}
   .base-camp :global(.button){margin-top:2rem;border-color:white;background:white;color:var(--color-forest-dark)}
+  .reason-grid{display:grid;grid-template-columns:1fr;max-width:var(--width-wide);margin-inline:auto}
+  .reason{padding:0;border:0;border-top:1px solid rgb(23 59 42 / .45);border-radius:0;background:transparent;box-shadow:none}
+  .reason:last-child{border-bottom:1px solid rgb(23 59 42 / .45)}
+  .reason summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0;cursor:pointer;color:var(--color-forest-dark);font-family:var(--font-display);font-size:calc(clamp(1.5rem,2.4vw,2.15rem) + var(--font-display-size-adjust));font-weight:500;line-height:1.15;list-style:none}
+  .reason summary::-webkit-details-marker{display:none}.reason summary h3{margin:0;font:inherit;color:inherit}.reason-toggle{position:relative;display:block;flex:none;width:1.5rem;height:1.5rem}.reason-toggle::before,.reason-toggle::after{position:absolute;top:50%;left:50%;width:1.05rem;height:2px;background:currentColor;content:'';transform:translate(-50%,-50%)}.reason-toggle::after{transform:translate(-50%,-50%) rotate(90deg)}.reason[open] .reason-toggle::after{display:none}
+  .reason-content{padding:0 clamp(1rem,9vw,8rem) 2rem 0}.reason-content p{margin:0;color:var(--color-ink-muted);font-size:1.1875rem;line-height:1.65;white-space:pre-line}
   @media(max-width:47.999rem){.base-camp{min-height:0;background-position:62% center}.base-camp-content{left:0;max-width:none}.base-camp h2{font-size:calc(clamp(3.5rem,15vw,5rem) + var(--font-display-size-adjust))}.base-camp-highlights,.base-camp-schedule-grid{grid-template-columns:1fr}.base-camp-highlights article{grid-template-rows:auto}}
 </style>
