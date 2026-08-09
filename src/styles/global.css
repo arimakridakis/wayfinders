@@ -4,7 +4,7 @@
 @import "@fontsource/nunito-sans/400.css";
 @import "@fontsource/nunito-sans/600.css";
 @import "@fontsource/nunito-sans/700.css";
-@import "@fontsource/caveat/500.css";
+@import "@fontsource/oooh-baby/400.css";
 @import "@fontsource/poppins/500.css";
 @import "@fontsource/poppins/600.css";
 @import "@fontsource/poppins/700.css";
@@ -34,7 +34,8 @@
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   /* Keeps the Poppins heading experiment visually aligned with the previous scale. */
   --font-display-size-adjust: -3px;
-  --font-hand: "Caveat", cursive;
+  /* Handwritten accent experiment: restore Caveat here to revert the script font. */
+  --font-hand: "Oooh Baby", cursive;
   --breakpoint-sm: 36rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
