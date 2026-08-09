@@ -42,7 +42,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
       <div class="options">{options.map((option) => <BaseCampOption {...option} />)}</div>
       <p class="availability"><NatureIcon name="leaf" size={24} /><strong>Limited spaces and scholarships available.</strong></p>
       <ImageStrip label="A day at Base Camp" images={[
-        { src:'/images/content/alberto-mugwart.jpg', alt:'A child exploring plants outdoors at Wayfinders' },
+        { src:'/images/content/meditation-with-leah.jpg', alt:'Meditation with Leah outdoors' },
         { src:'/images/content/fire3.jpg', alt:'Young people learning around a fire outdoors' },
         { src:'/images/content/greg-and-miles-knife-2.jpg', alt:'Wayfinders participants practicing outdoor skills' },
       ]} />
@@ -80,7 +80,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
     </DisclosureList></div></Container>
   </section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A fall of wonder awaits</p><h2>Ready to join us?</h2><p>Choose your day and register for Base Camp today.</p><div class="closing-actions">{options.map((option) => <Button registration={{ program: `Fall 2026 Base Camp — ${option.day}`, paymentUrl: option.href }}>{option.day} <span aria-hidden="true">→</span></Button>)}</div></div><aside><h3>Interested in the parent workshops?</h3><p>Register for the free community breathwork session.</p><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork</Button></aside></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">A fall of wonder awaits</p><h2>Ready to join us?</h2><p>Choose your day and register for Base Camp today.</p><div class="closing-actions">{options.map((option) => <Button registration={{ program: `Fall 2026 Base Camp — ${option.day}`, paymentUrl: option.href }}>{option.day} <span aria-hidden="true">→</span></Button>)}</div></div><aside><h3>Interested in the parent workshops?</h3><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for breathwork workshop</Button><Button href="https://forms.gle/bMqwnJeoiTaaBRiz6" variant="secondary">Register for resilience workshop</Button></aside></Container></section>
 </BaseLayout>
 
 <style>
@@ -91,7 +91,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .hero .type-label { margin:0; color:#e3dda3; }
   h1 { max-width:43rem; margin:.5rem 0 1rem; color:white; font-family:var(--font-display); font-size:calc(clamp(4rem,9vw,7.4rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust)); font-weight:500; letter-spacing:-.04em; line-height:.78; }
   h1 span { display:block; margin:.18em 0 0 .1em; color:#d3c769; font-family:var(--font-hand); font-size:calc(.72em + var(--font-hand-size-adjust)); font-weight:500; letter-spacing:0; line-height:1; }
-  .hero-intro { max-width:36rem; margin-bottom:40px; font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.55; }
+  .hero-intro { max-width:36rem; margin-bottom:70px; font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.55; }
   .location { margin-bottom:2rem; }
   .hero-note { display:inline-flex; align-items:center; gap:1rem; padding:.75rem 1.25rem; border-radius:1rem; background:rgb(101 120 79 / .9); color:white; font-size:1.1875rem; letter-spacing:.1em; line-height:1.45; text-decoration:none; text-transform:uppercase; }
   .section-heading { max-width:50rem; margin:0 auto clamp(2.5rem,5vw,4rem); text-align:center; }
@@ -106,8 +106,10 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .availability { display:flex; align-items:center; justify-content:center; gap:.75rem; margin:2.5rem 0 0; color:var(--color-moss); }
   .community { position:relative; background:#e8ebdf; overflow:hidden; }.community-leaf{top:10%;}.community :global(.community-grid){position:relative;z-index:1}
   :global(.community-grid) { display:grid; grid-template-columns:.8fr 1.5fr; gap:clamp(3rem,7vw,7rem); align-items:center; }
-  .community-intro h2 { font-size:calc(clamp(3rem,5vw,4.75rem) + var(--font-display-size-adjust)); }
+  .community-intro h2 { margin-bottom:30px; font-size:calc(clamp(3rem,5vw,4.75rem) + var(--font-display-size-adjust)); }
   .community-intro>p { font-size:1.1875rem; line-height:1.65; }
+  .community-intro>p + p { margin-top:15px; }
+  .community-intro>p:last-child { font-family:var(--font-hand); font-size:calc(1.1875rem + var(--font-hand-size-adjust)); }
   .handwritten { color:var(--color-earth); font-family:var(--font-hand); font-size:calc(clamp(1.6rem,3vw,2.2rem) + var(--font-hand-size-adjust)); line-height:1.1; }
   .workshops article { display:grid; grid-template-columns:9rem 1fr auto; gap:1.5rem; align-items:center; padding-block:1.5rem; border-block:1px solid rgb(49 88 67 / .2); }
   .round-image { overflow:hidden; aspect-ratio:1; border-radius:50%; }
@@ -131,7 +133,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .benefits ul { display:grid; gap:0; margin:2rem 0; padding:0; list-style:none; }
   .benefits li { display:flex; gap:.85rem; padding-block:.8rem; border-bottom:1px solid var(--color-line); }
   .benefits li :global(svg) { flex:none; color:var(--color-moss); }
-  .restoration { display:grid; min-height:38rem; place-items:center; padding-inline:var(--gutter); background:linear-gradient(rgb(13 35 23 / .6),rgb(13 35 23 / .8)),url('/images/banners/fire-circle-9.jpg') center / cover;color:white;text-align:center; }
+  .restoration { display:grid; min-height:38rem; place-items:center; padding-inline:var(--gutter); background:linear-gradient(rgb(13 35 23 / .6),rgb(13 35 23 / .8)),url('/images/content/alberto-mugwart.jpg') center / cover;color:white;text-align:center; }
   .restoration > div { max-width:38rem; }
   .restoration h2 { color:white; }.restoration .type-label{color:#e4dda2}.restoration :global(svg){margin:auto;color:#e4dda2}
   .details { background:#faf7ef; }
@@ -141,7 +143,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .closing { background:linear-gradient(90deg,rgb(13 35 23 / .5),rgb(13 35 23 / .5)),url('/images/banners/earth-altar.jpg') center / cover;color:white; }
   :global(.closing-grid) { display:grid; grid-template-columns:1.5fr .7fr; gap:clamp(3rem,7vw,6rem); align-items:center; }
   .closing h2 { color:white;font-size:calc(clamp(3.5rem,7vw,6rem)  + var(--font-display-size-adjust))}.closing .type-label{color:#e4dda2}.closing-actions{display:grid;width:min(100%,20rem);gap:.75rem;margin-top:2rem}.closing-actions :global(.button){border-color:white;background:white;color:var(--color-forest-dark)}
-  .closing aside { padding-left:clamp(2rem,5vw,4rem); border-left:1px solid rgb(255 255 255 / .5); }.closing aside h3{font-family:var(--font-display);font-size:calc(2rem + var(--font-display-size-adjust));line-height:1.1}.closing aside :global(.button){border-color:white;color:white}
+  .closing aside { padding-left:0; border-left:0; }.closing aside h3{font-family:var(--font-display);font-size:calc(2rem + var(--font-display-size-adjust));line-height:1.1}.closing aside :global(.button){display:flex;margin-top:1rem;border-color:white;color:white}
   @media (max-width:63.999rem){.options{grid-template-columns:1fr}.experience-grid{grid-template-columns:repeat(3,1fr);gap:2.5rem 0}.experience-grid article:nth-child(3){border:0}:global(.community-grid),.details-layout{grid-template-columns:1fr}.workshops article{grid-template-columns:7rem 1fr}.workshops :global(.button){grid-column:2}.details header{position:static}.contrast{grid-template-columns:1fr}.restoration{min-height:34rem}}
   @media (max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(10 27 17 / .7)}h1{font-size:calc(clamp(3.8rem,18vw,5.8rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust))}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience-grid article:nth-child(3){border-right:1px solid var(--color-line)}.experience-grid article:nth-child(2n){border:0}:global(.closing-grid){grid-template-columns:1fr}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}.closing-actions{width:100%}}
   @media (max-width:35.999rem){.workshops article{grid-template-columns:1fr}.round-image{width:7rem}.workshops :global(.button){grid-column:1}.experience-grid{grid-template-columns:1fr}.experience-grid article,.experience-grid article:nth-child(3){padding-block:1.5rem;border-right:0;border-bottom:1px solid var(--color-line)}}
