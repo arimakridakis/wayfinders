@@ -8,12 +8,13 @@ interface Props {
   /** Retained so each page can receive a unique hero image in a future update. */
   image?: string;
   alt?: string;
+  overlayOpacity?: number;
 }
 
-const { eyebrow, title, intro, image } = Astro.props;
+const { eyebrow, title, intro, image, overlayOpacity } = Astro.props;
 ---
 
-<section class="page-hero" style={image ? `--hero-image: url("${image}")` : undefined}>
+<section class="page-hero" style={image || overlayOpacity !== undefined ? `${image ? `--hero-image: url("${image}");` : ''}${overlayOpacity !== undefined ? `--hero-overlay-max: ${overlayOpacity}; --hero-overlay-mobile: ${overlayOpacity};` : ''}` : undefined}>
   <Container width="wide" class="hero-inner">
     <div class="copy">
       {eyebrow && <p class="type-label">{eyebrow}</p>}
@@ -31,7 +32,7 @@ const { eyebrow, title, intro, image } = Astro.props;
     align-items: center;
     padding-block: clamp(4.5rem, 10vw, 8rem);
     background:
-      linear-gradient(90deg, rgb(8 28 18 / .86) 0%, rgb(8 28 18 / .69) 48%, rgb(8 28 18 / .3) 100%),
+      linear-gradient(90deg, rgb(8 28 18 / var(--hero-overlay-max, .86)) 0%, rgb(8 28 18 / calc(var(--hero-overlay-max, .86) * .8)) 48%, rgb(8 28 18 / calc(var(--hero-overlay-max, .86) * .35)) 100%),
       var(--hero-image, url('/images/heroes/GreenForest1.webp')) center / cover no-repeat;
     color: var(--color-surface);
   }
@@ -52,7 +53,7 @@ const { eyebrow, title, intro, image } = Astro.props;
     .page-hero {
       min-height: calc(30rem + 50px);
       background:
-        linear-gradient(rgb(8 28 18 / .76), rgb(8 28 18 / .76)),
+        linear-gradient(rgb(8 28 18 / var(--hero-overlay-mobile, .76)), rgb(8 28 18 / var(--hero-overlay-mobile, .76))),
         var(--hero-image, url('/images/heroes/GreenForest1.webp')) center / cover no-repeat;
     }
   }
