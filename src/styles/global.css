@@ -59,7 +59,7 @@
 * { box-sizing: border-box; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 html { overflow-x: hidden; scroll-behavior: smooth; }
-body { margin: 0; min-width: 20rem; overflow-x: hidden; background: var(--color-page); color: var(--color-ink); font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; }
+body { margin: 0; min-width: 20rem; overflow-x: hidden; background: var(--color-page); color: var(--color-ink); font-family: var(--font-sans); font-size: 1.1875rem; line-height: 1.7; }
 img, picture, svg { display: block; max-width: 100%; }
 a { color: var(--color-forest-dark); text-decoration-thickness: .1em; text-underline-offset: .2em; }
 a:hover { color: var(--color-rust); }
@@ -71,10 +71,10 @@ a:hover { color: var(--color-rust); }
 .type-page-title { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; letter-spacing: -.035em; }
 .type-section { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.08; letter-spacing: -.025em; }
 .type-card { font-size: clamp(1.35rem, 2.5vw, 1.75rem); line-height: 1.15; }
-.type-small { font-size: .875rem; line-height: 1.55; }
-.type-label { font-size: .75rem; font-weight: 750; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; }
-.type-nav { font-size: .875rem; font-weight: 700; }
-.type-button { font-size: .875rem; font-weight: 750; letter-spacing: .015em; }
+.type-small { font-size: 1.1875rem; line-height: 1.55; }
+.type-label { font-size: 1.1875rem; font-weight: 750; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; }
+.type-nav { font-size: 1.1875rem; font-weight: 700; }
+.type-button { font-size: 1.1875rem; font-weight: 750; letter-spacing: .015em; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
