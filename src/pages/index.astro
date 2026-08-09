@@ -29,7 +29,7 @@ Wayfinders experiences sharpen EQ through social emotional learning, team buildi
 
 Rites of passage serve as a way of pausing and honoring significant milestones as we transition from one stage into another. Ceremonies allow us to hold space for these moments and make them stand out as special, beautiful, meaningful, and memorable. Wayfinders experience rites of passage in group and individual ceremonies and recognize the significance of their personal growth and their impact on the larger community.`],
 ];
-const reasonIcons = ['leaf','community','heart','feather','community','mountain'] as const;
+const reasonIcons = ['leaf','community','heart','feather','community','mountain','acorn'] as const;
 const gallery = [
  ['https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/f4fe7b2e-c144-4a34-80e9-e2cc36020dbb/IMG_9824.jpg?format=1200w','Wayfinders participants spending time together in the woods'],
  ['https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/789b6d2c-2c18-4deb-bb72-77c490b848a1/IMG_9803.jpg?format=1200w','Wayfinders outdoor nature activity'],
@@ -56,12 +56,12 @@ const gallery = [
   </section>
 
   <section class="why chapter">
-    <div class="wide"><header class="section-heading"><h2>Why Wayfinders?</h2><p>Why did climate activist Gwen Merkin and School Counselor Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the evidence of a need for this program is very clear! Click on the sections below to learn more.</p></header><div class="reason-grid">{reasons.slice(0,6).map(([title, copy], index) => <details class={`reason reason-${index + 1}`} open={index === 0}><summary><span class="reason-icon"><NatureIcon name={reasonIcons[index]} size={26} /></span><h3>{title}</h3><span class="reason-toggle" aria-hidden="true"></span></summary><div class="reason-content">{index === 0 ? <ul class="core-values">{copy.split('\n').map((value) => <li><NatureIcon name="check" size={25} /><span>{value}</span></li>)}</ul> : <p>{copy}</p>}</div></details>)}</div></div>
+    <div class="wide"><header class="section-heading"><h2>Why Wayfinders?</h2><p>Why did climate activist Gwen Merkin and School Counselor Leah Gozhansky create Wayfinders on the Hudson? After 30 years of combined experience, the evidence of a need for this program is very clear! Click on the sections below to learn more.</p></header><div class="reason-grid">{reasons.slice(0,6).concat([['Your Child’s Future & Rites of Passage', '']]).map(([title, copy], index) => <details class={`reason reason-${index + 1}`} open={index === 0}><summary><span class="reason-icon"><NatureIcon name={reasonIcons[index]} size={26} /></span><h3>{title}</h3><span class="reason-toggle" aria-hidden="true"></span></summary><div class="reason-content">{index === 0 ? <ul class="core-values">{copy.split('\n').map((value) => <li><NatureIcon name="check" size={25} /><span>{value}</span></li>)}</ul> : index === 6 ? <div class="combined-reason"><article><NatureIcon name="leaf" size={32} /><h4>Your Child’s Future</h4><p>{reasons[6][1]}</p></article><article><NatureIcon name="acorn" size={32} /><h4>Rites of Passage</h4><p>{reasons[7][1]}</p></article></div> : <p>{copy}</p>}</div></details>)}</div></div>
   </section>
 
   <section class="statements"><div class="wide"><p>As they enter their teenage years, our children are disconnecting from themselves, their families, communities, and the earth.</p><p>Wayfinders carves out time for youth to step away from the daily, to connect with purpose.</p><LeafDivider class="statements-divider" /></div></section>
 
-  <section class="future chapter"><LeafFlourish side="right" variant="big-3" class="future-leaf" /><div class="wide future-grid"><header><p class="type-label">Growing up. Growing together.</p><h2>Real-world experiences for a life of purpose.</h2></header>{reasons.slice(6).map(([title, copy]) => <article><h3>{title}</h3><p>{copy}</p></article>)}<div class="gallery">{gallery.slice(0,3).map(([src,alt]) => <img {src} {alt} width="800" height="600" loading="lazy" />)}</div></div></section>
+  <section class="mailing-signup"><div class="mailing-signup__content"><h2>Join Our Mailing List</h2><p>Sign up with your email address to receive news and updates.</p><Button newsletter>Sign up <span aria-hidden="true">→</span></Button></div></section>
 
   <section class="land chapter"><div class="wide land-grid"><div><p class="type-label">Land Acknowledgment and Responsibility</p><h2>We recognize the enduring stewardship of the Lenape.</h2></div><p>The Wayfinders team recognizes that the land where we live, work and play exists within the territory of the Lenape. We acknowledge the Lenape for their enduring stewardship of this place throughout the centuries and still today. We recognize a responsibility to learn about this history while educating new generations about how to live in right relationship with the earth and all of her inhabitants. Learning and relationship building is an ongoing pursuit and we welcome guidance and feedback from all as we endeavor to repair and restore this relationship.</p></div></section>
 
@@ -119,4 +119,15 @@ const gallery = [
   .statements p{margin:0 auto;color:var(--color-forest-dark);font-family:var(--font-hand);font-size:calc(clamp(1.8rem,3vw,2.6rem) + var(--font-hand-size-adjust));font-weight:500;line-height:1.15}
   .statements p + p{margin-top:1rem}
   :global(.statements-divider){grid-column:auto;margin-top:calc(clamp(2rem,4vw,3.5rem) - 48px)}
+  .combined-reason{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+  .combined-reason article{display:grid;grid-template-columns:auto 1fr;column-gap:.8rem;align-items:start}
+  .combined-reason article :global(svg){grid-row:1 / span 2;color:var(--color-moss)}
+  .combined-reason h4{margin:0;color:var(--color-forest-dark);font-family:var(--font-display);font-size:calc(1.55rem + var(--font-display-size-adjust));line-height:1.1}
+  .combined-reason p{grid-column:2;margin:.5rem 0 0;color:var(--color-ink-muted);font-size:1.1875rem;line-height:1.65;white-space:pre-line}
+  .mailing-signup{position:relative;display:flex;min-height:34rem;align-items:center;padding:clamp(4rem,8vw,7rem) var(--gutter);overflow:hidden;background:linear-gradient(90deg,rgb(8 25 15 / .88) 0%,rgb(8 25 15 / .62) 48%,rgb(8 25 15 / .12) 82%),url('/images/banners/mud-girl.jpg') center / cover no-repeat;color:#fff}
+  .mailing-signup__content{width:min(50%,var(--width-standard));margin-left:max(0px,calc((100vw - var(--width-wide))/2));}
+  .mailing-signup h2{margin:0;color:#fff;font-family:var(--font-display);font-size:calc(clamp(2.8rem,5vw,4.8rem) + var(--font-display-size-adjust));font-weight:500;letter-spacing:-.03em;line-height:1}
+  .mailing-signup p{max-width:31rem;margin:1.25rem 0 0;color:#fff;font-family:var(--font-hand);font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust));line-height:1.1}
+  .mailing-signup :global(.button){margin-top:2rem;border-color:#fff;background:#fff;color:var(--color-forest-dark)}
+  @media(max-width:47.999rem){.combined-reason{grid-template-columns:1fr}.mailing-signup{min-height:28rem;background-position:62% center}.mailing-signup__content{width:100%;margin:0}.mailing-signup h2{font-size:calc(clamp(2.6rem,12vw,4rem) + var(--font-display-size-adjust))}}
 </style>
