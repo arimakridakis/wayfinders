@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SiteFooter from '../components/global/SiteFooter.astro';
 import SiteHeader from '../components/global/SiteHeader.astro';
+import NewsletterModal from '../components/global/NewsletterModal.astro';
 import { site } from '../data/site';
 interface Props { title: string; description?: string; canonical?: URL | string; image?: string; }
 const { title, description = site.description, canonical, image } = Astro.props;
@@ -30,6 +31,7 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
     <SiteHeader />
     <main id="main-content" tabindex="-1"><slot /></main>
     <SiteFooter />
+    <NewsletterModal />
   </body>
 </html>
 <style>

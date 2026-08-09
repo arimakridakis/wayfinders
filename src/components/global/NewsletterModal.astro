@@ -1,0 +1,70 @@
+---
+const formAction = 'https://seedpod.us3.list-manage.com/subscribe/post?u=1e15fb7a65ef3c60361738300&id=ac2c47bde9&f_id=0066cde3f0';
+---
+
+<div class="newsletter-modal" data-newsletter-modal hidden>
+  <div class="newsletter-modal__backdrop" data-newsletter-close></div>
+  <section class="newsletter-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
+    <button class="newsletter-modal__close" type="button" aria-label="Close signup form" data-newsletter-close>×</button>
+    <div data-newsletter-form>
+      <p class="newsletter-modal__eyebrow">Stay connected</p>
+      <h2 id="newsletter-title">Join the Wayfinders community.</h2>
+      <p>Receive news, programs, and invitations to spend more time together outdoors.</p>
+      <form action={formAction} method="post" target="mailchimp-submit-frame" data-newsletter-form-submit>
+        <label>First name <input name="FNAME" autocomplete="given-name" /></label>
+        <label>Last name <input name="LNAME" autocomplete="family-name" /></label>
+        <label class="newsletter-modal__email">Email address <input name="EMAIL" type="email" autocomplete="email" required /></label>
+        <div class="newsletter-modal__honeypot" aria-hidden="true"><label>Leave this field empty <input name="b_1e15fb7a65ef3c60361738300_ac2c47bde9" tabindex="-1" /></label></div>
+        <button type="submit">Sign me up <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="newsletter-modal__privacy">We respect your privacy. You can unsubscribe anytime.</p>
+    </div>
+    <div class="newsletter-modal__success" data-newsletter-success hidden tabindex="-1">
+      <p class="newsletter-modal__eyebrow">You’re almost there</p>
+      <h2>Check your inbox.</h2>
+      <p>Mailchimp will send a confirmation email to finish your subscription.</p>
+      <button type="button" data-newsletter-close>Close</button>
+    </div>
+  </section>
+</div>
+<iframe class="newsletter-modal__frame" name="mailchimp-submit-frame" title="Mailchimp signup submission"></iframe>
+
+<script>
+  const modal = document.querySelector('[data-newsletter-modal]');
+  if (modal) {
+    const dialog = modal.querySelector('.newsletter-modal__dialog');
+    const formPanel = modal.querySelector('[data-newsletter-form]');
+    const successPanel = modal.querySelector('[data-newsletter-success]');
+    const form = modal.querySelector('[data-newsletter-form-submit]');
+    let trigger: HTMLElement | null = null;
+
+    const close = () => {
+      modal.setAttribute('hidden', '');
+      document.body.classList.remove('newsletter-modal-open');
+      formPanel?.removeAttribute('hidden');
+      successPanel?.setAttribute('hidden', '');
+      trigger?.focus();
+    };
+    const open = (event: Event) => {
+      trigger = event.currentTarget as HTMLElement;
+      modal.removeAttribute('hidden');
+      document.body.classList.add('newsletter-modal-open');
+      (dialog?.querySelector('input[name="FNAME"]') as HTMLInputElement | null)?.focus();
+    };
+
+    document.querySelectorAll('[data-newsletter-open]').forEach((element) => element.addEventListener('click', open));
+    modal.querySelectorAll('[data-newsletter-close]').forEach((element) => element.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hasAttribute('hidden')) close(); });
+    form?.addEventListener('submit', () => {
+      window.setTimeout(() => {
+        formPanel?.setAttribute('hidden', '');
+        successPanel?.removeAttribute('hidden');
+        (successPanel as HTMLElement | null)?.focus();
+      }, 150);
+    });
+  }
+</script>
+
+<style>
+  .newsletter-modal{position:fixed;z-index:200;inset:0;display:grid;place-items:center;padding:1rem}.newsletter-modal__backdrop{position:absolute;inset:0;background:rgb(8 25 15 / .72);backdrop-filter:blur(3px)}.newsletter-modal__dialog{position:relative;width:min(100%,38rem);padding:clamp(2rem,5vw,4rem);border:1px solid rgb(255 255 255 / .45);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:0 24px 70px rgb(0 0 0 / .3);color:var(--color-ink)}.newsletter-modal__close{position:absolute;top:1rem;right:1rem;display:grid;width:2.75rem;aspect-ratio:1;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--color-forest-dark);font-size:2rem;line-height:1;cursor:pointer}.newsletter-modal__eyebrow{margin:0;color:var(--color-rust);font-size:1rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.newsletter-modal h2{margin:.35rem 0 1rem;color:var(--color-forest-dark);font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4rem);font-weight:600;line-height:.95}.newsletter-modal form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.newsletter-modal label{display:grid;gap:.4rem;color:var(--color-forest-dark);font-size:.95rem;font-weight:750}.newsletter-modal input{width:100%;min-height:3rem;padding:.65rem .8rem;border:1px solid var(--color-line);border-radius:.65rem;background:#fff;color:var(--color-ink);font:inherit}.newsletter-modal__email,.newsletter-modal form button{grid-column:1/-1}.newsletter-modal form button,.newsletter-modal__success button{min-height:3.25rem;padding:.7rem 1.4rem;border:0;border-radius:var(--radius-button);background:var(--color-forest-dark);color:white;font:inherit;font-weight:750;cursor:pointer}.newsletter-modal form button:hover,.newsletter-modal__success button:hover{background:var(--color-rust)}.newsletter-modal__honeypot{position:absolute;left:-5000px}.newsletter-modal__privacy{margin:1rem 0 0;color:var(--color-ink-muted);font-size:.875rem}.newsletter-modal__success{min-height:17rem;display:grid;align-content:center}.newsletter-modal__frame{position:absolute;width:1px;height:1px;border:0;clip-path:inset(50%)}:global(body.newsletter-modal-open){overflow:hidden}@media(max-width:47.999rem){.newsletter-modal form{grid-template-columns:1fr}.newsletter-modal__dialog{padding:2rem}.newsletter-modal__close{top:.5rem;right:.5rem}}
+</style>
