@@ -33,6 +33,35 @@ async function subscribeToUpdates(email: string, firstName: string, lastName: st
   throw new Error('Mailchimp signup failed.');
 }
 
+function welcomeEmailFor(program: string, firstName: string) {
+  if (program === 'Fall 2026 Base Camp — Wednesday') {
+    return {
+      subject: 'Welcome to Wednesday Fall 2026 Base Camp',
+      text: `Dear ${firstName},\n\nThank you for registering for the Wednesday session of the Fall 2026 Base Camp. Here are some details for this program.\n\nWarmly,`,
+    };
+  }
+
+  if (program === 'Autumn 2026 Women’s Retreat') {
+    return {
+      subject: 'Welcome to the Autumn 2026 Women’s Retreat',
+      text: `Dear ${firstName},\n\nThank you for registering for the Autumn 2026 Women’s Retreat. This is a test welcome email for the retreat, so we can confirm that the correct program message is being sent.\n\nWarmly,`,
+    };
+  }
+
+  return null;
+}
+
+async function sendWelcomeEmail(program: string, firstName: string, email: string, fromEmail: string, replyTo: string, apiKey: string) {
+  const welcome = welcomeEmailFor(program, firstName);
+  if (!welcome) return;
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: fromEmail, to: [email], reply_to: replyTo, ...welcome }),
+  });
+  if (!response.ok) throw new Error('Welcome email failed.');
+}
+
 export default {
   async fetch(request: Request) {
     if (request.method !== 'POST') return json({ error: 'Method not allowed.' }, 405);
@@ -77,6 +106,8 @@ export default {
       }),
     });
     if (!notification.ok) return json({ error: 'We could not save your details. Please try again.' }, 502);
+    await sendWelcomeEmail(program, firstName, email, fromEmail, notificationEmail, resendApiKey)
+      .catch((error) => console.error('Welcome email error:', error));
     if (marketingConsent) await subscribeToUpdates(email, firstName, lastName).catch(() => undefined);
     return json({ ok: true });
   },
