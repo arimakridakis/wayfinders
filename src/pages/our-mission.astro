@@ -5,12 +5,17 @@ import Section from '../components/global/Section.astro';
 import MediaSplit from '../components/sections/MediaSplit.astro';
 ---
 <BaseLayout title="Our Mission" description="Wayfinders fosters nature connection and social-emotional learning to develop future sustainability leaders.">
-  <PageHero eyebrow="About Wayfinders" title="Our Mission" intro="Connecting people with themselves, each other, and the earth." image="/images/banners/arms-out-1.jpg" />
+  <PageHero eyebrow="ABOUT WAYFINDERS" title="Our Mission" intro="Connecting people with themselves, each other, and the earth." image="/images/banners/arms-out-1b.jpg" />
   <Section width="wide">
     <MediaSplit imagePosition="right" align="start">
       <div slot="copy" class="mission"><p>The mission of Wayfinders is to foster experiential nature-connection and social emotional learning to develop future sustainability leaders, bolster mental and physical health, and provide equitable access to experiences in nature.</p><p>Our core values focus on disconnecting from technology to reconnect with nature. Through this cultural repair work, Wayfinders' strives to build stronger communities and next generation leaders who are connected to themselves, each other, and the earth.</p></div>
-      <img slot="media" src="/images/banners/leaves-1.jpg" alt="Wayfinders community members celebrating together outdoors" width="2154" height="1220" loading="lazy" />
+      <img slot="media" src="/images/content/three-kids.webp" alt="Wayfinders children exploring together outdoors" width="1200" height="900" loading="lazy" />
     </MediaSplit>
   </Section>
 </BaseLayout>
-<style>.mission { font-family: var(--font-display); font-size:calc( calc(clamp(1.5rem, 3vw, 2.25rem) + var(--font-display-size-adjust)) + var(--font-display-size-adjust)); line-height: 1.35; }.mission p:first-child { margin-top: 0; }.mission p:last-child { color: var(--color-forest); }</style>
+<style>
+  .page-hero .intro { font-family:var(--font-hand); font-size:calc(clamp(1.15rem,2vw,1.45rem) + var(--font-hand-size-adjust) + 8px); line-height:1.1; }
+  .mission { font-family:var(--font-sans); font-size:21px; line-height:1.65; }
+  .mission p:first-child { margin-top:0; }
+  .mission p:last-child { color:var(--color-forest); }
+</style>
