@@ -40,6 +40,8 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
   .skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 100; padding: .75rem 1rem; transform: translateY(-180%); border-radius: .5rem; background: var(--color-forest-dark); color: white; font-weight: 750; }
   .skip-link:focus { transform: translateY(0); }
   :global(.section-heading h2) { display:flex; align-items:center; justify-content:center; gap:clamp(.45rem,1vw,.8rem); }
+  :global(.section-heading h2) { gap:30px; }
+  :global(.section-heading h2::before), :global(.section-heading h2::after) { transform:none; }
   :global(.section-heading h2::before), :global(.section-heading h2::after) { width:clamp(1.8rem,3.5vw,2.8rem); height:1.2rem; flex:none; background:center / contain no-repeat; content:''; }
   :global(.section-heading h2::before) { background-image:url('/images/decorative/leaf-left-small.png'); }
   :global(.section-heading h2::after) { background-image:url('/images/decorative/leaf-right-small.png'); }
