@@ -17,6 +17,6 @@ const programs = [
 ];
 ---
 <BaseLayout title="Fall 2026 Programs Overview" description="Explore Fall 2026 programs from Wayfinders on the Hudson.">
-  <PageHero eyebrow="FALL 2026 PROGRAMS" title="Fall 2026 Programs" intro="Spend some screen-free time in the woods! Scholarships & Payment Plans are available for all programs!" image="/images/banners/lark2.jpg" alt="A lark perched in a meadow" overlayOpacity={0.5} />
+  <PageHero eyebrow="WAYFINDERS" title="Fall 2026 Programs" intro="Spend some screen-free time in the woods! Scholarships & Payment Plans are available for all programs!" image="/images/banners/lark2.jpg" alt="A lark perched in a meadow" overlayOpacity={0.5} />
   <Section width="wide"><CardGrid columns={3}>{programs.map(([title,description,href,image,alt]) => <ProgramCard {title} {description} {href} {image} {alt} />)}</CardGrid></Section>
 </BaseLayout>
