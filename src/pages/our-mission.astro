@@ -7,15 +7,20 @@ import MediaSplit from '../components/sections/MediaSplit.astro';
 <BaseLayout title="Our Mission" description="Wayfinders fosters nature connection and social-emotional learning to develop future sustainability leaders.">
   <PageHero eyebrow="ABOUT WAYFINDERS" title="Our Mission" intro="Connecting people with themselves, each other, and the earth." image="/images/banners/arms-out-1b.jpg" />
   <Section width="wide">
+    <div class="mission-split">
     <MediaSplit imagePosition="right" align="start">
       <div slot="copy" class="mission"><p>The mission of Wayfinders is to foster experiential nature-connection and social emotional learning to develop future sustainability leaders, bolster mental and physical health, and provide equitable access to experiences in nature.</p><p>Our core values focus on disconnecting from technology to reconnect with nature. Through this cultural repair work, Wayfinders' strives to build stronger communities and next generation leaders who are connected to themselves, each other, and the earth.</p></div>
       <img slot="media" src="/images/content/three-kids.webp" alt="Wayfinders children exploring together outdoors" width="1200" height="900" loading="lazy" />
     </MediaSplit>
+    </div>
   </Section>
 </BaseLayout>
 <style>
   .page-hero .intro { font-family:var(--font-hand); font-size:calc(clamp(1.15rem,2vw,1.45rem) + var(--font-hand-size-adjust) + 8px); line-height:1.1; }
   .mission { font-family:var(--font-sans); font-size:21px; line-height:1.65; }
   .mission p:first-child { margin-top:0; }
+  .mission p + p { margin-top:25px; }
+  .mission-split :global(.media-split) { grid-template-columns:minmax(0, 7fr) minmax(0, 3fr); }
+  @media (max-width:47.999rem) { .mission-split :global(.media-split) { grid-template-columns:1fr; } }
   .mission p:last-child { color:var(--color-forest); }
 </style>
