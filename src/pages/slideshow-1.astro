@@ -49,8 +49,8 @@ const images = [
   { src: 'https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/2ae33c20-86cf-4d1b-a5fa-4af0766c2c91/46-All+Wayfinders.jpg', alt: 'All Wayfinders' },
 ];
 ---
-<BaseLayout title="Slideshow" description="Photographs from Wayfinders on the Hudson’s Spring 2022 programs.">
-  <PageHero eyebrow="Spring 2022" title="Wayfinders Slideshow" intro="Scenes from a season of nature connection, creativity, and community." image="/images/banners/running-kids-3.jpg" />
+<BaseLayout title="Gallery" description="Photographs from Wayfinders on the Hudson’s Spring 2022 programs.">
+  <PageHero eyebrow="Spring 2022" title="Wayfinders Gallery" intro="Scenes from a season of nature connection, creativity, and community." image="/images/banners/running-kids-3.jpg" />
   <Section width="wide"><div class="gallery">{images.map((image, index) => <figure><img src={image.src} alt={image.alt} width="900" height="675" loading={index < 4 ? 'eager' : 'lazy'} /></figure>)}</div></Section>
 </BaseLayout>
 <style>.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}figure{margin:0;overflow:hidden;border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}img{width:100%;aspect-ratio:4/3;object-fit:cover}@media(max-width:47.999rem){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:35.999rem){.gallery{grid-template-columns:1fr}}</style>
