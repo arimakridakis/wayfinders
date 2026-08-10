@@ -1,3 +1,5 @@
+import { welcomeEmailFor } from './registration-welcome-emails';
+
 const json = (body: Record<string, unknown>, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 const asText = (value: unknown, maximumLength: number) => typeof value === 'string' ? value.trim().slice(0, maximumLength) : '';
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,6 +33,17 @@ async function subscribeToUpdates(email: string, firstName: string, lastName: st
   const error = await response.json().catch(() => null) as { title?: string } | null;
   if (response.status === 400 && error?.title === 'Member Exists') return;
   throw new Error('Mailchimp signup failed.');
+}
+
+async function sendWelcomeEmail(program: string, firstName: string, email: string, fromEmail: string, replyTo: string, apiKey: string) {
+  const welcome = welcomeEmailFor(program, firstName);
+  if (!welcome) return;
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: fromEmail, to: [email], reply_to: replyTo, ...welcome }),
+  });
+  if (!response.ok) throw new Error('Welcome email failed.');
 }
 
 export default {
@@ -77,6 +90,8 @@ export default {
       }),
     });
     if (!notification.ok) return json({ error: 'We could not save your details. Please try again.' }, 502);
+    await sendWelcomeEmail(program, firstName, email, fromEmail, notificationEmail, resendApiKey)
+      .catch((error) => console.error('Welcome email error:', error));
     if (marketingConsent) await subscribeToUpdates(email, firstName, lastName).catch(() => undefined);
     return json({ ok: true });
   },
