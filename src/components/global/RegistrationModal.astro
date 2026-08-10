@@ -129,8 +129,10 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
             recaptchaToken,
           }),
         });
-        const result = await response.json() as { ok?: boolean; error?: string };
-        if (!response.ok || !result.ok) throw new Error(result.error || 'We could not save your details. Please try again.');
+        const result = response.headers.get('content-type')?.includes('application/json')
+          ? await response.json().catch(() => null) as { ok?: boolean; error?: string } | null
+          : null;
+        if (!response.ok || !result?.ok) throw new Error(result?.error || 'We could not save your details. Please try again.');
         close();
       } catch (error) {
         setError(error instanceof Error ? error.message : 'We could not save your details. Please try again.');
