@@ -42,7 +42,7 @@ const gallery = [
   <section class="hero home-hero">
     <div class="hero-inner">
       <h1>Connecting<br />With Ourselves,<br />Each Other,<br />And the Earth</h1>
-      <p class="hero-tagline">Screen-free time in nature. Programs for people of all ages.</p>
+      <p class="hero-tagline">Screen-free time in nature.<br />Programs for people of all ages.</p>
       <div class="hero-program-actions"><h2>Check out our NEW programs!</h2><div class="actions"><Button href="/fall-2026-programs-overview">Explore fall programs</Button><Button href="/our-mission" variant="secondary">Our mission</Button></div></div>
     </div>
   </section>
@@ -74,6 +74,8 @@ const gallery = [
   @media(max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(8 25 15/.7)}.hero h1{font-size:calc(clamp(3.25rem,15vw,5rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust))}.actions{flex-direction:column}.actions :global(.button){width:100%}.reason-grid,.future-grid,.statements .wide,.connect-grid{grid-template-columns:1fr}.future header,.gallery,.connect-grid>div:first-child{grid-column:auto}.future article{padding:0 0 2rem;border-right:0;border-bottom:1px solid var(--color-line)}.gallery{grid-template-columns:1fr}.gallery img{min-height:15rem}.what-is{background-position:60% center}.what-panel{padding:2rem}.reason summary{min-height:6rem}.land-grid{gap:1rem}}
   @media(max-width:47.999rem){.hero{min-height:calc(42rem + 9.0625rem)}}
   @media(min-width:48rem){.hero::after{background:linear-gradient(90deg,rgb(8 25 15/.9) 0%,rgb(8 25 15 / 0) 85%)}}
+  @media (min-width:48rem) { .hero h1 { font-size:calc(clamp(3.6rem,7vw,6.4rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
+  @media (max-width:47.999rem) { .hero h1 { font-size:calc(clamp(3.25rem,15vw,5rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
 
   /* Home-page sequence: quiet introduction, then the fuller case for Wayfinders. */
   .what-is{display:block;min-height:0;padding-inline:0;background:var(--color-surface)}
