@@ -77,6 +77,9 @@ const gallery = [
   @media (min-width:48rem) { .hero h1 { font-size:calc(clamp(3.6rem,7vw,6.4rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
   @media (max-width:47.999rem) { .hero h1 { font-size:calc(clamp(3.25rem,15vw,5rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
   .home-hero { background-image:url('/images/heroes/leaves1b.jpg'); }
+  .home-hero h1 { line-height:calc(.92em + 15px); }
+  .home-hero { min-height:calc(min(47rem,82vh) + 9.0625rem + 80px); }
+  @media (max-width:47.999rem) { .home-hero { min-height:calc(42rem + 9.0625rem + 80px); } }
 
   /* Home-page sequence: quiet introduction, then the fuller case for Wayfinders. */
   .what-is{display:block;min-height:0;padding-inline:0;background:var(--color-surface)}
