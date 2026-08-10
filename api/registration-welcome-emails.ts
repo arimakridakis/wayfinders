@@ -1,5 +1,5 @@
-import { baseCampWednesdayWelcome } from './registration-emails/base-camp-wednesday';
-import { womensRetreatWelcome } from './registration-emails/womens-retreat';
+import { baseCampWednesdayWelcome } from './registration-emails/base-camp-wednesday.js';
+import { womensRetreatWelcome } from './registration-emails/womens-retreat.js';
 
 interface WelcomeEmail {
   subject: string;
