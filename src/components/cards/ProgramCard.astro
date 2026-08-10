@@ -5,8 +5,8 @@ const { title, description, href, image, alt } = Astro.props;
 ---
 <article class="program-card"><img src={image} {alt} width="900" height="650" loading="lazy" decoding="async" /><div class="body"><h2 class="type-card">{title}</h2><p>{description}</p><Button {href} variant="secondary">Learn more</Button></div></article>
 <style>
-  .program-card { display: grid; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+  .program-card { display: grid; grid-template-rows: auto 1fr; align-items: stretch; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
   img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-  .body { display: flex; align-self: stretch; align-items: flex-start; justify-content: flex-start; flex-direction: column; padding: var(--card-padding); }
+  .body { display: flex; align-self: stretch; align-items: flex-start; justify-content: flex-start !important; flex-direction: column; padding: var(--card-padding); }
   h2 { margin: 0; } p { flex: 1; color: var(--color-ink-muted); }
 </style>
