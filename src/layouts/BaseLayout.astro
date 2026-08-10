@@ -56,6 +56,8 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
 
   @media (max-width: 47.999rem) {
     :global(.section-heading h2) { flex-wrap:wrap; }
+    :global(.section-heading h2::before),
+    :global(.section-heading h2::after) { display:none; }
     :global(#main-content > .hero:not(.home-hero)) {
       min-height: calc(42rem + 50px) !important;
     }
