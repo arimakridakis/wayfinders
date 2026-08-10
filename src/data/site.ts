@@ -18,7 +18,7 @@ export const site = {
       ],
     },
     { label: 'Testimonials', href: '/testimonials-' },
-    { label: 'Slideshow', href: '/slideshow-1' },
+    { label: 'Gallery', href: '/slideshow-1' },
     {
       label: 'Programs',
       children: [
