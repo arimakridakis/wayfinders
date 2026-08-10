@@ -1,4 +1,4 @@
-import { welcomeEmailFor } from './registration-welcome-emails';
+import { welcomeEmailFor } from './registration-welcome-emails.js';
 
 const json = (body: Record<string, unknown>, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 const asText = (value: unknown, maximumLength: number) => typeof value === 'string' ? value.trim().slice(0, maximumLength) : '';
