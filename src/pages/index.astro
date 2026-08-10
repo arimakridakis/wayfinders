@@ -77,6 +77,7 @@ const gallery = [
   @media (min-width:48rem) { .hero h1 { font-size:calc(clamp(3.6rem,7vw,6.4rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
   @media (max-width:47.999rem) { .hero h1 { font-size:calc(clamp(3.25rem,15vw,5rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust) - 5px); } }
   .home-hero { background-image:url('/images/heroes/leaves1b.jpg'); }
+  .home-hero .hero-tagline { margin-top:calc(1rem + 30px); margin-bottom:25px; font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust) + 15px) !important; }
   .home-hero h1 { line-height:calc(.92em + 15px); }
   .home-hero { min-height:calc(min(47rem,82vh) + 9.0625rem + 130px); }
   @media (max-width:47.999rem) { .home-hero { min-height:calc(42rem + 9.0625rem + 130px); } }
@@ -116,9 +117,9 @@ const gallery = [
   .base-camp-highlights h3,.base-camp-schedule-grid h3{margin:0 0 .55rem;color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.55rem,2.3vw,2.15rem) + var(--font-display-size-adjust));font-weight:600;line-height:1.03}
   .base-camp-highlights article p,.base-camp-schedule-grid article p{text-align:left}
   .base-camp-scheduling{padding-top:1.5rem;border-top:1px solid rgb(255 255 255 / .35)}
-  .base-camp-subheading{margin-bottom:40px;color:#e4dda2;font-family:var(--font-display);font-size:calc(clamp(1.7rem,2.7vw,2.4rem) + var(--font-display-size-adjust) + 3px)!important;font-weight:600;line-height:1.05;text-align:center}
+  .base-camp-subheading{margin-bottom:40px;color:white;font-family:var(--font-hand);font-size:calc(clamp(1.7rem,2.7vw,2.4rem) + var(--font-hand-size-adjust) + 11px)!important;font-weight:500;line-height:1.05;text-align:center}
   .base-camp-schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.25rem}
-  .base-camp :global(.button){margin-top:2rem;border-color:white;background:white;color:var(--color-forest-dark)}
+  .base-camp :global(.button){margin-top:65px;border-color:white;background:white;color:var(--color-forest-dark)}
   .reason-grid{display:grid;grid-template-columns:1fr;max-width:var(--width-wide);margin-inline:auto}
   .reason{padding:0;border:0;border-top:1px solid rgb(23 59 42 / .45);border-radius:0;background:transparent;box-shadow:none}
   .reason:last-child{border-bottom:1px solid rgb(23 59 42 / .45)}
@@ -145,7 +146,7 @@ const gallery = [
   .mailing-signup p{max-width:none;margin:1.25rem 0 0;color:#fff;font-family:var(--font-hand);font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust));line-height:1.1;white-space:nowrap}
   .mailing-signup :global(.button){margin-top:2rem;border-color:#fff;background:#fff;color:var(--color-forest-dark)}
   .what-is{padding-top:calc(clamp(5rem,10vw,9rem) - 30px)}
-  .why .section-heading h2::before,.why .section-heading h2::after{transform:scale(2.4)}
+  .why .section-heading h2{gap:30px}
   .why .section-heading>p:last-child{max-width:calc(58rem - 160px);margin-inline:auto}
   .base-camp-highlights :global(svg),.base-camp-schedule-grid :global(svg){color:#fff}
   .statements p{width:calc(100% - 195px);max-width:none}
