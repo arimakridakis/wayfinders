@@ -55,14 +55,14 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
   }
 
   /* Keep hero copy rhythm consistent across the custom and shared hero variants. */
-  :global(#main-content > .hero .hero-content > .hero-intro) { margin-bottom: 0; }
-  :global(#main-content > .hero .hero-content > .hero-intro + p) { margin-top: 30px !important; }
-  :global(#main-content > .hero .hero-content > .hero-intro + p + .hero-note),
-  :global(#main-content > .hero .hero-content > .hero-intro + p + .hero-actions),
-  :global(#main-content > .hero .hero-content > .hero-intro + p + .actions),
-  :global(#main-content > .hero .hero-content > .hero-intro + .hero-note),
-  :global(#main-content > .hero .hero-content > .hero-intro + .hero-actions),
-  :global(#main-content > .hero .hero-content > .hero-intro + .actions) { margin-top: 30px !important; }
+  :global(#main-content .hero .hero-content > .hero-intro) { margin-bottom: 0; }
+  :global(#main-content .hero .hero-content > .hero-intro + p) { margin-top: 30px !important; }
+  :global(#main-content .hero .hero-content > .hero-intro + p + .hero-note),
+  :global(#main-content .hero .hero-content > .hero-intro + p + .hero-actions),
+  :global(#main-content .hero .hero-content > .hero-intro + p + .actions),
+  :global(#main-content .hero .hero-content > .hero-intro + .hero-note),
+  :global(#main-content .hero .hero-content > .hero-intro + .hero-actions),
+  :global(#main-content .hero .hero-content > .hero-intro + .actions) { margin-top: 30px !important; }
   :global(#main-content > .page-hero .copy > .intro) { margin-bottom: 0; }
   :global(#main-content > .page-hero .copy > .button),
   :global(#main-content > .page-hero .copy > .actions) { margin-top: 30px !important; }
