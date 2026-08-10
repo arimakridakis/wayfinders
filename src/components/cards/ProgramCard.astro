@@ -8,5 +8,5 @@ const { title, description, href, image, alt } = Astro.props;
   .program-card { display: grid; grid-template-rows: auto 1fr; align-items: stretch; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
   img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .body { display: flex; align-self: stretch; align-items: flex-start; justify-content: flex-start !important; flex-direction: column; padding: var(--card-padding); }
-  h2 { margin: 0 0 30px; } p { flex: 1; color: var(--color-ink-muted); }
+  h2 { margin: 0 0 30px; } p { flex: 1; color: var(--color-ink-muted); } .body :global(.button) { margin-top: 25px; }
 </style>

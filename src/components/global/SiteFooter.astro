@@ -9,7 +9,7 @@ import Container from './Container.astro';
     <div><p class="type-label">Take the next step</p><div class="actions"><Button href="/fall-2026-programs-overview" variant="secondary">Explore programs</Button><Button href={site.donationUrl}>Donate</Button></div></div>
     <div><p class="type-label">Follow along</p><ul class="social-links">{site.socialLinks.map((link) => <li><a href={link.href} aria-label={link.label}>{link.label.toLowerCase().includes('instagram') ? <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg> : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3.5l.5-4H13V9c0-.7.3-1 1-1Z" /></svg>}<span class="sr-only">{link.label}</span></a></li>)}</ul></div>
   </Container>
-  <Container width="wide" class="legal"><small>© {new Date().getFullYear()} {site.name}. Foundation preview—not yet published.</small></Container>
+  <Container width="wide" class="legal"><small>© {new Date().getFullYear()} {site.name}.</small></Container>
 </footer>
 <style>
   .site-footer { padding-block: clamp(3rem, 7vw, 5rem) 2rem; border-top: 1px solid var(--color-line); background: var(--color-cream); }
@@ -23,6 +23,7 @@ import Container from './Container.astro';
   ul { display: grid; gap: .35rem; margin: 0; padding: 0; list-style: none; }
   :global(.site-footer .footer-grid) > div:nth-child(2) .type-label,:global(.site-footer .footer-grid) > div:nth-child(3) .type-label { margin-bottom: 15px !important; }
   :global(.site-footer .footer-grid) > div:nth-child(2) .actions { flex-direction: column; align-items: flex-start; }
+  :global(.site-footer .footer-grid .actions .button) { width: auto; max-width: 100%; flex: 0 0 auto; }
   .social-links { display: flex; gap: 1rem; }
   .social-links a { display: inline-flex; width: 2.25rem; height: 2.25rem; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-forest-dark); color: var(--color-cream); }
   .social-links svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
