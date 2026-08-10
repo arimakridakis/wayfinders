@@ -101,6 +101,10 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
       if (!form.reportValidity() || !paymentUrl) return;
       setError();
       if (submitButton) submitButton.disabled = true;
+      // Open the tab synchronously from the click event so browsers do not treat
+      // the eventual QuickBooks navigation as an unwanted popup.
+      const paymentWindow = window.open('', '_blank');
+      if (paymentWindow) paymentWindow.opener = null;
       try {
         const fields = new FormData(form);
         const recaptchaToken = await getRecaptchaToken();
@@ -121,8 +125,14 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
         });
         const result = await response.json() as { ok?: boolean; error?: string };
         if (!response.ok || !result.ok) throw new Error(result.error || 'We could not save your details. Please try again.');
-        window.location.assign(paymentUrl);
+        if (paymentWindow && !paymentWindow.closed) {
+          paymentWindow.location.assign(paymentUrl);
+        } else {
+          window.open(paymentUrl, '_blank', 'noopener,noreferrer');
+        }
+        close();
       } catch (error) {
+        paymentWindow?.close();
         setError(error instanceof Error ? error.message : 'We could not save your details. Please try again.');
       } finally {
         if (submitButton) submitButton.disabled = false;
