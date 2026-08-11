@@ -14,6 +14,7 @@ import { wiseOwlsOneSessionWelcome } from '../registration-emails/wise-owls-one-
 import { wiseOwlsTuesdaySeriesWelcome } from '../registration-emails/wise-owls-tuesday-series.js';
 import { wiseOwlsWednesdaySeriesWelcome } from '../registration-emails/wise-owls-wednesday-series.js';
 import { womensRetreatWelcome } from '../registration-emails/womens-retreat.js';
+import { createWelcomeEmail } from '../registration-emails/shared.js';
 
 interface WelcomeEmail {
   subject: string;
@@ -40,9 +41,12 @@ const emailFiles: Record<string, WelcomeEmail> = {
 };
 
 export function welcomeEmailFor(program: string, firstName: string) {
-  const emailFile = emailFiles[program];
-  return emailFile ? {
+  const emailFile = emailFiles[program] ?? createWelcomeEmail({
+    program,
+    closing: 'We’re looking forward to welcoming you into the Wayfinders community.',
+  });
+  return {
     subject: emailFile.subject,
     text: emailFile.text.replaceAll('{{firstName}}', firstName),
-  } : null;
+  };
 }

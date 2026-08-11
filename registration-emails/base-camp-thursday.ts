@@ -1,9 +1,2 @@
-export const baseCampThursdayWelcome = {
-  subject: 'Welcome to Fall 2026 Base Camp — Thursday',
-  text: `Dear {{firstName}},
-
-Thank you for registering for Fall 2026 Base Camp — Thursday. We are delighted that you'll be joining us this fall.
-
-Warmly,
-The Wayfinders team`,
-};
+import { createWelcomeEmail } from './shared.js';
+export const baseCampThursdayWelcome = createWelcomeEmail({ program: 'Fall 2026 Base Camp — Thursday', closing: 'We can’t wait to welcome your family this fall.' });
