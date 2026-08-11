@@ -1,0 +1,481 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wayfinders on the Hudson — Fall 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e9e4d9;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #354036;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    img {
+      border: 0;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .outer {
+      width: 100%;
+      background: #e9e4d9;
+      padding: 34px 12px;
+    }
+
+    .email {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f9f6ef;
+    }
+
+    .inner {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+
+    .brand {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #9b5f35;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      color: #36483b;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.06;
+      letter-spacing: -0.8px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.4px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 19px;
+      line-height: 1.3;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .kicker {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #9b5f35;
+      margin-bottom: 14px;
+    }
+
+    .hero-copy {
+      padding-top: 46px;
+      padding-bottom: 54px;
+    }
+
+    .feature-copy {
+      padding-top: 36px;
+      padding-bottom: 58px;
+    }
+
+    .feature-meta {
+      color: #6d756d;
+      font-size: 14px;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 1px solid #445648;
+      color: #445648 !important;
+      text-decoration: none;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: .2px;
+      border-radius:7px;
+    }
+
+    .button-dark {
+      background: #445648;
+      color: #ffffff !important;
+      border-color: #445648;
+    }
+
+    .quote-band {
+      background: #465748;
+      color: #f6f1e7;
+    }
+
+    .quote-band td {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    .quote-band h2,
+    .quote-band p {
+      color: #f6f1e7;
+    }
+
+    .quote-band p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .programs {
+      padding-top: 54px;
+      padding-bottom: 52px;
+    }
+
+    .program {
+      padding: 24px 0 28px;
+      border-bottom: 1px solid #ddd6c9;
+    }
+
+    .program:last-child {
+      border-bottom: 0;
+    }
+
+    .program p {
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .micro-link {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #9b5f35 !important;
+    }
+
+    .spacer {
+      height: 18px;
+      line-height: 18px;
+      font-size: 1px;
+    }
+
+    .donate {
+      background: #efe6d7;
+    }
+
+    .donate td {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .footer {
+      background: #2f3c33;
+      color: #eee9df;
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+
+    .footer p,
+    .footer a {
+      color: #eee9df;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-brand {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .outer {
+        padding: 0;
+      }
+
+      .inner {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+
+      h1 {
+        font-size: 34px !important;
+      }
+
+      h2 {
+        font-size: 26px !important;
+      }
+
+      .lead {
+        font-size: 17px !important;
+      }
+
+      .hero-copy {
+        padding-top: 34px !important;
+        padding-bottom: 40px !important;
+      }
+
+      .feature-copy {
+        padding-top: 28px !important;
+        padding-bottom: 44px !important;
+      }
+
+      .programs {
+        padding-top: 42px !important;
+        padding-bottom: 40px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<table role="presentation" width="100%" class="outer">
+<tr>
+<td align="center">
+
+<table role="presentation" width="100%" class="email">
+
+  <!-- BRAND -->
+  <tr>
+    <td class="inner" style="padding-top:34px; padding-bottom:22px;">
+      <div class="brand">Wayfinders on the Hudson</div>
+    </td>
+  </tr>
+
+  <!-- HERO IMAGE -->
+  <tr>
+    <td>
+      <img
+        src="https://www.wayfindersonthehudson.com/images/heroes/leaves1b.jpg"
+        alt="Wayfinders community gathered around a fire in the woods">
+    </td>
+  </tr>
+
+  <!-- HERO COPY -->
+  <tr>
+    <td class="inner hero-copy">
+      <div class="kicker">Fall 2026</div>
+      <h1>Come home to Wayfinders this fall.</h1>
+      <p class="lead">Summer is still here, and we hope you are soaking it up. But before long, the days will shorten, school will begin, calendars will fill, and life will start moving faster.</p>
+      <p class="lead">At Wayfinders, autumn offers another invitation: stay close to the natural world, deepen your relationships, and make room for what matters.</p>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class="inner" style="padding-bottom:22px;">
+      <h2 style="text-align:center; font-size:24px; letter-spacing:1px; text-transform:uppercase; color:#9b5f35; font-family:'Poppins',Arial,sans-serif; margin-bottom:0;">Featured This Fall</h2>
+    </td>
+  </tr>
+
+  <!-- BASE CAMP -->
+  <tr>
+    <td>
+      <img
+        src="https://www.wayfindersonthehudson.com/images/content/walk-team-1.jpg"
+        alt="Children running and playing in a field at Wayfinders">
+    </td>
+  </tr>
+
+  <tr>
+    <td class="inner feature-copy">
+      <div class="kicker">For Kids</div>
+      <h2 style="font-size:35px; margin-bottom:3px;">Base Camp</h2>
+      <p style="font-family:'Caveat',cursive;font-size:33px;line-height:1.1;margin-bottom:32px;color:#7b5a3b;">Adventure. Confidence. Outdoor skills.</p>
+      <p>Afternoons are for screen-free outdoor time: building fires and forts, scavenger hunts, foraging and cooking wild foods, field games, earth art, Taekwondo, and ecological restoration.</p>
+      <p>Every Base Camp child also becomes part of <strong>Restoration Nation</strong>, caring for the Hudson Valley through hands-on restoration and community stewardship.</p>
+      <p class="feature-meta"><strong>Grades 1–8:</strong> Tuesdays + Wednesdays, Sept. 22–Dec. 9, 3:45–5:45 PM<br>
+      <strong>Kindergarten:</strong> Thursdays, Sept. 24–Dec. 3, 3:45–5 PM<br>
+      <strong>Location:</strong> Lenoir Preserve, Yonkers</p>
+      <a class="button button-dark" href="https://www.wayfindersonthehudson.com/fall-2026-base-camp-k-8">Explore Base Camp</a>
+    </td>
+  </tr>
+
+  <!-- WOMEN'S RETREAT -->
+  <tr>
+    <td>
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3273a57a-857c-4623-8875-7c5838ba7b57/IMG_1760.jpg?format=1600w"
+        alt="Outdoor movement and reflection in nature">
+    </td>
+  </tr>
+
+  <tr>
+    <td class="inner feature-copy">
+      <div class="kicker">For Women</div>
+      <h2 style="font-size:35px; margin-bottom:3px;">Autumn Women’s Retreat</h2>
+      <p style="font-family:'Caveat',cursive;font-size:33px;line-height:1.1;margin-bottom:32px;color:#7b5a3b;">Rest. Renewal. A return to what matters.</p>
+      <p>Gather around the fire, slow down, and reconnect with yourself, community, and the earth. We’ll begin with a somatic warm-up and then move into a choice of sessions exploring Vision Quest, Nature Genograms, or Ancient Goddess Cultures for Modern Women.</p>
+      <p class="feature-meta"><strong>Friday, September 18</strong><br>
+      1:30–5:30 PM · Lenoir Preserve · $120</p>
+      <a class="button button-dark" href="https://www.wayfindersonthehudson.com/autumn-2026-womens-retreat">Join the Retreat</a>
+    </td>
+  </tr>
+
+  <!-- FOREST TOTS -->
+  <tr>
+    <td>
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/72e5bec5-fcd3-4ea8-b448-dff43ddb2fc7/IMG_9286.jpg?format=1200w"
+        alt="A toddler exploring natural materials outdoors">
+    </td>
+  </tr>
+
+  <tr>
+    <td class="inner feature-copy">
+      <div class="kicker">For Toddlers + Caregivers</div>
+      <h2 style="font-size:35px; margin-bottom:3px;">Forest Tots</h2>
+      <p style="font-family:'Caveat',cursive;font-size:33px;line-height:1.1;margin-bottom:32px;color:#7b5a3b;">Wonder begins early.</p>
+      <p>A new outdoor program for caregivers and toddlers ages 12–30 months, filled with sensory-rich play, nature exploration, seasonal songs, thoughtful invitations to discover, and time to connect.</p>
+      <p class="feature-meta"><strong>Tuesdays, Sept. 22–Nov. 24</strong><br>
+      10–11:15 AM · Lenoir Preserve<br>
+      $350 for 10 sessions · $40 drop-in</p>
+      <a class="button button-dark" href="https://www.wayfindersonthehudson.com/forest-tots-12-30-months">Explore Forest Tots</a>
+    </td>
+  </tr>
+
+  <!-- PHILOSOPHY / BRIDGE -->
+  <tr class="quote-band">
+    <td class="inner">
+      <div class="kicker" style="color:#d6b092;">One community. Many ways to belong.</div>
+      <h2>Wayfinders is for every stage of the journey.</h2>
+      <p>From first steps in the woods to adolescence, parenthood, midlife, and elderhood, we create places where people can gather outdoors, grow together, and reconnect with what matters.</p>
+    </td>
+  </tr>
+
+  <!-- IMAGE BREAK -->
+  <tr>
+    <td>
+      <img
+        src="https://www.wayfindersonthehudson.com/images/content/fire3.jpg"
+        alt="Wayfinders mentor and girls outdoors">
+    </td>
+  </tr>
+
+  <!-- SECONDARY PROGRAMS -->
+  <tr>
+    <td class="inner programs">
+
+      <div style="font-family:'Poppins',Arial,sans-serif;font-size:24px;letter-spacing:1px;text-transform:uppercase;color:#9b5f35;font-weight:600;margin-bottom:14px;">More Fall Offerings</div>
+
+      <div class="program">
+        <h3>Rose Blossoms · Ages 12–15</h3>
+        <p>A yearlong rite-of-passage journey into emotional resilience, sisterhood, intuitive knowing, gratitude, and Earth stewardship.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/rose-blossoms-12-15-year-old-girls">Learn about Rose Blossoms →</a>
+      </div>
+
+      <div class="program">
+        <h3>Free Parent Workshops</h3>
+        <p>Stay after Base Camp drop-off for free community offerings: Breathwork with Tal Gozhansky and Raising Resilient Kids with Talia Kovacs.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/fall-2026-base-camp-k-8">Reserve a free spot →</a>
+      </div>
+
+      <div class="program">
+        <h3>Motherhood Rising</h3>
+        <p>A supportive walking-and-talking group for caregivers and babies ages 6 weeks–12 months.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/motherhood-rising-6-weeks-12-months">Explore Motherhood Rising →</a>
+      </div>
+
+      <div class="program">
+        <h3>Wise Owls · 55+</h3>
+        <p>Mindful walking, meaningful conversation, and community. Tuesdays are women-only; Wednesdays are now co-ed.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/wise-owls-55-1">Join Wise Owls →</a>
+      </div>
+
+      <div class="program">
+        <h3>Holiday Camps · Grades 1–8</h3>
+        <p>Full days outside building fires and shelters, singing songs, and making earth art together.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/holiday-camps-1st-8th-graders">Reserve a camp day →</a>
+      </div>
+
+      <div class="program">
+        <h3>Ecstatic Dance for Women</h3>
+        <p>A sober, freeform movement practice for connection, embodiment, and somatic exploration.</p>
+        <a class="micro-link" href="https://www.wayfindersonthehudson.com/dance-embody-collective">Explore Ecstatic Dance →</a>
+      </div>
+
+      <div class="program">
+        <h3>Nature-Informed Therapy</h3>
+        <p>One-on-one walk-and-talk sessions in the woods with Wayfinders co-founder Leah Gozhansky.</p>
+        <a class="micro-link" href="mailto:wayfindersonthehudson@gmail.com">Request a free consultation →</a>
+      </div>
+
+    </td>
+  </tr>
+
+  <!-- DONATE -->
+  <tr class="donate">
+    <td class="inner" style="text-align:center;">
+      <div class="kicker">Support the work</div>
+      <h2>Help more people find their way outdoors.</h2>
+      <p>Wayfinders on the Hudson is a 501(c)(3) nonprofit. Your generosity helps us create meaningful experiences in nature and make our programs accessible to more members of the community.</p>
+      <a class="button" href="https://www.wayfindersonthehudson.com/donate">Support Wayfinders</a>
+    </td>
+  </tr>
+
+  <!-- FOOTER -->
+  <tr>
+    <td class="inner footer">
+      <div class="footer-brand">Wayfinders on the Hudson</div>
+      <p>Nature Connection · Social Emotional Learning · Community</p>
+      <p><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a></p>
+      <p style="font-size:11px;opacity:.75;margin-bottom:0;"><a href="#">Unsubscribe</a></p>
+    </td>
+  </tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>
