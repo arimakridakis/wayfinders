@@ -1,28 +1,214 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/sections/PageHero.astro';
 import Section from '../components/global/Section.astro';
-import CardGrid from '../components/sections/CardGrid.astro';
-import ImageStrip from '../components/sections/ImageStrip.astro';
-const shortQuotes = [
-  ['“In a lot of camps instead of adding onto things, normally people destroy things, but here people are upgrading things, helping somebody, nobody being rude, everybody being kind!”','Participant at Wayfinders Fall Base Camp'],
-  ['“As soon as I arrive at Wayfinders, I can just be myself!”','Long Time Wayfinders Participant'],
-  ['“Wayfinders on the Hudson Autumn Gathering for Women provided a much-needed pause in my busy fall, and a chance to connect to the profound changes in nature and in myself at this time. Being with other women in the woods for a quiet morning of meditation, sensory opening and sharing deeply fed my soul! Thank you, Wayfinders, Gwen and Amy!”','Participant Anne Jaffe Holmes on Wayfinders Autumn Women’s Gathering'],
-  ['“We are still feeling the good vibes from Monday!  Even though it didn’t feel like a Monday!  Hahaha. Thank you again for putting together such an impactful experience for our team.  It really set the stage for a very productive 2-day planning session.  We got A LOT done! Really appreciate all you did.”','Jordan Zelniker, CIO, Econoco Corporation on Wayfinders Corporate Retreats'],
-  ['“I learned that I enjoy nature itself. When I joined Wayfinders I learned the history of the place and plants, I found it fascinating!”.”','Spring Pilot Participant'],
-  ['“I learned that I like being in nature- I like it more than I thought. It was really fun being in the woods, being around trees and plants. It surprised me how open I was to meet new people. Usually I am not really up for it. I met so many new people and in order to enjoy myself, I needed to interact.”','Spring Pilot Participant'],
-  ['“I do not mind getting dirty!”','Wayfinders Participant'],
-  ['“I learned that I can be better at things than I knew I could.”','Spring Pilot Participant'],
-  ["“I'm the kind of guy who likes to have a good time. I learned that I like nature more than I thought because I never spent time in nature before. I learned that it's fun to be outside a lot. It's beautiful outside. It's easier than you think to connect with new people that you have never met before. I am a very social person but I was surprised that I was so trusting of new people.”",'Spring Pilot Participant'],
-  ['"Wayfinders mentors are the only adults I know that still like to run around and play games!”','Levi Segall, 4th grader'],
+import Button from '../components/global/Button.astro';
+
+const studentQuotes = [
+  '“It was like we knew each other for years.”',
+  '“Everyone wasn’t open at the beginning and the activities made us all comfortable.”',
+  '“I made assumptions about people and then I got to know them.”',
+  '“I was scared people would find me weird… everyone was accepting.”',
+  '“The people made me feel comfortable. This is a safe space to be your personality.”',
+  '“Getting to meet my future classmates.”',
+  '“I liked how BHSEC gave us an opportunity to make friends before school started.”',
+  '“The egg game was really fun and helped me create a connection with some of the students.”',
+  '“Getting to talk and meet other students.”',
 ];
-const studentQuotes = ['“It was like we knew each other for years.”','“Everyone wasn’t open at the beginning and the activities made us all comfortable.”','“I made assumptions about people and then I got to know them.”','“I was scared people would find me weird…everyone was accepting.”','“The people made me feel comfortable.  This is a safe space to be your personality.”','“Getting to meet my future classmates.”','“I liked how BHSEC gave us an opportunity to make friends before school started.”','“I loved the people there, it was their kindness that I was could be myself.”','“In the bus, I got to talk to Ms. Winter and we had such a nice conversation so I definitely made my first friend, which was my goal!”','“My highlight from the experience was the conversation pertaining to phones in school. I loved debate in middle school, so not only was the conversation right up my alley, it was so interesting to see everyone’s point of view.”','“The egg game was really fun and helped me create a connection with some of the students.”','“Meeting some of the staff members and the people I’ll be graduating with.”','“Getting to hear about everyone’s experiences and thoughts on how to come up with solutions.”','“The welcoming circle was an interesting way of introducing yourself, your name.”','“The whole experience was fun.”','“I liked how the juniors and freshmen were equals.”','“I connected with at least 4 boys whom I will be talking to through out the summer.”','“Getting to talk and meet other students.”'];
+
+const annaStory = [
+  'From the very beginning, it was evident that Wayfinders on the Hudson was more than just a typical after-school program. Gwen and Leah lead an exceptional team of mentors and facilitators who are gifted in the art of guiding individuals on their unique journeys, exuding warmth and genuine care for every child. I feel utmost confidence that my children are in excellent hands, where they are truly valued and encouraged at every step.',
+  'Throughout the program, my kids have experienced a diverse range of activities and workshops that sparked their curiosity and ignited their passions. The skill-building sessions have equipped them with valuable tools and knowledge that will undoubtedly serve them well in the future. They have gained valuable self-discovery skills and actively participate in mindfulness activities, fostering personal growth and self-awareness in this nurturing environment.',
+  'A standout aspect of this program is its strong emphasis on fostering a sense of community and camaraderie among the participants. My children quickly formed close bonds with their fellow Wayfinders, becoming cherished friends and allies. Together, they shared dreams and aspirations, celebrated achievements, and offered unwavering support through every challenge.',
+  'The hidden convenience of the Lenoir Preserve adds a remarkable touch that makes this experience truly special. The peace and beauty of the setting serve as the perfect backdrop for introspection and self-discovery. Surrounded by nature’s beauty, my children are inspired to explore their inner selves and appreciate the world around them in new ways.',
+  'Wayfinders has undeniably become the highlight of our children’s week, holding a special place in their hearts. They absolutely adore the program, and their contagious excitement and enthusiasm for each session are heartwarming. Witnessing their personal and social growth through Wayfinders has been truly fulfilling.',
+  'During a family vacation, an unexpected power outage left the entire region in complete darkness. Drawing from the guided meditation sessions he had learned in the program, my son Leo took the lead, guiding our family outside to a tranquil dock overlooking the ocean. Under a sky full of stars, he gently led us through a calming meditation. I am incredibly grateful for moments like that—and for the seed Wayfinders planted in him.'
+];
 ---
-<BaseLayout title="Testimonials" description="What participants, families, and community partners say about Wayfinders on the Hudson.">
-  <PageHero eyebrow="Community voices" title="Testimonials" intro="What Wayfinders are saying…" image="/images/banners/lark.jpg" />
-  <Section width="wide"><CardGrid columns={2}>{shortQuotes.slice(0,4).map(([quote,source]) => <blockquote><p>{quote}</p><footer>— {source}</footer></blockquote>)}</CardGrid><ImageStrip label="Wayfinders community moments" images={[{ src:'/images/content/dandelion-1.jpg', alt:'A young Wayfinders participant enjoying a moment in nature' },{ src:'/images/banners/leaves-2.jpg', alt:'Wayfinders participants celebrating together outdoors' }]} /></Section>
-  <Section tone="alternate" width="prose"><p class="type-label">Parent testimonial</p><h2 class="type-section">“As a proud parent of two Wayfinders kids (12 &9), I enthusiastically attest to my immense love and admiration for this incredible program!”</h2><div class="long-quote"><p>“From the very beginning, it was evident that Wayfinders on the Hudson was more than just a typical after-school program. Gwen and Leah lead an exceptional team of mentors and facilitators who are so gifted the art of guiding individuals on their unique journeys, exuding warmth and genuine care for every child. I feel utmost confidence that my children are in excellent hands, where they are truly valued and encouraged at every step.</p><p>Throughout the program, my kids have experienced a diverse range of activities and workshops that sparked their curiosity and ignited their passions. The skill-building sessions have equipped them with valuable tools and knowledge that will undoubtedly serve them well in the future. They have gained valuable subtle self-discovery skills and actively participate in mindfulness activities, fostering personal growth and self-awareness in this nurturing environment.</p><p>A standout aspect of this program is its strong emphasis on fostering a sense of community and camaraderie among the participants. My children quickly formed close bonds with their fellow Wayfinders, becoming cherished friends and allies. Together, they shared dreams and aspirations, celebrated achievements, and offered unwavering support through every challenge. It is heartwarming to witness their growth within such a supportive and uplifting environment.</p><p>The hidden convenience of the Lenior Preserve adds a remarkable touch that makes this experience truly special. The peace and beauty of the setting serve as the perfect backdrop for introspection and self-discovery. Surrounded by nature's beauty, my children are inspired to explore their inner selves and appreciate the world around them in new ways.</p><p>Wayfinders has undeniably become the highlight of our children's week, holding a special place in their hearts. They absolutely adore the program, and their contagious excitement and enthusiasm for each session are heartwarming. Witnessing their personal and social growth through Wayfinders has been truly fulfilling. The program's unique blend of enriching activities, a supportive community, and a picturesque setting make it an extraordinary and cherished favorite among all their activities.</p><p>I am truly amazed by the profound impact the Wayfinders program has had on my children, and as a testament to its transformative influence I wanted to share an unforgettable experience our family recently had....During our last family vacation at a remote beach location, an unexpected power outage one night left the entire region in complete darkness. It was in that dark moment that my 12 year old son Leo’s Wayfinders experience shone most brightly. Drawing from the guided meditation sessions he had learned in the program, Leo took the lead, guiding our family outside to the tranquil dock overlooking the vast ocean. Encouraging us to lie down, he gently instructed everyone to take deep, calming breaths. Under a sky adorned with countless stars and only the sound of the ocean waves, Leo skillfully guided our family through a soothing meditation. It was a truly magical and enchanting experience that brought us all closer together. I will remember that sky full of stars forever- laying there in quiet contemplation, surrounded by the wonders of nature and the profound serenity of the moment. I am incredibly grateful for moments like that- and I can’t help but reflect on how the seed for this extraordinary experience was planted during Leo’s time with Wayfinders, which has instilled in him a keen sense of mindfulness, self-discovery, and the desire to share such enriching moments with those he loves.</p><p>To any parents considering enrolling their children in this program, I wholeheartedly endorse it. Wayfinders on the Hudson provides an unforgettable journey of self-discovery and empowerment, nurturing, challenging, and supporting children to become the best versions of themselves. It has been an invaluable experience for my children, and I am certain it will be for yours too.”</p></div></Section>
-  <Section width="wide"><p class="type-label">BHSEC-Bronx Community Day</p><h2 class="type-section">“Are there any highlights from the experience that you would like to share with us?”</h2><div class="student-quotes"><CardGrid columns={3}>{studentQuotes.map(quote => <blockquote><p>{quote}</p></blockquote>)}</CardGrid></div></Section>
-  <Section tone="forest" width="wide"><h2 class="type-section">More from Wayfinders participants</h2><div class="more"><CardGrid columns={2}>{shortQuotes.slice(4).map(([quote,source]) => <blockquote><p>{quote}</p><footer>— {source}</footer></blockquote>)}</CardGrid></div></Section>
+
+<BaseLayout title="Stories from Our Community" description="Stories from students, families, educators, and partners in the Wayfinders community.">
+  <section class="stories-intro">
+    <div class="container intro-copy">
+      <p class="type-label">Community voices</p>
+      <h1 class="type-page-title">Stories from Our Community</h1>
+      <p>Wayfinders is shaped by the people who gather here: children finding confidence, parents seeing new sides of their kids, educators building stronger communities, and adults reconnecting with the natural world.</p>
+      <p>These are a few of their stories.</p>
+    </div>
+    <figure class="hero-story">
+      <img src="/images/content/fire3.jpg" alt="Young Wayfinders participants gathered outdoors around a fire" />
+      <figcaption>
+        <blockquote>“As soon as I arrive at Wayfinders, I can just be myself.”</blockquote>
+        <p>— Wayfinders student</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <Section class="parent-stories" tone="alternate" width="wide">
+    <div class="section-heading left-heading">
+      <p class="type-label">Parents & families</p>
+      <h2 class="type-section">Watching Children Grow</h2>
+    </div>
+    <div class="parent-feature">
+      <div>
+        <blockquote class="featured-quote">“Wayfinders has become the highlight of our children’s week.”<footer>— Anna Holmes, parent</footer></blockquote>
+        <p>Anna’s children came to Wayfinders for time outdoors. What they found was a place where curiosity, friendship, confidence, and care could grow together.</p>
+        <p>Week after week, she watched them come home with stories—about new skills, new friendships, and the ways they were learning to slow down and notice the world around them.</p>
+        <details class="story-disclosure">
+          <summary>Read Anna’s Story <span aria-hidden="true">→</span></summary>
+          <div>{annaStory.map(paragraph => <p>{paragraph}</p>)}</div>
+        </details>
+      </div>
+      <img src="/images/content/tea-fire-1.jpg" alt="Wayfinders families and participants spending time together outdoors" />
+    </div>
+    <div class="quote-pair parent-supporting">
+      <blockquote>“The mentors genuinely see each child.”<footer>— Wayfinders parent</footer></blockquote>
+      <blockquote>“We found a community.”<footer>— Wayfinders parent</footer></blockquote>
+    </div>
+  </Section>
+
+  <Section width="wide" class="student-stories">
+    <div class="section-heading left-heading">
+      <p class="type-label">Students</p>
+      <h2 class="type-section">In Students’ Own Words</h2>
+      <p>What young people share after spending time together in the woods.</p>
+    </div>
+    <div class="student-quote-grid">{studentQuotes.map(quote => <blockquote>{quote}</blockquote>)}</div>
+  </Section>
+
+  <Section tone="forest" width="wide" class="education-stories">
+    <div class="education-grid">
+      <div>
+        <p class="type-label">For schools</p>
+        <h2 class="type-section">A Different Kind of Education</h2>
+        <p>Wayfinders partners with schools to create experiences that build trust, belonging, and leadership beyond the classroom.</p>
+        <p>At Bard High School Early College Bronx, students gathered before the school year began to form relationships, practice listening, and begin imagining the community they wanted to create together.</p>
+        <details class="story-disclosure inverse">
+          <summary>Read Student Reflections <span aria-hidden="true">→</span></summary>
+          <div>{studentQuotes.map(quote => <p>{quote}</p>)}</div>
+        </details>
+      </div>
+      <figure>
+        <img src="/images/content/bronx-2.jpg" alt="Students participating in a Wayfinders outdoor learning activity" />
+        <blockquote>“Students who rarely spoke during class began leading conversations around the fire.”<footer>— Educator partner</footer></blockquote>
+      </figure>
+    </div>
+  </Section>
+
+  <Section width="wide" class="adult-stories">
+    <article class="adult-story women-story">
+      <img src="/images/content/meditation-with-leah.jpg" alt="Women gathering for a reflective Wayfinders experience outdoors" />
+      <div>
+        <p class="type-label">For women</p>
+        <h2 class="type-section">“I remembered parts of myself I’d forgotten.”</h2>
+        <p>Women come to Wayfinders for space: to slow down, listen inward, and reconnect with themselves, one another, and the rhythms of the natural world.</p>
+        <details class="story-disclosure">
+          <summary>Read More Reflections <span aria-hidden="true">→</span></summary>
+          <div><p>“Wayfinders on the Hudson’s Autumn Gathering for Women provided a much-needed pause in my busy fall, and a chance to connect to the profound changes in nature and in myself at this time. Being with other women in the woods for a quiet morning of meditation, sensory opening and sharing deeply fed my soul.”</p><p>— Anne Jaffe Holmes, Wayfinders Autumn Women’s Gathering participant</p></div>
+        </details>
+      </div>
+    </article>
+    <article class="adult-story wise-story">
+      <div>
+        <p class="type-label">For Wise Owls</p>
+        <h2 class="type-section">Wisdom Grows in Community</h2>
+        <p>Wise Owls gather in nature to walk, talk, reflect, and share the wisdom that comes from lived experience.</p>
+        <p class="short-lines">Walking together.<br />Sharing stories.<br />Staying curious.</p>
+      </div>
+      <img src="/images/content/walk-team-1.jpg" alt="Wise Owls walking together through the woods" />
+    </article>
+  </Section>
+
+  <Section tone="alternate" width="wide" class="therapy-story">
+    <div>
+      <p class="type-label">Nature-informed therapy</p>
+      <h2 class="type-section">Nature changes the conversation.</h2>
+      <p>For some people, the outdoors makes it easier to say what is hard to say. Nature offers room to breathe, move, notice, and begin again.</p>
+    </div>
+    <img src="/images/banners/leaves-1.jpg" alt="A quiet forest path in the Wayfinders community" />
+  </Section>
+
+  <Section width="wide" class="organization-stories">
+    <div class="section-heading centered-heading">
+      <p class="type-label">For organizations</p>
+      <h2 class="type-section">Bringing Wayfinders to Organizations</h2>
+      <p>Wayfinders helps teams, schools, and organizations create the conditions for trust, communication, and shared purpose.</p>
+    </div>
+    <div class="quote-pair">
+      <blockquote>“Our team left feeling closer than we had in years.”<footer>— Corporate retreat participant</footer></blockquote>
+      <blockquote>“The experience transformed how our students related to one another.”<footer>— School partner</footer></blockquote>
+    </div>
+  </Section>
+
+  <Section tone="forest" width="wide" class="closing-cta">
+    <p class="type-label">Find your place</p>
+    <h2 class="type-section">Join Our Community</h2>
+    <p>Whether you’re a student, parent, educator, or neighbor, there’s a place for you here.</p>
+    <Button href="/fall-2026-programs-overview/">Explore Our Programs</Button>
+  </Section>
 </BaseLayout>
-<style>blockquote{margin:0;padding:var(--card-padding);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:var(--shadow-soft)}blockquote p{margin-top:0;font-family:var(--font-display);font-size:calc(1.25rem + var(--font-display-size-adjust));line-height:1.45}blockquote footer{color:var(--color-ink-muted);font-weight:700}.long-quote p{color:var(--color-ink-muted)}.student-quotes,.more{margin-top:2rem}.student-quotes blockquote p{margin:0;font-size:1.05rem}.tone-forest h2{color:var(--color-cream)}.more blockquote{color:var(--color-ink)}</style>
+
+<style>
+  .container { width:min(calc(100% - (2 * var(--gutter))), var(--width-wide)); margin-inline:auto; }
+  .stories-intro { padding-top:var(--section-space); background:var(--color-page); }
+  .intro-copy { max-width:58rem; }
+  .intro-copy .type-label,.left-heading .type-label,.centered-heading .type-label { color:var(--color-rust); }
+  .intro-copy h1 { margin:.5rem 0 1.5rem; }
+  .intro-copy p:not(.type-label) { max-width:48rem; margin:0 0 1rem; color:var(--color-ink-muted); }
+  .hero-story { position:relative; width:min(calc(100% - (2 * var(--gutter))), var(--width-wide)); min-height:clamp(26rem,48vw,39rem); margin:clamp(2.5rem,6vw,5rem) auto 0; overflow:hidden; border-radius:var(--radius-card) var(--radius-card) 0 0; }
+  .hero-story>img { width:100%; height:100%; min-height:inherit; object-fit:cover; }
+  .hero-story figcaption { position:absolute; right:clamp(1.5rem,5vw,5rem); bottom:clamp(1.5rem,5vw,4rem); max-width:32rem; padding:clamp(1.4rem,3vw,2.25rem); border-radius:var(--radius-card); background:rgb(23 59 42 / .9); color:white; }
+  blockquote { margin:0; }
+  .hero-story blockquote,.featured-quote { font-family:var(--font-display); font-size:calc(clamp(1.75rem,3.3vw,3rem) + var(--font-display-size-adjust)); font-weight:500; line-height:1.15; letter-spacing:-.025em; }
+  blockquote footer { display:block; margin-top:1rem; color:var(--color-ink-muted); font-family:var(--font-sans); font-size:1rem; font-weight:700; letter-spacing:0; }
+  .hero-story footer,.hero-story figcaption>p { margin:.8rem 0 0; color:#e3dda3; font-size:1rem; font-weight:700; }
+  .section-heading { max-width:52rem; margin-bottom:clamp(2rem,5vw,4rem); }
+  .section-heading h2 { margin:.35rem 0 .8rem; }
+  .section-heading p:last-child { margin:0; color:var(--color-ink-muted); }
+  .parent-feature,.education-grid,.adult-story,.therapy-story { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,6vw,6rem); align-items:center; }
+  .parent-feature>img,.adult-story>img,.therapy-story>img,.education-grid img { width:100%; min-height:28rem; object-fit:cover; border-radius:var(--radius-card); }
+  .parent-feature>div>p { color:var(--color-ink-muted); }
+  .featured-quote { margin-bottom:1.5rem; color:var(--color-forest-dark); }
+  .quote-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(1rem,3vw,2rem); }
+  .quote-pair blockquote,.student-quote-grid blockquote { padding:var(--card-padding); border:1px solid var(--color-line); border-radius:var(--radius-card); background:var(--color-surface); box-shadow:var(--shadow-soft); font-family:var(--font-display); font-size:calc(1.4rem + var(--font-display-size-adjust)); font-weight:500; line-height:1.35; }
+  .parent-supporting { margin-top:clamp(2rem,5vw,4rem); }
+  .student-quote-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+  .education-stories .type-label { color:#e3dda3; }
+  .education-stories h2,.education-stories p { color:var(--color-cream); }
+  .education-grid figure { margin:0; }
+  .education-grid figure blockquote { margin-top:1.5rem; color:var(--color-cream); font-family:var(--font-display); font-size:calc(1.5rem + var(--font-display-size-adjust)); line-height:1.35; }
+  .education-grid figure footer { color:#e3dda3; }
+  .adult-stories { display:grid; gap:var(--section-space); }
+  .adult-story h2 { margin:.4rem 0 1rem; }
+  .adult-story p:not(.type-label) { color:var(--color-ink-muted); }
+  .women-story>img { order:2; }
+  .wise-story { align-items:start; }
+  .short-lines { color:var(--color-earth)!important; font-family:var(--font-hand); font-size:calc(clamp(1.8rem,3vw,2.5rem) + var(--font-hand-size-adjust)); line-height:1.1; }
+  .therapy-story>div { max-width:37rem; }
+  .therapy-story h2 { margin:.4rem 0 1rem; }
+  .therapy-story p:not(.type-label) { color:var(--color-ink-muted); }
+  .therapy-story>img { min-height:24rem; }
+  .centered-heading { margin-inline:auto; text-align:center; }
+  .closing-cta { text-align:center; }
+  .closing-cta .type-label { color:#e3dda3; }
+  .closing-cta h2 { margin:.35rem 0 1rem; color:var(--color-cream); }
+  .closing-cta>p:not(.type-label) { max-width:42rem; margin:0 auto 2rem; color:var(--color-cream); }
+  .closing-cta :global(.button) { border-color:var(--color-cream); background:var(--color-cream); color:var(--color-forest-dark); }
+  .story-disclosure { margin-top:2rem; border-top:1px solid var(--color-line); }
+  .story-disclosure summary { display:flex; justify-content:space-between; gap:1rem; padding:1rem 0; color:var(--color-forest-dark); font-weight:750; cursor:pointer; list-style:none; }
+  .story-disclosure summary::-webkit-details-marker { display:none; }
+  .story-disclosure summary span { transition:transform var(--transition); }
+  .story-disclosure[open] summary span { transform:rotate(45deg); }
+  .story-disclosure>div { padding-bottom:1rem; color:var(--color-ink-muted); }
+  .story-disclosure>div p:first-child { margin-top:0; }
+  .inverse { border-color:rgb(255 253 247 / .45); }
+  .inverse summary { color:var(--color-cream); }
+  .inverse>div { color:var(--color-cream); }
+  @media (max-width:47.999rem) {
+    .hero-story { width:calc(100% - (2 * var(--gutter))); min-height:30rem; border-radius:var(--radius-card); }
+    .hero-story figcaption { right:1rem; bottom:1rem; left:1rem; }
+    .parent-feature,.education-grid,.adult-story,.therapy-story { grid-template-columns:1fr; }
+    .parent-feature>img,.adult-story>img,.therapy-story>img,.education-grid img { min-height:20rem; }
+    .women-story>img { order:initial; }
+    .student-quote-grid,.quote-pair { grid-template-columns:1fr; }
+    .education-grid figure { order:2; }
+  }
+</style>
