@@ -1,9 +1,2 @@
-export const roseBlossomsFullJourneyWelcome = {
-  subject: 'Welcome to Rose Blossoms — Full journey',
-  text: `Dear {{firstName}},
-
-Thank you for registering for Rose Blossoms — Full journey. We are delighted that you'll be joining us this fall.
-
-Warmly,
-The Wayfinders team`,
-};
+import { createWelcomeEmail } from './shared.js';
+export const roseBlossomsFullJourneyWelcome = createWelcomeEmail({ program: 'Rose Blossoms — Full journey', closing: 'We’re looking forward to welcoming you into the Wayfinders community.' });

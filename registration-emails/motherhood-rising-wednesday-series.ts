@@ -1,9 +1,2 @@
-export const motherhoodRisingWednesdaySeriesWelcome = {
-  subject: 'Welcome to Motherhood Rising — Wednesday series',
-  text: `Dear {{firstName}},
-
-Thank you for registering for Motherhood Rising — Wednesday series. We are delighted that you'll be joining us this fall.
-
-Warmly,
-The Wayfinders team`,
-};
+import { createWelcomeEmail } from './shared.js';
+export const motherhoodRisingWednesdaySeriesWelcome = createWelcomeEmail({ program: 'Motherhood Rising — Wednesday series', closing: 'We’re looking forward to sharing this season of motherhood with you.' });
