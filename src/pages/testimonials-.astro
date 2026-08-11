@@ -10,10 +10,8 @@ const studentQuotes = [
   '“I made assumptions about people and then I got to know them.”',
   '“I was scared people would find me weird… everyone was accepting.”',
   '“The people made me feel comfortable. This is a safe space to be your personality.”',
-  '“Getting to meet my future classmates.”',
   '“I liked how BHSEC gave us an opportunity to make friends before school started.”',
   '“The egg game was really fun and helped me create a connection with some of the students.”',
-  '“Getting to talk and meet other students.”',
 ];
 
 const annaStory = [
@@ -29,6 +27,7 @@ const annaStory = [
 <BaseLayout title="Stories from Our Community" description="Stories from students, families, educators, and partners in the Wayfinders community.">
   <PageHero eyebrow="Community voices" title="Testimonials" intro="What Wayfinders are saying…" image="/images/banners/lark.jpg" />
 
+  <div class="testimonials-page">
   <Section class="stories-intro" width="wide">
     <div class="intro-copy">
       <h2 class="type-section">Stories from Our Community</h2>
@@ -62,7 +61,7 @@ const annaStory = [
 
   <Section width="wide" class="student-stories">
     <div class="section-heading left-heading">
-      <p class="type-label">Students</p>
+      <p class="type-label">Children</p>
       <h2 class="type-section">In Students’ Own Words</h2>
       <p>What young people share after spending time together in the woods.</p>
     </div>
@@ -78,10 +77,10 @@ const annaStory = [
       <div>
         <p>Wayfinders partners with schools to create experiences that build trust, belonging, and leadership beyond the classroom.</p>
         <p>At Bard High School Early College Bronx, students gathered before the school year began to form relationships, practice listening, and begin imagining the community they wanted to create together.</p>
+        <p class="educator-quote">“Students who rarely spoke during class began leading conversations around the fire.”<span>— Educator partner</span></p>
       </div>
       <figure>
         <img src="/images/content/bronx-2.jpg" alt="Students participating in a Wayfinders outdoor learning activity" />
-        <blockquote>“Students who rarely spoke during class began leading conversations around the fire.”<footer>— Educator partner</footer></blockquote>
       </figure>
     </div>
     <div class="student-quote-grid school-reflections">{studentQuotes.map(quote => <blockquote>{quote}</blockquote>)}</div>
@@ -89,15 +88,12 @@ const annaStory = [
 
   <Section width="wide" class="adult-stories">
     <article class="adult-story women-story">
-      <img src="/images/content/meditation-with-leah.jpg" alt="Women gathering for a reflective Wayfinders experience outdoors" />
+      <img src="https://images.squarespace-cdn.com/content/v1/61532ef9082b334755993cfd/3273a57a-857c-4623-8875-7c5838ba7b57/IMG_1760.jpg?format=1600w" alt="Women gathering for a reflective Wayfinders experience outdoors" />
       <div>
         <p class="type-label">For women</p>
         <h2 class="type-section">“I remembered parts of myself I’d forgotten.”</h2>
         <p>Women come to Wayfinders for space: to slow down, listen inward, and reconnect with themselves, one another, and the rhythms of the natural world.</p>
-        <details class="story-disclosure">
-          <summary>Read More Reflections <span aria-hidden="true">→</span></summary>
-          <div><p>“Wayfinders on the Hudson’s Autumn Gathering for Women provided a much-needed pause in my busy fall, and a chance to connect to the profound changes in nature and in myself at this time. Being with other women in the woods for a quiet morning of meditation, sensory opening and sharing deeply fed my soul.”</p><p>— Anne Jaffe Holmes, Wayfinders Autumn Women’s Gathering participant</p></div>
-        </details>
+        <blockquote class="women-reflection">“Wayfinders on the Hudson’s Autumn Gathering for Women provided a much-needed pause in my busy fall, and a chance to connect to the profound changes in nature and in myself at this time. Being with other women in the woods for a quiet morning of meditation, sensory opening and sharing deeply fed my soul.”<footer>— Anne Jaffe Holmes, Wayfinders Autumn Women’s Gathering participant</footer></blockquote>
       </div>
     </article>
   </Section>
@@ -122,10 +118,13 @@ const annaStory = [
       <Button href="/fall-2026-programs-overview/">Explore Our Programs</Button>
     </div>
   </Section>
+  </div>
 </BaseLayout>
 
 <style>
   .stories-intro { background:var(--color-page); }
+  :global(.page-hero .intro) { margin-top:1rem; font-family:var(--font-hand); font-size:calc(clamp(1.9rem,3.5vw,3rem) + var(--font-hand-size-adjust) + 10px); line-height:1.1; }
+  .testimonials-page :global(.section-heading h2::before),.testimonials-page :global(.section-heading h2::after) { display:none; }
   .intro-copy { max-width:58rem; }
   .left-heading .type-label { color:var(--color-rust); }
   .intro-copy h2 { margin:0 0 1.5rem; }
@@ -146,11 +145,15 @@ const annaStory = [
   .student-quote-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
   .education-grid figure { margin:0; }
   .education-grid figure blockquote { margin-top:1.5rem; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(1.5rem + var(--font-display-size-adjust)); line-height:1.35; }
+  .educator-quote { margin:2rem 0 0; color:var(--color-earth); font-family:var(--font-hand); font-size:calc(1.8rem + var(--font-hand-size-adjust)); line-height:1.2; }
+  .educator-quote span { display:block; margin-top:.55rem; color:var(--color-ink-muted); font-family:var(--font-sans); font-size:1rem; font-weight:700; }
   .school-reflections { margin-top:clamp(2rem,5vw,4rem); }
   .adult-stories { display:grid; gap:var(--section-space); }
   .adult-story h2 { margin:.4rem 0 1rem; }
+  .adult-story .type-label { color:var(--color-rust); }
   .adult-story p:not(.type-label) { color:var(--color-ink-muted); }
   .women-story>img { order:2; }
+  .women-reflection { margin-top:2rem; padding:1.5rem; border-left:3px solid var(--color-rust); color:var(--color-earth); font-family:var(--font-hand); font-size:calc(1.7rem + var(--font-hand-size-adjust)); line-height:1.2; }
   .cta-panel { max-width:44rem; margin-inline:auto; padding:clamp(2rem,5vw,4rem); border:1px solid rgb(255 253 247 / .28); border-radius:var(--radius-card); background:rgb(255 253 247 / .08); text-align:center; }
   .cta-panel .type-label { margin:0; color:#e3dda3; }
   .cta-panel h2 { margin:.45rem 0 1rem; color:var(--color-cream); }
