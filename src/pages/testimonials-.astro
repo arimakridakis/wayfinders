@@ -5,6 +5,18 @@ import Button from '../components/global/Button.astro';
 import PageHero from '../components/sections/PageHero.astro';
 
 const studentQuotes = [
+  '“As soon as I arrive at Wayfinders, I can just be myself.”',
+  '“Nobody is rude.”',
+  '“Everyone helps each other.”',
+  '“I made friends almost immediately.”',
+  '“It feels like family.”',
+  '“I actually look forward to being outside.”',
+  '“I’ve become much more confident.”',
+  '“I learned I can do hard things.”',
+  '“The fires, the woods, and the people all make me feel calm.”',
+];
+
+const schoolReflections = [
   '“It was like we knew each other for years.”',
   '“Everyone wasn’t open at the beginning and the activities made us all comfortable.”',
   '“I made assumptions about people and then I got to know them.”',
@@ -83,7 +95,7 @@ const annaStory = [
         <img src="/images/content/bronx-2.jpg" alt="Students participating in a Wayfinders outdoor learning activity" />
       </figure>
     </div>
-    <div class="student-quote-grid school-reflections">{studentQuotes.map(quote => <blockquote>{quote}</blockquote>)}</div>
+    <div class="student-quote-grid school-reflections">{schoolReflections.map(quote => <blockquote>{quote}</blockquote>)}</div>
   </Section>
 
   <Section width="wide" class="adult-stories">
@@ -123,12 +135,13 @@ const annaStory = [
 
 <style>
   .stories-intro { background:var(--color-page); }
-  :global(.page-hero .intro) { margin-top:1rem; font-family:var(--font-hand); font-size:calc(clamp(1.9rem,3.5vw,3rem) + var(--font-hand-size-adjust) + 10px); line-height:1.1; }
+  :global(.page-hero .intro) { margin-top:1rem; font-family:var(--font-hand); font-size:calc(clamp(1.9rem,3.5vw,3rem) + var(--font-hand-size-adjust) + 5px); line-height:1.1; }
   .testimonials-page :global(.section-heading h2::before),.testimonials-page :global(.section-heading h2::after) { display:none; }
-  .intro-copy { max-width:58rem; }
+  .testimonials-page :global(.section-heading h2),.intro-copy h2 { margin-left:0; padding-left:0; text-indent:0; }
+  .intro-copy { width:70%; max-width:none; margin-inline:auto; }
   .left-heading .type-label { color:var(--color-rust); }
   .intro-copy h2 { margin:0 0 1.5rem; }
-  .intro-copy p:not(.type-label) { max-width:48rem; margin:0 0 1rem; color:var(--color-ink-muted); }
+  .intro-copy p:not(.type-label) { max-width:none; margin:0 0 1rem; color:var(--color-ink-muted); }
   blockquote { margin:0; }
   .featured-quote { font-family:var(--font-display); font-size:calc(clamp(1.75rem,3.3vw,3rem) + var(--font-display-size-adjust)); font-weight:500; line-height:1.15; letter-spacing:-.025em; }
   blockquote footer { display:block; margin-top:1rem; color:var(--color-ink-muted); font-family:var(--font-sans); font-size:1rem; font-weight:700; letter-spacing:0; }
@@ -153,7 +166,7 @@ const annaStory = [
   .adult-story .type-label { color:var(--color-rust); }
   .adult-story p:not(.type-label) { color:var(--color-ink-muted); }
   .women-story>img { order:2; }
-  .women-reflection { margin-top:2rem; padding:1.5rem; border-left:3px solid var(--color-rust); color:var(--color-earth); font-family:var(--font-hand); font-size:calc(1.7rem + var(--font-hand-size-adjust)); line-height:1.2; }
+  .women-reflection { margin-top:2rem; padding:0; border:0; color:var(--color-earth); font-family:var(--font-hand); font-size:calc(1.7rem + var(--font-hand-size-adjust)); line-height:1.2; }
   .cta-panel { max-width:44rem; margin-inline:auto; padding:clamp(2rem,5vw,4rem); border:1px solid rgb(255 253 247 / .28); border-radius:var(--radius-card); background:rgb(255 253 247 / .08); text-align:center; }
   .cta-panel .type-label { margin:0; color:#e3dda3; }
   .cta-panel h2 { margin:.45rem 0 1rem; color:var(--color-cream); }
@@ -167,6 +180,7 @@ const annaStory = [
   .story-disclosure>div { padding-bottom:1rem; color:var(--color-ink-muted); }
   .story-disclosure>div p:first-child { margin-top:0; }
   @media (max-width:47.999rem) {
+    .intro-copy { width:100%; }
     .parent-feature,.education-grid,.adult-story { grid-template-columns:1fr; }
     .parent-feature>img,.adult-story>img,.education-grid img { min-height:20rem; }
     .women-story>img { order:initial; }
