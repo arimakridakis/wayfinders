@@ -1,0 +1,89 @@
+---
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+---
+
+<div class="support-modal" data-support-modal data-recaptcha-site-key={recaptchaSiteKey} hidden>
+  <div class="support-modal__backdrop" data-support-close></div>
+  <section class="support-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="support-title">
+    <button class="support-modal__close" type="button" aria-label="Close support form" data-support-close>×</button>
+    <div data-support-form-panel>
+      <p class="support-modal__eyebrow">Support Wayfinders</p>
+      <h2 id="support-title">How would you like to help?</h2>
+      <form data-support-form>
+        <label>First name <input name="firstName" autocomplete="given-name" required /></label>
+        <label>Last name <input name="lastName" autocomplete="family-name" required /></label>
+        <label class="support-modal__email">Email address <input name="email" type="email" autocomplete="email" required /></label>
+        <label class="support-modal__message">Here’s how I could support Wayfinders:<textarea name="message" rows="6" required></textarea></label>
+        <div class="support-modal__honeypot" aria-hidden="true"><label>Leave this field empty <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+        <button type="submit">Send message <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="support-modal__error" data-support-error role="alert" hidden></p>
+    </div>
+    <div class="support-modal__success" data-support-success hidden tabindex="-1">
+      <p class="support-modal__eyebrow">Thank you</p>
+      <h2>Your message is on its way.</h2>
+      <p>We’ll be in touch soon.</p>
+      <button type="button" data-support-close>Close</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  type Recaptcha = { ready: (callback: () => void) => void; execute: (siteKey: string, options: { action: string }) => Promise<string>; };
+  const modal = document.querySelector<HTMLElement>('[data-support-modal]');
+  if (modal) {
+    const siteKey = modal.dataset.recaptchaSiteKey;
+    const dialog = modal.querySelector<HTMLElement>('.support-modal__dialog');
+    const formPanel = modal.querySelector<HTMLElement>('[data-support-form-panel]');
+    const successPanel = modal.querySelector<HTMLElement>('[data-support-success]');
+    const errorPanel = modal.querySelector<HTMLElement>('[data-support-error]');
+    const form = modal.querySelector<HTMLFormElement>('[data-support-form]');
+    const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+    let trigger: HTMLElement | null = null;
+    let recaptchaLoader: Promise<Recaptcha> | null = null;
+
+    const setError = (message = '') => { if (errorPanel) { errorPanel.textContent = message; errorPanel.toggleAttribute('hidden', !message); } };
+    const loadRecaptcha = () => {
+      if (!siteKey) return Promise.reject(new Error('This form is temporarily unavailable.'));
+      if (recaptchaLoader) return recaptchaLoader;
+      recaptchaLoader = new Promise((resolve, reject) => {
+        const existing = document.querySelector<HTMLScriptElement>('script[data-wayfinders-recaptcha]');
+        const script = existing ?? document.createElement('script');
+        const complete = () => {
+          const recaptcha = (window as Window & { grecaptcha?: Recaptcha }).grecaptcha;
+          if (recaptcha) resolve(recaptcha); else reject(new Error('We could not load spam protection.'));
+        };
+        if (existing && (window as Window & { grecaptcha?: Recaptcha }).grecaptcha) { complete(); return; }
+        script.addEventListener('load', complete, { once: true });
+        script.addEventListener('error', () => reject(new Error('We could not load spam protection.')), { once: true });
+        if (!existing) { script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`; script.async = true; script.defer = true; script.dataset.wayfindersRecaptcha = 'true'; document.head.append(script); }
+      });
+      return recaptchaLoader;
+    };
+    const close = () => {
+      modal.setAttribute('hidden', ''); document.body.classList.remove('support-modal-open'); formPanel?.removeAttribute('hidden'); successPanel?.setAttribute('hidden', ''); form?.reset(); setError(); trigger?.focus();
+    };
+    const open = (event: Event) => {
+      trigger = event.currentTarget as HTMLElement; modal.removeAttribute('hidden'); document.body.classList.add('support-modal-open'); (dialog?.querySelector('input[name="firstName"]') as HTMLInputElement | null)?.focus();
+    };
+    document.querySelectorAll('[data-support-open]').forEach((element) => element.addEventListener('click', open));
+    modal.querySelectorAll('[data-support-close]').forEach((element) => element.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hasAttribute('hidden')) close(); });
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault(); if (!form.reportValidity()) return; setError(); if (submitButton) submitButton.disabled = true;
+      try {
+        const recaptcha = await loadRecaptcha(); await new Promise<void>((resolve) => recaptcha.ready(resolve));
+        const fields = new FormData(form);
+        const response = await fetch('/api/contact', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ firstName:fields.get('firstName'), lastName:fields.get('lastName'), email:fields.get('email'), message:fields.get('message'), website:fields.get('website'), recaptchaToken:await recaptcha.execute(siteKey!, { action:'contact_inquiry' }) }) });
+        const result = await response.json() as { ok?: boolean; error?: string };
+        if (!response.ok || !result.ok) throw new Error(result.error || 'We could not send your message. Please try again.');
+        formPanel?.setAttribute('hidden', ''); successPanel?.removeAttribute('hidden'); successPanel?.focus();
+      } catch (error) { setError(error instanceof Error ? error.message : 'We could not send your message. Please try again.'); }
+      finally { if (submitButton) submitButton.disabled = false; }
+    });
+  }
+</script>
+
+<style>
+  .support-modal{position:fixed;z-index:202;inset:0;display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;overscroll-behavior:contain;padding:1rem;-webkit-overflow-scrolling:touch}.support-modal__backdrop{position:fixed;inset:0;background:rgb(8 25 15 / .72);backdrop-filter:blur(3px)}.support-modal__dialog{position:relative;flex:0 0 auto;width:min(100%,42rem);margin:auto 0;padding:clamp(2rem,5vw,4rem);border:1px solid rgb(255 255 255 / .45);border-radius:var(--radius-card);background:var(--color-surface);box-shadow:0 24px 70px rgb(0 0 0 / .3);color:var(--color-ink)}.support-modal__close{position:absolute;top:1rem;right:1rem;display:grid;width:2.75rem;aspect-ratio:1;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--color-forest-dark);font-size:2rem;line-height:1;cursor:pointer}.support-modal__eyebrow{margin:0;color:var(--color-rust);font-size:1rem;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.support-modal h2{margin:.35rem 0 1rem;color:var(--color-forest-dark);font-family:var(--font-display);font-size:calc(clamp(2.6rem,6vw,4rem) + var(--font-display-size-adjust));font-weight:600;line-height:.95}.support-modal form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}.support-modal label{display:grid;gap:.4rem;color:var(--color-forest-dark);font-size:1.1875rem;font-weight:750}.support-modal input,.support-modal textarea{width:100%;padding:.75rem .8rem;border:1px solid var(--color-line);border-radius:.65rem;background:#fff;color:var(--color-ink);font:inherit}.support-modal textarea{resize:vertical}.support-modal__email,.support-modal__message,.support-modal form button{grid-column:1/-1}.support-modal form button,.support-modal__success button{min-height:3.25rem;padding:.7rem 1.4rem;border:0;border-radius:var(--radius-button);background:var(--color-forest-dark);color:white;font:inherit;font-size:1.1875rem;font-weight:750;cursor:pointer}.support-modal form button:hover,.support-modal__success button:hover{background:var(--color-rust)}.support-modal form button:disabled{cursor:wait;opacity:.7}.support-modal__honeypot{position:absolute;left:-5000px}.support-modal__error{margin:1rem 0 0;color:#9a3118;font-weight:700}.support-modal__success{min-height:17rem;display:grid;align-content:center}:global(body.support-modal-open){overflow:hidden}@media(max-width:47.999rem){.support-modal form{grid-template-columns:1fr}.support-modal__dialog{margin:0;padding:2rem}.support-modal__close{top:.5rem;right:.5rem}}
+</style>
