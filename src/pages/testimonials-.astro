@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/global/Section.astro';
 import Button from '../components/global/Button.astro';
+import PageHero from '../components/sections/PageHero.astro';
 
 const studentQuotes = [
   '“It was like we knew each other for years.”',
@@ -26,21 +27,15 @@ const annaStory = [
 ---
 
 <BaseLayout title="Stories from Our Community" description="Stories from students, families, educators, and partners in the Wayfinders community.">
-  <section class="stories-intro">
-    <div class="container intro-copy">
-      <p class="type-label">Community voices</p>
-      <h1 class="type-page-title">Stories from Our Community</h1>
+  <PageHero eyebrow="Community voices" title="Testimonials" intro="What Wayfinders are saying…" image="/images/banners/lark.jpg" />
+
+  <Section class="stories-intro" width="wide">
+    <div class="intro-copy">
+      <h2 class="type-section">Stories from Our Community</h2>
       <p>Wayfinders is shaped by the people who gather here: children finding confidence, parents seeing new sides of their kids, educators building stronger communities, and adults reconnecting with the natural world.</p>
-      <p>These are a few of their stories.</p>
+      <p>Here are a few of their voices.</p>
     </div>
-    <figure class="hero-story">
-      <img src="/images/content/fire3.jpg" alt="Young Wayfinders participants gathered outdoors around a fire" />
-      <figcaption>
-        <blockquote>“As soon as I arrive at Wayfinders, I can just be myself.”</blockquote>
-        <p>— Wayfinders student</p>
-      </figcaption>
-    </figure>
-  </section>
+  </Section>
 
   <Section class="parent-stories" tone="alternate" width="wide">
     <div class="section-heading left-heading">
@@ -52,13 +47,13 @@ const annaStory = [
         <blockquote class="featured-quote">“Wayfinders has become the highlight of our children’s week.”<footer>— Anna Holmes, parent</footer></blockquote>
         <p>Anna’s children came to Wayfinders for time outdoors. What they found was a place where curiosity, friendship, confidence, and care could grow together.</p>
         <p>Week after week, she watched them come home with stories—about new skills, new friendships, and the ways they were learning to slow down and notice the world around them.</p>
-        <details class="story-disclosure">
-          <summary>Read Anna’s Story <span aria-hidden="true">→</span></summary>
-          <div>{annaStory.map(paragraph => <p>{paragraph}</p>)}</div>
-        </details>
       </div>
       <img src="/images/content/tea-fire-1.jpg" alt="Wayfinders families and participants spending time together outdoors" />
     </div>
+    <details class="story-disclosure anna-story">
+      <summary>Read Anna’s Story <span aria-hidden="true">→</span></summary>
+      <div>{annaStory.map(paragraph => <p>{paragraph}</p>)}</div>
+    </details>
     <div class="quote-pair parent-supporting">
       <blockquote>“The mentors genuinely see each child.”<footer>— Wayfinders parent</footer></blockquote>
       <blockquote>“We found a community.”<footer>— Wayfinders parent</footer></blockquote>
@@ -74,23 +69,22 @@ const annaStory = [
     <div class="student-quote-grid">{studentQuotes.map(quote => <blockquote>{quote}</blockquote>)}</div>
   </Section>
 
-  <Section tone="forest" width="wide" class="education-stories">
+  <Section tone="alternate" width="wide" class="education-stories">
+    <div class="section-heading left-heading">
+      <p class="type-label">For schools</p>
+      <h2 class="type-section">A Different Kind of Education</h2>
+    </div>
     <div class="education-grid">
       <div>
-        <p class="type-label">For schools</p>
-        <h2 class="type-section">A Different Kind of Education</h2>
         <p>Wayfinders partners with schools to create experiences that build trust, belonging, and leadership beyond the classroom.</p>
         <p>At Bard High School Early College Bronx, students gathered before the school year began to form relationships, practice listening, and begin imagining the community they wanted to create together.</p>
-        <details class="story-disclosure inverse">
-          <summary>Read Student Reflections <span aria-hidden="true">→</span></summary>
-          <div>{studentQuotes.map(quote => <p>{quote}</p>)}</div>
-        </details>
       </div>
       <figure>
         <img src="/images/content/bronx-2.jpg" alt="Students participating in a Wayfinders outdoor learning activity" />
         <blockquote>“Students who rarely spoke during class began leading conversations around the fire.”<footer>— Educator partner</footer></blockquote>
       </figure>
     </div>
+    <div class="student-quote-grid school-reflections">{studentQuotes.map(quote => <blockquote>{quote}</blockquote>)}</div>
   </Section>
 
   <Section width="wide" class="adult-stories">
@@ -106,28 +100,10 @@ const annaStory = [
         </details>
       </div>
     </article>
-    <article class="adult-story wise-story">
-      <div>
-        <p class="type-label">For Wise Owls</p>
-        <h2 class="type-section">Wisdom Grows in Community</h2>
-        <p>Wise Owls gather in nature to walk, talk, reflect, and share the wisdom that comes from lived experience.</p>
-        <p class="short-lines">Walking together.<br />Sharing stories.<br />Staying curious.</p>
-      </div>
-      <img src="/images/content/walk-team-1.jpg" alt="Wise Owls walking together through the woods" />
-    </article>
-  </Section>
-
-  <Section tone="alternate" width="wide" class="therapy-story">
-    <div>
-      <p class="type-label">Nature-informed therapy</p>
-      <h2 class="type-section">Nature changes the conversation.</h2>
-      <p>For some people, the outdoors makes it easier to say what is hard to say. Nature offers room to breathe, move, notice, and begin again.</p>
-    </div>
-    <img src="/images/banners/leaves-1.jpg" alt="A quiet forest path in the Wayfinders community" />
   </Section>
 
   <Section width="wide" class="organization-stories">
-    <div class="section-heading centered-heading">
+    <div class="section-heading left-heading">
       <p class="type-label">For organizations</p>
       <h2 class="type-section">Bringing Wayfinders to Organizations</h2>
       <p>Wayfinders helps teams, schools, and organizations create the conditions for trust, communication, and shared purpose.</p>
@@ -139,27 +115,24 @@ const annaStory = [
   </Section>
 
   <Section tone="forest" width="wide" class="closing-cta">
-    <p class="type-label">Find your place</p>
-    <h2 class="type-section">Join Our Community</h2>
-    <p>Whether you’re a student, parent, educator, or neighbor, there’s a place for you here.</p>
-    <Button href="/fall-2026-programs-overview/">Explore Our Programs</Button>
+    <div class="cta-panel">
+      <p class="type-label">Find your place</p>
+      <h2 class="type-section">Join Our Community</h2>
+      <p>Whether you’re a student, parent, educator, or neighbor, there’s a place for you here.</p>
+      <Button href="/fall-2026-programs-overview/">Explore Our Programs</Button>
+    </div>
   </Section>
 </BaseLayout>
 
 <style>
-  .container { width:min(calc(100% - (2 * var(--gutter))), var(--width-wide)); margin-inline:auto; }
-  .stories-intro { padding-top:var(--section-space); background:var(--color-page); }
+  .stories-intro { background:var(--color-page); }
   .intro-copy { max-width:58rem; }
-  .intro-copy .type-label,.left-heading .type-label,.centered-heading .type-label { color:var(--color-rust); }
-  .intro-copy h1 { margin:.5rem 0 1.5rem; }
+  .left-heading .type-label { color:var(--color-rust); }
+  .intro-copy h2 { margin:0 0 1.5rem; }
   .intro-copy p:not(.type-label) { max-width:48rem; margin:0 0 1rem; color:var(--color-ink-muted); }
-  .hero-story { position:relative; width:min(calc(100% - (2 * var(--gutter))), var(--width-wide)); min-height:clamp(26rem,48vw,39rem); margin:clamp(2.5rem,6vw,5rem) auto 0; overflow:hidden; border-radius:var(--radius-card) var(--radius-card) 0 0; }
-  .hero-story>img { width:100%; height:100%; min-height:inherit; object-fit:cover; }
-  .hero-story figcaption { position:absolute; right:clamp(1.5rem,5vw,5rem); bottom:clamp(1.5rem,5vw,4rem); max-width:32rem; padding:clamp(1.4rem,3vw,2.25rem); border-radius:var(--radius-card); background:rgb(23 59 42 / .9); color:white; }
   blockquote { margin:0; }
-  .hero-story blockquote,.featured-quote { font-family:var(--font-display); font-size:calc(clamp(1.75rem,3.3vw,3rem) + var(--font-display-size-adjust)); font-weight:500; line-height:1.15; letter-spacing:-.025em; }
+  .featured-quote { font-family:var(--font-display); font-size:calc(clamp(1.75rem,3.3vw,3rem) + var(--font-display-size-adjust)); font-weight:500; line-height:1.15; letter-spacing:-.025em; }
   blockquote footer { display:block; margin-top:1rem; color:var(--color-ink-muted); font-family:var(--font-sans); font-size:1rem; font-weight:700; letter-spacing:0; }
-  .hero-story footer,.hero-story figcaption>p { margin:.8rem 0 0; color:#e3dda3; font-size:1rem; font-weight:700; }
   .section-heading { max-width:52rem; margin-bottom:clamp(2rem,5vw,4rem); }
   .section-heading h2 { margin:.35rem 0 .8rem; }
   .section-heading p:last-child { margin:0; color:var(--color-ink-muted); }
@@ -171,27 +144,18 @@ const annaStory = [
   .quote-pair blockquote,.student-quote-grid blockquote { padding:var(--card-padding); border:1px solid var(--color-line); border-radius:var(--radius-card); background:var(--color-surface); box-shadow:var(--shadow-soft); font-family:var(--font-display); font-size:calc(1.4rem + var(--font-display-size-adjust)); font-weight:500; line-height:1.35; }
   .parent-supporting { margin-top:clamp(2rem,5vw,4rem); }
   .student-quote-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
-  .education-stories .type-label { color:#e3dda3; }
-  .education-stories h2,.education-stories p { color:var(--color-cream); }
   .education-grid figure { margin:0; }
-  .education-grid figure blockquote { margin-top:1.5rem; color:var(--color-cream); font-family:var(--font-display); font-size:calc(1.5rem + var(--font-display-size-adjust)); line-height:1.35; }
-  .education-grid figure footer { color:#e3dda3; }
+  .education-grid figure blockquote { margin-top:1.5rem; color:var(--color-forest-dark); font-family:var(--font-display); font-size:calc(1.5rem + var(--font-display-size-adjust)); line-height:1.35; }
+  .school-reflections { margin-top:clamp(2rem,5vw,4rem); }
   .adult-stories { display:grid; gap:var(--section-space); }
   .adult-story h2 { margin:.4rem 0 1rem; }
   .adult-story p:not(.type-label) { color:var(--color-ink-muted); }
   .women-story>img { order:2; }
-  .wise-story { align-items:start; }
-  .short-lines { color:var(--color-earth)!important; font-family:var(--font-hand); font-size:calc(clamp(1.8rem,3vw,2.5rem) + var(--font-hand-size-adjust)); line-height:1.1; }
-  .therapy-story>div { max-width:37rem; }
-  .therapy-story h2 { margin:.4rem 0 1rem; }
-  .therapy-story p:not(.type-label) { color:var(--color-ink-muted); }
-  .therapy-story>img { min-height:24rem; }
-  .centered-heading { margin-inline:auto; text-align:center; }
-  .closing-cta { text-align:center; }
-  .closing-cta .type-label { color:#e3dda3; }
-  .closing-cta h2 { margin:.35rem 0 1rem; color:var(--color-cream); }
-  .closing-cta>p:not(.type-label) { max-width:42rem; margin:0 auto 2rem; color:var(--color-cream); }
-  .closing-cta :global(.button) { border-color:var(--color-cream); background:var(--color-cream); color:var(--color-forest-dark); }
+  .cta-panel { max-width:44rem; margin-inline:auto; padding:clamp(2rem,5vw,4rem); border:1px solid rgb(255 253 247 / .28); border-radius:var(--radius-card); background:rgb(255 253 247 / .08); text-align:center; }
+  .cta-panel .type-label { margin:0; color:#e3dda3; }
+  .cta-panel h2 { margin:.45rem 0 1rem; color:var(--color-cream); }
+  .cta-panel>p:not(.type-label) { margin:0 auto 2rem; color:var(--color-cream); }
+  .cta-panel :global(.button) { border-color:var(--color-cream); background:var(--color-cream); color:var(--color-forest-dark); }
   .story-disclosure { margin-top:2rem; border-top:1px solid var(--color-line); }
   .story-disclosure summary { display:flex; justify-content:space-between; gap:1rem; padding:1rem 0; color:var(--color-forest-dark); font-weight:750; cursor:pointer; list-style:none; }
   .story-disclosure summary::-webkit-details-marker { display:none; }
@@ -199,14 +163,9 @@ const annaStory = [
   .story-disclosure[open] summary span { transform:rotate(45deg); }
   .story-disclosure>div { padding-bottom:1rem; color:var(--color-ink-muted); }
   .story-disclosure>div p:first-child { margin-top:0; }
-  .inverse { border-color:rgb(255 253 247 / .45); }
-  .inverse summary { color:var(--color-cream); }
-  .inverse>div { color:var(--color-cream); }
   @media (max-width:47.999rem) {
-    .hero-story { width:calc(100% - (2 * var(--gutter))); min-height:30rem; border-radius:var(--radius-card); }
-    .hero-story figcaption { right:1rem; bottom:1rem; left:1rem; }
-    .parent-feature,.education-grid,.adult-story,.therapy-story { grid-template-columns:1fr; }
-    .parent-feature>img,.adult-story>img,.therapy-story>img,.education-grid img { min-height:20rem; }
+    .parent-feature,.education-grid,.adult-story { grid-template-columns:1fr; }
+    .parent-feature>img,.adult-story>img,.education-grid img { min-height:20rem; }
     .women-story>img { order:initial; }
     .student-quote-grid,.quote-pair { grid-template-columns:1fr; }
     .education-grid figure { order:2; }
