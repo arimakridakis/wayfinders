@@ -10,12 +10,13 @@ interface Props {
   alt?: string;
   overlayOpacity?: number;
   backgroundPosition?: string;
+  fadeOverlayToTransparent?: boolean;
 }
 
-const { eyebrow, title, intro, image, overlayOpacity, backgroundPosition } = Astro.props;
+const { eyebrow, title, intro, image, overlayOpacity, backgroundPosition, fadeOverlayToTransparent = false } = Astro.props;
 ---
 
-<section class="page-hero" style={image || overlayOpacity !== undefined || backgroundPosition ? `${image ? `--hero-image: url("${image}");` : ''}${overlayOpacity !== undefined ? `--hero-overlay-max: ${overlayOpacity}; --hero-overlay-mobile: ${overlayOpacity};` : ''}${backgroundPosition ? `--hero-background-position: ${backgroundPosition};` : ''}` : undefined}>
+<section class="page-hero" style={image || overlayOpacity !== undefined || backgroundPosition || fadeOverlayToTransparent ? `${image ? `--hero-image: url("${image}");` : ''}${overlayOpacity !== undefined ? `--hero-overlay-max: ${overlayOpacity}; --hero-overlay-mobile: ${overlayOpacity};` : ''}${backgroundPosition ? `--hero-background-position: ${backgroundPosition};` : ''}${fadeOverlayToTransparent ? '--hero-overlay-end: 0; --hero-overlay-mobile-end: 0;' : ''}` : undefined}>
   <Container width="wide" class="hero-inner">
     <div class="copy">
       {eyebrow && <p class="type-label">{eyebrow}</p>}
@@ -33,7 +34,7 @@ const { eyebrow, title, intro, image, overlayOpacity, backgroundPosition } = Ast
     align-items: center;
     padding-block: clamp(4.5rem, 10vw, 8rem);
     background:
-      linear-gradient(90deg, rgb(8 28 18 / var(--hero-overlay-max, .86)) 0%, rgb(8 28 18 / calc(var(--hero-overlay-max, .86) * .8)) 48%, rgb(8 28 18 / calc(var(--hero-overlay-max, .86) * .35)) 100%),
+      linear-gradient(90deg, rgb(8 28 18 / var(--hero-overlay-max, .86)) 0%, rgb(8 28 18 / calc(var(--hero-overlay-max, .86) * .8)) 48%, rgb(8 28 18 / var(--hero-overlay-end, calc(var(--hero-overlay-max, .86) * .35))) 100%),
       var(--hero-image, url('/images/heroes/GreenForest1.webp')) var(--hero-background-position, center) / cover no-repeat;
     color: var(--color-surface);
   }
@@ -54,7 +55,7 @@ const { eyebrow, title, intro, image, overlayOpacity, backgroundPosition } = Ast
     .page-hero {
       min-height: calc(30rem + 50px);
       background:
-        linear-gradient(rgb(8 28 18 / var(--hero-overlay-mobile, .76)), rgb(8 28 18 / var(--hero-overlay-mobile, .76))),
+        linear-gradient(90deg, rgb(8 28 18 / var(--hero-overlay-mobile, .76)), rgb(8 28 18 / var(--hero-overlay-mobile-end, var(--hero-overlay-mobile, .76)))),
         var(--hero-image, url('/images/heroes/GreenForest1.webp')) var(--hero-background-position, center) / cover no-repeat;
     }
     h1 { font-size: calc(clamp(3.6rem, 17vw, 5.6rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust)); }
