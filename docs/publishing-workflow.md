@@ -2,14 +2,16 @@
 
 The intended workflow is:
 
-> Request → Codex branch → pull request → Vercel preview → revisions → explicit approval → merge → production
+> Request → local validation → commit to `main` → push → Vercel production deployment → live review → follow-up change if needed
 
-Creating a Vercel preview does not publish production. A successful build or an available pull request is not publication approval. Never merge until the owner explicitly approves the exact latest preview and commit.
+For ordinary, clearly scoped website changes, Codex works directly on the up-to-date `main` branch. It must run `npm run check`, `npm run build`, and `git diff --check` before committing. When those checks pass, Codex commits only the intended files and pushes directly to `origin main`.
 
-Multiple collaborators may work on separate branches. Keep each branch coherent, resolve overlap through pull-request review, and continue revisions on the same branch when responding to preview feedback.
+GitHub's Vercel integration detects the push and begins a production deployment. Codex must report whether the deployment is live, pending, or failed, and provide the live production URL when available. A failed deployment is not publication.
 
-## Preview workflow verification
+The owner reviews the live result and asks Codex for a focused follow-up change if needed. Git commits preserve the history of each production release; do not leave pull requests or unpublished branches behind.
 
-The GitHub-to-Vercel pull-request preview workflow was successfully verified on August 7, 2026, using pull request #1. A follow-up commit to the existing pull-request branch automatically created a successful Vercel Preview deployment, and the branch-specific test change was confirmed in that preview.
+## Changes that require an explicit pause
 
-The temporary verification marker was removed after confirmation and is not part of the foundation page. The preview test did not authorize a merge or production publication.
+Codex must stop and ask for direction before changing secrets, environment variables, domains/DNS, Vercel settings, billing, team access, external messages or payments, or a broad/ambiguous design or content change. It must also stop if `main` cannot be updated safely or unexpected local work is present.
+
+For costs, dates, names, payment links, registration links, and similar high-impact content, Codex may proceed only when the owner supplies the exact final value.

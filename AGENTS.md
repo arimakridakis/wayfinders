@@ -31,14 +31,17 @@ These instructions apply to the entire repository.
 
 ## Git behavior
 
-- Start substantive work from the latest `main`, create a descriptive branch, and make one coherent change per branch.
-- Run checks before committing, push the branch, and open or prepare a pull request.
-- Do not merge without explicit approval. Never force-push `main` and never commit secrets.
+- Start substantive work from the latest `main`. Work directly on `main` for ordinary website requests and keep each commit focused on one coherent change.
+- Before editing, inspect the repository status. If unexpected local work is present or `main` cannot be updated safely with `git pull --ff-only origin main`, stop and explain the situation before proceeding.
+- Run `npm run check`, `npm run build`, and `git diff --check` before committing. Do not push if a required check fails.
+- Commit only the intended files, with a specific commit message, and push directly to `origin main`. Never force-push `main` and never commit secrets, `.env` files, generated build output, or unrelated user changes.
+- A normal, clearly scoped website request authorizes this direct-to-production workflow. Do not create a branch, pull request, preview-only deployment, or separate publication approval for ordinary changes.
+- Pause and ask for direction before changes involving secrets, environment variables, DNS/domains, Vercel settings, billing, team access, external messages or payments, destructive actions, an ambiguous material redesign, or high-impact content whose exact final value was not supplied.
 
 ## Reporting behavior
 
-After each task, report what changed, what was deliberately left unchanged, affected pages, tests and builds run, unresolved questions, the pull request URL, the Vercel preview URL, and publication status.
+After each task, report what changed, what was deliberately left unchanged, affected pages, tests and builds run, unresolved questions, and production deployment status.
 
-End all unapproved changes with:
+For ordinary changes, report the commit SHA, production deployment status, and live production URL when available. Do not report a pull request or preview URL because this workflow does not use them.
 
-> Not published. Review the preview and explicitly approve publication when ready.
+If a deployment is pending or failed, say so clearly and do not claim that the change is live.

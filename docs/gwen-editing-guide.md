@@ -1,21 +1,19 @@
 # Gwen's editing guide
 
-You can update the website by talking to Codex. You do not need to install development software, edit code, or use the GitHub or Vercel websites.
+You can update the website by talking to Codex. You do not need to install development software, edit code, use Terminal, or use the GitHub or Vercel websites.
 
 ## Ask for a change
 
-Start a Codex chat in the Wayfinders project. Say which page should change, provide the final wording and any images, mention a visual reference if helpful, and say what must stay unchanged. End with: “Please make a preview; do not publish.”
+Start a Codex chat in the Wayfinders project. Say which page should change, provide the final wording and any images, mention a visual reference if helpful, and say what must stay unchanged.
 
-Codex will make the change on a separate branch, run the website checks, and give you a Vercel preview link. That link is safe to share for feedback: it does not change the live website.
+Codex will make the focused change, run the website checks, commit it directly to the `main` branch, and push it to GitHub. Vercel will then deploy the live site automatically.
 
-## Review the preview
+## Check the live result
 
-Open the preview link and send any corrections back to Codex. Codex will update the same preview until it is ready. A new preview replaces the earlier one, so always review the latest link.
+Codex will report when the Vercel production deployment is live and give you the production link. Open that page and send any corrections back to Codex in plain language. Codex will make a new focused change and deploy it the same way.
 
-## Publish only when ready
+## What you do not need to do
 
-When the exact latest preview is approved, say: “I approve publication of PR #NUMBER.” Codex will verify that the Vercel preview is passing, merge that pull request, and report the production deployment. Vercel then updates the live site automatically.
+You do not need to create a branch, open a pull request, merge a pull request, or say a special publication phrase. A normal, clear website request authorizes Codex to deploy that focused change after its required checks pass.
 
-Do not use “looks good” or “ship it” as approval. Publication requires the explicit phrase above, including the pull-request number, so that the preview being approved is unambiguous.
-
-GitHub remains the authoritative website copy, but this workflow means Gwen never needs to interact with GitHub directly.
+GitHub remains the authoritative website copy, and its commit history is the record of each production change. Codex handles the GitHub and Vercel mechanics behind the scenes.
