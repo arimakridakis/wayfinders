@@ -1,15 +1,13 @@
 ---
 import Button from '../global/Button.astro';
-interface Props { title: string; description: string; href: string; image: string; alt: string; notice?: string; tracks?: string[]; }
-const { title, description, href, image, alt, notice, tracks } = Astro.props;
+interface Props { title: string; description: string; href: string; image: string; alt: string; notice?: string; }
+const { title, description, href, image, alt, notice } = Astro.props;
 ---
-<article class:list={["program-card", { "has-notice": notice }]}>{notice && <div class="notice type-label">{notice}</div>}<img src={image} {alt} width="900" height="650" loading="lazy" decoding="async" /><div class="body"><h2 class="type-card">{title}</h2><p>{description}</p>{tracks && <div class="tracks"><strong>Select one of the following tracks:</strong><ul>{tracks.map((track) => <li>{track}</li>)}</ul></div>}<Button {href} variant="secondary">Learn more</Button></div></article>
+<article class:list={["program-card", { "has-notice": notice }]}>{notice && <div class="notice type-label">{notice}</div>}<img src={image} {alt} width="900" height="650" loading="lazy" decoding="async" /><div class="body"><h2 class="type-card">{title}</h2><p>{description}</p><Button {href} variant="secondary">Learn more</Button></div></article>
 <style>
   .program-card { display: grid; grid-template-rows: auto 1fr; align-items: stretch; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
   .has-notice { grid-template-rows: auto auto 1fr; }
   .notice { padding: .75rem var(--card-padding); background: var(--color-moss); color: white; text-align: center; }
-  .tracks ul { padding-left: 1.25rem; margin-block: .5rem 0; }
-  .tracks li + li { margin-top: .5rem; }
   img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .body { display: flex; align-self: stretch; align-items: flex-start; justify-content: flex-start !important; flex-direction: column; padding: var(--card-padding); }
   h2 { margin: 0 0 30px; } p { flex: 1; color: var(--color-ink-muted); } .body :global(.button) { margin-top: 25px; }
