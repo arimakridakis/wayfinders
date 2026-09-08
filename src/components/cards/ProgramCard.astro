@@ -3,12 +3,13 @@ import Button from '../global/Button.astro';
 interface Props { title: string; description: string; href: string; image: string; alt: string; notice?: string; }
 const { title, description, href, image, alt, notice } = Astro.props;
 ---
-<article class:list={["program-card", { "has-notice": notice }]}>{notice && <div class="notice type-label">{notice}</div>}<img src={image} {alt} width="900" height="650" loading="lazy" decoding="async" /><div class="body"><h2 class="type-card">{title}</h2><p>{description}</p><Button {href} variant="secondary">Learn more</Button></div></article>
+<article class="program-card"><div class:list={["media", { "has-notice": notice }]}>{notice && <div class="notice type-label">{notice}</div>}<img src={image} {alt} width="900" height="650" loading="lazy" decoding="async" /></div><div class="body"><h2 class="type-card">{title}</h2><p>{description}</p><Button {href} variant="secondary">Learn more</Button></div></article>
 <style>
   .program-card { display: grid; grid-template-rows: auto 1fr; align-items: stretch; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
-  .has-notice { grid-template-rows: auto auto 1fr; }
+  .media { display: grid; aspect-ratio: 4 / 3; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+  .media.has-notice { grid-template-rows: auto minmax(0, 1fr); }
   .notice { padding: .75rem var(--card-padding); background: var(--color-moss); color: white; text-align: center; }
-  img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; }
   .body { display: flex; align-self: stretch; align-items: flex-start; justify-content: flex-start !important; flex-direction: column; padding: var(--card-padding); }
   h2 { margin: 0 0 30px; } p { flex: 1; color: var(--color-ink-muted); } .body :global(.button) { margin-top: 25px; }
 </style>
