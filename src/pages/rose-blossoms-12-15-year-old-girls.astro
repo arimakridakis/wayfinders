@@ -6,6 +6,9 @@ import Button from '../components/global/Button.astro';
 import NatureIcon from '../components/global/NatureIcon.astro';
 import DisclosureList from '../components/sections/DisclosureList.astro';
 import ImageStrip from '../components/sections/ImageStrip.astro';
+import { teamMembers } from '../data/team';
+
+const facilitators = teamMembers.filter((person) => ['/gwen', '/leah'].includes(person.sourceProfile));
 
 const weekendUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b05303556c5743c19b436e9f5ad980762e71deb9659042c2bf5204807802f8baf474ba1adf0c445d975b569ebcf28767?locale=EN_US&cta=copylistmultilink';
 const journeyUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-47b764e180774183bd534e417aa1e1aa070a56dcdd244b5a917c4d59ebb0a3425157ebfa108d474e9572bca4e4c4c501?locale=EN_US&cta=copylistmultilink';
@@ -52,7 +55,7 @@ const seasons = [
 
   <section class="details chapter"><Container width="wide"><div class="details-layout"><header><p class="type-label">A supported passage</p><h2>Program details</h2><p>Learn more about the care, community, and practices that shape Rose Blossoms.</p></header><DisclosureList>
     <details open><summary>Family &amp; community involvement</summary><div><p>Rose Blossoms is a journey for girls, with the weekends offering space to grow in confidence, deepen friendships, and explore together in the care of our facilitators. Parents and caregivers are valued partners and will be included in selected gatherings and moments along the way. The weekends themselves are for the girls; parents and caregivers are not expected to attend and are warmly encouraged to support this time for their growing independence.</p></div></details>
-    <details><summary>Experienced facilitators</summary><div><p>Two trained adults—a lead and an assistant/guide—bring experience in youth development, non-violent communication, outdoor education, and girls’ rites of passage.</p></div></details>
+    <details><summary>Experienced facilitators</summary><div><p>Two trained adults—a lead and an assistant/guide—bring experience in youth development, non-violent communication, outdoor education, and girls’ rites of passage.</p><div class="facilitators">{facilitators.map((person) => <figure><img src={person.image} alt={`Portrait of ${person.name}`} width="160" height="180" loading="lazy" /><figcaption><a href={`/the-team#${person.sourceProfile.slice(1)}`}>learn more about {person.sourceProfile.slice(1)}</a></figcaption></figure>)}</div></div></details>
     <details><summary>Safety, inclusion &amp; accessibility</summary><div><p>Shared group agreements, consent, and individualized mentorship support participation. Materials are provided, with sliding-scale fees or scholarships available.</p></div></details>
   </DisclosureList></div></Container></section>
 
@@ -60,6 +63,8 @@ const seasons = [
 </BaseLayout>
 
 <style>
+  .facilitators{display:flex;flex-wrap:wrap;gap:2rem;margin-top:1.5rem}.facilitators figure{margin:0;max-width:100%}.facilitators img{width:10rem;height:11.25rem;object-fit:cover;border-radius:var(--radius-card)}.facilitators figcaption{margin-top:.75rem;font-family:var(--font-sans)}.facilitators a{display:inline-flex;align-items:center;min-height:2.75rem;text-underline-offset:.2em}
+
   .chapter{padding-block:clamp(5.5rem,10vw,9rem)}.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
   .hero{position:relative;display:grid;min-height:min(48rem,82vh);align-items:center;isolation:isolate;background:url('/images/banners/gwen-candle-banner.jpg') 68% center/cover no-repeat;color:white}.hero::after{position:absolute;z-index:-1;inset:0;content:'';background:linear-gradient(90deg,rgb(26 31 18/.9) 0%,rgb(30 35 21/.68) 45%,rgb(30 35 21/.08) 76%)}:global(.hero-content){padding-block:5rem}.hero .type-label{color:#e6d9b4}.hero h1{max-width:38rem;margin:.35rem 0;color:white;font-family:var(--font-display);font-size:calc(clamp(4.5rem,9vw,7.6rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust));font-weight:500;letter-spacing:-.045em;line-height:.73}.hero h1 span{display:block;margin-left:.28em;color:#d8b5a2;font-family:var(--font-hand);font-size:calc(.72em + var(--font-hand-size-adjust));letter-spacing:0;line-height:1}.hero-kicker{margin:1.5rem 0 .75rem;font-size:.78rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase}.hero-intro{max-width:36rem;font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.6}.hero .actions :global(.secondary){border-color:white;color:white}
   .introduction{position:relative;background:#faf7ef;text-align:center}.availability{display:flex;justify-content:center;align-items:center;gap:.6rem;margin:0 0 2rem;color:var(--color-moss)}.intro-copy{max-width:58rem;margin:0 auto;font-family:var(--font-display);font-size:calc(clamp(1.55rem,3vw,2.25rem) + var(--font-display-size-adjust));line-height:1.35}.intro-columns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);margin-top:3.5rem;text-align:left}.intro-columns p{margin-top:0}.handwritten{color:var(--color-rust);font-family:var(--font-hand);font-size:calc(clamp(1.45rem,2.5vw,2rem) + var(--font-hand-size-adjust));line-height:1.25}
