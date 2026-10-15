@@ -92,3 +92,8 @@ a:hover { color: var(--color-rust); }
 /* Hero wordmarks and taglines use Caveat at the larger hero scale. */
 .family-program h1 span { font-size:calc(.68em + var(--font-hand-size-adjust) + 5px) !important; }
 .hero-tagline { font-size:calc(clamp(1.7rem,3vw,2.4rem) + var(--font-hand-size-adjust) + 5px) !important; }
+
+/* Shared pricing option layout. */
+.pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr)); gap:1.5rem; margin-top:2rem; }
+.pricing-panel { display:flex; flex-direction:column; padding:clamp(1.5rem,3vw,2.25rem); border:1px solid var(--color-line); border-radius:1.75rem; background:var(--color-surface); color:var(--color-ink); box-shadow:var(--shadow-soft); }
+.pricing-panel h3 { font-family:var(--font-sans); font-size:1.55rem; line-height:1.3; color:var(--color-forest-dark); margin:0 0 1rem; }

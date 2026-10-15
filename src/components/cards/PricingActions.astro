@@ -1,0 +1,22 @@
+---
+import NatureIcon from '../global/NatureIcon.astro';
+import Button from '../global/Button.astro';
+interface Props { price?: string; program: string; href: string; }
+const { price, program, href } = Astro.props;
+---
+<div class="pricing-actions">
+  {price && <p class="price"><span class="price-icon"><NatureIcon name="dollar" size={21} /></span><span><span class="sr-only">Price: </span>{price.replace(/^\$/, "")}<span class="sr-only"> dollars</span></span></p>}
+  <Button registration={{ program, paymentUrl: href }}>Register and pay <span aria-hidden="true">→</span></Button>
+  <button class="scholarship-trigger" type="button" data-scholarship-open data-scholarship-program={program}>Apply for scholarship</button>
+</div>
+<style>
+  .pricing-actions { display:flex; flex-direction:column; gap:.75rem; margin-top:auto; padding-top:1.5rem; width:100%; color:var(--color-forest-dark); }
+  .pricing-actions .price { margin:0 0 .5rem !important; padding:0; font-family:var(--font-sans); display:grid; grid-template-columns:1.75rem 1fr; gap:.65rem; align-items:start; font-size:1.1875rem; font-weight:400; line-height:1.5; color:var(--color-ink); }
+  .price-icon { color:var(--accent, var(--color-moss)); }
+  .pricing-actions :global(.button), .scholarship-trigger { box-sizing:border-box; display:flex; width:100%; min-height:3rem; margin:0 !important; padding:.75rem 1.25rem; justify-content:center; align-items:center; gap:.75rem; border:2px solid var(--color-forest-dark) !important; border-radius:var(--radius-button); font-family:var(--font-sans); font-size:1.1875rem; font-weight:700; line-height:1.3; text-align:center; }
+  .pricing-actions :global(.button) { background:var(--color-forest-dark) !important; color:var(--color-surface) !important; }
+  .scholarship-trigger { background:transparent; color:var(--color-forest-dark); cursor:pointer; list-style:none; }
+  .scholarship-trigger::-webkit-details-marker { display:none; }
+  .scholarship-trigger:focus-visible { outline:3px solid var(--color-focus); outline-offset:3px; }
+  .scholarship-preview p { margin:.75rem 0 0; font-size:.9rem; line-height:1.5; color:var(--color-ink-muted); }
+</style>

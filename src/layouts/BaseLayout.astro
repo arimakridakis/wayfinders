@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SiteFooter from '../components/global/SiteFooter.astro';
 import SiteHeader from '../components/global/SiteHeader.astro';
 import NewsletterModal from '../components/global/NewsletterModal.astro';
+import ScholarshipModal from '../components/global/ScholarshipModal.astro';
 import RegistrationModal from '../components/global/RegistrationModal.astro';
 import SupportModal from '../components/global/SupportModal.astro';
 import { site } from '../data/site';
@@ -35,6 +36,7 @@ const canonicalUrl = canonical ? String(canonical) : Astro.site ? new URL(Astro.
     <SiteFooter />
     <NewsletterModal />
     <RegistrationModal />
+    <ScholarshipModal />
     <SupportModal />
   </body>
 </html>

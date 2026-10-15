@@ -1,4 +1,5 @@
 ---
+import PricingActions from '../components/cards/PricingActions.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/global/Container.astro';
 import Button from '../components/global/Button.astro';
@@ -55,7 +56,7 @@ const seasons = [
     <details><summary>Safety, inclusion &amp; accessibility</summary><div><p>Shared group agreements, consent, and individualized mentorship support participation. Materials are provided, with sliding-scale fees or scholarships available.</p></div></details>
   </DisclosureList></div></Container></section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">Join the Rose Blossoms Journey</p><h2>Step into the circle.</h2><p>Join the full Rose Blossoms journey or choose a weekend.</p><p><strong>$550 per weekend · $1,450 for the full journey — save $200</strong></p><p>Payment plans and scholarships available.</p><div class="actions"><Button registration={{ program: 'Rose Blossoms — Camping weekend', paymentUrl: weekendUrl }}>Camping weekend</Button><Button registration={{ program: 'Rose Blossoms — Full journey', paymentUrl: journeyUrl }}>Full journey</Button><Button href="/scholarships-1" variant="secondary">Scholarships</Button></div></div><aside><NatureIcon name="heart" size={38} /><h3>Limited Spaces &amp; Scholarships Available!</h3><p><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a><br />(917) 318-3888</p></aside></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">Join the Rose Blossoms Journey</p><h2>Step into the circle.</h2><p>Join the full Rose Blossoms journey or choose a weekend.</p><p>Payment plans and scholarships available.</p><div class="pricing-grid"><article class="pricing-panel"><h3>Camping weekend</h3><PricingActions price="$550" program="Rose Blossoms — Camping weekend" href={weekendUrl} /></article><article class="pricing-panel"><h3>Full journey</h3><p>Save $200 with the full journey.</p><PricingActions price="$1,450" program="Rose Blossoms — Full journey" href={journeyUrl} /></article></div></div><aside><NatureIcon name="heart" size={38} /><h3>Limited Spaces &amp; Scholarships Available!</h3><p><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a><br />(917) 318-3888</p></aside></Container></section>
 </BaseLayout>
 
 <style>

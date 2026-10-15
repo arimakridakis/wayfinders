@@ -1,4 +1,5 @@
 ---
+import PricingActions from '../components/cards/PricingActions.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/global/Container.astro';
 import Button from '../components/global/Button.astro';
@@ -42,9 +43,8 @@ const included = [
       <div class="detail-cards">
         <article><span class="detail-icon"><NatureIcon name="calendar" size={36} /></span><p class="type-label">Date &amp; time</p><h3>Friday, September 18th</h3><p>1:30–5:30 PM</p></article>
         <article><span class="detail-icon"><NatureIcon name="mountain" size={36} /></span><p class="type-label">Location</p><h3>Lenoir Preserve in Yonkers</h3></article>
-        <article><span class="detail-icon"><NatureIcon name="leaf" size={36} /></span><p class="type-label">Cost</p><h3>$120</h3><p>Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!</p></article>
+        <article><span class="detail-icon"><NatureIcon name="leaf" size={36} /></span><p class="type-label">Cost</p><p>Scholarships and payment plans are available, so please don't hesitate to reach out. We would love to have you with us!</p><PricingActions price="$120" program="Autumn 2026 Women’s Retreat" href={registerUrl} /></article>
       </div>
-      <div class="detail-action"><Button registration={{ program: 'Autumn 2026 Women’s Retreat', paymentUrl: registerUrl }}>Autumn 2026 Women's Retreat <span aria-hidden="true">→</span></Button></div>
     </Container>
   </section>
 
