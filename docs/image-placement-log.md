@@ -34,3 +34,11 @@ The Women’s Retreat and Dance Embody Collective heroes intentionally share the
 - Desktop gradients now fade from 90% opacity at the left edge to zero opacity at the 85% mark.
 - Mobile heroes use their existing solid dark-green overlay.
 - The lighter `rgb(34 75 48)` overlay was tested and reverted.
+
+## Talia Kovacs portrait
+
+- Asset: `public/images/team/talia-kovacs.jpg` (400 × 600; original size, no upscaling).
+- Source: https://static.showit.co/400/EOMbeCr-ST2AkqaP1HbbDQ/112013/headshot_talia_2022_denim_01.jpg, linked from https://taliakovacs.com/.
+- Subject: Talia Kovacs. Usage: Meet the Team profile.
+- Publication authorization: site owner explicitly requested her photo and bio on October 17, 2026. No separate license claim is made.
+- Bio: paraphrased from Talia’s official website; Rose Blossoms role supplied by the site owner.
