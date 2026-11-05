@@ -1,14 +1,15 @@
 interface WelcomeEmailOptions {
   program: string;
   closing: string;
+  season?: string;
 }
 
-export function createWelcomeEmail({ program, closing }: WelcomeEmailOptions) {
+export function createWelcomeEmail({ program, closing, season = 'fall' }: WelcomeEmailOptions) {
   return {
     subject: 'Welcome to Wayfinders!',
     text: `Hi {{firstName}},
 
-Thank you for registering for ${program}. We’re so glad you’ll be joining us this fall.
+Thank you for registering for ${program}. We’re so glad you’ll be joining us this ${season}.
 
 We know that signing up for something new is the beginning of a journey, and we’re honored that you’ve chosen to spend part of your season with the Wayfinders community.
 

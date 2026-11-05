@@ -22,6 +22,7 @@ interface WelcomeEmail {
 }
 
 const emailFiles: Record<string, WelcomeEmail> = {
+  'Winter 2027 Base Camp — Tuesday': createWelcomeEmail({ program: 'Winter 2027 Base Camp — Tuesday', season: 'winter', closing: 'We’re looking forward to welcoming you into the Wayfinders community.' }),
   'Fall 2026 Base Camp — Tuesday': baseCampTuesdayWelcome,
   'Fall 2026 Base Camp — Wednesday': baseCampWednesdayWelcome,
   'Fall 2026 Base Camp — Thursday': baseCampThursdayWelcome,

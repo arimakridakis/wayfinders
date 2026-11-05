@@ -2,14 +2,14 @@
 import PricingActions from './PricingActions.astro';
 import NatureIcon from '../global/NatureIcon.astro';
 
-interface Props { day: string; price: string; ages: string; dates: string; time: string; href: string; accent: 'moss' | 'blue' | 'earth'; icon: 'leaf' | 'mountain' | 'acorn'; }
-const { day, price, ages, dates, time, href, accent, icon } = Astro.props;
+interface Props { program?: string; day: string; price: string; ages: string; dates: string; time: string; href: string; accent: 'moss' | 'blue' | 'earth'; icon: 'leaf' | 'mountain' | 'acorn'; }
+const { day, price, ages, dates, time, href, accent, icon, program = `Fall 2026 Base Camp — ${day}` } = Astro.props;
 ---
 <article class:list={['option-card', `accent-${accent}`]}>
   <div class="option-heading"><span class="icon"><NatureIcon name={icon} size={36} /></span><div><h2>{day}<br />Base Camp</h2><p class="type-label">{ages}</p></div></div>
   <dl><div><dt><NatureIcon name="calendar" size={21} /><span class="sr-only">Dates</span></dt><dd>{dates}</dd></div><div><dt><NatureIcon name="clock" size={21} /><span class="sr-only">Time</span></dt><dd>{time}</dd></div></dl>
   <div class="option-location"><dt><NatureIcon name="map-pin" size={21} /><span class="sr-only">Location</span></dt><dd><strong>Lenoir Preserve</strong> · 19 Dudley Street, Yonkers</dd></div>
-  <PricingActions {price} program={`Fall 2026 Base Camp — ${day}`} {href} />
+  <PricingActions {price} {program} {href} />
 </article>
 <style>
   .option-card { --accent: var(--color-moss); display:flex; flex-direction:column; padding:clamp(1.5rem,3vw,2.25rem); border:1px solid rgb(49 88 67 / .13); border-radius:1.75rem; background:rgb(255 253 247 / .96); box-shadow:var(--shadow-soft); transition:transform var(--transition),box-shadow var(--transition); }
