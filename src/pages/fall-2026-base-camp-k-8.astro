@@ -26,12 +26,25 @@ const experiences = [
 
 const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence, resilience, and independence.','Deep connection to nature in every season.','Meaningful friendships and cooperative play.','A supportive community for the whole family.'];
 ---
-<BaseLayout title="Fall 2026 Base Camp K–8" description="Wayfinders Fall Base Camp meets after school on Tuesdays, Wednesdays, and Thursdays at Lenoir Preserve.">
+<BaseLayout title="Fall 2027 Base Camp K–8" description="Wayfinders Fall Base Camp meets after school on Tuesdays, Wednesdays, and Thursdays at Lenoir Preserve.">
   <section class="hero">
     <Container width="wide" class="hero-content">
       <p class="type-label">WAYFINDERS</p>
-      <h1>Fall 2026 <span>Base Camp</span></h1>
+      <h1>Fall 2027 <span>Base Camp</span></h1>
       <p class="hero-intro">Outdoor play, community building, and leadership development for Kindergarten through 8th grade.</p>
+    </Container>
+  </section>
+
+  <section id="winter-base-camp" class="programs winter-program chapter" aria-labelledby="winter-title">
+    <Container width="wide">
+      <header class="section-heading"><p class="type-label">Winter 2027</p><h2 id="winter-title">Winter Base Camp</h2><p>Outdoor play, community building, and leadership development on Tuesdays at Lenoir Preserve.</p></header>
+      <div class="winter-layout">
+        <div class="winter-details">
+        <BaseCampOption day="Tuesday" program="Winter 2027 Base Camp — Tuesday" price="$685" ages="1st–8th graders" dates="10 sessions · January 12–March 30, 2027" time="3:45–5:45 pm" accent="moss" icon="leaf" href="https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3cae42e32e34417ba5696db3af46e43604da13b259dc46cea4df39fb92dcdc8872a19973d2814ee4ba4bf819765a3faf-1?locale=EN_US&cta=saveandcopylink" />
+        <div class="winter-dates"><h3>Tuesday meeting dates</h3><p>1/12, 1/19, 1/26, 2/2, 2/9, 2/23, 3/2, 3/9, 3/16, 3/30</p><p>No session on February 16 (February break) or March 23 (spring break).</p><p>Base Camp takes place outdoors, with indoor space and activities available when needed.</p><p><strong>Limited spaces and scholarships available.</strong></p></div>
+        </div>
+        <img class="winter-photo" src="/images/content/winter-base-camp-snow.jpg" alt="A child bundled in winter clothing inside a snow shelter" width="912" height="1200" loading="lazy" decoding="async" />
+      </div>
     </Container>
   </section>
 
@@ -46,19 +59,6 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
         { src:'/images/content/fire3.jpg', alt:'Young people learning around a fire outdoors' },
         { src:'/images/content/greg-and-miles-knife-2.jpg', alt:'Wayfinders participants practicing outdoor skills' },
       ]} />
-    </Container>
-  </section>
-
-  <section id="winter-base-camp" class="programs winter-program chapter" aria-labelledby="winter-title">
-    <Container width="wide">
-      <header class="section-heading"><p class="type-label">Winter 2027</p><h2 id="winter-title">Winter Base Camp</h2><p>Outdoor play, community building, and leadership development on Tuesdays at Lenoir Preserve.</p></header>
-      <div class="winter-layout">
-        <div class="winter-details">
-        <BaseCampOption day="Tuesday" program="Winter 2027 Base Camp — Tuesday" price="$685" ages="1st–8th graders" dates="10 sessions · January 12–March 30, 2027" time="3:45–5:45 pm" accent="moss" icon="leaf" href="https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3cae42e32e34417ba5696db3af46e43604da13b259dc46cea4df39fb92dcdc8872a19973d2814ee4ba4bf819765a3faf-1?locale=EN_US&cta=saveandcopylink" />
-        <div class="winter-dates"><h3>Tuesday meeting dates</h3><p>1/12, 1/19, 1/26, 2/2, 2/9, 2/23, 3/2, 3/9, 3/16, 3/30</p><p>No session on February 16 (February break) or March 23 (spring break).</p><p>Base Camp takes place outdoors, with indoor space and activities available when needed.</p><p><strong>Limited spaces and scholarships available.</strong></p></div>
-        </div>
-        <img class="winter-photo" src="/images/content/winter-base-camp-snow.jpg" alt="A child bundled in winter clothing inside a snow shelter" width="912" height="1200" loading="lazy" decoding="async" />
-      </div>
     </Container>
   </section>
 
@@ -98,7 +98,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
 
 <style>
   .chapter { padding-block:clamp(5rem,10vw,9rem); }
-  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('/images/heroes/base-camp-running-kids-1b.jpg') center / cover no-repeat; color:white; }
+  .hero { position:relative; display:grid; min-height:min(48rem,82vh); align-items:center; isolation:isolate; background:url('/images/content/winter-base-camp-snow.jpg') center 25% / cover no-repeat; color:white; }
   .hero::after { position:absolute; z-index:-1; inset:0; content:''; background:linear-gradient(90deg,rgb(10 27 17 / .9) 0%,rgb(10 27 17 / .68) 45%,rgb(10 27 17 / .12) 80%); }
   :global(.hero-content) { padding-block:5rem; }
   .hero .type-label { margin:0; color:#e3dda3; }
@@ -163,7 +163,7 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .closing h2 { color:white;font-size:calc(clamp(3.5rem,7vw,6rem)  + var(--font-display-size-adjust))}.closing .type-label{color:#e4dda2}.closing-actions{display:grid;width:min(100%,20rem);gap:.75rem;margin-top:2rem}.closing-actions :global(.button){border-color:white;background:white;color:var(--color-forest-dark)}
   .closing aside { padding-left:0; border-left:0; }.closing aside h3{font-family:var(--font-display);font-size:calc(2rem + var(--font-display-size-adjust));line-height:1.1}.closing aside :global(.button){display:flex;margin-top:1rem;border-color:white;color:white}
   @media (max-width:63.999rem){.options{grid-template-columns:1fr}.experience-grid{grid-template-columns:repeat(3,1fr);gap:2.5rem 0}.experience-grid article:nth-child(3){border:0}:global(.community-grid),.details-layout{grid-template-columns:1fr}.workshops article{grid-template-columns:7rem 1fr}.workshops :global(.button){grid-column:2}.details header{position:static}.contrast{grid-template-columns:1fr}.restoration{min-height:34rem}}
-  @media (max-width:47.999rem){.hero{min-height:42rem;background-position:62% center}.hero::after{background:rgb(10 27 17 / .7)}h1{font-size:calc(clamp(3.8rem,18vw,5.8rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust))}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience-grid article:nth-child(3){border-right:1px solid var(--color-line)}.experience-grid article:nth-child(2n){border:0}:global(.closing-grid){grid-template-columns:1fr}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}.closing-actions{width:100%}}
+  @media (max-width:47.999rem){.hero{min-height:42rem;background-position:center 25%}.hero::after{background:rgb(10 27 17 / .7)}h1{font-size:calc(clamp(3.8rem,18vw,5.8rem) + var(--font-display-size-adjust) + var(--font-display-hero-size-adjust))}.experience-grid{grid-template-columns:repeat(2,1fr)}.experience-grid article:nth-child(3){border-right:1px solid var(--color-line)}.experience-grid article:nth-child(2n){border:0}:global(.closing-grid){grid-template-columns:1fr}.closing aside{padding:2rem 0 0;border-top:1px solid rgb(255 255 255 / .5);border-left:0}.closing-actions{width:100%}}
   @media (max-width:47.999rem){.hero-note{font-size:1rem}}
   @media (max-width:35.999rem){.workshops article{grid-template-columns:1fr}.round-image{width:7rem}.workshops :global(.button){grid-column:1}.experience-grid{grid-template-columns:1fr}.experience-grid article,.experience-grid article:nth-child(3){padding-block:1.5rem;border-right:0;border-bottom:1px solid var(--color-line)}}
   @media (min-width:48rem){.hero::after{background:linear-gradient(90deg,rgb(10 27 17 / .9) 0%,rgb(10 27 17 / 0) 85%)}}
