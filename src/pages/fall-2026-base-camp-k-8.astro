@@ -53,8 +53,11 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
     <Container width="wide">
       <header class="section-heading"><p class="type-label">Winter 2027</p><h2 id="winter-title">Winter Base Camp</h2><p>Outdoor play, community building, and leadership development on Tuesdays at Lenoir Preserve.</p></header>
       <div class="winter-layout">
+        <div class="winter-details">
         <BaseCampOption day="Tuesday" program="Winter 2027 Base Camp — Tuesday" price="$685" ages="1st–8th graders" dates="10 sessions · January 12–March 30, 2027" time="3:45–5:45 pm" accent="moss" icon="leaf" href="https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-3cae42e32e34417ba5696db3af46e43604da13b259dc46cea4df39fb92dcdc8872a19973d2814ee4ba4bf819765a3faf-1?locale=EN_US&cta=saveandcopylink" />
         <div class="winter-dates"><h3>Tuesday meeting dates</h3><p>1/12, 1/19, 1/26, 2/2, 2/9, 2/23, 3/2, 3/9, 3/16, 3/30</p><p>No session on February 16 (February break) or March 23 (spring break).</p><p>Base Camp takes place outdoors, with indoor space and activities available when needed.</p><p><strong>Limited spaces and scholarships available.</strong></p></div>
+        </div>
+        <img class="winter-photo" src="/images/content/winter-base-camp-snow.jpg" alt="A child bundled in winter clothing inside a snow shelter" width="912" height="1200" loading="lazy" decoding="async" />
       </div>
     </Container>
   </section>
@@ -112,6 +115,8 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .programs { background:linear-gradient(120deg,#fbf8f0,#f5f1e7); }
   .options { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
   .winter-layout { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); max-width:60rem; margin-inline:auto; align-items:center; }
+  .winter-photo { display:block; width:100%; height:auto; border-radius:var(--radius-card); }
+  .winter-dates { margin-top:2rem; }
   .winter-dates h3 { margin:0 0 1rem; font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1.1; }
   .winter-dates p { margin:1rem 0; line-height:1.65; }
   @media(max-width:47.999rem){.winter-layout{grid-template-columns:1fr}}

@@ -42,3 +42,10 @@ The Women’s Retreat and Dance Embody Collective heroes intentionally share the
 - Subject: Talia Kovacs. Usage: Meet the Team profile.
 - Publication authorization: site owner explicitly requested her photo and bio on October 17, 2026. No separate license claim is made.
 - Bio: paraphrased from Talia’s official website; Rose Blossoms role supplied by the site owner.
+
+## Winter Base Camp snow photo
+
+- Asset: `public/images/content/winter-base-camp-snow.jpg` (912 × 1200).
+- Source: owner-supplied `IMG_2754.jpg`; publication requested explicitly in chat.
+- Placement: Winter 2027 Base Camp section on the Base Camp page.
+- Optimized JPEG, full portrait composition retained on desktop and mobile; subject name not supplied.
