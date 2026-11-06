@@ -47,5 +47,5 @@ The Women’s Retreat and Dance Embody Collective heroes intentionally share the
 
 - Asset: `public/images/content/winter-base-camp-snow.jpg` (912 × 1200).
 - Source: owner-supplied `IMG_2754.jpg`; publication requested explicitly in chat.
-- Placement: Base Camp page hero and Winter 2027 Base Camp section.
+- Placement: Winter 2027 Base Camp page hero. The section beside the Tuesday dates uses the original Base Camp running-kids photo.
 - Optimized JPEG, full portrait composition retained on desktop and mobile; subject name not supplied.
