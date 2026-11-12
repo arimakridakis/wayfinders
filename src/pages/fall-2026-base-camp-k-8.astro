@@ -57,6 +57,10 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
         <details open><summary><strong>Spring 2027 Thursdays · Kindergarten &amp; 1st graders · $585</strong></summary><div><p>4/8, 4/15, skip 4/22, 4/29, 5/6, 5/13, 5/20, 5/27, 6/3, 6/10, 6/17</p></div></details>
       </DisclosureList>
       <p class="availability">Registration links coming soon.</p>
+      <div class="base-camp-gallery" aria-label="Friendship and creativity at Base Camp">
+        <img src="/images/content/base-camp-community-hug.jpg" alt="Two children hug an older participant beneath the trees at Base Camp" width="1050" height="1400" loading="lazy" decoding="async" />
+        <img src="/images/content/base-camp-nature-creations.jpg" alt="Two children create with pine cones, acorns, and sticks on the woodland floor" width="1400" height="1050" loading="lazy" decoding="async" />
+      </div>
     </Container>
   </section>
 
@@ -136,6 +140,9 @@ const benefits = ['Kids come home happy, muddy, and proud.','Stronger confidence
   .programs { background:linear-gradient(120deg,#fbf8f0,#f5f1e7); }
   .options { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
   .winter-layout { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); max-width:60rem; margin-inline:auto; align-items:center; }
+  .base-camp-gallery { display:grid; grid-template-columns:3fr 4fr; gap:1rem; margin-top:clamp(2.5rem,5vw,4rem); align-items:center; }
+  .base-camp-gallery img { display:block; width:100%; height:auto; border-radius:var(--radius-card); }
+  @media(max-width:47.999rem){.base-camp-gallery{grid-template-columns:1fr}}
   .winter-photo { display:block; width:100%; height:auto; border-radius:var(--radius-card); }
   .winter-dates { margin-top:2rem; }
   .winter-dates h3 { margin:0 0 1rem; font-family:var(--font-display); font-size:calc(2rem + var(--font-display-size-adjust)); line-height:1.1; }

@@ -49,3 +49,11 @@ The Women’s Retreat and Dance Embody Collective heroes intentionally share the
 - Source: owner-supplied `IMG_2754.jpg`; publication requested explicitly in chat.
 - Placement: Winter 2027 Base Camp page hero. The section beside the Tuesday dates uses the original Base Camp running-kids photo.
 - Optimized JPEG, full portrait composition retained on desktop and mobile; subject name not supplied.
+
+## Base Camp friendship and creativity photos
+
+- Owner supplied and explicitly requested for publication on the Base Camp page.
+- `public/images/content/base-camp-community-hug.jpg`: source `4ace3c7c-3f42-4c3b-bda8-9880956bd59e.jpeg`, 1050 × 1400.
+- `public/images/content/base-camp-nature-creations.jpg`: source `IMG_1213 (1).jpeg`, 1400 × 1050.
+- Placement: gallery beneath Spring 2027 dates. Optimized JPEGs with full compositions retained and stacked mobile layout.
+- The three supplied HEICs decoded as black images and were excluded.
