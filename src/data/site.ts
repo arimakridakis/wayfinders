@@ -23,7 +23,7 @@ export const site = {
       label: 'Programs',
       children: [
         { label: 'Fall 2026 Programs Overview', href: '/fall-2026-programs-overview' },
-        { label: 'Winter 2027 Base Camp (1st-8th graders)', href: '/fall-2026-base-camp-k-8' },
+        { label: 'Base Camp Programs (K-8th graders)', href: '/fall-2026-base-camp-k-8' },
         { label: 'Forest Tots (12-30 months)', href: '/forest-tots-12-30-months' },
         { label: 'Rose Blossoms (12-15 year old girls)', href: '/rose-blossoms-12-15-year-old-girls' },
         { label: "Autumn 2026 Women's Retreat", href: '/autumn-2026-womens-retreat' },
