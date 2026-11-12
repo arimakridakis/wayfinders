@@ -12,6 +12,7 @@ const facilitators = teamMembers.filter((person) => ['/gwen', '/leah'].includes(
 
 const weekendUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-b05303556c5743c19b436e9f5ad980762e71deb9659042c2bf5204807802f8baf474ba1adf0c445d975b569ebcf28767?locale=EN_US&cta=copylistmultilink';
 const journeyUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-47b764e180774183bd534e417aa1e1aa070a56dcdd244b5a917c4d59ebb0a3425157ebfa108d474e9572bca4e4c4c501?locale=EN_US&cta=copylistmultilink';
+const remainingYearUrl = 'https://connect.intuit.com/pay/WayfindersOnTheHudson/scs-v1-00cc1bd6e0334928936fbdfc5dce6bcc04d2d442e8974c8da657866f545fc7539bfea2533c9948fc856eed2964af84f3-1?locale=EN_US&cta=copylistmultilink';
 
 const practices = [
   'Build friendships and explore identity and belonging.',
@@ -64,7 +65,7 @@ const seasons = [
     <details><summary>Safety, inclusion &amp; accessibility</summary><div><p>Shared group agreements, consent, and individualized mentorship support participation. Materials are provided, with sliding-scale fees or scholarships available.</p></div></details>
   </DisclosureList></div></Container></section>
 
-  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">Join the Rose Blossoms Journey</p><h2>Step into the circle.</h2><p>Join the full Rose Blossoms journey or choose a weekend.</p><p>Payment plans and scholarships available.</p><div class="pricing-grid"><article class="pricing-panel"><h3>Camping weekend</h3><PricingActions price="$550" program="Rose Blossoms — Camping weekend" href={weekendUrl} /></article><article class="pricing-panel"><h3>Full journey</h3><p>Save $200 with the full journey.</p><PricingActions price="$1,450" program="Rose Blossoms — Full journey" href={journeyUrl} /></article></div></div><aside><NatureIcon name="heart" size={38} /><h3>Limited Spaces &amp; Scholarships Available!</h3><p><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a><br />(917) 318-3888</p></aside></Container></section>
+  <section class="closing chapter"><Container width="wide" class="closing-grid"><div><p class="type-label">Join the Rose Blossoms Journey</p><h2>Step into the circle.</h2><p>Join the full Rose Blossoms journey or choose a weekend.</p><p>Payment plans and scholarships available.</p><div class="pricing-grid"><article class="pricing-panel"><h3>Camping weekend</h3><PricingActions price="$550" program="Rose Blossoms — Camping weekend" href={weekendUrl} /></article><article class="pricing-panel"><h3>Full journey</h3><p>Save $200 with the full journey.</p><PricingActions price="$1,450" program="Rose Blossoms — Full journey" href={journeyUrl} /></article><article class="pricing-panel"><h3>Join for the rest of the year</h3><p>December–May</p><PricingActions price="$900" program="Rose Blossoms — December–May" href={remainingYearUrl} /></article></div></div><aside><NatureIcon name="heart" size={38} /><h3>Limited Spaces &amp; Scholarships Available!</h3><p><a href="mailto:wayfindersonthehudson@gmail.com">wayfindersonthehudson@gmail.com</a><br />(917) 318-3888</p></aside></Container></section>
 </BaseLayout>
 
 <style>

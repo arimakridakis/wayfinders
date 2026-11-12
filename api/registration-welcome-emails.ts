@@ -34,6 +34,7 @@ const emailFiles: Record<string, WelcomeEmail> = {
   'Motherhood Rising — Wednesday series': motherhoodRisingWednesdaySeriesWelcome,
   'Motherhood Rising — Single session': motherhoodRisingSingleSessionWelcome,
   'Rose Blossoms — Camping weekend': roseBlossomsCampingWeekendWelcome,
+  'Rose Blossoms — December–May': createWelcomeEmail({ program: 'Rose Blossoms — December–May', season: 'winter', closing: 'We’re looking forward to welcoming you into the Wayfinders community.' }),
   'Rose Blossoms — Full journey': roseBlossomsFullJourneyWelcome,
   'Autumn 2026 Women’s Retreat': womensRetreatWelcome,
   'Wise Owls — One session': wiseOwlsOneSessionWelcome,
